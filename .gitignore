@@ -1,0 +1,7 @@
+.deps/
+artifacts/
+build/
+__pycache__/
+*.pyc
+theta.local.json
+.runtime/

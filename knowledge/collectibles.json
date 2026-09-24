@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "save_slot": 1,
+  "updated_on": "2026-09-24",
+  "scope": "本轮发现的收集物及回访待办；未列出的收集物未知",
+  "verified_star_count": 2,
+  "items": [
+    {
+      "nid": 201,
+      "kind": "tutorial_watch",
+      "location": "Chapter1",
+      "position": [
+        1,
+        2
+      ],
+      "status": "collected_verified",
+      "counts_as_star": false,
+      "evidence_file": "artifacts/slot1-playthrough/watch-save-check.json",
+      "evidence": "slot1 存档 Collections[201]=true，accomplishCollectionCount=0，与已拾取怀表而未计入星星的实测一致",
+      "note": "教学收集物与成就星星分开计数"
+    },
+    {
+      "nid": 1,
+      "kind": "star",
+      "location": "1-2",
+      "position": [
+        5,
+        1
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": true,
+      "evidence_file": "artifacts/slot1-playthrough/1-2.json",
+      "analysis_file": "artifacts/slot1-playthrough/1-2-star-static-analysis.json",
+      "finding": "已观测静态地图中，星星位于与起点区域分离的四格口袋，普通逐格移动不连通；将横纵边界都按环绕假设扩展后仍不连通。",
+      "next_step": "先核验回到Chapter1后如何正常恢复单人38,38朝上split1起点，再逐段测试候选1-2+1-7世界路线；允许单人经过已完成入口的新模型已找到路线，见candidate_notes末节。实际合图后再核验条件性关内取星路线。",
+      "limitation": "这里只分析普通移动连通性，尚未证明所有机制下的可达性或必要条件。",
+      "hypothesis": "已实测关卡相加后，1-2+1-8可能连通右边界星星口袋：在假设水平拼接且高度取最大值的三个纵向对齐方案中，来自1-8的角色均有3到5步普通安全路径到星星。实际不等高组合规则与其他角色影响尚未验证。",
+      "candidate_notes": "scratch/icecart-analysis-stars-handoff.md",
+      "world_route_limitation": "允许单人经过已完成入口的新世界模型已给出1-2+1-7路线，但尚未从实时起点实测；旧禁止所有中途入口的搜索结论已过时。真实合图和取星仍需核验。"
+    },
+    {
+      "nid": 2,
+      "kind": "star",
+      "location": "1-6",
+      "position": [
+        7,
+        6
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": true,
+      "evidence_file": "artifacts/slot1-playthrough/1-6.json",
+      "finding": "已观测到两把普通钥匙[7,3]/[7,4]、一把叉子[7,2]；左侧通往上区的走廊有三锁[1,2..4]，星星入口另有三锁[4..6,6]。",
+      "hypothesis": "按当前一次分裂把两把钥匙复制为最多四把的模型，打开两组三锁的预算不足；尚未证明后续机制或替代路线下的必要条件。",
+      "next_step": "回访先核验真实1-6+1-20拼接。若符合报告，DDDWWWDD八输入测试接缝，再DDDW补叉；普通1-6可用DDDWWWSSSAAAAAAWX十七输入测试重合分裂前方锁如何扣钥匙。74步完整候选仅在逐段实测吻合后继续，不预记取得。",
+      "boundary_check": "初始地图四条边界均无可直接通行的安全格；仅把另一个关卡放在旁边尚未给出普通移动入内的路径。钥匙预算问题仍未解决，需要新的实测机制或不同构造。",
+      "candidate_notes": "scratch/icecart-analysis-stars-handoff.md",
+      "candidate_analysis_file": "scratch/star2-route-analysis.md",
+      "candidate_replay_script": "scratch/star2-route-analysis.cjs",
+      "conditional_candidate": {
+        "actions": "DDDWWWDDDDDWWDDDDDDDWSASSASSASSAAWWAWWAAAAAAXXAAAXXAAWXWWXXWWWWDWDDSXDDSDD",
+        "action_count": 74,
+        "status": "model_only_not_executed",
+        "assumptions": "1-6在左且y+2，1-20在右且x+9；目标全局7,8；合并朝向及三人结算仍需验证。局部模型对同目标分裂去重不是已验证游戏规则。"
+      },
+      "model_limitations": "旧72步候选依赖同一前方锁被串行land两次、第二分支不扣钥匙，已拒用。74步key0/1合并有M041支持，52步1/1有M022有限支持；朝向、三人结算、任意双非零资源、真实拼接和同格分裂仍不能视为全面验证。"
+    },
+    {
+      "nid": 3,
+      "kind": "star",
+      "location": "1-14",
+      "position": [
+        6,
+        7
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": true,
+      "evidence_file": "artifacts/slot1-playthrough/1-14.json",
+      "finding": "中央星路有7个details.ID=2的闸门；初始实体中只有两个可见按钮[9,2]与[2,13]。本轮1-14已通关，但完成快照中星星仍active=true，这7扇门仍blockable=true。",
+      "hypothesis": "尚未核实ID=2的控制条件；两个按钮同时占用是否影响这一组门，仅为待验证假设。",
+      "next_step": "从Chapter1真实单人[38,38]朝上split1条件出发，逐段实测候选WAAWAAAXWWAAAAWWWWWWWSAAAAAASSSSAWW构造1-10+1-14；先观察实际拼接，再用SSA踩原1-10 ID2按钮，核验星路七门是否打开。候选尚未执行。",
+      "combination_hypothesis": {
+        "candidate": "1-14+1-10",
+        "evidence": "1-14星路七扇门ID=2；1-10初始门[4,1]也为ID=2，既有实测配置将其对应按钮[5,1]。",
+        "test": "正常组合后重新观察门的ID/配对，单独踩1-10侧按钮并检查1-14星路是否打开；先验证控制关系再规划取星。",
+        "limitation": "尚未验证不同关卡相加后按钮编号是否保留、重编号或按来源隔离；不能把相同ID直接当作已证明跨关控制。"
+      },
+      "candidate_notes": "scratch/icecart-analysis-stars-handoff.md"
+    },
+    {
+      "nid": 101,
+      "kind": "red_fork",
+      "location": "Chapter1",
+      "position": [
+        38,
+        14
+      ],
+      "status": "collected_verified",
+      "counts_as_star": false,
+      "evidence_file": "artifacts/slot1-playthrough/chapter1-world.json",
+      "finding": "红色叉子已持久化；在第一章大地图提供一次分裂。正常分裂的两名角色同时进入1-X与1-Y后，实际进入横向相加的组合关卡1-X+1-Y。",
+      "next_step": "结合已实测关卡相加机制继续章节流程，并评估早期星星回访条件；尚未证明特定星星的取得解法。",
+      "name_zh": "红色叉子",
+      "persistence_status": "verified",
+      "persistence_note": "SaveSlot1 Collections[101]=true；accomplishCollectionCount仍0，红色叉子不计星。"
+    },
+    {
+      "nid": 5,
+      "kind": "unknown_collection",
+      "location": "Chapter2",
+      "position": [
+        39,
+        6
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter2-arrival.json",
+      "finding": "第二章到达时完整观测可见active COLLECTION；名称、用途与是否计星尚未实际核实。",
+      "next_step": "正常探索第二章并核实收藏界面/拾取与持久化结果。"
+    },
+    {
+      "nid": 102,
+      "kind": "blue_fork",
+      "location": "Chapter2",
+      "position": [
+        36,
+        6
+      ],
+      "status": "collected_verified",
+      "counts_as_star": false,
+      "evidence_file": "artifacts/slot1-playthrough/chapter2-world.json",
+      "finding": "2-Y已W完成后，从世界26,6输入D沿冰道到36,6；实际CollectDialog显示蓝色叉子，角色split0→1。正常确认并进入2-X后返回世界，只读Collections[102]=true，星计数仍1。",
+      "next_step": "正常探索蓝色叉子的世界功能及世界蓝箱交互；尚未触发关卡相乘，不能先计Blue成就。",
+      "name_zh": "蓝色叉子"
+    },
+    {
+      "nid": 4,
+      "kind": "star",
+      "location": "2-16",
+      "position": [
+        7,
+        5
+      ],
+      "status": "collected_verified",
+      "counts_as_star": true,
+      "evidence_file": "artifacts/slot1-playthrough/2-16.json",
+      "finding": "34步回访候选逐段实测匹配；实际拾取UI显示4号星星、接球！。确认并返回世界后Collections[4]=true，星计数0→1；关数仍50，原38步通关记录保留。",
+      "next_step": "本项已取得；继续其余星星与章节。",
+      "name_zh": "4号星星",
+      "subtitle": "接球！",
+      "persistence_status": "verified",
+      "verified_collection_actions": "WWWWWWWWWAWDXDSSADSAWDSAWWASAASAAS",
+      "evidence_section": "revisit_collection and appended events"
+    },
+    {
+      "nid": 6,
+      "kind": "star",
+      "location": "2-Y",
+      "position": [
+        1,
+        9
+      ],
+      "status": "collected_verified",
+      "counts_as_star": true,
+      "evidence_file": "artifacts/slot1-playthrough/2-XY.json",
+      "finding": "2-X×2-Y中切到逝水线执行WWW（完整TWWW），到原目标1,7时组合仍未完成，继续到1,9拾取。正常确认并返回世界后Collections[6]=true，星计数1→2；关卡总数仍57，未完成2-X。",
+      "name_zh": "6号星星",
+      "subtitle": "时间啊，停下来吧"
+    },
+    {
+      "nid": 9,
+      "kind": "unclassified",
+      "location": "Chapter3",
+      "position": [
+        39,
+        11
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter3-world.json",
+      "evidence": "initial.level.timelines中的COLLECTION实体：NID=9，pos=[39, 11]，active=true；仅证明已观察该收集物，不证明可达或取得。",
+      "next_step": "通过正常游玩靠近并核验收集物种类及取得前后存档；不凭NID预记星星或章节工具。"
+    },
+    {
+      "nid": 103,
+      "kind": "unclassified",
+      "location": "Chapter3",
+      "position": [
+        -9,
+        -2
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter3-world.json",
+      "evidence": "initial.level.timelines中的COLLECTION实体：NID=103，pos=[-9, -2]，active=true；仅证明已观察该收集物，不证明可达或取得。",
+      "next_step": "通过正常游玩靠近并核验收集物种类及取得前后存档；不凭NID预记星星或章节工具。"
+    },
+    {
+      "nid": 7,
+      "kind": "unclassified",
+      "location": "3-21",
+      "position": [
+        2,
+        6
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/3-21.json",
+      "finding": "实际画面呈星形；尚未拾取，类型及是否计星仍待取得后核验。幽灵不能直接走出本关DARK，普通安全路径受墙及地刺分隔。",
+      "next_step": "未实测回访假设：3-22确认光能使ghost分出生/死世界线。尝试以唯一棱镜在8,9把目标8,1方向的光引到row9，使位于安全格2,9的ghost复活，再经1,9→1,8→1,7→1,6→2,6接近收藏。前提未证：目标是否无棱镜即发光、光能否穿8,3闭门、8,9棱镜可达与光线方向。不能作为已解路线或取得证据。"
+    },
+    {
+      "nid": 8,
+      "kind": "unclassified",
+      "location": "3-31",
+      "position": [
+        4,
+        3
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/3-31.json",
+      "finding": "初始结构化观测COLLECTION NID8，四邻4,4/3,3/5,3/4,2为墙，未拾取；不按编号预记星。",
+      "next_step": "完成主线后结合正常解锁机制调查围墙内收藏，实际取得后验证种类与存档。"
+    }
+  ],
+  "last_save_check": {
+    "observed_at": "2026-09-24T14:21:36.279472+00:00",
+    "source": "C:/Users/Administrator/AppData/LocalLow/DeltaTheta/Theta and Paralldox on Worldlines/SaveSlot1.es3",
+    "method": "read_only",
+    "CurWorld": 3,
+    "accomplishLevelCount": 89,
+    "accomplishCollectionCount": 2,
+    "Collections": {
+      "201": true,
+      "101": true,
+      "4": true,
+      "102": true,
+      "6": true
+    },
+    "note": "阶段末只读核验89关、2星；NID8仅观察未取得。"
+  }
+}

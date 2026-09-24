@@ -1,0 +1,2957 @@
+{
+  "hypothesis": "Assume two stacked boxes behave as one movable box, after candidate WWWWWWAWADWA",
+  "initial": {
+    "scene": "Template3",
+    "frame": 605250,
+    "screen": [
+      1280,
+      720
+    ],
+    "ui": {
+      "buttons": [],
+      "texts": [
+        {
+          "path": "Chapter3/Canvas (1)/ChapTitle/Chapter",
+          "text": "3-1"
+        },
+        {
+          "path": "Chapter3/Canvas (1)/ChapTitle/Chapter (1)",
+          "text": "提问"
+        }
+      ],
+      "selected": "Chapter3/Canvas (1)/PauseMenu/Note/Menu/V/List/NoteDirEntry(Clone)"
+    },
+    "level": {
+      "id": "question",
+      "world": false,
+      "initialized": true,
+      "input_locked": false,
+      "busy": false,
+      "completed": false,
+      "conflicting": false,
+      "looping": false,
+      "undo_depth": 0,
+      "current_timeline": 55,
+      "instructions": "",
+      "goals": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "paused": false,
+      "dialog": false,
+      "dialog_index": 0,
+      "timelines": [
+        {
+          "id": 55,
+          "axis": [
+            0,
+            0,
+            0
+          ],
+          "time": 0,
+          "size": [
+            8,
+            8
+          ],
+          "min_anchor": [
+            0,
+            0
+          ],
+          "looping": false,
+          "split_locked": false,
+          "parent": null,
+          "entities": [
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 0,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 1
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                1
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 1,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 2
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 2,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 3
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                3
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 3,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 4
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                4
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 4,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 5
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                5
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 5,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 6
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 6,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 7
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                0,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 7,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 8
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                1,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 8,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 9
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                1,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 9,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 10
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 10,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 11
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 11,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 12
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                3
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 12,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 13
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                4
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 13,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 14
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                5
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 14,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 15
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 15,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 16
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                2,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 16,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 17
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                3,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 17,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 18
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                3,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 18,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 19
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                3,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 19,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 20
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                3,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 20,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 21
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                4,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 21,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 22
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                4,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 22,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 23
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                4,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 23,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 24
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                5,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 24,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 25
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                5,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 25,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 26
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                5,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 26,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 27
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                5,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 27,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 28
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 28,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 29
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 29,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 30
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                3
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 30,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 31
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                4
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 31,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 32
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                5
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 32,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 33
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 33,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 34
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                6,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 34,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 35
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                7,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 35,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 36
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                7,
+                1
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 36,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 37
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                7,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 37,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 38
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                0
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 38,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 39
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                1
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 39,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 40
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 40,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 41
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                3
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 41,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 42
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                4
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 42,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 43
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                5
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 43,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 44
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                6
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 44,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 45
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                7
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 45,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 46
+              }
+            },
+            {
+              "type": "SOLID",
+              "class": "Wall",
+              "pos": [
+                8,
+                8
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 46,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "SourceMapRealID": "question",
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 47
+              }
+            },
+            {
+              "type": "GOAL",
+              "class": "DynamicEntity",
+              "pos": [
+                3,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "id": 47,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1
+              },
+              "anim_completed": true,
+              "details": {}
+            },
+            {
+              "type": "GOAL",
+              "class": "DynamicEntity",
+              "pos": [
+                4,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "id": 48,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1
+              },
+              "anim_completed": true,
+              "details": {}
+            },
+            {
+              "type": "PLAYER",
+              "class": "Player",
+              "pos": [
+                1,
+                7
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": true,
+              "blockable": false,
+              "id": 49,
+              "face": [
+                0,
+                -1
+              ],
+              "properties": {
+                "face": 2,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0,
+                "key": 1,
+                "split": 0,
+                "ghost": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "InitialSplit": 0,
+                "InitialGhost": 0,
+                "isSitting": false,
+                "GMID": 48
+              }
+            },
+            {
+              "type": "PLAYER",
+              "class": "Player",
+              "pos": [
+                1,
+                5
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": true,
+              "blockable": false,
+              "id": 50,
+              "face": [
+                0,
+                -1
+              ],
+              "properties": {
+                "face": 2,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0,
+                "key": 0,
+                "split": 0,
+                "ghost": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "InitialSplit": 0,
+                "InitialGhost": 0,
+                "isSitting": false,
+                "GMID": 49
+              }
+            },
+            {
+              "type": "KEY",
+              "class": "Key",
+              "pos": [
+                7,
+                7
+              ],
+              "active": false,
+              "floor": false,
+              "pushable": false,
+              "blockable": false,
+              "id": 51,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "mix": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "defaultType": 0,
+                "isFork": false
+              }
+            },
+            {
+              "type": "LOCK",
+              "class": "Lock",
+              "pos": [
+                4,
+                2
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": false,
+              "blockable": true,
+              "id": 52,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "Shadow": false,
+                "Color": 1,
+                "GMID": 50
+              }
+            },
+            {
+              "type": "BOX",
+              "class": "Box",
+              "pos": [
+                0,
+                7
+              ],
+              "active": true,
+              "floor": false,
+              "pushable": true,
+              "blockable": true,
+              "id": 53,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "Shadow": false,
+                "Color": 3,
+                "GMID": 51
+              }
+            },
+            {
+              "type": "BOX",
+              "class": "Box",
+              "pos": [
+                1,
+                2
+              ],
+              "active": false,
+              "floor": false,
+              "pushable": true,
+              "blockable": true,
+              "id": 54,
+              "face": [
+                0,
+                1
+              ],
+              "properties": {
+                "face": 0,
+                "maskedoff": 0,
+                "contained": 0,
+                "container": -1,
+                "height": 1,
+                "movingdir": 0,
+                "movingsrc": -1,
+                "movingsrcext": 0
+              },
+              "anim_completed": true,
+              "details": {
+                "Shadow": false,
+                "Color": 3,
+                "GMID": 52
+              }
+            }
+          ],
+          "tiles": [
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                0,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                1,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                2,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                3,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                4,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                5,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                6,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                7,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                0
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                1
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                2
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                3
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                4
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                5
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                6
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                7
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            },
+            {
+              "type": "SOLID",
+              "class": "Floor",
+              "pos": [
+                8,
+                8
+              ],
+              "active": true,
+              "floor": true,
+              "pushable": false,
+              "blockable": false,
+              "details": {}
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

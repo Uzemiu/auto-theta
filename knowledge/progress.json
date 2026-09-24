@@ -1,0 +1,1508 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-09-25",
+  "save_management_file": "save-management.md",
+  "active_playthrough": {
+    "id": "slot1-from-start-2026-09-22",
+    "save_slot": 1,
+    "save_file": "C:/Users/Administrator/AppData/LocalLow/DeltaTheta/Theta and Paralldox on Worldlines/SaveSlot1.es3",
+    "status": "paused",
+    "baseline_completed_count": 0,
+    "verified_completed_levels": [
+      "0-1",
+      "0-2",
+      "0-3",
+      "0-4",
+      "0-5",
+      "0-6",
+      "0-7",
+      "0-8",
+      "0-9",
+      "1-1",
+      "1-2",
+      "1-3",
+      "1-4",
+      "1-5",
+      "1-6",
+      "1-7",
+      "1-8",
+      "1-9",
+      "1-10",
+      "1-11",
+      "1-12",
+      "1-13",
+      "1-14",
+      "1-15",
+      "1-16",
+      "1-17",
+      "1-18",
+      "1-19",
+      "1-20",
+      "1-X",
+      "1-Y",
+      "2-1",
+      "2-2",
+      "2-3",
+      "2-4",
+      "2-5",
+      "2-6",
+      "2-7",
+      "2-8",
+      "2-9",
+      "2-10",
+      "2-11",
+      "2-12",
+      "2-14",
+      "2-15",
+      "2-16",
+      "2-18",
+      "2-17",
+      "2-19",
+      "2-20",
+      "2-22",
+      "2-23",
+      "2-24",
+      "2-25",
+      "2-21",
+      "2-13",
+      "2-Y",
+      "2-X",
+      "2-B",
+      "2-D",
+      "2-C",
+      "3-2",
+      "3-1",
+      "3-3",
+      "3-4",
+      "3-5",
+      "3-6",
+      "3-7",
+      "3-8",
+      "3-9",
+      "3-10",
+      "3-11",
+      "3-12",
+      "3-13",
+      "3-14",
+      "3-15",
+      "3-16",
+      "3-17",
+      "3-18",
+      "3-20",
+      "3-21",
+      "3-22",
+      "3-24",
+      "3-25",
+      "3-28",
+      "3-29",
+      "3-30",
+      "3-31",
+      "3-32",
+      "3-A"
+    ],
+    "last_observed_location": {
+      "scene": "3-0",
+      "level_id": "Chapter3",
+      "world": true,
+      "player_positions": [
+        [
+          46,
+          18
+        ]
+      ],
+      "time": 0,
+      "fork": 0,
+      "observed_on": "2026-09-25"
+    },
+    "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
+    "chapter_transitions": [
+      {
+        "from": "Chapter1",
+        "to": "Chapter2",
+        "trigger_position": [
+          38,
+          48
+        ],
+        "trigger": "confirm on UI 前往上层",
+        "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+        "arrival_evidence_file": "../artifacts/slot1-playthrough/chapter2-arrival.json",
+        "note": "北侧电梯进章，未完成东侧世界GOAL；不增加普通关卡数量"
+      }
+    ],
+    "paused_at_utc": "2026-09-24T16:24:14.111321+00:00",
+    "pause_reason": "用户要求先提交文件，然后暂停子agent；已停止游戏输入及所有搜索。",
+    "pause_checkpoint": {
+      "location": {
+        "scene": "3-0",
+        "level_id": "Chapter3",
+        "world": true,
+        "player_positions": [
+          [
+            46,
+            18
+          ]
+        ],
+        "time": 0,
+        "fork": 0,
+        "observed_on": "2026-09-25"
+      },
+      "last_attempted_level": "3-19",
+      "last_attempted_time": 60,
+      "completed": false,
+      "evidence_file": "../artifacts/slot1-playthrough/3-19.json",
+      "world_evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json"
+    },
+    "resumed_at_utc": "2026-09-24T03:56:37.952001+00:00",
+    "notes": [
+      "2026-09-24子agent正常新增2-B/2-D/2-C三关，61关2星，西端出口通过第二章进入第三章。2-A/G/P/Q仍未解，本阶段禁提示。",
+      "2026-09-24第三章子agent完成3-1至3-10，累计71关2星，Lift本轮条件已验证；无主动提示。最新世界56,5，3-11待进入。",
+      "2026-09-24第三章中段完成3-11..3-18及3-20共9关，累计80关2星。3-19实际尝试未完成，见solutions/3-19.md；root同意暂缓回访。无提示，当前世界35,18。",
+      "2026-09-24第三章后段新增3-21/22/24/25共4关，累计84关2星；3-23/26/27尝试未解。3-28已进入初态待接续；本阶段无提示，完成阶段审计84/84且issues=[]。"
+    ]
+  },
+  "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
+  "status_definitions": {
+    "unknown": "尚未核实",
+    "observed": "已读取关卡状态，尚未确认通关",
+    "attempted": "已实际尝试，尚未确认通关",
+    "completed_verified": "已通过游戏完成状态或可核实的通关界面确认"
+  },
+  "unlisted_level_status": "unknown",
+  "total_game_levels": null,
+  "verified_completed_count": 90,
+  "levels": {
+    "1-1": {
+      "name": "叉子",
+      "internal_level_id": "fork",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "verified_successful_runs": 1,
+      "run_kind": "replay",
+      "first_completion_of_save": false,
+      "prior_save_observation": "进入前入口显示重新进入；本记录仅证明本次重玩成功",
+      "observation_mode": [
+        "mcp_structured_state",
+        "game_screenshot"
+      ],
+      "solution_file": "solutions/1-1.md",
+      "mechanic_ids": [
+        "M001",
+        "M002",
+        "M003",
+        "M004",
+        "M005"
+      ],
+      "verified_solution_actions": 9,
+      "optimality_proven": false,
+      "undo_count": 0,
+      "retry_count": 0,
+      "in_level_human_interventions": 0,
+      "completion_evidence": {
+        "source": "2026-09-22 本任务内的实际 MCP 工具返回结果",
+        "raw_step_log_file": null,
+        "instructions": "WWWXWWWWW",
+        "completed": true,
+        "final_player_positions": [
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            9
+          ]
+        ],
+        "goal_positions": [
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            9
+          ]
+        ],
+        "returned_to_world": true
+      },
+      "slot1_run": {
+        "actions": "WWWXWWWWW",
+        "action_count": 9,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-1.json"
+      }
+    },
+    "0-1": {
+      "evidence_file": "../artifacts/slot1-playthrough/evidence.json",
+      "name": "序章教学",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "internal_level_id": "tut1",
+      "solution_file": "solutions/0-1.md",
+      "save_slot": 1
+    },
+    "0-2": {
+      "evidence_file": "../artifacts/slot1-playthrough/evidence.json",
+      "name": "序章教学",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "internal_level_id": "tut2",
+      "solution_file": "solutions/0-2.md",
+      "save_slot": 1
+    },
+    "0-3": {
+      "evidence_file": "../artifacts/slot1-playthrough/evidence.json",
+      "name": "序章教学",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "internal_level_id": "tut3",
+      "solution_file": "solutions/0-3.md",
+      "save_slot": 1
+    },
+    "0-4": {
+      "evidence_file": "../artifacts/slot1-playthrough/evidence.json",
+      "name": "序章教学",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "internal_level_id": "tut4",
+      "solution_file": "solutions/0-4.md",
+      "save_slot": 1
+    },
+    "0-5": {
+      "evidence_file": "../artifacts/slot1-playthrough/evidence.json",
+      "name": "序章教学",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "internal_level_id": "tut5",
+      "solution_file": "solutions/0-5.md",
+      "save_slot": 1
+    },
+    "0-6": {
+      "solution_file": "solutions/0-6.md",
+      "name": "序章教学",
+      "evidence_file": "../artifacts/slot1-playthrough/0-6.json",
+      "internal_level_id": "tut6",
+      "verified_on": "2026-09-22",
+      "save_slot": 1,
+      "status": "completed_verified"
+    },
+    "0-7": {
+      "evidence_file": "../artifacts/slot1-playthrough/0-7.json",
+      "verified_on": "2026-09-22",
+      "status": "completed_verified",
+      "save_slot": 1,
+      "internal_level_id": "tut7",
+      "solution_file": "solutions/0-7.md",
+      "name": "序章教学"
+    },
+    "0-8": {
+      "evidence_file": "../artifacts/slot1-playthrough/0-8.json",
+      "verified_on": "2026-09-22",
+      "status": "completed_verified",
+      "save_slot": 1,
+      "name": "序章教学",
+      "internal_level_id": "tut8",
+      "solution_file": "solutions/0-8.md"
+    },
+    "0-9": {
+      "name": "序章教学",
+      "save_slot": 1,
+      "status": "completed_verified",
+      "internal_level_id": "tut9",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/0-9.md",
+      "evidence_file": "../artifacts/slot1-playthrough/0-9.json"
+    },
+    "1-2": {
+      "name": "方向",
+      "internal_level_id": "direction",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-2.md",
+      "slot1_run": {
+        "actions": "WWDDDAAASWDAXWDSD",
+        "action_count": 17,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-2.json"
+      }
+    },
+    "1-3": {
+      "name": "侧面",
+      "internal_level_id": "side",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-3.md",
+      "slot1_run": {
+        "actions": "SSSWXDD",
+        "action_count": 7,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-3.json"
+      }
+    },
+    "1-4": {
+      "name": "心",
+      "internal_level_id": "heart",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-4.md",
+      "slot1_run": {
+        "actions": "WDWDWDWWWWSDSSASAAASWXWDWDWWDWDWW",
+        "action_count": 33,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-4.json"
+      }
+    },
+    "1-5": {
+      "name": "不是门",
+      "internal_level_id": "nogate",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-5.md",
+      "slot1_run": {
+        "actions": "WWAADWWWSAAAWAXWWWWW",
+        "action_count": 20,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-5.json"
+      }
+    },
+    "1-6": {
+      "name": "密封",
+      "internal_level_id": "seal",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-6.md",
+      "slot1_run": {
+        "actions": "DDDWWWWAAAWWXWWWWWAASSWWAAAWWWWDDWW",
+        "action_count": 35,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-6.json"
+      }
+    },
+    "1-7": {
+      "name": "错位",
+      "internal_level_id": "displaced2",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-7.md",
+      "slot1_run": {
+        "actions": "WSSSSXAAWDWWWWDDWWWW",
+        "action_count": 20,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-7.json"
+      }
+    },
+    "1-8": {
+      "name": "象限",
+      "internal_level_id": "quadrant",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-8.md",
+      "slot1_run": {
+        "actions": "AAASAAAWWWWSAADSWWWDSDSDSDSXAAAAAASSAWWWDWWWWW",
+        "action_count": 46,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-8.json"
+      }
+    },
+    "1-9": {
+      "name": "闸门",
+      "internal_level_id": "valve",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-9.md",
+      "slot1_run": {
+        "actions": "SSSSWWWWWADXWWSSSSSSASDDSDDDSWDDDWWDWDWWSSSAWAAAAAAAAAWAWWWWWWWDDDSD",
+        "action_count": 68,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-9.json"
+      }
+    },
+    "1-10": {
+      "name": "物质",
+      "internal_level_id": "pressure",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-10.md",
+      "slot1_run": {
+        "actions": "DSSAAAAAWWWWWWDDSSSSDDDSSAAAAAWWWWWWDSXWAAASSSAAWWWWWWWWWWDSDSS",
+        "action_count": 63,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-10.json"
+      }
+    },
+    "1-11": {
+      "name": "通过",
+      "internal_level_id": "pass",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-11.md",
+      "slot1_run": {
+        "actions": "DDSSWDDSAAAWWSAWWWWWWSWDSXAWWDDDSSASS",
+        "action_count": 37,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-11.json"
+      }
+    },
+    "1-12": {
+      "name": "扭转",
+      "internal_level_id": "twist",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-12.md",
+      "slot1_run": {
+        "actions": "SSWXAWWWAWWDADDDSDWAWAAAAADWSDSSAWASAADDDDS",
+        "action_count": 43,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-12.json"
+      }
+    },
+    "1-13": {
+      "name": "运输",
+      "internal_level_id": "transfer1",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-13.md",
+      "slot1_run": {
+        "actions": "WAWWDSAXADSSSSSSSSAADSSSSDSDSAADDWDWWWWAWWDSSSWWWWWWWWAAAWW",
+        "action_count": 59,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-13.json"
+      }
+    },
+    "1-14": {
+      "name": "波动",
+      "internal_level_id": "fluctuate",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-14.md",
+      "slot1_run": {
+        "actions": "WDDDDDDDSAWWWWWWWSXWWDDDSSSSWWWWWWWWWWWWWWDWWWAWAWASAWWDDDSSSSDDDWDWDWDWASW",
+        "action_count": 75,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-14.json"
+      }
+    },
+    "1-15": {
+      "name": "锁",
+      "internal_level_id": "lock",
+      "status": "completed_verified",
+      "verified_on": "2026-09-22",
+      "solution_file": "solutions/1-15.md",
+      "slot1_run": {
+        "actions": "DDDAAWWAWDDDDSASSDDWWAWWDSSSWAAXSDDWWWWWWWW",
+        "action_count": 43,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-15.json"
+      }
+    },
+    "1-16": {
+      "name": "互斥",
+      "internal_level_id": "mutex",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-16.md",
+      "slot1_run": {
+        "actions": "AWWDDDSDWWWWWXWW",
+        "action_count": 16,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-16.json"
+      }
+    },
+    "1-17": {
+      "name": "四分之一",
+      "internal_level_id": "fourth",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-17.md",
+      "slot1_run": {
+        "actions": "AAWWWWWWSXXWAWWWASSDSDSA",
+        "action_count": 24,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-17.json"
+      }
+    },
+    "1-18": {
+      "name": "队列",
+      "internal_level_id": "queue",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-18.md",
+      "slot1_run": {
+        "actions": "WAAAWWXSWDDDDXWDWWWWWWWWWA",
+        "action_count": 26,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-18.json"
+      }
+    },
+    "1-19": {
+      "name": "四叶草",
+      "internal_level_id": "clover",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-19.md",
+      "slot1_run": {
+        "actions": "WAAADDDDDDXWWWAAASWXDDWWWAX",
+        "action_count": 27,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-19.json"
+      }
+    },
+    "1-20": {
+      "name": "光栅",
+      "internal_level_id": "raster",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-20.md",
+      "slot1_run": {
+        "actions": "WAWWAWWDDDDSSASSASWXWWXWWXWWXWWXXW",
+        "action_count": 34,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-20.json"
+      }
+    },
+    "1-X": {
+      "name": "黎明",
+      "internal_level_id": "dawn",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-XY.md",
+      "slot1_run": {
+        "actions": "AAWDDDSXDDD",
+        "action_count": 11,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-XY.json",
+        "completion_kind": "combined",
+        "runtime_level_id": "template1",
+        "save_record_key": "dawn+dusk",
+        "combined_level": "1-X+1-Y",
+        "component_ids": [
+          "dawn",
+          "dusk"
+        ]
+      }
+    },
+    "1-Y": {
+      "name": "黄昏",
+      "internal_level_id": "dusk",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/1-XY.md",
+      "slot1_run": {
+        "actions": "AAWDDDSXDDD",
+        "action_count": 11,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/1-XY.json",
+        "completion_kind": "combined",
+        "runtime_level_id": "template1",
+        "save_record_key": "dawn+dusk",
+        "combined_level": "1-X+1-Y",
+        "component_ids": [
+          "dawn",
+          "dusk"
+        ]
+      }
+    },
+    "2-1": {
+      "name": "突破",
+      "internal_level_id": "breakthrough",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-1.md",
+      "slot1_run": {
+        "actions": "WAAWWWSSDDDSWXWWWWWWSDDDWWTADSSSAA",
+        "action_count": 34,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-1.json"
+      }
+    },
+    "2-2": {
+      "name": "交叉",
+      "internal_level_id": "crossing",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-2.md",
+      "slot1_run": {
+        "actions": "AXWWWWASSDASWAWDDWWWDDDDTWWWAAAA",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-2.json"
+      }
+    },
+    "2-3": {
+      "name": "金库",
+      "internal_level_id": "safebox",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-3.md",
+      "slot1_run": {
+        "actions": "AAAWWWWWXDWDDAASSDSSSWDWWWWAAAWADWWADDDDSASAWWWAAAWWWDDDTWWWDDDD",
+        "action_count": 64,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-3.json"
+      }
+    },
+    "2-4": {
+      "name": "占据",
+      "internal_level_id": "occupation",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-4.md",
+      "slot1_run": {
+        "actions": "DDDWWDWSXDWDSTAS",
+        "action_count": 16,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-4.json"
+      }
+    },
+    "2-5": {
+      "name": "挤压",
+      "internal_level_id": "squish",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-5.md",
+      "slot1_run": {
+        "actions": "WADXDSSWWWWWWSSSSSDDDAAAWWWWWWDDDDTSSSSSDDDAAAWAAAWWWWWT",
+        "action_count": 56,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-5.json"
+      }
+    },
+    "2-6": {
+      "name": "空白",
+      "internal_level_id": "void",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-6.md",
+      "slot1_run": {
+        "actions": "WDDWWWWXWDDDDSAAAAAAASSSSSSSTDT",
+        "action_count": 31,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-6.json"
+      }
+    },
+    "2-7": {
+      "name": "镜像",
+      "internal_level_id": "carriage1",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-7.md",
+      "slot1_run": {
+        "actions": "WAAAASDXDWWWWWWADDSAWWWWADDWAAAAATWDDDDDT",
+        "action_count": 41,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-7.json"
+      }
+    },
+    "2-8": {
+      "name": "传递",
+      "internal_level_id": "transmit",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-8.md",
+      "slot1_run": {
+        "actions": "WWWWWWWWWWWWWDXSASASSSSDAAAWWWAWWDDWWWDDDDDDSSSSSSSTWDDDDDDDDT",
+        "action_count": 62,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-8.json"
+      }
+    },
+    "2-9": {
+      "name": "冰面",
+      "internal_level_id": "ice",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-9.md",
+      "slot1_run": {
+        "actions": "SDWASDXW",
+        "action_count": 8,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-9.json"
+      }
+    },
+    "2-10": {
+      "name": "冰湖",
+      "internal_level_id": "icelake",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-10.md",
+      "slot1_run": {
+        "actions": "SSSAAADDDWXWASAAAAAWWAAWAADWAWWDDSSAWWWWDDSSSSSAWADSDD",
+        "action_count": 54,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-10.json"
+      }
+    },
+    "2-11": {
+      "name": "冰球",
+      "internal_level_id": "curling",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-11.md",
+      "slot1_run": {
+        "actions": "DDDDDDWWWAWWWAWASSSWWWDSAWWWDDDDSAAAAAWXASADDDDDWDWWTWAWWT",
+        "action_count": 58,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-11.json"
+      }
+    },
+    "2-12": {
+      "name": "交错",
+      "internal_level_id": "interlace1",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-12.md",
+      "slot1_run": {
+        "actions": "SXWDDDDDDA",
+        "action_count": 10,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-12.json"
+      }
+    },
+    "2-13": {
+      "name": "冰车",
+      "internal_level_id": "icecart",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-13.md",
+      "slot1_run": {
+        "actions": "WDAASSAWWDWDSSWWWWWWDSSSDSSSAASAWWWWWWD",
+        "action_count": 39,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-13.json"
+      }
+    },
+    "2-14": {
+      "name": "滑冰场",
+      "internal_level_id": "rink",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-14.md",
+      "slot1_run": {
+        "actions": "WASDXDSSATWAT",
+        "action_count": 13,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-14.json"
+      }
+    },
+    "2-15": {
+      "name": "准星",
+      "internal_level_id": "snipper",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-15.md",
+      "slot1_run": {
+        "actions": "WDDDSWXAASASDWDWDWWAWDASSDDDWTWASAAT",
+        "action_count": 36,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-15.json"
+      }
+    },
+    "2-16": {
+      "name": "时差",
+      "internal_level_id": "lag",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-16.md",
+      "slot1_run": {
+        "actions": "WWXWWWAWWDDWWAASSSWWDDDDDDWWTWWDDDDDDS",
+        "action_count": 38,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-16.json"
+      }
+    },
+    "2-17": {
+      "name": "导火线",
+      "internal_level_id": "fuse",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-17.md",
+      "slot1_run": {
+        "actions": "DDSSSSSSAASSDDDDDXSSSSWWWDWDWDWWWASDSAWWWASDSAWWWAADSAAWWAADWWWSSAAAAAWWDDWWWWWWAASSTDSSSSSSSSSSAAAAAAAAAAWWWW",
+        "action_count": 110,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-17.json"
+      }
+    },
+    "2-18": {
+      "name": "平衡",
+      "internal_level_id": "balance",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-18.md",
+      "slot1_run": {
+        "actions": "ADWWWWWWWWDAAWAASAAAWAAAAXWWWWWWDDSDDWSAAAAAADWWWWDWDWWDWWDSSDDDWDTSSAAAAW",
+        "action_count": 74,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-18.json"
+      }
+    },
+    "2-19": {
+      "name": "连锁",
+      "internal_level_id": "chain",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-19.md",
+      "slot1_run": {
+        "actions": "AWDSAAXAWDSAWDDWWWWWDDTDDWWWWWAAAAAAA",
+        "action_count": 37,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-19.json"
+      }
+    },
+    "2-20": {
+      "name": "追尾",
+      "internal_level_id": "chase",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-20.md",
+      "slot1_run": {
+        "actions": "SWDAASXSWXDDDW",
+        "action_count": 14,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-20.json"
+      }
+    },
+    "2-22": {
+      "name": "生命",
+      "internal_level_id": "life",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-22.md",
+      "slot1_run": {
+        "actions": "DDDWXWDWAADDDDDXWWDAAAADDDDDXDSS",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-22.json"
+      }
+    },
+    "2-21": {
+      "name": "列车",
+      "internal_level_id": "train1",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-21.md",
+      "slot1_run": {
+        "actions": "WAAXSDDDSAWWAWDDDDSSWDDDDDDXDWWAAAAAAAAAAAAAAAAAASSSSSSSDDDDDSSWDDDDDDXDDWWWWAAAAAAAAAAAAAAAAAASSSSSSSSSSSDDDSSWDDDDDDXDDDWWWWWWAAAAAAAAAAAAAAAAAASSSSSSSSAAAAAWWWWW",
+        "action_count": 164,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-21.json"
+      }
+    },
+    "2-23": {
+      "name": "世界",
+      "internal_level_id": "world",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-23.md",
+      "slot1_run": {
+        "actions": "SSSSSSSDDDDDDDWWWWWWXWAXASSWAWDWWWDDDDWWSSSSAWAWWAAAAATWWWWWSSSSSWWDDDDDTSDSAAAAWWAAAAAAATWAAWWSDSSDDDDDTT",
+        "action_count": 106,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-23.json"
+      }
+    },
+    "2-24": {
+      "name": "双翼",
+      "internal_level_id": "wings",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-24.md",
+      "slot1_run": {
+        "actions": "WDWXAAASWWAASWDXASAWSWAASSSSSSSSAWAAWWTWDWWWSSSSAAASSSSDDDDDWWW",
+        "action_count": 63,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-24.json"
+      }
+    },
+    "2-25": {
+      "name": "方",
+      "internal_level_id": "square",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-25.md",
+      "slot1_run": {
+        "actions": "WWWDAWAASSSSAXWAAWDDDXADSSSSSDDWWWWWWTAAAAWWWWDDDDDDDDDDDSSSSSSTSSSSSDDDDWWWWWWTSWAAAAWWWWDDDDDDDDDDDDDSSSSSS",
+        "action_count": 109,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-25.json"
+      }
+    },
+    "2-Y": {
+      "name": "逝水",
+      "internal_level_id": "spoil",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-Y.md",
+      "slot1_run": {
+        "actions": "W",
+        "action_count": 1,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-Y.json"
+      }
+    },
+    "2-X": {
+      "name": "拒绝",
+      "internal_level_id": "refuse",
+      "status": "completed_verified",
+      "verified_on": "2026-09-23",
+      "solution_file": "solutions/2-X.md",
+      "slot1_run": {
+        "actions": "WWWAXTWXWDST",
+        "action_count": 12,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-X-times-14.json",
+        "completion_kind": "combined",
+        "runtime_level_id": "template2",
+        "save_record_key": "rink×refuse",
+        "combined_level": "2-14×2-X",
+        "combination_operator": "×",
+        "component_ids": [
+          "rink",
+          "refuse"
+        ]
+      }
+    },
+    "2-A": {
+      "name": "抛物",
+      "internal_level_id": "parabolic",
+      "status": "in_progress",
+      "solution_file": "solutions/2-A.md",
+      "evidence_file": "../artifacts/slot1-playthrough/2-A.json",
+      "notes": "用户暂停于WA后；箱3,3压按钮，8门已开；未通关，未使用提示。"
+    },
+    "2-B": {
+      "name": "鲸鱼",
+      "internal_level_id": "whale",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/2-B.md",
+      "slot1_run": {
+        "actions": "ADWWXDSSSAAWWDSSSSASSWWWAAASDSSAAASWWWWW",
+        "action_count": 40,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-B.json"
+      }
+    },
+    "2-D": {
+      "name": "草花",
+      "internal_level_id": "clubs",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/2-D.md",
+      "slot1_run": {
+        "actions": "SSSSAWWWWWWAAWWWDSXAXASAAADDDSSSSSWWWWWAAAAAAAAWWWWWDDDDDDDTWWWWWDDDDDDSTWWWWWDDDDDDW",
+        "action_count": 85,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-D.json"
+      }
+    },
+    "2-C": {
+      "name": "填充",
+      "internal_level_id": "fill",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/2-C.md",
+      "slot1_run": {
+        "actions": "SWWWADSASAAWXX",
+        "action_count": 14,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/2-C.json"
+      }
+    },
+    "3-2": {
+      "name": "乌云",
+      "internal_level_id": "darkcloud",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-2.md",
+      "slot1_run": {
+        "actions": "SDDDDWWXWWWWWWWWDDDWWDSDDSAWWWWWWS",
+        "action_count": 34,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-2.json"
+      }
+    },
+    "3-1": {
+      "name": "提问",
+      "internal_level_id": "question",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-1.md",
+      "slot1_run": {
+        "actions": "WWWWWWAWWAAAAAASSSSWWAWWWWWWWWDS",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-1.json"
+      }
+    },
+    "3-3": {
+      "name": "照亮",
+      "internal_level_id": "illuminate",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-3.md",
+      "slot1_run": {
+        "actions": "WAAAASAWSSADSAAAWWDWWWWDWDDSSAASWWWXAAWAA",
+        "action_count": 41,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-3.json"
+      }
+    },
+    "3-4": {
+      "name": "发散",
+      "internal_level_id": "divergence",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-4.md",
+      "slot1_run": {
+        "actions": "WDDDWWWSSAXWDWA",
+        "action_count": 15,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-4.json"
+      }
+    },
+    "3-5": {
+      "name": "单调",
+      "internal_level_id": "mono",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-5.md",
+      "slot1_run": {
+        "actions": "SAAAWAAAWWWDSSASDDSDWAAWWWWWDDSDDDSSASSAAAAWW",
+        "action_count": 45,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-5.json"
+      }
+    },
+    "3-6": {
+      "name": "收敛",
+      "internal_level_id": "convergence",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-6.md",
+      "slot1_run": {
+        "actions": "AASSDDDDDSASSSDDWWWAAAAASAAWDDDDDDWWWDSASSAAAAAA",
+        "action_count": 48,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-6.json"
+      }
+    },
+    "3-7": {
+      "name": "结",
+      "internal_level_id": "knot",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-7.md",
+      "slot1_run": {
+        "actions": "DDWWWAAAAWDDSSSSSSAAAWWWWASSDDDDDS",
+        "action_count": 34,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-7.json"
+      }
+    },
+    "3-8": {
+      "name": "圈",
+      "internal_level_id": "circ",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-8.md",
+      "slot1_run": {
+        "actions": "ASASDDXDSSDWSWSWSWSWSTWWWDWWAAAAW",
+        "action_count": 33,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-8.json"
+      }
+    },
+    "3-9": {
+      "name": "链",
+      "internal_level_id": "link",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-9.md",
+      "slot1_run": {
+        "actions": "WWWWDDSSAASSAAAWDWDDDDDDSWTSSADDSSDDDWAWAAAAAASW",
+        "action_count": 48,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-9.json"
+      }
+    },
+    "3-10": {
+      "name": "网",
+      "internal_level_id": "net",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-10.md",
+      "slot1_run": {
+        "actions": "WWWAAWDXWAWASSSAWDWADDSSSSTTWWWWTSAAWDDDDSDWAAAASSSAWDWWAASDDDDSDWWSSSSS",
+        "action_count": 72,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-10.json"
+      }
+    },
+    "3-11": {
+      "name": "闭环",
+      "internal_level_id": "circle",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-11.md",
+      "slot1_run": {
+        "actions": "WWWWWWWWWWDDDDD",
+        "action_count": 15,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-11.json"
+      }
+    },
+    "3-12": {
+      "name": "纠正",
+      "internal_level_id": "rectify",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-12.md",
+      "slot1_run": {
+        "actions": "ADDDSASDSSAWSAWWWWAWA",
+        "action_count": 21,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-12.json"
+      }
+    },
+    "3-13": {
+      "name": "连体",
+      "internal_level_id": "connected",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-13.md",
+      "slot1_run": {
+        "actions": "SSWWWAAXWASSDSSWAWAWAAWWWWW",
+        "action_count": 27,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-13.json"
+      }
+    },
+    "3-14": {
+      "name": "逆转",
+      "internal_level_id": "reversed",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-14.md",
+      "slot1_run": {
+        "actions": "AAAWWXDWSSDDDDDASAWWWDDSDDWSAWWDSDWW",
+        "action_count": 36,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-14.json"
+      }
+    },
+    "3-15": {
+      "name": "自旋锁",
+      "internal_level_id": "spinlock",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-15.md",
+      "slot1_run": {
+        "actions": "AWWXWWWWDWWSSSDDDWAASAWWAAWAWWWDAAADDDDWWWAAASAASDDDDDDWWW",
+        "action_count": 58,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-15.json"
+      }
+    },
+    "3-16": {
+      "name": "U型锁",
+      "internal_level_id": "ulock",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-16.md",
+      "slot1_run": {
+        "actions": "WWAAAXWAWWWASSSWDWWWWWWWADSSAWDDSSSAASAAWWWWDSSDDWDWW",
+        "action_count": 53,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-16.json"
+      }
+    },
+    "3-17": {
+      "name": "死锁",
+      "internal_level_id": "deadlock1",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-17.md",
+      "slot1_run": {
+        "actions": "WXAWWWWWWADDSAWDSAWWASADSDDWAWWDSAAADAWWWWDWDDDWSAAASDDWDDDDDWWAWWAAA",
+        "action_count": 69,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-17.json"
+      }
+    },
+    "3-18": {
+      "name": "解锁",
+      "internal_level_id": "lockpick",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-18.md",
+      "slot1_run": {
+        "actions": "AAAAAAASSSSWWDWWWADXASASDSSAASAWSAAWDSDWAAAWWDASSDWAWDSSDDDDWDWASSAAAAAWWWDSSASDDDDSDWWDWASSAAAAAWWDSSDDDDDWWWASSDSAASAWW",
+        "action_count": 121,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-18.json"
+      }
+    },
+    "3-20": {
+      "name": "幽灵",
+      "internal_level_id": "phantom",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-20.md",
+      "slot1_run": {
+        "actions": "AASSSSSSWWWXWWWWWAWAWWDDWWAAAW",
+        "action_count": 30,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-20.json"
+      }
+    },
+    "3-19": {
+      "name": "撬锁",
+      "internal_level_id": "lockpick2",
+      "status": "attempted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-19.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-19.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WWSAWDDDDDWWDWXDWWDSSSWWAWWWDSSSSSWAAAAASDDWDWAAAWDWDSDSDWDW",
+        "checkpoint_time": 60,
+        "undo_count": 30,
+        "retry_count": 2,
+        "note": "第二次重试后59步造8,4四箱夹困；第60W72原地等待、63推开左箱到7,5，实际异奇偶双活人7,4/8,4；继续清柱。 已正常返回世界46,18；用户要求提交后暂停，未进入3-B。"
+      }
+    },
+    "3-21": {
+      "name": "束缚",
+      "internal_level_id": "imprison",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-21.md",
+      "slot1_run": {
+        "actions": "ASSWWWDXWWWDDDWDWDWDWSDAAWWWWWWADDDDSSDDDSSSSSSSSSSSS",
+        "action_count": 53,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-21.json"
+      }
+    },
+    "3-22": {
+      "name": "闪光",
+      "internal_level_id": "flash",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-22.md",
+      "slot1_run": {
+        "actions": "DSXSWWAWWWWWWWAAAWWAWWDWDWDWTAWDT",
+        "action_count": 33,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-22.json"
+      }
+    },
+    "3-23": {
+      "name": "安全区",
+      "internal_level_id": "shelter",
+      "status": "attempted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-23.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-23.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "",
+        "checkpoint_time": 0,
+        "undo_count": 26,
+        "retry_count": 1,
+        "note": "正常retry恢复初态后返回世界；3-24已观察解锁，继续教学后回访。"
+      }
+    },
+    "3-24": {
+      "name": "复生",
+      "internal_level_id": "rebirth",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-24.md",
+      "slot1_run": {
+        "actions": "WXADDDWWWWWWWWWWSSSWDSSAAAAAWDWWAWWAAWDAA",
+        "action_count": 41,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-24.json"
+      }
+    },
+    "3-25": {
+      "name": "幽闭",
+      "internal_level_id": "darklock",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-25.md",
+      "slot1_run": {
+        "actions": "AASWWWAXAASWAASSWWDDDDSSAWAWDTSDDWASAWWSAAATADWWWWWWDSASADDDSASDDDWWDWWW",
+        "action_count": 72,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-25.json"
+      }
+    },
+    "3-26": {
+      "name": "潜行",
+      "internal_level_id": "stealth",
+      "status": "attempted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-26.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-26.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "DDDWXWADASSSSDSAWSAAAAAAWWWWSDDSSASSSSSSWSWDDWWWW",
+        "checkpoint_time": 49,
+        "undo_count": 1,
+        "retry_count": 2,
+        "note": "已取key返回并完成混合接触实验，正常undo恢复双人后返回世界；3-27实际已解锁，先推进后续机制。"
+      }
+    },
+    "3-27": {
+      "name": "色散",
+      "internal_level_id": "dispersion",
+      "status": "attempted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-27.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-27.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "DDWAASSAXWWAWWDTDTDDDSSSDDAWDWWWTAAAAAAD",
+        "checkpoint_time": 36,
+        "undo_count": 0,
+        "retry_count": 0,
+        "note": "安全复活及棱镜冲突已实测；三线各只一活人，边角源棱镜仍不满足；返回世界查看后续解锁。"
+      }
+    },
+    "3-28": {
+      "name": "保护",
+      "internal_level_id": "protection",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-28.md",
+      "slot1_run": {
+        "actions": "WDDDDSXSWWWAWDDWWWWSSSWAADDSSSAAAWWSDDDWWWWWAAAASDDDWDSSSSSASDDWWWWWWWDDTWWWWWWWWWWW",
+        "action_count": 84,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-28.json"
+      }
+    },
+    "3-29": {
+      "name": "捕获",
+      "internal_level_id": "capture",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-29.md",
+      "slot1_run": {
+        "actions": "WSDDDWWWWWWAAAAAASSSWWWDDDDDSSSSDSSAAWAAWXSSSSSWAWADSAAWDDWAADDDWWWWAAAAASSSSDDDDSDWWWWDWAATAAA",
+        "action_count": 95,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-29.json"
+      }
+    },
+    "3-30": {
+      "name": "解答",
+      "internal_level_id": "answer",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-30.md",
+      "slot1_run": {
+        "actions": "SSSWWXWWWWWWAATSSSSAAWW",
+        "action_count": 23,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-30.json"
+      }
+    },
+    "3-31": {
+      "name": "压缩",
+      "internal_level_id": "compress",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-31.md",
+      "slot1_run": {
+        "actions": "DAAWAWWWWAWDDSDDDDWSAAWSAASXSDDWWDAAAAASDDSSASASSTASDDSSASASSWWWWWW",
+        "action_count": 67,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-31.json"
+      }
+    },
+    "3-32": {
+      "name": "多态",
+      "internal_level_id": "poly",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-32.md",
+      "slot1_run": {
+        "actions": "WWAADDDDWDWAASSSSDWDWAAASAWAAXWDWDWWADWDWWWSADDDDWSSDWWDTDWDSSSSSD",
+        "action_count": 66,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-32.json"
+      }
+    },
+    "3-33": {
+      "name": "蔽目",
+      "internal_level_id": "blindcorner",
+      "status": "attempted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-33.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-33.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SSSWWXWWWWWWAASSSSSAAWTSSSSSAAWW",
+        "checkpoint_time": 23,
+        "undo_count": 0,
+        "retry_count": 0,
+        "note": "不同箱叠加后角落1,7观察分线，两线分别占1,4/1,5仍不完成；保留失败证据并查看后续。"
+      }
+    },
+    "3-W": {
+      "name": "黑暗森林",
+      "internal_level_id": "darkforest",
+      "status": "observed_uncompleted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-W.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-W.json",
+      "note": "初态已保存，无关内方向输入；无fork、目标左刺另三面墙，未找到已验证存活构造。正常返回，组合可能性待查。"
+    },
+    "3-A": {
+      "name": "延伸",
+      "internal_level_id": "stretch",
+      "status": "completed_verified",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-A.md",
+      "slot1_run": {
+        "actions": "WWDDDDWWWAAASDDWDSSSASWXSSWWDDWSAAAADDDDSSAAAAAAAWW",
+        "action_count": 51,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-A.json"
+      }
+    },
+    "3-B": {
+      "name": "延展",
+      "internal_level_id": "extension",
+      "status": "observed_uncompleted",
+      "verified_on": "2026-09-24",
+      "solution_file": "solutions/3-B.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
+      "note": "初态已观察，无关内输入；箱链捕获候选尚未证可达，模型截断不证明无解。"
+    }
+  },
+  "last_observed_location": {
+    "scene": "3-0",
+    "level_id": "Chapter3",
+    "world": true,
+    "player_positions": [
+      [
+        46,
+        18
+      ]
+    ],
+    "time": 0,
+    "fork": 0,
+    "observed_on": "2026-09-25"
+  },
+  "update_rules": [
+    "未列出的关卡视为未知，不能视为未通关或已通关",
+    "只有出现可核实的完成证据才能标记 completed_verified",
+    "已找到的解法不自动视为最优解",
+    "新增或更改关卡状态时同步核对 verified_completed_count",
+    "后续失败不抹除历史已验证成功记录"
+  ]
+}

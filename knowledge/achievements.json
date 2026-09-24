@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-09-24",
+  "objective": "通过正常游戏操作，在 SaveSlot1 持续推进至全成就",
+  "steam_app_id": 3219580,
+  "catalog_source": "https://steamcommunity.com/stats/3219580/achievements/",
+  "catalog_total": 28,
+  "account_unlocked_count": 8,
+  "slot1_verified_earned_count": 8,
+  "verification_note": "官方公开列表用于确定成就范围，不能证明当前账户已解锁。账户历史成就和本轮 slot1 达成证据分开记录。隐藏条件未公开的条目保持未知，不编造条件。",
+  "achievements": [
+    {
+      "name": "Awaken",
+      "known_requirement": "通过序章",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter1-arrival.json",
+          "note": "slot1 实测通过序章9关与Chapter0，抵达第一章；账户成就此前已解锁，本条记录本轮重新达成条件"
+        }
+      ],
+      "api_name": "ACH_PASSCH0",
+      "name_zh": "苏醒",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-21T02:17:18+00:00"
+    },
+    {
+      "name": "Red",
+      "known_requirement": "使两个关卡相加",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter1-world.json",
+          "note": "大地图使用红色叉子正常分裂，两角色在[36,41]与[40,41]同时占据1-X与1-Y入口，DDWW回执input_locked。"
+        },
+        {
+          "file": "artifacts/slot1-playthrough/1-XY.json",
+          "note": "initial的UI明确显示1-X+1-Y、黎明+黄昏；新关卡id=template1、size=[17,8]，包含四个目标，证明实际使两个关卡相加。账户Red原已解锁，本证据记录slot1本轮重新达成条件，不计为新的账户解锁。"
+        }
+      ],
+      "api_name": "ACH_RED",
+      "name_zh": "红色",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-21T16:44:29+00:00"
+    },
+    {
+      "name": "Parallel",
+      "known_requirement": "通过第一章",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter1-world.json",
+          "note": "正常完成1-X+1-Y后沿上方桥到Chapter1[38,48]，UI提示前往上层，confirm后实际抵达scene2-0/Chapter2[82,8]并出现第二章开场对话；只读存档CurWorld=2、Counters.chapter_2_entered=1。账户此前已解锁Parallel，本证据记录slot1本轮完成第一章主线条件，不代表第一章东侧GOAL或全部回访内容完成。"
+        }
+      ],
+      "api_name": "ACH_PASSCH1",
+      "name_zh": "平行",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-21T16:44:51+00:00"
+    },
+    {
+      "name": "Breakdown",
+      "known_requirement": "触发冲突，产生新的世界线",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/2-1.json",
+          "note": "events[16]单世界线中两角色分别在[3,3]与[4,4]，蓝箱[3,4]；向上一步后events[18]实测产生axis=[0,0,0]与[1,0,0]两条世界线，箱子分别在[3,5]与[2,4]，每线仅对应推箱者active。满足冲突产生新世界线条件；瞬时冲突结束后的conflicting=false不否定已分支事实。账户此前已解锁Breakdown，本条仅记录slot1重新达成条件。"
+        }
+      ],
+      "api_name": "ACH_CONFLICTION",
+      "name_zh": "破坏",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-21T16:51:40+00:00"
+    },
+    {
+      "name": "Prison",
+      "known_requirement": "触发装箱",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/2-13.json",
+          "note": "2-13 events[23]：正常输入A后，time57，玩家58在[5,1]仍active，contained=1、container=54（箱子），游戏对话同时确认被关进箱子。由实际装箱状态核验本轮满足ACH_BOXING条件。账户该成就在本轮之前已解锁，最新缓存仍5/28，本次不计为新账户解锁；后续撤销不改变已经观测到该机制触发的事实。"
+        }
+      ],
+      "api_name": "ACH_BOXING",
+      "name_zh": "禁锢",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-22T12:30:15+00:00"
+    },
+    {
+      "name": "Interference",
+      "known_requirement": "通过第二章",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter3-world.json",
+          "note": "2026-09-24正常由第二章西端前往上层进入Chapter3；slot1 CurWorld=3、chapter_3_entered=1。账户缓存解锁时间早于本次阶段，不能宣称此次首次新增账户成就。"
+        }
+      ],
+      "api_name": "ACH_PASSCH2",
+      "name_zh": "干涉",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-23T06:01:35+00:00"
+    },
+    {
+      "name": "Lift",
+      "known_requirement": "触发叠加",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/3-1.json",
+          "note": "2026-09-24本轮重访3-1，WWWWWWAWW第9步两箱同时进入1,7，event33箱54 height2/contained1/container53；event35整叠到0,7，随后通关。实际满足触发叠加。账户于2026-09-23已解锁，本条不是新的账户解锁。"
+        }
+      ],
+      "api_name": "ACH_STACK",
+      "name_zh": "抬升",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-23T06:02:59+00:00"
+    },
+    {
+      "name": "Blue",
+      "known_requirement": "使两个关卡相乘",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/2-XY.json",
+          "note": "正常世界蓝箱冲突生成两线；将axis1预先滑过2-Y，axis0在time244进入2-X，与axis1历史位置27,6同刻对齐。实际进入template2，UI标题2-X×2-Y、拒绝×逝水；账户缓存随后首次见Blue解锁。"
+        }
+      ],
+      "api_name": "ACH_BLUE",
+      "name_zh": "蓝色",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": "2026-09-23T01:08:28+00:00"
+    },
+    {
+      "name": "Creation",
+      "known_requirement": "触发箱子分裂",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "mechanism_observed_achievement_unconfirmed",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/3-30.json",
+          "note": "第12W两种颜色箱子同格叠加，第13A推至目标2,7后观测成两条世界线，分别保留Color1与Color3箱，两支都保留双活人；随后23输入通关。属于可能相关机制证据，2026-09-24T13:39:12.045127+00:00本地账户缓存仍ACH_CREATION=false、8/28，不宣称触发条件已完整满足。"
+        }
+      ],
+      "api_name": "ACH_CREATION",
+      "name_zh": "创造",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null,
+      "verification_note": "物体叠加被观测后分线的现象已实测，仍须实际解锁证据或进一步正常操作证明Creation完整条件；当前不计入已确认成就。"
+    },
+    {
+      "name": "Green",
+      "known_requirement": "使两个关卡叠加",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_GREEN",
+      "name_zh": "绿色",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Observation",
+      "known_requirement": "通过第三章",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_PASSCH3",
+      "name_zh": "观测",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Cat Box",
+      "known_requirement": "在同时杀死和拯救某人",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "mechanism_observed_achievement_unconfirmed",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/3-22.json",
+          "note": "events[9]和[14]：同一ghost76经棱镜照明分为axis0活人(active=true ghost0)与axis1死者(active=false ghost1)，均位于[4,6]；普通自动教学确认生死叠加被观测后发生时空断裂。符合公开条件的本轮机制证据，但2026-09-24T11:06:32Z账户缓存仍locked，不计作已确认账户解锁。"
+        },
+        {
+          "file": "artifacts/slot1-playthrough/3-24.json",
+          "note": "event19最后A同时令原推者2,11死亡、ghost1,2在生分支复活，关卡完成。账户缓存随后只读检查仍ACH_CAT=false、pending0、cache mtime2026-09-24T11:45:45.333372+00:00、账户8/28。公开描述对应的机制现象已观察，但实际触发条件是否完整满足未确认，不计为已获得。"
+        },
+        {
+          "file": "artifacts/slot1-playthrough/3-28.json",
+          "note": "3-28第63步载ghost箱7,1目标观测成箱内活人/死者两线，3-29第90步再次观察同类现象；阶段20260924T141902650637Z缓存仍ACH_CAT=false、8/28，只作机制候选证据。"
+        }
+      ],
+      "api_name": "ACH_CAT",
+      "name_zh": "猫箱",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null,
+      "verification_note": "3-22/24/28/29均有生死观察机制证据；阶段账户仍locked，不计作已获得，须正常操作进一步核验完整条件。"
+    },
+    {
+      "name": "Burst",
+      "known_requirement": "触发墙的分裂",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_BURST",
+      "name_zh": "爆破",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Starry",
+      "known_requirement": "获得9颗星星",
+      "verified_progress": {
+        "stars": 2,
+        "required_stars": 9,
+        "evidence_file": "artifacts/slot1-playthrough/2-16.json",
+        "evidence_section": "revisit_collection.save_check_after_return",
+        "note": "4号星星已实测拾取并持久化，尚未达到成就条件。"
+      },
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_STARRY",
+      "name_zh": "星光",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Emergence",
+      "known_requirement": "通过第四章",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_PASSCH4",
+      "name_zh": "演生",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Yellow",
+      "known_requirement": "分裂一个关卡",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_YELLOW",
+      "name_zh": "黄色",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Cyan",
+      "known_requirement": "覆盖一个关卡",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_CYAN",
+      "name_zh": "青色",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Link",
+      "known_requirement": "发现量子纠缠的性质",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_CHAIN",
+      "name_zh": "链接",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Travel",
+      "known_requirement": "抵达平行世界",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_TRAVEL",
+      "name_zh": "旅行",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Entanglement",
+      "known_requirement": "通过第五章",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_PASSCH5",
+      "name_zh": "纠缠",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Overflow",
+      "known_requirement": "通过第六章",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_PASSCH6",
+      "name_zh": "溢流",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Loop",
+      "known_requirement": "抵达世界的终点（你永远做不到）",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_LOOP",
+      "name_zh": "循环",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Vector",
+      "known_requirement": "发现一个新的维度",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_VECTOR",
+      "name_zh": "向量",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Cone",
+      "known_requirement": "让世界上升",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_CONE",
+      "name_zh": "光锥",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "New Light",
+      "known_requirement": "见证结局？",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_End1",
+      "name_zh": "新的光芒",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Good Night",
+      "known_requirement": "见证真正的结局",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_End2",
+      "name_zh": "晚安",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "Magic",
+      "known_requirement": "获得所有的星星",
+      "verified_progress": {
+        "stars": 2,
+        "required_stars": null,
+        "evidence_file": "knowledge/collectibles.json",
+        "note": "当前确认2颗；总数尚未核实，不以Starry的9颗条件代替全部星星要求。"
+      },
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_MAGIC",
+      "name_zh": "魔法",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    },
+    {
+      "name": "World and Lines",
+      "known_requirement": "完成所有的关卡",
+      "account_status": "locked_in_local_cache",
+      "slot1_status": "unverified",
+      "evidence": [],
+      "api_name": "ACH_100",
+      "name_zh": "世界与线",
+      "requirement_source": "Steam local official achievement schema",
+      "account_unlock_time_utc": null
+    }
+  ],
+  "first_account_observation": {
+    "evidence_file": "artifacts/achievements/20260922T134633078475Z.json",
+    "unlocked_count": 5,
+    "note": "首次读取账户缓存发生于 slot1 开始游玩之后；不能作为零时刻基线。"
+  },
+  "latest_account_evidence": "artifacts/achievements/20260924T152250621842Z.json",
+  "account_status_source": "Steam local binary VDF cache, read-only; server synchronization not independently verified",
+  "account_observed_at_utc": "2026-09-24T15:22:50.621842+00:00"
+}
