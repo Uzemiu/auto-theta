@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-09-25",
+  "updated_on": "2026-09-27",
   "save_management_file": "save-management.md",
   "active_playthrough": {
     "id": "slot1-from-start-2026-09-22",
@@ -98,21 +98,27 @@
       "3-30",
       "3-31",
       "3-32",
-      "3-A"
+      "3-A",
+      "3-23",
+      "3-33"
     ],
     "last_observed_location": {
-      "scene": "3-0",
-      "level_id": "Chapter3",
-      "world": true,
+      "scene": "Template3",
+      "level_id": "distribute",
+      "world": false,
       "player_positions": [
         [
-          46,
-          18
+          7,
+          3
+        ],
+        [
+          8,
+          4
         ]
       ],
-      "time": 0,
+      "time": 59,
       "fork": 0,
-      "observed_on": "2026-09-25"
+      "observed_on": "2026-09-27"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -129,35 +135,40 @@
         "note": "北侧电梯进章，未完成东侧世界GOAL；不增加普通关卡数量"
       }
     ],
-    "paused_at_utc": "2026-09-24T16:24:14.111321+00:00",
-    "pause_reason": "用户要求先提交文件，然后暂停子agent；已停止游戏输入及所有搜索。",
+    "paused_at_utc": "2026-09-26T17:22:34.771400+00:00",
+    "pause_reason": "用户要求先提交文件然后暂停子agent；已停止全部游戏输入与模型搜索。",
     "pause_checkpoint": {
       "location": {
-        "scene": "3-0",
-        "level_id": "Chapter3",
-        "world": true,
+        "scene": "Template3",
+        "level_id": "distribute",
+        "world": false,
         "player_positions": [
           [
-            46,
-            18
+            7,
+            3
+          ],
+          [
+            8,
+            4
           ]
         ],
-        "time": 0,
+        "time": 59,
         "fork": 0,
-        "observed_on": "2026-09-25"
+        "observed_on": "2026-09-27"
       },
-      "last_attempted_level": "3-19",
-      "last_attempted_time": 60,
+      "last_attempted_level": "3-34",
+      "last_attempted_time": 59,
       "completed": false,
-      "evidence_file": "../artifacts/slot1-playthrough/3-19.json",
-      "world_evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json"
+      "evidence_file": "../artifacts/slot1-playthrough/3-34.json",
+      "action_count": 52
     },
-    "resumed_at_utc": "2026-09-24T03:56:37.952001+00:00",
+    "resumed_at_utc": "2026-09-26T16:36:40.665349+00:00",
     "notes": [
       "2026-09-24子agent正常新增2-B/2-D/2-C三关，61关2星，西端出口通过第二章进入第三章。2-A/G/P/Q仍未解，本阶段禁提示。",
       "2026-09-24第三章子agent完成3-1至3-10，累计71关2星，Lift本轮条件已验证；无主动提示。最新世界56,5，3-11待进入。",
       "2026-09-24第三章中段完成3-11..3-18及3-20共9关，累计80关2星。3-19实际尝试未完成，见solutions/3-19.md；root同意暂缓回访。无提示，当前世界35,18。",
-      "2026-09-24第三章后段新增3-21/22/24/25共4关，累计84关2星；3-23/26/27尝试未解。3-28已进入初态待接续；本阶段无提示，完成阶段审计84/84且issues=[]。"
+      "2026-09-24第三章后段新增3-21/22/24/25共4关，累计84关2星；3-23/26/27尝试未解。3-28已进入初态待接续；本阶段无提示，完成阶段审计84/84且issues=[]。",
+      "2026-09-27恢复slot1，子agent正常通关3-23安全区，46输入，本次0撤销/0重试；累计91关2星，M081双棱镜链安全观测。无提示。"
     ]
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
@@ -169,7 +180,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 90,
+  "verified_completed_count": 92,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -1300,17 +1311,14 @@
     "3-23": {
       "name": "安全区",
       "internal_level_id": "shelter",
-      "status": "attempted",
-      "verified_on": "2026-09-24",
+      "status": "completed_verified",
+      "verified_on": "2026-09-27",
       "solution_file": "solutions/3-23.md",
-      "evidence_file": "../artifacts/slot1-playthrough/3-23.json",
-      "slot1_attempt": {
-        "completed": false,
-        "checkpoint_actions": "",
-        "checkpoint_time": 0,
-        "undo_count": 26,
-        "retry_count": 1,
-        "note": "正常retry恢复初态后返回世界；3-24已观察解锁，继续教学后回访。"
+      "slot1_run": {
+        "actions": "SASAAAAAAAWWWWDWDWDWWWAWAAASDWWWWWWTDWDDDDDDDW",
+        "action_count": 46,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-23.json"
       }
     },
     "3-24": {
@@ -1439,17 +1447,14 @@
     "3-33": {
       "name": "蔽目",
       "internal_level_id": "blindcorner",
-      "status": "attempted",
-      "verified_on": "2026-09-24",
+      "status": "completed_verified",
+      "verified_on": "2026-09-27",
       "solution_file": "solutions/3-33.md",
-      "evidence_file": "../artifacts/slot1-playthrough/3-33.json",
-      "slot1_attempt": {
-        "completed": false,
-        "checkpoint_actions": "SSSWWXWWWWWWAASSSSSAAWTSSSSSAAWW",
-        "checkpoint_time": 23,
-        "undo_count": 0,
-        "retry_count": 0,
-        "note": "不同箱叠加后角落1,7观察分线，两线分别占1,4/1,5仍不完成；保留失败证据并查看后续。"
+      "slot1_run": {
+        "actions": "SSSWWXWWWWWWWSAASAWWWWWDSDSDAAAADSSSSAAWTDSSSSAAWWTAAAAATT",
+        "action_count": 58,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-33.json"
       }
     },
     "3-W": {
@@ -1477,26 +1482,54 @@
     "3-B": {
       "name": "延展",
       "internal_level_id": "extension",
-      "status": "observed_uncompleted",
-      "verified_on": "2026-09-24",
+      "status": "attempted",
+      "verified_on": "2026-09-27",
       "solution_file": "solutions/3-B.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
-      "note": "初态已观察，无关内输入；箱链捕获候选尚未证可达，模型截断不证明无解。"
+      "note": "初态已观察，无关内输入；箱链捕获候选尚未证可达，模型截断不证明无解。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WWDDDDDWWWWWWWSSWWDDSSADWWWWSS",
+        "checkpoint_time": 30,
+        "undo_count": 0,
+        "retry_count": 0,
+        "note": "首次实际抽三箱到第四列下房，角色4,5 fork1；尚未完成"
+      }
+    },
+    "3-34": {
+      "name": "分配",
+      "internal_level_id": "distribute",
+      "status": "attempted",
+      "verified_on": "2026-09-27",
+      "solution_file": "solutions/3-34.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-34.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "DDDDDWDWSAAAWDASAXDSASSWDDDDWDDAWSAASAAWDDDASDDDSDWW",
+        "checkpoint_time": 59,
+        "undo_count": 0,
+        "retry_count": 0,
+        "note": "52输入构成7,4三层叠加；用户要求提交后暂停，未执行后续装载候选。"
+      }
     }
   },
   "last_observed_location": {
-    "scene": "3-0",
-    "level_id": "Chapter3",
-    "world": true,
+    "scene": "Template3",
+    "level_id": "distribute",
+    "world": false,
     "player_positions": [
       [
-        46,
-        18
+        7,
+        3
+      ],
+      [
+        8,
+        4
       ]
     ],
-    "time": 0,
+    "time": 59,
     "fork": 0,
-    "observed_on": "2026-09-25"
+    "observed_on": "2026-09-27"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
