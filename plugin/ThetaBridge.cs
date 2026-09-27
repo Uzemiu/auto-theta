@@ -16,7 +16,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[BepInPlugin("local.theta.agent", "Theta Agent Bridge", "0.3.0")]
+[BepInPlugin("local.theta.agent", "Theta Agent Bridge", "0.3.1")]
 public sealed class ThetaBridge : BaseUnityPlugin
 {
     const int MaxRequest = 65536;
@@ -106,9 +106,11 @@ public sealed class ThetaBridge : BaseUnityPlugin
                             JObject req = JObject.Parse(Encoding.UTF8.GetString(bytes.ToArray()));
                             if ((string)req["token"] != token) response = Failure("unauthorized", "Invalid bridge token");
                             else {
-                                Job job = new Job { Request = req, Client = client };
+                                bool isBatch = (string)req["method"] == "batch";
+                                Job job = new Job { Request = req, Client = client,
+                                    Deadline = DateTime.UtcNow.AddSeconds(isBatch ? 45 : 15) };
                                 lock (queue) queue.Enqueue(job);
-                                if (job.Done.WaitOne(16000)) response = job.Response;
+                                if (job.Done.WaitOne(isBatch ? 46000 : 16000)) response = job.Response;
                                 else {
                                     job.Cancelled = true;
                                     response = Failure("timeout", "Game did not respond. Inspect state before retrying an action.");
@@ -151,7 +153,7 @@ public sealed class ThetaBridge : BaseUnityPlugin
         bool action = false;
         try {
             switch (method) {
-                case "ping": result = new JObject { ["version"] = "0.3.0", ["game"] = Application.productName,
+                case "ping": result = new JObject { ["version"] = "0.3.1", ["game"] = Application.productName,
                     ["unity"] = Application.unityVersion, ["pid"] = System.Diagnostics.Process.GetCurrentProcess().Id,
                     ["scene"] = SceneManager.GetActiveScene().name, ["save_path"] = Application.persistentDataPath }; break;
                 case "state": result = State((bool?)args["include_map"] ?? true); break;
@@ -239,8 +241,8 @@ public sealed class ThetaBridge : BaseUnityPlugin
         BatchRun run = new BatchRun();
         try {
             JArray actions = args["actions"] as JArray;
-            if (actions == null || actions.Count < 1 || actions.Count > 20)
-                throw new ArgumentException("actions must contain 1..20 action names");
+            if (actions == null || actions.Count < 1 || actions.Count > 50)
+                throw new ArgumentException("actions must contain 1..50 action names");
             run.Actions = new string[actions.Count];
             // Validate the entire sequence before scheduling any input.
             for (int i = 0; i < actions.Count; i++) {
@@ -314,7 +316,7 @@ public sealed class ThetaBridge : BaseUnityPlugin
 
     static string BatchStop(Job job, Level original, int sceneHandle, string levelId, bool waiting) {
         if (job.Cancelled) return "cancelled";
-        // Return partial progress before the transport's 16-second response deadline.
+        // Return partial progress before the batch transport's 46-second response deadline.
         if (DateTime.UtcNow >= job.Deadline.AddSeconds(-2)) return "time_budget";
         try {
             Socket socket = job.Client.Client;

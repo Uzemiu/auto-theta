@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from theta import Bridge, BridgeError, MCPServer, ROOT, TOOLS, call_tool, main
+from theta import Bridge, BridgeError, MCPServer, ROOT, TOOLS, call_tool, main, compact_observation
 
 
 class FakeBridge:
@@ -109,10 +109,72 @@ class ProtocolTests(unittest.TestCase):
     def test_observe_keeps_full_information(self):
         full = {"scene": "puzzle", "ui": {"texts": ["dialog"]}, "level": {
             "id": "fork", "timelines": [{"entities": [{"properties": {"split": 2}}], "tiles": [[1, 2]]}]}}
-        with patch.object(self.bridge, "call", return_value=full):
-            result = call_tool(self.bridge, "theta_observe", {})
+        with patch.object(self.bridge, "call", return_value=full) as send:
+            result = call_tool(self.bridge, "theta_observe", {"full": True})
+        send.assert_called_once_with("state")
         self.assertEqual(result["structuredContent"], full)
         self.assertEqual(json.loads(result["content"][0]["text"]), full)
+
+    def test_compact_observe_preserves_mechanics_and_does_not_mutate_source(self):
+        entity = {"id": 1, "type": "PLAYER", "class": "Player", "pos": [2, 3],
+                  "active": True, "floor": False, "pushable": True, "blockable": False,
+                  "anim_completed": False, "properties": {"face": 2, "container": -1,
+                  "height": 2, "split": 0, "unknown": False}, "details": {"Color": 3}}
+        full = {"frame": 12, "screen": [1280, 720], "ui": {"texts": ["dialog"]},
+                "level": {"instructions": "WASD", "dialog": True, "timelines": [
+                    {"id": 5, "entities": [entity, {"id": 2, "active": False, "properties": {}, "details": {}}],
+                     "tiles": [{"class": "Floor", "pos": [0, 0], "floor": True, "details": {}}]}]}}
+        original = json.dumps(full)
+        with patch.object(self.bridge, "call", return_value=full):
+            result = call_tool(self.bridge, "theta_observe", {})["structuredContent"]
+        self.assertEqual(json.dumps(full), original)
+        self.assertNotIn("frame", result)
+        self.assertNotIn("screen", result)
+        self.assertNotIn("instructions", result["level"])
+        self.assertEqual(result["ui"], full["ui"])
+        timeline = result["level"]["timelines"][0]
+        compact = timeline["entities"][0]
+        self.assertEqual(compact, entity)
+        self.assertEqual(result["defaults"]["entity"]["active"], True)
+        self.assertEqual(result["defaults"]["properties"]["container"], -1)
+        self.assertEqual(result["defaults"]["applies_to_classes"], ["Wall", "Floor"])
+        self.assertEqual(compact["details"], {"Color": 3})
+        self.assertTrue(compact["pushable"])
+        self.assertFalse(compact["anim_completed"])
+        self.assertFalse(timeline["entities"][1]["active"])
+        self.assertTrue(timeline["tiles"][0]["floor"])
+        self.assertNotIn("details", timeline["tiles"][0])
+        self.assertEqual(timeline["entities"][1], full["level"]["timelines"][0]["entities"][1])
+
+    def test_observe_only_compacts_exact_wall_and_floor_classes(self):
+        entities = [{"class": cls, "type": "SOLID", "active": True, "floor": False,
+                     "pushable": False, "properties": {"container": -1, "height": 1,
+                     "maskedoff": 2, "unknown": 0}, "details": {}}
+                    for cls in ("Wall", "Floor", "Box", "Player", "Key", "DynamicEntity", "SpecialWall", "Unknown")]
+        source = {"level": {"timelines": [{"entities": entities, "tiles": entities}]}}
+        result = compact_observation(source)["level"]["timelines"][0]
+        for collection in ("entities", "tiles"):
+            for original, actual in zip(entities, result[collection]):
+                with self.subTest(collection=collection, cls=original["class"]):
+                    if original["class"] in ("Wall", "Floor"):
+                        self.assertNotIn("active", actual)
+                        self.assertNotIn("details", actual)
+                        self.assertEqual(actual["properties"], {"maskedoff": 2, "unknown": 0})
+                    else:
+                        self.assertEqual(actual, original)
+
+    def test_compact_observe_without_level_or_map(self):
+        self.assertEqual(compact_observation({"scene": "title", "level": None}),
+                         {"scene": "title", "level": None})
+        with patch.object(self.bridge, "call", return_value={"level": {"timelines": [{"entities": []}]}}) as send:
+            result = call_tool(self.bridge, "theta_observe", {"include_map": False})["structuredContent"]
+        send.assert_called_once_with("state", include_map=False)
+        self.assertNotIn("tiles", result["level"]["timelines"][0])
+
+    def test_observe_cli_full_option(self):
+        with patch("theta.Bridge", return_value=self.bridge), patch("sys.stdout", new_callable=io.StringIO):
+            self.assertEqual(main(["observe", "--full", "--no-map"]), 0)
+        self.assertEqual(self.bridge.calls, [("state", {"include_map": False})])
 
     def test_receipt_without_level_or_players(self):
         with patch.object(self.bridge, "call", return_value={"scene": "NewTitle", "level": None}):
@@ -134,7 +196,7 @@ class ProtocolTests(unittest.TestCase):
 
     def test_batch_validates_entire_list_before_contacting_game(self):
         self.initialize()
-        for args in [{}, {"actions": []}, {"actions": ["left"] * 21}, {"actions": "left"},
+        for args in [{}, {"actions": []}, {"actions": ["left"] * 51}, {"actions": "left"},
                      {"actions": ["left", "invalid"]}, {"actions": ["left", 1]},
                      {"actions": [None]}, {"actions": [["left"]]}, {"actions": ["left"], "repeat": 3}]:
             with self.subTest(args=args):
@@ -143,14 +205,14 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual(self.bridge.calls, [])
 
     def test_batch_uses_one_game_request_and_small_result_at_limit(self):
-        actions = ["left", "undo"] * 10
-        native = {"ok": True, "scene": "test", "level_id": "puzzle", "requested": 20,
-                  "executed": 20, "remaining": 0, "stop_reason": "finished", "last_action": "undo",
+        actions = ["left", "undo"] * 25
+        native = {"ok": True, "scene": "test", "level_id": "puzzle", "requested": 50,
+                  "executed": 50, "remaining": 0, "stop_reason": "finished", "last_action": "undo",
                   "debug_history": ["x" * 10000] * 20}
         with patch.object(self.bridge, "call", return_value=native) as send:
             response = call_tool(self.bridge, "theta_batch", {"actions": actions})
         send.assert_called_once_with("batch", actions=actions)
-        self.assertEqual(response["structuredContent"]["executed"], 20)
+        self.assertEqual(response["structuredContent"]["executed"], 50)
         self.assertEqual(response["structuredContent"]["remaining"], 0)
         self.assertLess(len(json.dumps(response)), 1500)
         self.assertNotIn("debug_history", response["structuredContent"])
@@ -180,6 +242,19 @@ class ProtocolTests(unittest.TestCase):
             response = self.request("tools/call", {"name": "theta_batch", "arguments": {"actions": ["left", "right"]}})
         self.assertTrue(response["result"]["isError"])
         send.assert_called_once_with("batch", actions=["left", "right"])
+
+    def test_batch_transport_has_longer_response_budget(self):
+        bridge = Bridge()
+        for method, timeout in [("batch", 50), ("act", 20), ("ping", 20)]:
+            with self.subTest(method=method), patch.object(bridge, "config", return_value={
+                    "host": "127.0.0.1", "port": 17643, "token": "test"}), \
+                    patch("theta.socket.create_connection") as connect:
+                connection = connect.return_value.__enter__.return_value
+                stream = connection.makefile.return_value.__enter__.return_value
+                stream.readline.return_value = b'{"ok":true,"result":{}}\n'
+                self.assertEqual(bridge.call(method), {})
+                connection.settimeout.assert_called_once_with(timeout)
+                connection.sendall.assert_called_once()
 
     def test_batch_cli_order_and_receipt(self):
         native = {"ok": True, "scene": "test", "level_id": "puzzle", "requested": 2,

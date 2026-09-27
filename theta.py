@@ -17,6 +17,13 @@ CONFIG = ROOT / "theta.local.json"
 ACTIONS = ["up", "down", "left", "right", "split", "undo", "retry", "tab", "shift", "confirm", "pause", "grid", "preview", "redo"]
 PROTOCOLS = ["2024-11-05", "2025-03-26", "2025-06-18", "2025-11-25"]
 MAX_RESPONSE = 64 * 1024 * 1024
+OBSERVE_DEFAULTS = {
+    "applies_to_classes": ["Wall", "Floor"],
+    "entity": {"active": True, "floor": False, "pushable": False, "blockable": False,
+               "anim_completed": True, "properties": {}, "details": {}},
+    "properties": {"face": 0, "maskedoff": 0, "contained": 0, "container": -1, "height": 1,
+                   "movingdir": 0, "movingsrc": -1, "movingsrcext": 0},
+}
 
 
 class BridgeError(Exception):
@@ -54,7 +61,7 @@ class Bridge:
         message = {"token": conf["token"], "method": method, "params": params}
         try:
             with socket.create_connection((conf["host"], conf["port"]), timeout=3) as connection:
-                connection.settimeout(20)
+                connection.settimeout(50 if method == "batch" else 20)
                 connection.sendall((json.dumps(message, ensure_ascii=False) + "\n").encode("utf-8"))
                 with connection.makefile("rb") as stream:
                     line = stream.readline(MAX_RESPONSE + 1)
@@ -122,12 +129,13 @@ def tool(name: str, description: str, properties: dict | None = None,
 TOOLS = [
     tool("status", "Check if the authenticated local Unity game bridge is connected."),
     tool("launch", "Launch through Steam -applaunch (avoids Steam URL launch-parameter confirmation), in a visible 1280x720 window. Wait for the bridge. Does not start a save.", read_only=False),
-    tool("observe", "Read current level, all timelines, entity positions/properties, goals, locks and visible UI. Coordinates are game grid [x,y]; up increases y.",
-         {"include_map": {"type": "boolean", "default": True}}),
+    tool("observe", "Read current level, all timelines, entities, goals, locks and visible UI. Only exact classes Wall and Floor omit repeated default fields, defined once in defaults; absent properties/details there mean empty objects before applying property defaults. All other entities including Box and Player retain every field, even default values and empty objects. Omits frame, screen size and instruction history. Set full=true for the original unabridged state. Set include_map=false to omit terrain already observed. Coordinates are grid [x,y]; up increases y.",
+         {"include_map": {"type": "boolean", "default": True},
+          "full": {"type": "boolean", "default": False}}),
     tool("act", "Dispatch one normal game input and return a compact receipt with status flags and up to 8 active players in the current timeline. No full state, entity lists or UI. Use theta_observe for details. Dispatch does not guarantee movement. May advance/save gameplay. Never automatically retry a timed-out action.",
          {"action": {"type": "string", "enum": ACTIONS}}, ["action"], False),
-    tool("batch", "Execute 1..20 actions sequentially inside the game with one round trip, waiting for each animation. Requires an initialized, unpaused level. Stops on level change, dialog, input lock, completion, pause, conflict, looping, disconnect or timeout. Returns only executed/remaining counts, stop_reason and compact final state. Executed counts dispatched inputs, not successful moves. Never automatically retry a partial or timed-out batch. Use theta_observe for details.",
-         {"actions": {"type": "array", "items": {"type": "string", "enum": ACTIONS}, "minItems": 1, "maxItems": 20}}, ["actions"], False),
+    tool("batch", "Execute 1..50 actions sequentially inside the game with one round trip, waiting for each animation. Requires an initialized, unpaused level. Stops on level change, dialog, input lock, completion, pause, conflict, looping, disconnect or timeout. Returns only executed/remaining counts, stop_reason and compact final state. Executed counts dispatched inputs, not successful moves. Never automatically retry a partial or timed-out batch. Use theta_observe for details.",
+         {"actions": {"type": "array", "items": {"type": "string", "enum": ACTIONS}, "minItems": 1, "maxItems": 50}}, ["actions"], False),
     tool("ui", "List active menu buttons (ephemeral instance IDs), labels and text. Inspect before clicking."),
     tool("click", "Click an active, interactable menu button returned by theta_ui; return only a compact receipt, not full state. Use theta_observe or theta_ui to inspect details. Buttons can start/continue/delete saves; inspect the label and choose deliberately.",
          {"id": {"type": "integer"}}, ["id"], False),
@@ -200,6 +208,32 @@ def compact_receipt(result: dict, command: str, arguments: dict) -> dict:
     return receipt
 
 
+def compact_observation(state: dict) -> dict:
+    """Factor defaults out of Wall/Floor only; preserve every other entity verbatim."""
+    import copy
+    result = copy.deepcopy(state)
+    result.pop("frame", None)
+    result.pop("screen", None)
+    level = result.get("level")
+    if isinstance(level, dict):
+        level.pop("instructions", None)
+        for timeline in level.get("timelines", []):
+            for collection in ("entities", "tiles"):
+                for entity in timeline.get(collection, []):
+                    if not isinstance(entity, dict) or entity.get("class") not in OBSERVE_DEFAULTS["applies_to_classes"]:
+                        continue
+                    properties = entity.get("properties")
+                    if isinstance(properties, dict):
+                        for key, default in OBSERVE_DEFAULTS["properties"].items():
+                            if key in properties and type(properties[key]) is type(default) and properties[key] == default:
+                                del properties[key]
+                    for key, default in OBSERVE_DEFAULTS["entity"].items():
+                        if key in entity and type(entity[key]) is type(default) and entity[key] == default:
+                            del entity[key]
+        result["defaults"] = copy.deepcopy(OBSERVE_DEFAULTS)
+    return result
+
+
 def call_tool(bridge: Bridge, name: str, arguments: dict) -> dict:
     spec = next((item for item in TOOLS if item["name"] == name), None)
     if spec is None:
@@ -210,6 +244,10 @@ def call_tool(bridge: Bridge, name: str, arguments: dict) -> dict:
         result = bridge.status()
     elif command == "launch":
         result = bridge.launch()
+    elif command == "observe":
+        result = bridge.call("state", **{k: v for k, v in arguments.items() if k != "full"})
+        if not arguments.get("full", False):
+            result = compact_observation(result)
     else:
         result = bridge.call("state" if command == "observe" else command, **arguments)
     if command in ("act", "click", "wait", "batch"):
@@ -250,8 +288,8 @@ class MCPServer:
             version = params["protocolVersion"]
             result = {"protocolVersion": version if version in PROTOCOLS else PROTOCOLS[-1],
                       "capabilities": {"tools": {"listChanged": False}},
-                      "serverInfo": {"name": "theta-game", "version": "0.3.0"},
-                      "instructions": "Only theta_observe returns full game state. act/batch/click/wait return compact receipts; ui returns only controls/text; screenshot returns only the image. Use batch for known routes of up to 20 actions; it stops early on interruptions. Check executed and stop_reason; do not blindly resend the original sequence. Use observe when detailed state is needed. Dispatch does not guarantee movement. Do not retry timed-out actions without observing. Normal game autosave applies."}
+                      "serverInfo": {"name": "theta-game", "version": "0.3.1"},
+                      "instructions": "theta_observe factors repeated defaults out of Wall/Floor only; all other entities keep every field. Defaults apply only to classes listed in defaults.applies_to_classes. Pass full=true for original fields. act/batch/click/wait return compact receipts; ui returns only controls/text; screenshot returns only the image. Use batch for known routes of up to 50 actions; it stops early on interruptions. Check executed and stop_reason; do not blindly resend the original sequence. Use observe when detailed state is needed. Dispatch does not guarantee movement. Do not retry timed-out actions without observing. Normal game autosave applies."}
         elif method == "ping":
             result = {}
         elif not self.initialized:
@@ -291,6 +329,7 @@ def main(argv: list[str] | None = None) -> int:
         commands.add_parser(name)
     observe = commands.add_parser("observe", aliases=["state"])
     observe.add_argument("--no-map", action="store_true")
+    observe.add_argument("--full", action="store_true", help="Return original state without field compaction")
     act = commands.add_parser("act")
     act.add_argument("action", choices=ACTIONS)
     batch = commands.add_parser("batch")
@@ -310,7 +349,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         command = "observe" if args.command == "state" else args.command
         params: dict[str, Any] = {}
-        if command == "observe": params = {"include_map": not args.no_map}
+        if command == "observe": params = {"include_map": not args.no_map, "full": args.full}
         elif command == "act": params = {"action": args.action}
         elif command == "batch": params = {"actions": args.actions}
         elif command == "click": params = {"id": args.id}
