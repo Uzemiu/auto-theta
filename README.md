@@ -1,206 +1,249 @@
-# Theta 游戏 MCP / CLI
+# auto-theta
 
-为本机《茜塔和世界线悖论》（Theta and Paralldox on Worldlines）提供实际游戏状态读取、原生输入、菜单操作和画面截图。
+A local MCP server and CLI for AI agents to observe and play **Theta and Paralldox on Worldlines**, with a portable Windows installer.
 
-适用于 Windows x64、Steam 版游戏和 Python 3.10+。Python 客户端只用标准库，无需 pip/npm。下载或克隆本项目到你选择的目录，关闭游戏后执行：
+为《茜塔和世界线悖论》提供游戏状态读取、原生输入、菜单操作和截图。AI 可以通过 MCP 观察局面并执行操作，也可以通过 CLI 使用相同接口。
+
+- 读取关卡、全部世界线、实体属性、地形和 UI。
+- 执行单步动作，或一次提交最多 **50 步**动作序列。
+- 默认精简 Wall/Floor 的重复属性，其他实体完整保留；支持获取原始完整状态。
+- 自动发现 Python 和 Steam 游戏目录，按安装位置生成 MCP 配置。
+- 保留游玩知识库与实验记录，方便研究和复现。
+
+## 环境要求
+
+- Windows x64、Windows PowerShell 5.1。
+- 已通过 Steam 安装游戏（App ID `3219580`）。
+- Python **3.10+**。客户端仅使用标准库，无需 pip/npm；安装器不会自动安装 Python。
+- 首次安装需要联网下载 BepInEx 和 C# 编译器。
+
+当前适配 Unity Mono 版本，已验证游戏 **1.1.0 / Unity 2022.3.34f1**。游戏更新后可能需要重新编译或调整插件。MCP 使用本机 stdio，运行游戏的电脑也需要运行 MCP 服务。
+
+## 快速开始
+
+### 1. 下载项目
+
+在你希望存放项目的目录执行：
+
+```powershell
+git clone https://github.com/Uzemiu/auto-theta.git
+cd auto-theta
+```
+
+也可以从 GitHub 下载 ZIP 并解压。编译依赖会保存在项目目录；如果希望避开 C 盘，将项目放在其他盘即可。
+
+### 2. 安装插件并生成配置
+
+先关闭游戏，再执行：
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
-安装器自动寻找 Python 和 Steam App 3219580，支持其他盘上的 Steam 库；下载并校验编译依赖，构建插件并安装到实际游戏目录。依赖保存在项目的 `.deps`，临时文件在 `.runtime/temp`，不会安装全局 Python 包或改动 PATH。想让新增依赖避开 C 盘，就把项目放在其他盘；本次开发验证仍全部使用原有非 C 盘目录。
+安装器自动查找 Python 和 Steam 的游戏安装位置，支持多个磁盘上的 Steam 库；下载并校验依赖、编译插件，随后生成：
 
-安装完成后，将生成的 `.runtime/mcp.json` 中 `theta_game` 配置复制到你的 MCP 客户端。Codex 用户可用 `-ConfigureCodex` 同时生成项目配置。配置中的绝对路径由安装器自动填写，无需修改源码；项目或 Python 搬家后重新生成即可。
+| 文件 | 用途 |
+| --- | --- |
+| `.runtime/mcp.json` | 通用 MCP 客户端配置 |
+| `.runtime/codex-mcp.toml` | Codex MCP 配置片段 |
+| `.runtime/python-path.txt` | CLI 使用的 Python 路径 |
+| `theta.local.json` | 本机游戏路径、端口和连接令牌 |
 
-`knowledge` 和 `scratch` 保留为实验记录，不参与安装。
+这些本机配置均被 Git 忽略。安装器不修改系统 PATH，也不安装全局 Python 包。
 
-## 立即使用
+若自动发现失败，可以指定位置。将以下占位符替换为实际路径：
 
-在本项目目录执行：
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 `
+  -Python '<python.exe完整路径>' `
+  -GamePath '<游戏安装目录>'
+```
+
+### 3. 接入 MCP
+
+**其他本地 MCP 客户端：** 将 `.runtime/mcp.json` 中的 `theta_game` 条目合并到客户端的 `mcpServers` 配置，然后重新连接服务。生成的配置使用实际绝对路径，不依赖客户端的工作目录。`mcp.example.json` 是格式示例，不能直接当作已安装配置使用。
+
+**Codex：** 安装时加 `-ConfigureCodex`，或在安装后执行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ConfigureOnly -ConfigureCodex
+```
+
+该命令会创建项目的 `.codex/config.toml`；若已有文件仅包含 `theta_game` 配置，会先保留首次备份再更新。若包含其他设置，则拒绝覆盖：省略 `-ConfigureCodex` 生成配置片段，再手动合并 `.runtime/codex-mcp.toml`。信任项目并重新连接 MCP 后即可加载工具。
+
+### 4. 启动并检查
 
 ```powershell
 .\theta.cmd launch
 .\theta.cmd status
-.\theta.cmd ui
 .\theta.cmd observe
-.\theta.cmd act left
-.\theta.cmd act undo
-.\theta.cmd batch right right up
-.\theta.cmd screenshot
 ```
 
-也可以双击 `play.cmd` 启动游戏。`launch` 只启动到游戏当前默认画面，不会自动进入或新建存档。已经连接时不会重复启动。
+也可以双击 `play.cmd`。启动器通过 Steam 的 `-applaunch 3219580` 启动游戏，避免携带参数的 Steam URL 启动确认框。它不会自动选择或新建存档；已连接时不会重复启动。Steam 登录、更新或云存档冲突仍需自行处理。
 
-### Steam 启动参数确认框
+## MCP 工具与 CLI
 
-启动器通过注册表找到现有 Steam 客户端，调用：
+| MCP 工具 | CLI 示例 | 返回内容 |
+| --- | --- | --- |
+| `theta_status` | `.\theta.cmd status` | 连接、版本、进程与场景信息 |
+| `theta_launch` | `.\theta.cmd launch` | 启动或已有连接的信息 |
+| `theta_observe` | `.\theta.cmd observe` | 关卡、世界线、实体、地形与 UI |
+| `theta_act` | `.\theta.cmd act left` | 单次输入回执与简要状态 |
+| `theta_batch` | `.\theta.cmd batch right right up` | 执行数量、停止原因与最终摘要 |
+| `theta_ui` | `.\theta.cmd ui` | 按钮 ID、文字与菜单选中项 |
+| `theta_click` | `.\theta.cmd click 123` | 按钮点击回执；ID 应取自当前 `ui` |
+| `theta_screenshot` | `.\theta.cmd screenshot` | MCP 返回图片；CLI 保存 PNG |
+| `theta_wait` | `.\theta.cmd wait 250` | 等待后的简要状态 |
+
+支持的动作：
 
 ```text
-Steam.exe -applaunch 3219580 -logFile <项目目录下的日志> -screen-fullscreen 0 -screen-width 1280 -screen-height 720
+up down left right split undo redo retry tab shift confirm pause grid preview
 ```
 
-不再直接运行游戏 EXE，也不使用携带参数的 `steam://` 链接。该方式已连续两次自动进入标题画面，不需要点击 Steam 的“允许使用以下参数启动”确认框。以后请使用 `play.cmd` 或 `theta.cmd launch`。Steam 登录、更新或云存档冲突属于另外的交互流程，不在这里自动确认。
+坐标为游戏网格 `[x, y]`，向上移动增加 `y`。`confirm` 用于确认、交互或推进对话；暂停菜单可用 `up/down` 选择并用 `confirm` 确认。按钮 ID 仅在当前实例有效，请先读取 UI 再点击。
 
-## 命令
+`act`、`batch`、`click`、`wait` 仅返回摘要，包括关卡状态与当前世界线最多 8 个活跃角色的位置；`player_count` 给出全部活跃角色数量。`ok: true` 表示请求处理成功，`dispatched: true` 表示输入已发送，均不保证角色实际移动。
 
-| 命令 | 用途 |
-| --- | --- |
-| `launch` | 通过 Steam 启动游戏，等待插件就绪 |
-| `status` | 连接状态、进程、Unity 版本、场景与原有存档目录 |
-| `observe` / `state` | 关卡、世界线、实体、地形、UI；仅精简 Wall/Floor 默认属性 |
-| `observe --no-map` | 省略静态地形，仍返回动态实体 |
-| `ui` | 当前按钮 ID、路径、文字、暂停菜单选中项 |
-| `click <id>` | 触发当前可见且可交互的按钮，仅返回简要结果 |
-| `act <action>` | 单次原生游戏输入，仅返回执行回执和简要状态 |
-| `batch <action> ...` | 在游戏内连续执行 1–50 步，返回执行数量、停止原因和最终摘要 |
-| `wait [ms]` | 等待 0–5000 毫秒并返回简要状态，默认 250 |
-| `screenshot [--out PATH] [--max-width 1280]` | 保存真实游戏帧，默认 `artifacts/screenshot.png` |
-| `mcp` | 启动 MCP stdio 服务，标准输出仅包含 JSON-RPC |
+### Observe：默认精简，按需完整
 
-动作名称：`up down left right split undo redo retry tab shift confirm pause grid preview`。
+默认返回全部世界线和实体，仅对 **`class` 精确等于 `Wall` 或 `Floor`** 的对象省略重复默认属性与空对象。省略规则列在 `defaults.entity`、`defaults.properties` 中，适用范围由 `defaults.applies_to_classes` 指明。Box、Player、Key 及其他实体保留全部字段，包括默认值和空对象。
 
-从 0.2.0 起，只有 `observe` 返回完整游戏状态。`act`、`batch`、`click`、`wait` 的回执仅包含执行信息和摘要：关卡 ID、忙碌/锁定/对话等状态、当前世界线最多 8 个活跃角色的 ID 与位置；`player_count` 表示该世界线全部活跃角色数量。不会附带实体属性、其他世界线、操作历史、静态地图或 UI 列表。`ui` 仍只返回菜单内容，`screenshot` 仍只返回图片，`status` / `launch` 仍只返回连接/启动信息。
+默认也省略帧号、屏幕尺寸与完整操作历史。需要原始字段或已读取过地图时，可使用：
 
-`ok: true` 表示请求处理成功，`dispatched: true` 仅表示已注入输入，不保证实际移动。回执不是完整变化记录；需要检查推箱子、分裂结果或其他世界线变化时，再调用 `observe`。更新后需重新加载已经运行的 MCP 服务进程；新版客户端也会将旧插件的完整操作返回裁剪为同样的摘要。
+| 需求 | `theta_observe` 参数 | CLI |
+| --- | --- | --- |
+| 原始完整状态 | `{"full": true}` | `.\theta.cmd observe --full` |
+| 省略静态地形 | `{"include_map": false}` | `.\theta.cmd observe --no-map` |
+| 完整字段但省略地形 | `{"full": true, "include_map": false}` | `.\theta.cmd observe --full --no-map` |
 
-`split`、`tab`、`shift`、`retry` 对应游戏自身的分裂、切换与重试输入；可用性由当前关卡和游戏规则决定。`confirm` 用于确认、交互及推进对话。暂停菜单可用 `up/down` 选择、`confirm` 确认，`pause` 通常返回游戏。主菜单的图标按钮可能没有文字，需结合 `path` 与截图识别，再用 `click` 操作；按钮 ID 只在当前实例有效。
+一次同状态快照对比中，JSON 从 **47,626 字节降到 27,487 字节（减少 42.3%）**，其余 26 个实体逐对象比对完全一致；具体比例随关卡变化。精简在 Python 层完成，底层 `Bridge.call("state")` 仍返回原始状态。
 
-### 批量动作（0.3.1）
+### Batch：最多 50 步
 
-MCP 工具 `theta_batch`：
+调用 `theta_batch` 的参数示例：
 
 ```json
 {"actions": ["right", "right", "up"]}
 ```
 
-命令行：
+插件先校验全部动作，再在游戏内逐步执行、等待每步动画。一个批次只发送一次请求，其他接口请求不会插入批次中间。它适用于已加载、未暂停的关卡；标题画面、菜单和对话请使用单步工具。
+
+遇到切换关卡、加载、对话、暂停、锁定、通关、冲突或循环时，会停止剩余动作。客户端断开、单步动画等待超过 4 秒或整个请求接近 43 秒也会终止批次。因此，50 步是请求上限，不保证每次都执行完。
+
+| 回执字段 | 含义 |
+| --- | --- |
+| `requested` | 请求动作数 |
+| `executed` | 已发送的输入数，不等同于成功移动次数 |
+| `remaining` | 尚未发送的输入数 |
+| `stop_reason` | `finished` 表示完成；其他值说明中断原因 |
+| `last_action` | 最后发送的动作，至少执行一步时出现 |
+
+提前停止不会撤销已执行步骤。先检查回执，必要时重新 `observe`，再决定下一步；超时后不要直接重发整个批次。插件 **0.3.1+** 支持 50 步，0.3.0 上限为 20 步；更新插件后需要重启游戏。
+
+## 建议的游玩流程
+
+1. 用 `status` 检查连接，需要时 `launch`。
+2. 用 `ui` 和 `screenshot` 确认画面、存档和菜单。
+3. 用 `observe` 读取局面，等待加载或动画结束。
+4. 已确定的路线使用 `batch`，需要试探的步骤使用 `act`。
+5. 检查回执；推箱子、分裂或跨世界线变化后按需重新观察。
+
+游戏操作仍按游戏自身规则自动保存。接口提供观察和控制能力，具体解题策略由调用它的 AI 或脚本决定。
+
+## 更新、搬迁与卸载
+
+更新代码后，关闭游戏并重新运行安装器：
 
 ```powershell
-.\theta.cmd batch right right up
+git pull
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
-`actions` 是必填数组，支持与 `act` 相同的动作名称，每次 1–50 步。客户端和插件都会先校验整个列表；含非法动作或超过上限时，一步也不执行。
-
-一个批次只发送一次游戏请求，插件在 Unity 主线程中按顺序注入单帧输入，等待每步动画结束。重复方向也是离散的多步输入，不模拟不确定的长按。整个批次占用同一请求队列，不会被其他 MCP 客户端的操作插入；游戏本身仍正常运行，不会冻结世界或加速动画。
-
-批次只用于已经加载、未暂停的关卡。标题画面、暂停菜单和对话请继续使用单步工具。遇到关卡切换、加载、对话、暂停、输入锁定、通关、冲突或循环时立即停止；也会在客户端断开、单步动画等待超过 4 秒或整个请求接近 43 秒时停止剩余动作。一次正常撞墙仍算已发送一步，不自动认定为异常。
-
-回执额外包含：
-
-- `requested`：请求步数。
-- `executed`：已发送的输入数，不保证都成功移动。
-- `remaining`：未发送步数。
-- `stop_reason`：`finished` 表示整批完成；提前停止可能返回 `paused`、`dialog`、`input_locked`、`level_changed`、`loading`、`level_completed`、`conflicting`、`looping`、`busy`、`no_level`、`not_ready`、`animation_timeout`、`time_budget`、`cancelled`、`client_disconnected` 或 `error`。
-- `last_action`：最后一个已发送的动作，仅已执行至少一步时出现。
-
-提前停止不会撤销已经执行的步骤。检查摘要，必要时 `observe`，再决定如何执行剩余动作；不要原样重发整个批次。特别是最后一步触发暂停/对话时，`remaining` 可以为 0，`stop_reason` 仍会说明当前中断状态。
-
-需重新加载 MCP 服务才能发现第 9 个工具；游戏插件需更新到 0.3.1 并重启游戏，才能使用 50 步上限；0.3.0 仍限制为 20 步。更早版本不支持 `batch`，客户端不会将失败的批次自动重发成单步调用。
-
-### 自动游玩循环
-
-1. `status`，未连接则 `launch`。
-2. `ui` / `screenshot` 识别标题画面和当前存档；使用返回的按钮 ID 继续游戏。
-3. `observe` 读取局面。等待加载、动画或对话结束。
-4. 已确定的路线用 `batch`，需要试探的位置用 `act`；检查简要回执，需要详细局面时调用 `observe`，不能把已发送输入当成移动成功。
-5. 按需截图或撤销，再读取状态。请求超时后先观察，避免重复执行刚才可能已生效的动作。
-
-游戏仍按自身规则自动保存。实测前的原始存档副本保存在 `artifacts/save-backup-20260922-183218`；测试的移动、撤销、重做最终恢复到原角色位置 `[9,1]` 和空操作记录。游戏自己的原有存档仍在 Unity 的 AppData 目录，未迁移存档。
-
-## MCP 接入
-
-`install.ps1` 会生成 `.runtime/mcp.json`（通用 JSON）和 `.runtime/codex-mcp.toml`（Codex 配置片段）。它们使用检测到的 Python 和项目绝对路径，即使客户端工作目录不同也能启动。
+如果只是搬迁项目、更换 Python 或刷新 MCP 配置，可以保持游戏运行：
 
 ```powershell
-# 只生成/刷新 MCP 配置，不安装插件、不关闭或重启游戏：
 powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ConfigureOnly
-# 同时写入项目的 Codex 配置：
-powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ConfigureOnly -ConfigureCodex
 ```
 
-`-ConfigureCodex` 创建 `.codex/config.toml`，或者更新仅含 `theta_game` 的旧配置（先备份到 `.runtime`）。若文件含有其他设置，安装器会拒绝覆盖；省略该开关后，将生成的 TOML 片段手动合并即可。所有含本机路径的生成配置均被 Git 忽略；`mcp.example.json` 仅是占位符模板。
+随后在 MCP 客户端重新导入生成的配置并重新连接。该模式不安装或更新游戏插件。
 
-CLI 的 `theta.cmd` 和 `play.cmd` 使用安装器记录的 Python，也支持通过 `THETA_PYTHON` 覆盖。重新安装 Python 或搬迁项目后，运行 `-ConfigureOnly` 并在 MCP 客户端重新导入配置。
-
-当前会话已经可以使用 CLI。要将 `theta_*` 作为原生工具加载，请在应用的 MCP 设置中重启服务器，或重新打开本项目任务。项目配置需要项目被信任。其他本地 stdio MCP 客户端使用生成的 `.runtime/mcp.json`。本项目依赖本机 Windows 游戏进程，不是可直接填 URL 使用的远程 MCP 服务。
-
-提供 9 个工具：`theta_status`、`theta_launch`、`theta_observe`、`theta_act`、`theta_batch`、`theta_ui`、`theta_click`、`theta_screenshot`、`theta_wait`。截图通过 MCP 原生 `image` 内容返回。协议版本支持 `2024-11-05`、`2025-03-26`、`2025-06-18`、`2025-11-25` 的 initialize/stdio 流程。
-
-## 安装、编译和卸载
-
-先关闭游戏，再执行：
+其他维护命令：
 
 ```powershell
-.\install.ps1
-# 指定解释器/游戏位置（示例占位符需替换）：
-.\install.ps1 -Python '<python.exe完整路径>' -GamePath '<游戏安装目录>'
-# 仅编译，不安装：
-.\tools\setup.ps1 -BuildOnly
-# 其他安装目录或端口：
-.\install.ps1 -GamePath '<游戏安装目录>' -Port 17643
-# 卸载本项目安装的文件：
-.\tools\uninstall.ps1
+# 仅编译，不安装
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\setup.ps1 -BuildOnly
+# 指定桥接端口，安装后需更新客户端配置并重启游戏
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Port 17643
+# 关闭游戏后卸载插件及本项目安装的加载器文件
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\uninstall.ps1
 ```
 
-依赖下载到 `.deps`，按固定 SHA-256 校验；编译临时目录指向 `.runtime/temp`。依赖位置跟随项目目录，插件位置跟随游戏目录；安装器拒绝覆盖不同版本的现有加载器文件。游戏运行时会在下载/安装前停止并提示关闭，`-ConfigureOnly` 和 `-BuildOnly` 可在游戏运行时使用。卸载按 `.runtime/install-manifest.json` 的文件清单和哈希操作，保留游戏文件、存档及生成的日志；发现安装文件被更改会停止卸载。
+卸载按照 `.runtime/install-manifest.json` 中的文件清单和哈希执行，保留原始游戏文件、存档及日志；发现文件已变更时会停止。请保留该安装清单。卸载后可自行移除 MCP 客户端中的 `theta_game` 配置。
 
-游戏路径优先级：`-GamePath`、`THETA_GAME_PATH`、有效的 `theta.local.json`、Steam 注册表及库清单。多份游戏安装并存时请显式选择。Python 优先级：`-Python`、`THETA_PYTHON`、PATH 中的 `python`、`py -3`；不自动安装 Python，检测不到 3.10+ 时会给出提示。
+## 路径与依赖
 
-依赖为 BepInEx 5.4.23.5（Unity Mono x64）和 Microsoft.Net.Compilers.Toolset 4.14.0（便携编译器）。运行时复用游戏自己的 Unity、Newtonsoft.Json 和系统 .NET Framework。
+| 项目 | 发现顺序或位置 |
+| --- | --- |
+| 游戏目录 | `-GamePath` → `THETA_GAME_PATH` → 有效本地配置 → Steam 注册表与库清单 |
+| Python | `-Python` → `THETA_PYTHON` → PATH 的 `python` → `py -3` |
+| 下载依赖 | 项目 `.deps/`，固定版本并校验 SHA-256 |
+| 临时文件与生成配置 | 项目 `.runtime/` |
+| 编译结果 | 项目 `build/ThetaBridge.dll` |
+| 插件 | 游戏 `BepInEx/plugins/ThetaAgent/ThetaBridge.dll` |
+| 截图和运行日志 | 项目 `artifacts/` |
 
-## 实现与验证
+CLI 优先使用 `THETA_PYTHON`，否则使用安装器记录的解释器。多份游戏安装并存时，可用 `-GamePath` 明确选择。
+
+编译使用 **BepInEx 5.4.23.5** 和 **Microsoft.Net.Compilers.Toolset 4.14.0**，运行时使用游戏自身的 Unity、Newtonsoft.Json 与系统 .NET Framework。安装器拒绝覆盖不同版本的现有加载器。
+
+## 实现与实验记录
 
 ```text
-Codex / 其他 MCP 客户端 → Python stdio MCP
-命令行                 → Python CLI
-                         ↓ 本机 TCP + 随机令牌
-                      BepInEx 插件
-                         ↓ Unity 主线程
-                      游戏原生输入 / 状态 / 截图
+MCP 客户端 / CLI
+       ↓
+Python stdio MCP / CLI
+       ↓ 本机 TCP + 随机令牌
+BepInEx 插件
+       ↓ Unity 主线程
+游戏原生输入、状态与截图
 ```
 
-插件绑定 `127.0.0.1:17643`，不监听局域网。认证信息在 `theta.local.json` 和游戏 `BepInEx/config/theta-agent.json`，已加入忽略规则。网络线程只接收请求，游戏对象读取、按钮调用和截图都在 Unity 主线程执行。输入补丁只在指定帧注入动作，不修改角色属性、存档解锁状态或原始游戏 DLL。
+桥接仅监听 `127.0.0.1`，默认端口为 `17643`。网络线程接收请求，游戏对象读取与输入在 Unity 主线程执行。令牌保存在本机配置中，不包含在生成的 MCP 连接片段里。
 
-已验证游戏 1.1.0、Unity 2022.3.34f1，当前 `Assembly-CSharp.dll` 的 SHA-256：
+| 目录 | 内容 |
+| --- | --- |
+| `plugin/` | 游戏内桥接插件源码 |
+| `tools/` | 安装、配置、卸载与验证工具 |
+| `tests/` | 协议、回执与可移植安装测试 |
+| [`knowledge/`](knowledge/) | 机制、关卡解法、进度与验证记录 |
+| [`scratch/`](scratch/) | 探索脚本、候选解法和中间实验结果 |
 
-```text
-066EE7767C28806719F90075C0AD2B28B62605D490C143C92B6D31076B0637BF
-```
+**实验记录包含剧透。** `knowledge` 和 `scratch` 作为历史研究材料保留，不参与安装；其中的路径、存档约定、实验指令与进度描述属于当时的实验环境，不代表新安装用户的当前游戏状态。
+
+## 验证
 
 ```powershell
 python -m unittest discover -s tests -v
-# 游戏运行时执行只读端到端验证：
+# 游戏已运行且插件可连接时，执行只读端到端验证
 python tools\smoke-test.py
 ```
 
-28 项自动测试已通过，包括 50 步请求接受、51 步请求拒绝、批次传输超时预算，observe 精简与完整模式，以及多 Steam 库、中文/空格路径、移动后重生成配置和任意工作目录 MCP 启动。0.3.1 插件已编译；为保留正在进行的关卡，尚未重启游戏进行新版实测。真实游戏中已验证状态/地形读取、截图、继续游戏、暂停与菜单导航、移动、撤销、重做。MCP 端到端测试验证了握手、工具列表、状态读取、原生图片和错误令牌拒绝。0.3.0 批量动作实测（当时上限为 20 步）：20 步左移/撤销约 4.8 秒完成并恢复位置与操作记录；暂停后停止剩余动作；已暂停时执行 0 步；标题画面拒绝开始；非法末尾动作和 21 步请求均在执行前拒绝。尚未逐关验证分裂与世界线切换，也未开发自动解谜算法。
+目前 28 项自动测试通过，覆盖 MCP 协议、摘要与完整返回、50/51 步边界、超时处理、多 Steam 库、中文和空格路径、目录搬迁，以及从其他工作目录启动 MCP。隔离目录中也验证了完整安装和卸载，原始游戏文件保持完整。
 
-另在含中文和空格的隔离目录完成了安装/卸载实测：安装器创建并移除了 24 个自有文件，模拟游戏原始文件保留；未修改正在运行的游戏。报告：`artifacts/portable-install-report.json`。
+真实游戏已验证状态读取、截图、菜单导航、移动、撤销和重做。0.3.0 的 20 步批次完成及中断处理经过实测；50 步版本的校验与编译已通过，尚未完成真实游戏中的 50 步整批验证。游戏更新后请重新验证适配情况。
 
-证据文件：`artifacts/smoke-report.json`、`artifacts/batch-verification.json`、`artifacts/move-undo-redo-verification.json`、`artifacts/mcp-gameplay.png`。游戏更新后如接口失效，可重新编译；如果游戏内部 API 改名，需要更新适配代码。
+`artifacts/` 中的本地报告、截图和快照不随仓库分发；运行验证后可在本机生成相应结果。
 
-插件在这个游戏的初始场景切换时需要 `HideFlags.HideAndDontSave` 保持管理对象存活，已在代码中处理。
+## 常见问题
 
-## 排错
-
-`status` 未连接时查看 `artifacts/Player.log` 和游戏目录的 `BepInEx/LogOutput.log`。若游戏启动前就已经运行，请先正常关闭再用启动器启动，以加载插件。出现 `Level is busy or input is locked` 时先 `observe` / `ui`，再等待、确认对话或退出菜单。启动器不会自动重发失败的游戏操作。
-
-## 参考
-
-- [BepInEx 官方发布](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.5)
-- [Valve Steam API 启动说明](https://partner.steamgames.com/doc/sdk/api)
-- [Valve 对带参数 Steam URL 增加确认框的说明](https://store.steampowered.com/news/11052/)
-- [OpenAI 官方 MCP 配置说明](https://developers.openai.com/codex/mcp)
-- [MCP 2025-11-25 标准输入输出传输](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports)
-
-### Observe 字段精简
-
-`theta_observe` 默认保留地图、全部世界线与实体、位置、解谜属性、状态和 UI，但省略帧号、屏幕尺寸、完整操作历史，以及仅限 `class` 为 `Wall`、`Floor` 的重复默认属性与空对象。Box、Player、Key 等其他实体的所有字段均原样保留，包括默认值和空对象。`defaults.applies_to_classes` 明确限定适用类别，不会根据 `type=SOLID` 或类名包含 Wall 就精简。返回的 `defaults.entity` 和 `defaults.properties` 统一列出省略值的含义；非默认值和未知属性仍原样保留，实体列表不会截断。
-
-- 原始完整字段：`theta_observe({"full": true})`，CLI：`theta.cmd observe --full`。
-- 已读取地图后省略地形：`theta_observe({"include_map": false})`，CLI：`theta.cmd observe --no-map`。
-- 两个选项可以组合；`full` 不会覆盖 `include_map`。
-
-精简在 Python 接口层完成，兼容正在运行的旧插件；重新连接 MCP 服务即可生效，无需重启游戏。底层 `Bridge.call("state")` 仍返回原始状态，已有直接使用它的解题脚本不受影响。
-
-使用同一份只读观察快照验证：原始 JSON 47,626 字节，仅精简 Wall/Floor 后 27,487 字节，减少 42.3%；其余 26 个实体逐对象比对完全一致。大小按 UTF-8 JSON 计算，具体比例随关卡变化。
+| 问题 | 处理方式 |
+| --- | --- |
+| 找不到 Python | 安装 Python 3.10+，或通过 `-Python` 指定解释器 |
+| 找不到游戏或找到多份安装 | 通过 `-GamePath` 指定含游戏 EXE 的目录 |
+| 游戏正在运行，安装被拒绝 | 关闭游戏后重试；只刷新 MCP 配置则用 `-ConfigureOnly` |
+| 现有加载器版本不同 | 检查已有 Mod/BepInEx 安装并协调版本，安装器不会强行覆盖 |
+| Codex 配置含其他设置 | 不带 `-ConfigureCodex` 生成片段，再手动合并 |
+| `status` 未连接 | 确认插件已安装且游戏已重启；查看 `artifacts/Player.log` 与游戏 `BepInEx/LogOutput.log` |
+| 工具仍显示旧字段或旧上限 | 重新连接 MCP；50 步支持还需要游戏加载新版插件 |
+| 游戏忙碌、输入锁定或动作超时 | 先 `observe` / `ui` 确认状态，再等待或处理对话；不要盲目重发动作 |
