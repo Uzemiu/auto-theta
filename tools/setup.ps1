@@ -1,13 +1,18 @@
 param(
-    [string]$GamePath = 'H:\Games\steamapps\common\Theta and Paralldoxs on Worldlines',
+    [string]$GamePath,
     [int]$Port = 17643,
     [switch]$BuildOnly
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
-$GamePath = [IO.Path]::GetFullPath($GamePath)
-if ($root -match '^C:' -or $GamePath -match '^C:') { throw 'Dependencies and game bridge must be outside C:.' }
+. "$PSScriptRoot\install-common.ps1"
+Import-Module (Join-Path $PSHOME 'Modules\Microsoft.PowerShell.Archive') -ErrorAction Stop
+$GamePath = Resolve-ThetaGamePath -GamePath $GamePath -Root $root
 if ($Port -lt 1024 -or $Port -gt 65535) { throw 'Port must be 1024..65535' }
+$gameExe = Join-Path $GamePath 'Theta and Paralldox on Worldlines.exe'
+if (-not $BuildOnly -and (Get-Process | Where-Object { $_.Path -eq $gameExe })) {
+    throw 'Close the game before installing/updating the bridge.'
+}
 $managed = Join-Path $GamePath 'Theta and Paralldox on Worldlines_Data\Managed'
 if (-not (Test-Path "$managed\Assembly-CSharp.dll")) { throw "Unity Mono game assembly missing: $managed" }
 New-Item -ItemType Directory -Force -Path "$root\.deps", "$root\.runtime\temp", "$root\build" | Out-Null

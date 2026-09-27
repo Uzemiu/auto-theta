@@ -1,4 +1,5 @@
 $ErrorActionPreference = 'Stop'
+Import-Module (Join-Path $PSHOME 'Modules\Microsoft.PowerShell.Utility') -ErrorAction Stop
 $root = Split-Path $PSScriptRoot -Parent
 $manifestFile = "$root\.runtime\install-manifest.json"
 $manifest = Get-Content -LiteralPath $manifestFile -Raw | ConvertFrom-Json

@@ -2,7 +2,17 @@
 
 为本机《茜塔和世界线悖论》（Theta and Paralldox on Worldlines）提供实际游戏状态读取、原生输入、菜单操作和画面截图。
 
-已安装到 `H:\Games\steamapps\common\Theta and Paralldoxs on Worldlines`。Python 客户端只用标准库，复用 `D:\python14\python.exe`。新增编译依赖位于本项目的 `.deps`，插件和加载器位于 H 盘游戏目录，没有向 C 盘安装依赖。
+适用于 Windows x64、Steam 版游戏和 Python 3.10+。Python 客户端只用标准库，无需 pip/npm。下载或克隆本项目到你选择的目录，关闭游戏后执行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+安装器自动寻找 Python 和 Steam App 3219580，支持其他盘上的 Steam 库；下载并校验编译依赖，构建插件并安装到实际游戏目录。依赖保存在项目的 `.deps`，临时文件在 `.runtime/temp`，不会安装全局 Python 包或改动 PATH。想让新增依赖避开 C 盘，就把项目放在其他盘；本次开发验证仍全部使用原有非 C 盘目录。
+
+安装完成后，将生成的 `.runtime/mcp.json` 中 `theta_game` 配置复制到你的 MCP 客户端。Codex 用户可用 `-ConfigureCodex` 同时生成项目配置。配置中的绝对路径由安装器自动填写，无需修改源码；项目或 Python 搬家后重新生成即可。
+
+`knowledge` 和 `scratch` 保留为实验记录，不参与安装。
 
 ## 立即使用
 
@@ -26,7 +36,7 @@
 启动器通过注册表找到现有 Steam 客户端，调用：
 
 ```text
-Steam.exe -applaunch 3219580 -logFile <G盘项目日志> -screen-fullscreen 0 -screen-width 1280 -screen-height 720
+Steam.exe -applaunch 3219580 -logFile <项目目录下的日志> -screen-fullscreen 0 -screen-width 1280 -screen-height 720
 ```
 
 不再直接运行游戏 EXE，也不使用携带参数的 `steam://` 链接。该方式已连续两次自动进入标题画面，不需要点击 Steam 的“允许使用以下参数启动”确认框。以后请使用 `play.cmd` 或 `theta.cmd launch`。Steam 登录、更新或云存档冲突属于另外的交互流程，不在这里自动确认。
@@ -37,7 +47,7 @@ Steam.exe -applaunch 3219580 -logFile <G盘项目日志> -screen-fullscreen 0 -s
 | --- | --- |
 | `launch` | 通过 Steam 启动游戏，等待插件就绪 |
 | `status` | 连接状态、进程、Unity 版本、场景与原有存档目录 |
-| `observe` / `state` | 完整关卡、世界线、实体、地形、UI |
+| `observe` / `state` | 关卡、世界线、实体、地形、UI；仅精简 Wall/Floor 默认属性 |
 | `observe --no-map` | 省略静态地形，仍返回动态实体 |
 | `ui` | 当前按钮 ID、路径、文字、暂停菜单选中项 |
 | `click <id>` | 触发当前可见且可交互的按钮，仅返回简要结果 |
@@ -99,9 +109,20 @@ MCP 工具 `theta_batch`：
 
 ## MCP 接入
 
-项目内 `.codex/config.toml` 已配置 `theta_game`，并已用 `codex mcp get theta_game --json` 验证能被识别。它使用现有 D 盘 Python；无需 pip/npm 安装。
+`install.ps1` 会生成 `.runtime/mcp.json`（通用 JSON）和 `.runtime/codex-mcp.toml`（Codex 配置片段）。它们使用检测到的 Python 和项目绝对路径，即使客户端工作目录不同也能启动。
 
-当前会话已经可以使用 CLI。要将 `theta_*` 作为原生工具加载，请在应用的 MCP 设置中重启服务器，或重新打开本项目任务。项目配置需要项目被信任。其他 MCP 客户端可以参考 `mcp.example.json`。
+```powershell
+# 只生成/刷新 MCP 配置，不安装插件、不关闭或重启游戏：
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ConfigureOnly
+# 同时写入项目的 Codex 配置：
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ConfigureOnly -ConfigureCodex
+```
+
+`-ConfigureCodex` 创建 `.codex/config.toml`，或者更新仅含 `theta_game` 的旧配置（先备份到 `.runtime`）。若文件含有其他设置，安装器会拒绝覆盖；省略该开关后，将生成的 TOML 片段手动合并即可。所有含本机路径的生成配置均被 Git 忽略；`mcp.example.json` 仅是占位符模板。
+
+CLI 的 `theta.cmd` 和 `play.cmd` 使用安装器记录的 Python，也支持通过 `THETA_PYTHON` 覆盖。重新安装 Python 或搬迁项目后，运行 `-ConfigureOnly` 并在 MCP 客户端重新导入配置。
+
+当前会话已经可以使用 CLI。要将 `theta_*` 作为原生工具加载，请在应用的 MCP 设置中重启服务器，或重新打开本项目任务。项目配置需要项目被信任。其他本地 stdio MCP 客户端使用生成的 `.runtime/mcp.json`。本项目依赖本机 Windows 游戏进程，不是可直接填 URL 使用的远程 MCP 服务。
 
 提供 9 个工具：`theta_status`、`theta_launch`、`theta_observe`、`theta_act`、`theta_batch`、`theta_ui`、`theta_click`、`theta_screenshot`、`theta_wait`。截图通过 MCP 原生 `image` 内容返回。协议版本支持 `2024-11-05`、`2025-03-26`、`2025-06-18`、`2025-11-25` 的 initialize/stdio 流程。
 
@@ -110,16 +131,20 @@ MCP 工具 `theta_batch`：
 先关闭游戏，再执行：
 
 ```powershell
-.\tools\setup.ps1
+.\install.ps1
+# 指定解释器/游戏位置（示例占位符需替换）：
+.\install.ps1 -Python '<python.exe完整路径>' -GamePath '<游戏安装目录>'
 # 仅编译，不安装：
 .\tools\setup.ps1 -BuildOnly
 # 其他安装目录或端口：
-.\tools\setup.ps1 -GamePath 'H:\Games\steamapps\common\Theta and Paralldoxs on Worldlines' -Port 17643
+.\install.ps1 -GamePath '<游戏安装目录>' -Port 17643
 # 卸载本项目安装的文件：
 .\tools\uninstall.ps1
 ```
 
-依赖下载到 `.deps`，按固定 SHA-256 校验；编译临时目录指向 `.runtime/temp`。安装器拒绝向 C 盘放置项目依赖或游戏插件，并拒绝覆盖不同版本的现有加载器文件。卸载按 `.runtime/install-manifest.json` 的文件清单和哈希操作，保留游戏文件、存档及生成的日志；发现安装文件被更改会停止卸载。
+依赖下载到 `.deps`，按固定 SHA-256 校验；编译临时目录指向 `.runtime/temp`。依赖位置跟随项目目录，插件位置跟随游戏目录；安装器拒绝覆盖不同版本的现有加载器文件。游戏运行时会在下载/安装前停止并提示关闭，`-ConfigureOnly` 和 `-BuildOnly` 可在游戏运行时使用。卸载按 `.runtime/install-manifest.json` 的文件清单和哈希操作，保留游戏文件、存档及生成的日志；发现安装文件被更改会停止卸载。
+
+游戏路径优先级：`-GamePath`、`THETA_GAME_PATH`、有效的 `theta.local.json`、Steam 注册表及库清单。多份游戏安装并存时请显式选择。Python 优先级：`-Python`、`THETA_PYTHON`、PATH 中的 `python`、`py -3`；不自动安装 Python，检测不到 3.10+ 时会给出提示。
 
 依赖为 BepInEx 5.4.23.5（Unity Mono x64）和 Microsoft.Net.Compilers.Toolset 4.14.0（便携编译器）。运行时复用游戏自己的 Unity、Newtonsoft.Json 和系统 .NET Framework。
 
@@ -148,7 +173,9 @@ python -m unittest discover -s tests -v
 python tools\smoke-test.py
 ```
 
-24 项自动测试已通过，包括 50 步请求接受、51 步请求拒绝、批次传输超时预算，以及 observe 精简与完整模式。0.3.1 插件已编译；为保留正在进行的关卡，尚未重启游戏进行新版实测。真实游戏中已验证状态/地形读取、截图、继续游戏、暂停与菜单导航、移动、撤销、重做。MCP 端到端测试验证了握手、工具列表、状态读取、原生图片和错误令牌拒绝。0.3.0 批量动作实测（当时上限为 20 步）：20 步左移/撤销约 4.8 秒完成并恢复位置与操作记录；暂停后停止剩余动作；已暂停时执行 0 步；标题画面拒绝开始；非法末尾动作和 21 步请求均在执行前拒绝。尚未逐关验证分裂与世界线切换，也未开发自动解谜算法。
+28 项自动测试已通过，包括 50 步请求接受、51 步请求拒绝、批次传输超时预算，observe 精简与完整模式，以及多 Steam 库、中文/空格路径、移动后重生成配置和任意工作目录 MCP 启动。0.3.1 插件已编译；为保留正在进行的关卡，尚未重启游戏进行新版实测。真实游戏中已验证状态/地形读取、截图、继续游戏、暂停与菜单导航、移动、撤销、重做。MCP 端到端测试验证了握手、工具列表、状态读取、原生图片和错误令牌拒绝。0.3.0 批量动作实测（当时上限为 20 步）：20 步左移/撤销约 4.8 秒完成并恢复位置与操作记录；暂停后停止剩余动作；已暂停时执行 0 步；标题画面拒绝开始；非法末尾动作和 21 步请求均在执行前拒绝。尚未逐关验证分裂与世界线切换，也未开发自动解谜算法。
+
+另在含中文和空格的隔离目录完成了安装/卸载实测：安装器创建并移除了 24 个自有文件，模拟游戏原始文件保留；未修改正在运行的游戏。报告：`artifacts/portable-install-report.json`。
 
 证据文件：`artifacts/smoke-report.json`、`artifacts/batch-verification.json`、`artifacts/move-undo-redo-verification.json`、`artifacts/mcp-gameplay.png`。游戏更新后如接口失效，可重新编译；如果游戏内部 API 改名，需要更新适配代码。
 

@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "theta_game": {
-      "command": "D:\\python14\\python.exe",
-      "args": ["G:\\code\\auto-puzzle\\theta-paradox\\theta.py", "mcp"],
+      "command": "python",
+      "args": ["<PROJECT_DIRECTORY>/theta.py", "--config", "<PROJECT_DIRECTORY>/theta.local.json", "mcp"],
       "env": {"PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
     }
   }

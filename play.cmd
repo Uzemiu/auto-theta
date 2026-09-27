@@ -1,3 +1,3 @@
 @echo off
-python "%~dp0theta.py" launch
+call "%~dp0theta.cmd" launch
 if errorlevel 1 pause
