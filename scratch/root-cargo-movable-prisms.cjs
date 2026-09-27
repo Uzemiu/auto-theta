@@ -1,4 +1,4 @@
-// Read-only 3-18 cargo-key hypothesis. Static prisms are obstacles only; optical completion is not simulated.  Locks/keys added; same-lock split branch collisions rejected as unverified. No ice/prisms/stacking/worldline simulation.
+// Read-only ordinary BOX/PRISM pushing and cargo model. PRISM cargo is allowed after actual 3-36 input100 verification. Optical completion, ice, stacking and worldline branching are not simulated; same-lock split branch collisions remain rejected.
 const fs=require('fs'),r=JSON.parse(fs.readFileSync(process.argv[2],'utf8').replace(/^\uFEFF/,'')),cfg=JSON.parse(process.argv[3]||'{}');
 const o=cfg.observation_event!==undefined?r.events[cfg.observation_event].observation:r.initial,t=o.level.timelines[cfg.timeline_index||0],ents=t.entities.filter(e=>e.active),boxes=ents.filter(e=>['BOX','PRISM'].includes(e.type)),items=ents.filter(e=>e.type==='KEY'),locks=ents.filter(e=>e.type==='LOCK');
 if(t.tiles.some(e=>!['SOLID','SPIKE'].includes(e.type))||ents.some(e=>!['SOLID','GOAL','PLAYER','BOX','KEY','LOCK','PRISM'].includes(e.type)))throw Error('Unsupported entities/tiles');
@@ -29,7 +29,7 @@ function next(s,a){
  if(bad)return null;
  const nb=s.b.map((v,i)=>plans.has(i)?mv(v,plans.get(i)):v.slice());
  if(new Set(nb.map(xy)).size!==nb.length)return null; // Stacking not simulated.
- for(const p of np){if(p[4]>=0){p[0]=nb[p[4]][0];p[1]=nb[p[4]][1];if(plans.has(p[4])){const lock=li(p);if(lock>=0){if(p[5]<=0||cfg.keep_locks_closed)return null;p[5]--;l|=1<<lock;}for(let j=0;j<items.length;j++)if(!(c&(1<<j))&&xy(items[j].pos)===xy(p)){c|=1<<j;if(items[j].details.isFork)p[3]++;else p[5]++;}}}else{const i=nb.findIndex(b=>xy(b)===xy(p));if(i>=0){if(boxes[i].type==='PRISM')return null;p[4]=i;}}}
+ for(const p of np){if(p[4]>=0){p[0]=nb[p[4]][0];p[1]=nb[p[4]][1];if(plans.has(p[4])){const lock=li(p);if(lock>=0){if(p[5]<=0||cfg.keep_locks_closed)return null;p[5]--;l|=1<<lock;}for(let j=0;j<items.length;j++)if(!(c&(1<<j))&&xy(items[j].pos)===xy(p)){c|=1<<j;if(items[j].details.isFork)p[3]++;else p[5]++;}}}else{const i=nb.findIndex(b=>xy(b)===xy(p));if(i>=0){p[4]=i;}}}
  const merged=[];for(const v of np){const p=merged.find(p=>xy(p)===xy(v)&&p[4]===v[4]);if(p){p[3]=Math.max(p[3],v[3]);p[5]=Math.max(p[5],v[5]);}else merged.push(v);}
  return {p:merged,b:nb,c,l,wait:a<4&&s.p.some(v=>v[4]<0&&merged.some(p=>p[4]<0&&xy(p)===xy(v)))};
 }

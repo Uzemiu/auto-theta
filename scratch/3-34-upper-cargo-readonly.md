@@ -20,3 +20,9 @@
 中央路线绕行必要性：仅AA令cargo5,7/外人6,7时，6,6刺与7,6墙阻止自由人从右侧走到5,6。正确做法AAA先把cargo送4,7、外人5,7；SAAW经5,6→4,6→3,6→3,7；D把cargo向右回5,7、外人4,7；SD走4,6→5,6，再WW进目标。
 
 候选已发送root和唯一输入owner。尚不构成3-34通关证据，无新增JSON、模型文件或后台进程。
+
+## 2026-09-27 实测验证
+
+唯一输入owner resume_slot1_ch3b 已按正常操作完成本关，共111输入，0撤销/0重试。主记录3-34.json的event29、第79输入显示三条颜色分支均保留PLAYER63在7,7且contained=1，container分别自动关联60/62/64；外部PLAYER67仍在8,7。以上三条条件尾全部实测成功。原先关于载人继承的假设现已被本关实测验证，详见正式solution与M084。
+
+Root独立读取最终completed=true，SaveSlot1的distribute状态为3、111动作编码与LevelRecords完全一致，accomplishLevelCount=93。以上旧候选段落保留分析过程，不再代表本关未完成。

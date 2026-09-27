@@ -400,7 +400,7 @@
     "unlocked_count": 5,
     "note": "首次读取账户缓存发生于 slot1 开始游玩之后；不能作为零时刻基线。"
   },
-  "latest_account_evidence": "artifacts/achievements/20260926T163936290998Z.json",
+  "latest_account_evidence": "artifacts/achievements/20260927T030715392432Z.json",
   "account_status_source": "Steam local binary VDF cache, read-only; server synchronization not independently verified",
-  "account_observed_at_utc": "2026-09-26T16:39:36.290998+00:00"
+  "account_observed_at_utc": "2026-09-27T03:07:15.392432+00:00"
 }
