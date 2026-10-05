@@ -275,6 +275,8 @@ M027实测补充：2-3最终两线time56与time57，分别占[8,9]/[9,9]，在�
 
 M035补充：2-11把箱放[2,4]/[3,4]并背靠左墙，角色从[5,4]输入A，在冰格[4,4]遇不可推双箱链后停住；没有在同次滑行自动转弯。随后W穿过x4冰列至普通[4,9]。这与冰墙止滑一致，但只验证本次不可推箱链。
 
+M035补充（2-G，第18/19输入）：row9两Blue盒112=11,9、114=10,9，推者106=12,9。第18 A后112停10,9 SOLID，114经9,9 ICE停8,9 SPIKE，推者11,9。第19 A让112进入9,9冰后撞114，114被继续向西送到2,9（1,9 Wall止滑），112停8,9 SPIKE，推者停10,9；19输入共time26，五名角色仍活、只有一线。证据[2-G](../artifacts/slot1-playthrough/2-G.json)连续17/18/19直接帧。确认此例箱与箱碰撞传递滑行动作、原后箱停接触格；不把惯性当第二主动推者触发冲突，不推广未知正交撞击。
+
 ### M036 冰上开锁会停止滑行，相向滑动可交错，同向追尾可合并（2-12）
 
 2-12「交错」角色[12,5]持key1，与[6,5]无钥匙角色同输入D，右人因墙左转向左滑，收集[11,5]/[10,5]两钥匙后打开[5,5]锁，停在仍是ICE的[5,5]、key2；另一人右滑到[12,5]，两者途中相向交错，没有合并。其后D反复让两人交换左右端，持钥匙者分别停在新打开的[4,5]/[3,5]，最后利用普通格[2,5]停止、再A使两人占[1,5]/[2,5]通关。
@@ -294,6 +296,11 @@ M035补充：2-11把箱放[2,4]/[3,4]并背靠左墙，角色从[5,4]输入A，�
 
 进一步实测：箱含一人停[5,1]，外部玩家绕上方通道到[8,1]后A，从右推箱通过门。箱及contained玩家一起滑到[1,1]，外部玩家停[5,1]；运输没有释放箱内玩家。证据均在[2-13](../artifacts/slot1-playthrough/2-13.json)，含time57首次装箱、time90追撞及time82运输实验。装箱后是否有其他可释放方式、箱内玩家是否能计入目标仍未知；这些试验未完成2-13。
 
+#### M038补证：2-G普通滑动箱捕获已停止的活角色（79）
+
+2026-10-05新普通BOX捕获fixture已实际闭环到79/time123/event379/frame19195752。source新60/event350之后完整19尾WWDSSDSAAAWDSAASWDA，前18逐批全14实体严格核对；末A仅receipt370一次accepted1/remaining0，无重发。立即RAM+stdout保回执，公开state快速69次/944ms采样371..377，另378完整末态、379只读动画稳态，全部留同一2-G主JSON。直接相邻376/frame19134445/time122：BOX113[3,9] movingdir3/A/movingsrc106，109[2,9]/A active且contained0/container-1/md0/src-1；377/frame19134468/time123：BOX113到[2,9]停止，109 active/ghost0/Fork0/key0/maskedoff0/contained1/container113/height1，typePLAYER/classPlayer保留。容器113仍普通Color2 BOX/classBox、active/h1/contained0/container-1，未叠箱、无新增ID、无分线/force/复活。稳定379单axis0/id119、所有motion0/src-1/动画true，无busy/lock/dialog/paused/completed；全14物理/静态字段与378除动画外diff=[]，GMID未重分配。四活PLAYER为105[14,5]/S、106[10,9]/A、108[5,7]/A、109[2,9]/A；前3为free，109为被动cargo，107[8,4]/W inactive/ghost1。九Blue110[8,9]/111[8,5]/112[7,7]/113[2,9]/114[2,10]/115[8,6]/116[10,7]/117[8,7]/118[5,10]全active/h1/contained0/md0/src-1。这是M038本关滑动箱捕获已停活人的有限补证，来源106沿惯性保留至接触；没有模拟捕获后的规则或授予F0 cargo独立force来源。左侧有效控制库存应记2free(106/108)+1passive cargo109，另right105，不把3active left算3free。累计93Undo0retry，118完成6星link3不变、未完成2-G；旧C87/M133/71/83/全部Undo历史保留，Slot1、唯一owner、禁提示/简化/反射/隐藏实现/存档进度编辑。本fixture无live输入/搜索handle；末A后只观察。root已授权在此稳定证据与canonical保存后仅正常Undo19恢复source350新60，尚未执行恢复；save-management未改。
+
+本例只核活人被动装入普通空箱的实际字段和直接相邻帧。箱113到2,9时其下一西格1,9为Wall，接触前109已停2,9；不推广仍滑动人物、尸体捕获、occupied箱、多层、后续释放、所有来源或F0 cargo主动操控。私有原模型在接触前停止，不将377后的实际后态冒称旧模型校准。证据[2-G](../artifacts/slot1-playthrough/2-G.json) events368..379，关键376→377。
 
 ### M039 切换世界线后未结束的冰滑会继续（2-14）
 
@@ -370,7 +377,7 @@ M040补充（2-19）：箱[1,6]、双人[1,1]/[1,7]单W，time43→45，箱停IC
 
 ### M052 两箱同刻进入同格触发叠加（3-1）
 
-重访初态执行WWWWWWAWW，第9步：箱53从2,7向左、箱54从1,6向上，同时进入1,7。实际箱53 height1/contained0；箱54 height2/contained1/container53。接着A整叠同时移到0,7，角色分别1,7和1,5，后续通关。此前WWWWWWAWADW的静止双箱受阻推动未叠加：箱仍1,7/1,6，推者转向到1,4。已验证的原因是两箱同时进入同格，不是单纯把后箱推向受阻前箱。证据3-1.json events[33]/[35]及completion；满足Lift官方条件触发叠加，账户历史解锁不算今日新增。
+重访初态执行WWWWWWAWW，第9步：箱53从2,7向左、箱54从1,6向上，同时进入1,7。实际箱53 height1/contained0；箱54 height2/contained1/container53。接着A整叠同时移到0,7，角色分别1,7和1,5，后续通关。此前WWWWWWAWADW的静止双箱受阻推动未叠加：箱仍1,7/1,6，推者转向到1,4。已验证的原因是两箱同时进入同格，不是单纯把后箱推向受阻前箱。证据3-1.json events[33]/[35]及completion；满足Lift官方条件触发叠加，账户历史解锁不算今日新增。此证据为关卡初始的独立两箱；同源分裂箱相遇按M107融合，不能自相叠加。
 
 ### M053 棱镜扩散目标光束，分支需要同时被角色覆盖（3-3/3-4）
 
@@ -440,9 +447,13 @@ M040补充（2-19）：箱[1,6]、双人[1,1]/[1,7]单W，time43→45，箱停IC
 
 本例明确盒内钥匙能在推动时用于开锁，且箱内角色可满足棱镜光；不是箱子自身自动无钥匙穿锁。候选模型需在箱子移动时更新其contained角色的拾取/开锁，不能沿用固定阻挡锁的旧模型。
 
+4-21补具体缓冲实例：第35空C4箱81[10,5]在载83/cargo95[10,4]后，outside10,6/10,8均F0；第36A下者因9,6墙转S推双链，cargo到SPIKE10,3仍ghost0且key1。第37A继续使cargo用自身key开10,2锁，key0/Lockinactive；空81留10,3，外推者只到safe10,4，未踏Key格死亡。两步前后原始观察保4-21.json第35/36/37；只补已证箱内取物/自身开锁及缓冲推链，未据此宣称Goal。
+
 ### M064 尖刺上可先拾钥匙再死亡；迟到空箱不会复活该死者（3-19局部）
 
 从time39前缀输入WA，玩家70在5,5拾key1后变inactive/ghost1，KEY61变inactive；再D该死者未移动。之后空箱68移到5,5同格，玩家70仍inactive/contained0/container−1/key1，未被装箱复活。另一试验空箱进入仍active的KEY61所在5,5，KEY保持active/contained0，未随箱装载。全部实验正常撤销，原事件保留。此关未完成，不把模型搜索失败认作无解。见3-19.json events9/13/15/19。
+
+2026-10-04补Fork直接实例：4-15第38 D，外人53进入SPIKE4,6后split0→1、最后Fork46 inactive，同时53已inactive/ghost1/contained0；支持本例先拾叉再死亡。已停止的ICE载箱没有自动接近死者，故本次不裁定后续微tick追撞捕获，具体证据与范围见M113。
 
 ### M065 DARK覆盖下仍可沿安全地面正常行走（3-20有限路线）
 
@@ -529,6 +540,10 @@ BOX支DWSSDWWD将空箱推7,9，推者7,8刺死亡，另一人6,7；源PRISM6,9�
 
 第35输入后角色4,3/3,6，箱3,4/3,5，额外箱7,1。A时上人因2,6墙转下，推双箱链至3,3/3,4；下人同时从4,3到3,3，实际contained1/container42。两人起点同奇偶，但前端箱与普通单箱推入格不同，不能把单箱接触的奇偶限制泛化到箱链。之后载人箱进1,5，外人死于1,4刺而completed=true。全51输入，无撤销/重试，证据3-A.json event6及completion。
 
+4-10回访补充：实际第31态两外人5,3/2,4，空Color4箱3,3/4,3。第32 A左推两箱链至2,3/3,3；2,4持叉者被闭门1,4阻挡而转S，同刻到2,3，被前端BOX58捕获。cargo63仍active、ghost0、split1，外人60在4,3。证据4-10.json events[59]/[61]为直接前后态；这个双箱链保叉捕获实例仍不推广为任意单箱的同奇偶装箱。
+
+4-21首入补同型直接帧：实际第9 outside94[7,7]/S与95[10,8]/D，空C4箱81[8,7]/83[9,7]；单第10 S，左者因南Gate7,6闭转D推双链至9,7/10,7，右者同步向南到10,7被前端83捕获。cargo95 active/ghost0/contained1/Fork0，outside94留8,7；首Fork已用于两F0分裂，12,8与9,2后叉都仍active。本例再证同奇偶双链捕获，未完成Goal，不扩大单箱规则。证据4-21.json直接第9/10观察。
+
 ### M079 箱内活人可安全拾取尖刺上的钥匙（3-19）
 
 双箱链在安全格6,5捕获角色后，外人将载人箱推入5,5尖刺：箱内角色仍active、ghost0、contained1，key由0变1；普通空箱覆盖该钥匙不会拾取。证据3-19.json再访time16→20。此现象仅证明运输与取钥匙安全，不代表已经能回收载人箱或完成本关。
@@ -583,3 +598,420 @@ M086边界补充（3-37第162输入）：没有棱镜的四对象链，前载人
 下侧弃箱祖线的九人去上边和右侧；上侧弃箱祖线的九人去下边和左侧，交叉覆盖对方不可回收箱占据的目标。619正常输入、0撤销/0重试，最终18个活人目标一一对应并completed=true。这里无需载人箱或回收观察后的箱。证据3-38.json输入264、574及completion。
 
 观测注意：各分支timeline id可能相同，必须结合axis与当前动作/画面定位。切到较早时间线后其他线的实体是当前全局时刻投影，字段time仍可显示其较晚局部终点；必须切回最大时间核全局目标。本关末尾10T到axis9最大time312才确认全部18目标。
+
+### M089 世界可推入口可压按钮并维持占用门（Chapter3）
+
+2026-10-02正常把3-X入口从11,11沿北侧通道移至18,11，入口独占按钮时18,9门已打开。随后逐S把入口送18,10/18,9/18,8，玩家18,11/18,10/18,9，门保持打开，验证入口占门后可跟入。西门-9,0重复同样结果，并取得绿色叉子NID103，玩家split0→1；正常进入3-Y后Collections103=true，星数仍2。证据chapter3-world.json本日事件，路线见scratch/chapter3-west-entry-readonly.md（其原候选已实测）。
+
+边界：空3-X入口可推至3-Y同格-16,4，但未直接触发组合；再A将3-X推离而玩家踩3-Y，只进入普通3-Y。面对可推入口单Shift/confirm均未有状态变化，不能据此推广所有Shift语义。世界普通受阻转向同样成立：玩家-14,5面对无地形北侧输入W，左-15,5墙，实际落-14,4。
+
+### M090 同一角色同时占两个世界入口触发关卡叠加（Chapter3）
+
+正常复位后从玩家11,10/可推3-X11,11，以 `WWWWWWWWWDWAASAASSS` 到人8,16/入口9,20；`WX` 得7,17/9,17双人；`AWDSWDSDWDWWAA` 末步前人10,22/11,20、入口10,21。最后A上人遇9,22墙转下推入口到固定3-28的10,20，另一人左走10,20与入口同格，外人停10,21。实际进入 `3-28^3-X / 保护^排斥`，单个8×8地图，目标保留原坐标。这与M089后续实验两人各进不同入口的 `3-28+3-X` 横向相加不同。证据chapter3-world.json第67输入及3-28^3-X.json初态；尚未完成叠图，不预记关卡通关。
+
+叠图初态BOX4,4两箱叠成2层，3-X角色1,4与3-28墙同格而contained1/container11；叠墙可能封路，不能推断叠加总使关卡更容易。3-X另有Color4箱8,4，其交互尚未验证。
+
+### M091 已完成可推入口可载角色留在世界继续运输（Chapter3）
+
+3-X普通DD完成后，复位仍可推入口11,11且单人fork1。重新通过冰桥变换奇偶，将双人布置10,20/11,22、入口10,21；W后外人10,21，入口10,22且另人contained1/container240留在里面。UI只提示3-X排斥“重新进入”，不再自动加载。对照未完成3-X的完全相同捕获会自动入关，所以M089/M090中“捕获立即入关”应限定于未完成入口。此时载人入口世界运输成为可行机制，但到3-Y组合仍待实测。证据chapter3-world.json本轮94输入。
+
+M091完成证据：最终以可回收的载入口9,20/自由人9,19为起点，99步正常运输至3-Y(-16,4)。中途载入口经过已完成3-31/3-33/3-34均留在world；到未完成Y才自动进入3-X^3-Y。叠图中X提供KEY7,4，开启Y锁4,6；初始同格双箱推到X目标3,4观察为两支，两个人分别覆盖3,4与Y目标4,0。完整32输入真实完成，存档键3X^3Y，新增Y且总数98。顶边载入口10,22因y23无floor不可南推，曾正常undo末W再以12步内区捕获规避，不能把载入口运输一般化到所有位置。
+
+
+### M092 同一动作落刺并装箱，形成仍可用叉子的箱内幽灵（2-21再访）
+
+2026-10-02正常重入已完成2-21，以原解前63输入及7步取第二叉，保持PLAYER183 split1。真实124输入最后S：178从19,2因下方箱链不可推而转上，推BOX161由19,3到19,4，自身落19,3刺死亡；183从18,4因下墙转右到19,4，与箱同时汇合，结果active=true、ghost1、contained1/container161、split1。不是普通活人装箱，也不是inactive死亡；此前122S已牺牲184以移箱。完整前置见solutions/2-21.md与主JSON。
+
+自动教学明确三句：“我正在试图同时杀死自己并且进入一个箱子！”“由于不确定这两件事的发生先后顺序，我以幽灵的状态存在于箱子中”“真是太神奇了”。随后普通确认完毕，不使用主动提示。Cat Box账户由root核解锁，10/28；相较此前3-28先在黑暗中死后再被装箱，本次同刻死亡/装箱是关键新增条件。
+
+### M093 箱内持叉角色分裂会复制容器，幽灵复制的新箱与自身纠缠（2-21再访）
+
+接M092，124态仅载ghost183在19,4，面右且split1。单X第125输入后，原BOX161及183到19,3；新BOX185及新角色186到20,4，原邻BOX159被推21,4。两角色active、contained1、ghost1且split0；仍只有一条世界线，不是简单新增时间线。此例上侧19,5有墙，分裂的一侧落19,3、另一侧改前方20,4；不预设每次一定这两个方向。
+
+自动教学逐句：“活着的我可以通过分裂复制箱子，死了的则不行！”“所以当幽灵态的我分裂一个箱子的时候，新产生箱子的状态也和我纠缠在一起了！”“这样的箱子具有类似幽灵态的性质！可以看到纠缠的边框”。完整原文含标色标签保存在主JSON。Creation账户由root核解锁，11/28。当前尚未实际照光检验纠缠新箱生死，也未验证任意墙或世界入口能如此复制；不能把普通BOX结论直接套用所有容器。
+
+2026-10-03只读字段复核：2-21 events[117]/[124]中的原BOX161和新BOX185均为Color2、class Box、Shadow=false；BOX的properties/details没有独立ghost或entangled标志。两cargo183/186则均active、ghost1、contained1、split0。纠缠身份需由第125 X的新实体ID与自动教学溯源，不能仅凭普通blockable等字段识别或推出穿墙、无叉复制。第四章活Color4复制已有M098等实证，幽灵Color4复制的具体行为仍须独立核验。条件式规则报告见`scratch/ch4-9-ghostbox-readonly.md`；其中假设前置未构造，不是现成解法，也不要求打断普通路线做实验。
+
+2026-10-02补充M041/M022有限实例：1-6+1-20取星78路线，第56输入4,1处key0+1合并为1，6,1处key1+1仍1；第72输入三人key0/0/1同汇3,6，最终key1/faceDown/split1；第75输入key0/1在4,6合并为key1/faceLeft。各检查点有完整真实状态，不推广任意资源/遍历顺序规则。
+
+### M094 关卡相加后同ID按钮控制跨来源闸门（1-10+1-14）
+
+2026-10-02真实合图size21,14，左1-10 y0/右1-14 x9。正常 `DSSAA` 5输入后两人5,1与12,1，左人压原1-10按钮5,1；左4,1门及右七扇星路门17,12/16,12/15,12/15,11/15,10/15,9/15,8均ID2且blockable=false，ID0/1门仍关闭。这是同ID跨来源配对的正实证，不只是编号推断。旧SSA因6,2墙实际不到按钮，拒用作否定实验；本段为初次第5输入诊断，后续完成见下。证据1-10+1-14.json初态与第5输入。
+
+M094取星实证续：正常undo5后123路线，第14左人借共享ID0开门取得fork，第42右双人压18,2/11,13，第46左再分为双人；第70左BOX5,1永久压ID2（外人3,1/7,2，右19,2/11,12），接53步不移动两箱、四人均活，末15,7取得NID3。正常返回后星数5、Collections3=true；完整动作见1-14 solution与组合主JSON。
+
+### M095 载人箱遭外部推力冲突时，箱内活人随两支保留（4-1）
+
+2026-10-03游戏1.1.1，正常18输入后Color4 BOX39和cargo40在6,5，两个外人5,5/7,5。W后载箱5,5、外人6,5/5,6；A时右人左推，北人遇4,6墙转下推。两支分别载箱4,5与5,4，cargo40均active、ghost0、contained1，其container仍对应本线BOX39，另一外部输家被masked。无需箱内叉子即可经推力冲突在两支继承cargo；不等同于单线复制新箱。
+
+两支分别9与11步运输到1,7/7,7，末推者刺死，cargo均活；最高time31实际completed=true，全41有效输入。相反推力6,5直接D虽同样继承cargo，一支送7,5死柱，正常undo1改正交冲突。另有Color4普通箱内fork0单X不改变时间、instructions或实体的隔离实测。完整证据4-1.json，累计历史2retry/9undo保留，无提示。
+
+### M096 用箱和墙挡住分裂三向，让一人原地消耗叉、另一人正常分裂（4-2）
+
+2026-10-03实际14输入后BOX3,2，两个fork1角色2,4与4,2均朝上。4,2的前方4,3墙、右5,2墙、左BOX3,2背靠2,2墙，只有背面4,1空。第15 X该人原地、fork1变0；另一人分到1,4/3,4。只需分裂左右与前方三向阻塞，不要求普通四向移动全夹困；这是M024在可回收单箱构型的新实证，实际改变角色相对奇偶。
+
+后将原地者装入3,5，保留两外人。末WDDDW让其中一人横推载箱到6,6并在5,6刺死，另一人同步到6,5再向上接力，把载箱送6,7，自己死6,6；cargo始终活。32有效输入完成，1undo/0retry，证据4-2.json与solution，无提示。
+
+### M097 分裂侧推可把箱送入无叉等待者，留下另一侧外人运输（4-3）
+
+2026-10-03实际第30态Color4箱5,6，无叉人4,6、有叉人6,6朝下。第31 X：无叉人原地等待，持叉人的左侧分裂正常推动箱至4,6，捕获等待者；左侧新推者落5,6刺死亡，右侧新角色7,6存活且叉归零。箱内人active/ghost0，只有单时间线。这结合了分裂侧向推箱与无叉X等待，避免普通同步移动使待捕获者离开。
+
+随后外人WAAASS绕至箱上方，将载箱送过4,5刺至4,4目标，外人死于4,5，cargo仍活；37输入实际完成。不能据此推断箱可通过任意刺或所有分裂方向均有效，具体侧向、回退与阻塞应现场核。证据4-3.json与solution，无提示。
+
+### M098 用关闭的闸门使持叉人等待，保叉装箱后活人复制普通容器（4-4）
+
+2026-10-03第21态持叉人6,1，被6,2关闭门和三面墙夹困，外人5,4、箱5,3。ASS三动作该人始终原地、fork1保留；外人依次4,4/4,3/5,3，末步推箱到6,3按钮重新开门。等待造成相对奇偶变化，随后正常普通同步方向捕获持叉人5,5，载箱运到4,7刺上；外推者落4,6刺死，cargo仍active/ghost0/fork1。
+
+第37单X朝上分裂，原Color4 BOX58及cargo59到3,7、新BOX61及cargo62到5,7；兩人contained且active/ghost0、fork0，单条时间线直接完成双目标。这是M093教学中“活着的我可以通过分裂复制箱子”的实际活人证据，区别于幽灵复制纠缠箱。4-4仅开场一句普通自动教学，无新提示；证据4-4.json与solution。
+
+### M099 箱内X只有一侧有效时迁移原载箱，利用占门让外人离开按钮再回收（4-5）
+
+2026-10-03第47态载Color4 BOX50在1,7，cargo52活且fork1朝上；外人57在1,1压按钮，2,7门blockable=false。第48 X左0,7及前1,8墙，仅右2,7有效：原BOX50和cargo52一同移到2,7，fork0，无新箱或人。外人无叉仍在按钮。箱内分裂不能一概记作复制两容器。
+
+第49 W外人离按钮到1,2，载箱2,7独占门，门仍blockable=false。外人随后绕至1,7推动载箱通过门至7,7，末自己落6,7刺死而cargo仍活；初始4,1四墙夹困额外活人全程原地，不妨碍完成。61输入实际通关，0undo/0retry，证据4-5.json与solution，无提示。
+
+4-10回访的类BOX占门范围判别：第52态cargo63/BOX58在3,3叉1面A，free60=6,1压按钮0。53 X将原载箱移3,2，新BOX64/cargo65移3,4，四箱均保留，两cargo叉0活；54 A外人离按钮到5,1。此时3,4门由BOX64占位而blockable=false，同ID0的4,5门blockable=true，6,1按钮为空。载人箱在本例也只保持自己的所在门开启，不会令整个ID组常开；证据4-10.json events[65]/[67]/[69]，不以取得钥匙或关卡完成作证。
+
+### M100 同门多个按钮可分别开门；刺上复制载箱可先占目标、保外人运输另一箱（4-6）
+
+2026-10-03第5态单人2,1、其他按钮1,1为空，门6,1 blockable=false；第6态单人1,1，2,1为空，门仍blockable=false。此例两按钮为OR，而非要求同时压住。Button details没有暴露ID，不能仅从观测索引数量臆测配对或AND规则；其他关仍须核实体与门状态。
+
+第48态活cargo在6,6刺内、fork1朝左，外人5,5；第49 X上下复制载箱到6,5与6,7目标，两cargo均活，外人留5,5。外人随后运下方载箱至2,7，末死2,6。完整61输入实际完成，0undo/0retry；这是M098的刺内活人复制延伸，起点与外人避开复制落点的安排允许单外人先保右目标再送左目标。证据4-6.json与solution，无提示。
+
+### M101 持叉cargo与持叉外人同次X可同时复制载箱和分出外人，再由双载箱链跨连续刺（4-7）
+
+2026-10-03第26输入/time27态cargo3,6与外人1,4均fork1面下。第27 X：cargo因左2,6墙使用右4,6及前3,5，原BOX42和新BOX46均装活人；外人分到2,4/1,3。单条线共有两cargo、两free，叉均归零。
+
+下箱从3,5送5,4，外人由5,2上滑ICE5,3，推箱至5,5时停在5,4；再W将cargo推5,6，自己死5,5，另一free到3,6。两cargo4,6/5,6随后被连续DD串推至6,6/7,6；外人最终死5,6，两cargo活且目标完成。48输入/time50，0undo/0retry。此前第12 X左出生在真实ICE5,3滑至4,3、右7,3停，证明同一次分裂后自动滑动可造奇偶差；各自动滑动额外time不额外增加instructions。证据4-7.json与solution，无提示。
+
+### M102 载箱分裂腾出的原格可同刻接住外人分裂；分裂载箱还可推开另一箱（4-8）
+
+2026-10-03第19态活cargo BOX51/PLAYER53在6,1、fork1面左，外人52在6,2同样fork1面左，空Color3 BOX50在5,1。第20 X：载人箱向上6,2及前方5,1分裂，前方副本把Color3箱推至4,1；外人两支落6,1/6,3，证明下支可以使用同刻腾出的原载箱格，不能按输入前静态阻塞裁掉。单线双cargo+双free均active/ghost0/fork0。
+
+此前第10 S已实测Color3+Color4异色箱链同推，右端Color4同刻捕获另一个向下进入的人。随后八方向完成上方接力：载箱6,7刺内仍活，首推者死6,6，另一free从5,7推至7,7目标，自己死6,7。28输入/time28，0undo/0retry。证据4-8.json与solution，无提示。
+
+### M103 分裂后外人处于箱链前侧才能先绕到末端；双箱链可越刺压按钮而保另一外人完成（4-9）
+
+2026-10-03第21态cargo3,3面A，外人2,3面D，均fork1。第22 X真实cargo3,4/2,3，free2,4/3,3；free3,3占箱右侧可先去7,1。此前相同箱坐标但free1,3/1,5的旧20态受限模型无尾，人物相对箱的哪一侧是关键状态，不能只按箱位置判断等价。
+
+第32态箱7,3/6,3、free5,3/7,1，经WDSWSSW把双箱送7,6按钮及7,5，首推者死7,4，而另一free7,2仍活；gate3,1 blockable=false由箱独压按钮。余free走底行至goal1,1完成。46有效输入/time47，两cargo始终活；本例用双箱链使首箱到刺后方按钮，不需要箱内幽灵或推断穿墙。证据4-9.json与solution，无提示。
+
+### M104 已复制的两cargo和四free经推力冲突，各支保两cargo及三free完成成对尖刺目标（4-11）
+
+2026-10-04第11 X，一名叉2角色1,1面S的两侧/前方三墙，原地耗一叉，另一叉2外人分裂，得到三名叉1外人。捕获一名后第21 X同时复制cargo容器并分裂两外人，形成2cargo+4free全叉0，包含6,3新外人落入同刻腾空的容器原格。
+
+第40 W，叉0两外人7,3（北墙迫使向左）及6,2（直接向北）正交推载人BOX51，真实断裂为两线；BOX45未参与，cargo47/52在两支都仍active、contained1。两互斥推者各支遮蔽一个，其余角色继续继承，因此每支2cargo+3free。axis0用两cargo覆盖1,7/2,7，axis1覆盖6,7/7,7。三个外人先分别竖推两cargo跨row6尖刺，再从安全4,7横推row7双箱链，使两目标同时覆盖，末外人落刺死亡可接受。81有效输入、time58/62，在较晚线completed=true；正常落盘108关5星，证据4-11.json及solution。只证本例两载人箱与未参与外人的继承，不推广任意容器或重叠冲突。
+
+### M105 保留末叉给X等待者，装箱后两叉0外人冲突分工覆盖三个目标（4-12）
+
+2026-10-04鸭子实测：第一次取6,3叉分裂成两叉0外人；仅取上部7,5叉返回后再X，旧角色59无叉原地等待，两新外人60/62移动出生。空Color4箱下送2,2并横推至6,2button，门7,4保持开，旧角色59先取保留的7,6叉，之后回收箱并捕获59。此时cargo叉1、两外人叉0，能同时从2,2/3,3对载箱2,3作W请求，产生北/左正交推力冲突。
+
+实际两支均保cargo59 active、ghost0、contained1、split1，各保一叉0外人。北支送2,7再X复制至1,7/3,7；左支先W把cargo前方对Wall，仅右2,3有效，X原箱单侧迁移并耗叉，再下送2,2、绕底上推至中央2,7。两支末推者均死2,6，time57/65，较晚支真实completed=true。70有效输入/11undo/0retry，正常持久化109关5星，证据4-12.json及solution。证明本例取叉次序、可回收箱压按钮及跨线cargo分工；没有验证连续X的同刻重叠BOX碰撞或任意trap可达性。
+
+### M106 闭门和箱背阻挡可普通等待保叉2；刺内cargo转朝向后第二代复制得到四容器（4-13）
+
+2026-10-04矩阵第33/34态直接核两BUTTONGATE5,4与5,7均blockable=true、空Color4 BOX5,6。53在5,5，左右4,5/6,5是真Wall，南为闭门5,4，北BOX5,6的背后为闭门5,7，普通A实际原地且split2不变；54同时从2,4移到2,3，时间33→34。普通等待保叉，有别于失败X会耗叉。之后完整普通回收段第51实际捕获54，cargo及外人均split2；模型还解释49D第二trap与50W捕获，但这两个中间点未单独实时观察，详见解法范围说明。
+
+第63 cargo2,6刺内为唯一活人，split2/ghost0/contained1，末推者2,5已死。第64 X复制Color4载箱到1,6/3,6刺内，两个cargo均split1活；第65 A仅将cargo face改A、BOX位置不变；第66 X各向上下复制，实际四cargo/四BOX到1,5/1,7/3,5/3,7，split0/ghost0/contained1，同线完成。证明连续两代复制可在中间普通方向转朝向，使第二代落到矩形四角；本例四落点互不重叠，不证明重叠BOX合并。66输入/0undo/0retry，正常持久化110关5星，证据4-13.json及solution。
+
+### M107 同一个体分裂的箱子相遇会融合，不能自相叠加；不同源蓝箱背墙可迫使分裂改走前方（4-14）
+
+2026-10-04金字塔初始cargo4,6叉3面S连续XX，第二次X两同源容器同时落4,6：BOX50/cargo51 active，BOX52/cargo53 inactive，所有height1，后者cargo.container=50。自动教学完整正文：“就像分裂的我一样，分裂自同一个体的箱子之间也会<color=#FF5060>融合</color>”；“这意味着它们不能自相<color=#FF5060>叠加</color>”。这是正常自动教学，无hint。与M052不同来源普通箱可叠加的条件区分；不从桥无来源字段推导任何量子纠缠属性，也不将本教学归为Link成就。
+
+正常undo2后，17输入解法先把空Color3蓝箱送3,5/5,5，再cargo面A X竖分4,5/4,7，W设北面，X横分时将蓝箱推至2,5/6,5。最后X因蓝箱外背1,5/7,5墙无法继续外推，低cargo改走前方3,6/5,6，并在4,5融合；上层出生2,7/4,7/6,7，在4,7融合。六个目标实际同时被六活cargo覆盖，两个交汇点loser inactive、height1，completed=true。证据主JSON保留初XX、完整自动dialog、undo2与最终17动作。111关5星持久化，solution4-14。
+
+M107补持叉融合范围：4-14 initial cargo49 Fork3；events[2]第一次X后cargo49/51均Fork2，events[4]第二X同源中央相遇后survivor51 active/Fork1、loser53 inactive/Fork1，外两cargo49/55亦Fork1。这直接说明本例同源载箱内两Fork1融合仍保Fork1，未相加成Fork2；不据此改写M025自由人或不同高度/不同来源的全局合并规则。无需重玩，直接引用既有实证帧。
+
+### M108 先装入蓝箱再经冰面拾叉可保持活人；活Color3 cargo分裂也复制容器（4-15回访局部）
+
+2026-10-04对齐第二次正常回访第23态，两叉0外人50=4,1、51=5,4，Color4箱48=4,2、Color3箱49=4,3。24 W双箱链上推，51受5,5墙阻转A，同刻到4,4被蓝箱捕获，仍active/ghost0。25 W将蓝箱送入ICE4,5再自动滑4,6 SPIKE；cargo51依次收两叉，稳定后split2/ghost0/contained1/active，外人50=4,3，Color4空箱4,4。25输入/time26包含滑行额外tick；不是裸人先死后在下一tick被追撞救活的未知试验。
+
+26单X原Color3 BOX49/cargo51到3,6，新Color3 BOX52/cargo53到5,6，两cargo均active/ghost0/contained1/split1，原朝W保留，外人叉0原地。这是活Color3容器复制的直接证据，区别于M093中幽灵复制Color2纠缠箱；本例没有纠缠自动教学，也未达成六目标或新成就。证据4-15.json第23/24/25/26稳定帧及solutions/4-15.md。
+
+27 W将空Color4箱滑到两cargo之间4,6；28 X的相反侧向分裂推力实际断裂为两线，分别C4=3,6/5,6，每线三活Bluecargo=2,6/4,6/6,6叉0，输家的新容器/cargo被maskedoff，不是融合为第四活cargo。两线随后各运输20方向到右外目标6,7/7,8或左外目标1,8/2,7，另各cargo在4,6，末外人死。70instructions、两线time50且切线核仍completed=false：本例父线先前3,6/5,6占据不使缺内侧目标的终态完成。此失败完整留档并undo44恢复26持叉状态，不能把条件外侧尾写成全关解或泛化所有父线目标规则。
+
+另正常undo1回25，AX短判别：A使cargo4,6朝A、外人因左墙转S到4,2；X向下分裂支进入ICE4,5，原Blue49/cargo51自动滑4,4并推动空C4箱4,4→4,3，另一支Blue58/cargo59前方3,6。两cargo仍叉1/ghost0/contained1/active，外人未被捕获。27inputs/time29的直接稳定观测证实本例分裂载箱的落冰续滑，不借普通移动模型假定；此跨row状态仍未完成。
+
+AX后接单W、单X的相邻父盒探针：28 W使两Bluecargo在3,6/4,6、叉1朝W；29 X四载箱到2,6/3,6/4,6/5,6，全部active、ghost0、contained1、叉0、height1，单时间线，未发生融合/叠加/冲突。对方旧父盒格可当次使用，不能将输入前静态占据当成分裂落点必定受阻。本例只验证相邻同源父盒、横向互换出生，不推导任意箱穿越或异源叠加。随后undo4+X恢复横向双叉1状态，累计49undo/0retry。
+
+### M109 cargo分裂同时推独立箱与出生可造成异源叠加；目标光坍缩两箱时各支继承cargo（4-15回访局部）
+
+2026-10-04对齐42态Color4空箱48=5,6，两Bluecargo49/51=4,6、64/65=6,7均叉1朝D，外人50=7,6叉0。43 X，前者的前方Bluechild66/67到5,6并推空C4至6,6，后者的向下Bluechild64/65同刻到6,6。实际C4底height1，Blue上height2/contained1/container48；cargo65仍active/ghost0且container48/height2。另外下方Blue经ICE滑4,4，右前方Blue7,7，两者cargo仍活。独立C4与Blue可以叠加，此例不套同源Blue相遇的M107融合。
+
+44 A推动叠体到GOAL5,6，真实产生两世界线：axis0保C4箱48、mask Blue64；axis1保Blue64、mask C4箱48。cargo65两支均活、ghost0、contained1/height1，container分别48/64，其余三个cargo及外人也各支保留。两线time47、44instructions，仍未完成、无自动教学。此为M084载人叠体观察继承的本关直接证据，不凭颜色或重复ID计算线数，不称量子纠缠/Link成就；具体箱身份来自同一主JSON42/43/44直接帧。后续完整目标覆盖仍未核。
+
+### M110 已完成AlwaysEnable入口可普通走过的实际对照（Chapter2）
+
+2026-10-04正常地图传送Chapter2，世界P82,7/Fork1。前5W到82,12，单W第6输入实际到82,13，所在ENTRY2-1的AlwaysEnable=true；仍worldChapter2、initialized且input_locked=false，UI仅显示2-1突破/重新进入/关卡预览，没有自动加载。证据chapter2-world.json events[367]完整稳定态。此前导航模型将所有AlwaysEnable格排除，因而只得到35格下房的受限范围；此例应允许走过已完成2-1，不从该字段单独推断自动触发，也不未经观察推广其他章节入口。接13安全输入正常走过done2-2到75,17，叉仍1，BlueBOX45,15与COL5未动。
+
+### M111 世界冰箱迎面制动后可作分岔止滑物（Chapter2 COL5）
+
+2026-10-04初始世界BlueBOX34445,15。真实第62态双free在34,15/76,15，单D使左人向右滑推箱、右人因边墙转A迎面反推，稳定第63/time201：BOX55,15仍在ICE且movingdir0，外人45,15/56,15均活、无contained，只有一线。证据chapter2-world.json events[388]；这是M040在大地图的直接制动实例，不把箱惯性当第二主动推者自动断裂。
+
+WDW后剩一free75,17，另一人真实落54,14SPIKE死亡。安全绕路27输入到55,18；第94 S沿55列撞推盒，pusher停55,15、BOX继续滑至SPIKE55,7。第95 S面对不能推进缺格55,6的BOX，在55,8止滑。末DSASAWA：57,8→57,7→56,7（盒西54,7缺tile，不能左推而制动）→56,5→54,5→54,6→39,6。第102/time304 UI实际获得5号星星（大桥要断掉啦），COL5 inactive；正常确认，无提示/0undo0retry。证明此岔路可通过动态盒位置停滑绕过55,7裸刺，星数落盘另据存档核验，不从编号预信用。
+
+M111持久化补证：正常地图Chapter2→3后，root于2026-10-03T22:31:56.7440073Z只读确认SaveSlot1 Collections5=true、accomplishCollectionCount6、accomplishLevelCount111；chapter2-world主JSON末追加save_check。
+
+
+### M112 同输入踩按钮的末开门不改变另一人的该步闭门判定（2-A 实际探针）
+
+2026-10-04回访抛物，第34态P61=3,4、P71=3,6，BOX60=3,7；Gate3,5已closed、仅BOX占据的3,7门自持开。单S，下人61进入button3,3，稳定35全部门open；上人71却未走进此前闭着的3,5，而转D进入SPIKE4,6并inactive/ghost1。因下人ID先于上人，此例不能用'先处理下方玩家会即时开门让上方过'作为普通移动模型。支持本输入使用输入前门态作此步通行判断，不穷尽后续ICE微tick/多按钮时序。随后正常undo1恢复34双活，未完成。直接证据2-A.json events34/36/38，0retry、无提示；33W末开门/34W末关门的对照同主JSON有实际稳定帧。
+
+同日正常已解锁通用笔记读取：Chapter3 `Note/Content/Title` 的13/15叠加、14/15装箱、15/15穿越均与此前实证一致；它们确认容器能与人一并分裂、幽灵依赖黑暗、边界循环。没有读取获得启示或关卡提示，没有将此重复一般说明计作新成就。原UI全文已记录chapter3-world.json本次菜单事件。
+
+### M113 受阻停止的冰面载箱清障后不自行续滑；裸人可先拾SPIKE叉再死亡（4-15局部）
+
+2026-10-04蓝箱挡冰新回访，第37态Color4 BOX48/cargo51停ICE4,5，叉0、活ghost0；前方Blue49=4,6且其背4,7为Wall。BOX48与cargo51的movingdir均0、movingsrc=-1，外人50=4,4/53=3,6均活叉0。单38 D，53将Blue向右推5,6，自身进入SPIKE4,6，实际先拾最后Fork：KEY46 inactive、53 split1，但53已inactive/ghost1/contained0。50正常到5,4存活。BOX48/cargo51仍4,5、movingdir0，没有因同输入障碍移开而重新滑入4,6；time38→39，仅一线、未完成、无自动对话。
+
+这是M064“先拾物再死亡”在Fork上的直接实例，以及已稳定停止的冰箱清障不会自动重启的本例证据。该输入没有实际发生后续箱滑，因而不判定“第二微tick追撞刚死者是否捕获/复活”；也不把下一输入迟箱的旧M064边界直接推广到这种同输入情形。正常undo1恢复37及最后Forkactive，累计50undo/0retry。直接帧 `artifacts/slot1-playthrough/4-15.json` events[96]/[98]/[100]。
+
+M113补最小分裂判别：正常redo1回第38裸死者Fork1状态，单X虽dispatch，但instructions仍38、time39、undo_depth38；53仍inactive/ghost1/contained0/split1，未产生新PLAYER/BOX/世界线。其他两活角色Fork0不变。只限定本例非DARK、未装箱的inactive持叉Ghost，不能否定M093箱内活动Ghost。再undo1恢复37，累计51undo/1redo/0retry，直接帧events102/104/106。
+
+### M114 同输入后续冰箱到刚死者格，仍未捕获持叉Ghost（4-15局部）
+
+2026-10-04正常undo20回蓝箱挡冰17，再 `WSASSSSWWWSAWWADWX` 到新35/time36。末W令双Fork1父在4,2朝A、2,6朝W；X直接出生四名活Fork0外人：50=4,1、54=4,3、51=1,6、55=3,6。此刻Color4空BOX48=4,4、空Blue49=4,6，最后Fork46仍active。用X出生所需站位，区别于从普通方向构造末步的受限模型。
+
+单36 D后真实time36→38：54从4,3受5,3墙阻而向北推BOX48；BOX48由4,4沿唯一ICE4,5到4,6，Blue49同时被55从4,6向右推到5,6。55自身在4,6拾最后叉但稳定帧仍inactive/ghost1/split1/contained0/container-1，BOX48为空，没有捕获或复活。50=5,1、54=4,4、51=2,6均活叉0；只有一线、completed=false、无自动对话。直接前后帧为4-15.json events[116]/[118]；中间ICE格路径由实际地图和两tick时间推进确认，不另伪造逐微帧观察。
+
+本例补M064：即使是同一个输入的新推箱后续冰滑，稳定结果也未把刚死者装入容器；它与M092同一主tick同时到格的活动Ghost装箱实例区分。范围只限这次Color4空箱/裸持叉Ghost，不断言所有时序、箱颜色或已有cargo都一样。随后正常undo1恢复35四活与未取Fork，累计72undo/1redo/0retry；未增加关卡或成就。
+
+### M115 两叶可跨侧分配目标并联合完成六目标（4-15）
+
+2026-10-04正常重建已实测28输入的分裂推箱冲突后，各叶已有三活cargo2,6/4,6/6,6与一外人4,4，空C4分别在3,6或5,6。成功收尾没有增加人物或世界线：axis0先将两箱送右侧，再把原中央cargo链推回3,6，最终活cargo3,6/6,7/7,8；axis1对称保右内侧5,6，取左外侧1,8/2,7。两叶time52，最后W使completed=true，完整73输入。六cargo皆active/ghost0/contained1，两个外推者分别死7,7/1,7；正常自动返回后align=3、112关6星。
+
+本例是M027跨线目标集合覆盖的具体成功实例，不要求每条叶线恰好完成同一侧的全部三个目标。旧固定“每叶整侧三目标”的普通模型无尾不能推广成此资源状态无解；本轮放宽到任意目标集合相并才找到正尾，但实际没有使用底行弃箱，也没有依赖冲突前父线上的目标或新增幽灵机制。尾17的两次关键双箱链推各有直接前后帧，成功主证据[4-15](../artifacts/slot1-playthrough/4-15.json) completion及保存检查，解法保全部旧失败历史。
+
+### M116 新分裂载箱与另一个活人同格时，装箱并融合为一个活动角色（4-16局部）
+
+2026-10-04活塞 `WWAXD` 第5态：两活cargo50=5,6/container45、54=4,5/container53，均Fork1/faceD/ghost0；外人49=4,4 Fork0、contained0。第6单X，新Color4 BOX57出生4,4；49仍active、ghost0、Fork0，变contained1/container57/height1。新cargo58也在4,4、container57/height1，但inactive、maskedoff0、ghost0、Fork0。BOX57 height1；只有一条线、无自动对话。稳定结果为两个角色同格后的融合与原外人的装箱，不能将其计为两名活cargo或异源叠体。
+
+另外三个cargo50/54/56在5,7/4,6/5,5均活且contained/Fork0，当前四活角色全在箱内、未覆盖目标，completed=false。此例补M041/M038，不推广存活ID排序、持叉数合并、不同高度或既有多cargo容器。主证据[4-16](../artifacts/slot1-playthrough/4-16.json) events[7]/[9]直接前后帧；正常undo6恢复fresh0，累计7undo/0retry。
+
+
+M116补持叉实例（4-20）：25cargo61=2,3F2/W与outside59=4,3F2/A；WA27后cargo仍2,3F2/A、outside3,2F2/A、Blue3,3。28单X，C4 childBOX57/cargo61与freechild65同2,2，双方本应各Fork1；实际61 active/contained1/container57/height1/Fork1，65 inactive/ghost0/maskedoff0/contained1/container57/height1/Fork1，未相加为Fork2。另一新cargo67在2,4SPIKE受保护活Fork1，外59在3,1活Fork1，一线未完成无对话。与4-16原外人存活的F0样本区别，本例存活cargoID61，不据此宣称固定ID顺序。normalundo3恢复25双Fork2，累计5undo0retry，直接4-20.json events[20]/[22]/[24]。
+
+### M117 活Color2箱内分裂复制容器；同步复制外人可牺牲一人压双按钮并保左区通路（4-18局部）
+
+2026-10-04混合第25 W，外77在8,2上推Color2 BOX73由8,3到8,4；持叉78从9,4北受Lock9,5阻转A至8,4，被捕获且active/ghost0/contained1/Fork1，外77在8,3仍活Fork1。第26 W将载箱送SPIKE8,5，cargo仍活，外人8,4。第27 X原73/78至7,5、新Color2 BOX80/cargo81至8,6；外人同时生7,4/9,4两Fork0，cargo也皆Fork0/ghost0/contained1/active，一条线、无自动对话。
+
+第28 W左外人77推cargo7,5至按钮7,6，自身落SPIKE7,5死亡；右外人79北受Lock9,5阻转A至8,4仍活。Color2载箱73/78及80/81分别在7,6/8,6压按钮，两Gate5,2(ID0)/6,2(ID1)直接实观blockablefalse。随后SSAAAA唯一活外人实际安全穿双门到4,2，左两空箱未动，证明本例保留了探索左区的控制者。已有第27稳定帧补配对范围：只有BOX80占Button8时，Gate5,2(ID0)已open而Gate6,2(ID1)仍closed；第28在Button8仍占用时加入Button7，Gate6,2才open。Button8单独配对已证，Button7单独状态未测；不声称Ghost纠缠性质或Link成就，也未完成四Goal。范围补充M093的活人容器复制，区别于原Ghost教学。证据4-18.json第25/26/27/28及34帧。
+
+左区第41 W裸人至SPIKE3,6，先拾Fork成为split2/key1，再inactive/ghost1/contained0；normalundo1恢复40活3,5F1/key1。此处是M064拾物先于死亡的新Fork实例；动态字形覆盖下层SPIKE不能当安全地形。无尸体装箱或再分裂实验，不泛化新时序。
+
+M117补后续回收：4-18第40外人3,5活Fork1/key1，16尾SDSSDDDDDWWWAAAA正常开Lock9,5并从右推回两Color2 cargo横链。第56 front73/cargo78到SPIKE3,6，实际仍active/ghost0/contained1且拾末Fork成split1；rear80/cargo81在4,6活Fork0，外79在5,6活Fork1。左两空箱仍2,2/2,3；两Gate因按钮空置关闭，Lockinactive。与第41裸取叉死亡构成直接对照，补M079/M108载箱保护取物；不是复活Ghost或新纠缠，也未解四Goal。
+
+
+### M118 世界水晶推入冰面后，推者停止；水晶自身惯性可触发正常入关（Chapter4 4-X）
+
+2026-10-04，4-18正常返回后，世界安全35输入到COL104旧格[-32,6]，SS把4-X水晶29推至[-32,3]、玩家66到[-32,4]F1。DAX实际生两活Fork0外人66[-32,3]/74[-32,5]，水晶[-32,2]；这次X是普通自由人分裂，不是“分裂关卡”的成就证据。14S后实际世界54/time54，水晶29停ICE[-32,-12]、两人[-32,-11]/[-32,-9]；下一S因南方缺地形不能继续推，低人转D安全退开。
+
+ASS后58态两活自由人[-31,-12]/[-33,-12]夹水晶。59单D，水晶被推至SOLID[-31,-12]，右人到[-30,-12]，推者74停ICE[-32,-12]，皆active/ghost0/contained0，movingdir0；直接证明本例水晶推者与M035普通箱一样停止，而不是在下一微拍追着再推。下一单A回执执行1动作后busy/input_locked，观察正常加载Template4/sky「4-X 天空」fresh0；1300ms后完全解锁，未使用提示。按59前态与真实地形，该步是右人西推水晶进ICE[-32,-12]，另一个活人到SOLID[-33,-12]，水晶自身向西滑行后触发入关。
+
+最后入关过渡没有稳定保存world contained=1的中间帧，因此捕获位置与第二微拍是由已实测59、地形和正常加载解释的路径范围，不伪造独立逐微帧或PLAYER container属性。主证据chapter4-world.json events[241..251]与4-X.json initial；没有把旧22步“推者继续滑”假设当实证，也未证明Yellow/Cyan/Link条件或4-X通关。
+
+### M119 未遍历Prism标志不能单独证明阻光（4-19局部）
+
+2026-10-04反制初态与17态，Goal所在PRISM45[6,8] traversedtrue/testCompletedfalse，侧PRISM46[5,8]/47[7,8] traversedfalse。17后DDW至20，唯一活cargo5,6F1朝W；单21 X得到两活载箱cargo4,6/6,6F0，实际completed=false。此时左46改为traversedtrue/testCompletedfalse，右47仍traversedfalse，中央45仍true/testfalse。直接前后帧保留4-19.json；随后undo4恢复17双活F1。
+
+本例只证实这组中央向下占位构型不足完成，以及观察到的标志变化。不能仅凭traversedfalse推断相邻Prism阻光，M068已有邻接Prism同时被遍历的反例；递归检查遇未满足支路可能早停仅为解释，未读取隐藏实现或把该解释当实证规则。没有新增成就或通关。
+
+### M120 箱内人与外人同次分裂的相反推力可形成两线，未冲突的新cargo仍保留（4-20局部）
+
+2026-10-04马第25态C4 BOX57/cargo61在2,3 Fork2/W，外59在4,3 Fork2/A，空Blue58在3,3。26单X：cargo右生侧需将Blue向D推，外人前生需将同Blue向A推；双方另一个有效分支分别2,4与4,2。实际形成axis0/1两叶，均time26，没有自动对话，稳定后解锁，未完成。
+
+D胜叶原C457/cargo61到3,3活Fork1/contained1，Blue58到4,3；外人前孩子62 inactive/maskedoff1。A胜叶Blue到2,3，外人前孩子62在3,3活Fork1/uncontained，原C457与cargo61在2,3 inactive/maskedoff1，cargocontained0。两叶各保外59在4,2Fork1，以及新C463/cargo64在SPIKE2,4 Fork1/active/ghost0/contained1。直接帧4-20.json events[13]/[15]/[16]。
+
+此例补M042/M109的自由人分裂与载箱分裂混合推力：不能把输了冲突的原cargo当成仍活动的箱内资源；不参与该推力的另一cargo分支在两叶保留。只录此相反推Blue的真实继承，不推断任意排序、纠缠、Ghost或全局Fork合并规则，仍是未完成关卡。
+
+M078补4-22四箱链实际实例（2026-10-04）：4-22.json第33/34观察（events[13]/[15]）中，原四C4在3,5..8，两个Fork1/key2活人分别4,9面A与3,4面A。单W下人上推整个四箱列一格，顶人因4,10Wall转A同刻入新顶箱3,9；cargo88/BOX87仍Fork1/key2/ghost0/active/contained1，外89留3,5活。只补已证多箱链捕获的长度与保资源实例，不推广任意箱内多角色或SPIKE先后。
+
+
+### M121 无叉载人箱可被另一箱的分裂推到新Fork，再自行分裂（4-23）
+
+2026-10-04，4-23真实48态cargo91/BOX90=4,7 Fork0，cargo105/BOX104=4,8 Fork2；全部contained且ghost0，已无活外人。49S将活箱内角色转朝S，不挪箱。单50X，105分裂侧均受Wall，前方分支推旧箱90从4,7到4,6，旧cargo91仍活Fork0；单51X再次将旧箱推到4,5，实际KEY叉inactive、cargo91从Fork0变Fork1/ghost0。单52X原cargo91自行复制到双GOAL5,5/3,5，两活货物Fork0/contained1/ghost0，关卡completed=true。直接49/50/51/52稳定帧见4-23.json，不把无叉普通X本身说成能推或复制，也不推断Fork融合相加。
+
+此前37/38空Blue缓冲允许推者两次安全接近SPIKE：载C4到9,6/9,7依次拾叉1/2，外人第二W才踩9,5死亡。整个蛇尾允许箱内角色消费旧叉并在分裂出生格拾新叉、持续前进；本例仅为这些实际坐标/已验证分裂与拾物规则组合，没有读取隐藏机制或使用提示。
+
+
+### M122 Color1活人容器可单侧迁移与双侧复制，出生取叉补回消耗（4-24）
+
+2026-10-04响指，23双箱链捕获前端Color1 BOX87中的活cargo91，ghost0/Fork0；缓冲12步到35，载箱9,6受保护拾Fork1、C4空9,5、外89在9,4安全。36单X面W，两侧10,6/8,6为Wall，唯一front9,7仍有Fork：原BOX87/cargo91迁至9,7并拾叉保持Fork1，不新增第二箱或外人。37再单X，两有效侧/前落点8,7与9,8分别取叉，生成原87/cargo91和新94/cargo95，两货物皆active/contained1/ghost0/Fork1；外人F0未响应X、仍安全9,4。完整原始前后帧见4-24.json。
+
+这把M093/M098/M110容器分裂的实际标签覆盖补至Color1活人箱，不能仅从Color1未曾载人复制就排除该资源。Fork1保持是先消耗旧叉、再在各出生落点拾新叉，不是融合相加或凭空无限叉；本例未触发自动教学、worldline冲突或新成就，也尚未完成两Goal。
+
+
+M122补按钮实证：4-24第42单X，Color1 carrier97/BOX96在5,7面A前向分裂，将原独立Blue70从4,7推至Button67[3,7]，原载箱入4,7Fork0。稳定Gate1,8(ID1)open、Gate1,2(ID0)closed，Button4,6未占用；outside89仍8,4活F0。只证Button3,7单独开上门，第二按钮配对与两Goal完成不提前信用。39–42每X完整原始帧保留，无提示。
+
+
+### M123 分裂产生的无叉载箱可补成长竖链，外人推链后以Fork0头箱接力补叉（4-25）
+
+2026-10-04长颈鹿，真实64 Bluecargo84/BOX64在3,4 Fork1、空C4 rear83在SPIKE3,3、外85在3,2。66X先推空rear南移，再67W外人用两箱链安全推回；侧Fork与X的已知规则组合，在3列逐段堆出载箱链，未出现stack/冲突/新教学。真实85时col3空83=3,2及Blue y3..12、head113/112=3,14 Fork0，中间y13缺口；115/114=2,15 Fork1，外85=3,1。
+
+86单W外人推下部11箱链一格，填成col3 y3..14连续12箱，外仍活3,2；87单W将这条12箱链再推一格到y4..15，head113至3,15F0，外人进SPIKE3,3死亡。cargo皆受保护ghost0，旁侧2,15F1保留。88单X该持叉cargo侧生推旧head至4,15，旧head受保护拾最后Fork成为1；89再单X由head侧生5,15 Goal，completed=true。直接4-25.json events58/60/62/64/66与completion保存。
+
+这是M078箱链长度与M121无叉货物补叉接力的新实际实例：Fork1入口加可控outside/rear箱足以本关完成，不能因solo连续北X预算不足判全关无解。只限该12箱链/顶端继承与取叉时序，不推断无限链、不同源叠体或Fork融合相加。整个89成功串、第一次64正常离关和重入历史保留，0undo0retry；root存档114/6独立核。
+
+
+M055/M078补4-26混合双链捕获实际例（2026-10-04）：主4-26.json actual15为Blue46[13,3]、Prism92[13,4]、free93[14,2]与94[13,5]，两活人Fork0。单A16，94因12,5Wall转S下推Prism+Blue混合链，Prism到13,3、Blue到13,2；93同时A至13,2，被Blue装载且active/ghost0/contained1，94留13,4活。Prism没有容纳角色。继续DSSAA到21，货物安全进入SPIKE11,2并拾Fork1、外人12,2活；只补此混合两对象链的具体捕获/护叉实例，不推断棱镜载人、任意堆叠或完整Goal已满足。
+
+
+### M124 单个棱镜装载活人并随持叉角色分裂（4-26）
+
+2026-10-04，4-26.json actual32为Blue46/cargo93在11,2/Fork1/faceW、空Prism92在12,2、outside94在13,2/Fork0/faceW。单X33：右出生的Blue46/cargo93推Prism92到13,2，静止outside94被装载。P94仍active/ghost0/contained1/container92/height1/Fork0，isSittingfalse；Prism92仍typePRISM/classPrism/Color1/height1，lighten/traversed/testCompleted=false，没有变成BOX。新北Blue95/cargo96在11,3拾叉Fork1/ghost0，旧Blue46/cargo93为12,2/Fork0；三个活人均contained，单时间线time33、無conflict/自动对话、Goal未完成。root独立MCP核一致。
+
+只证明本例安全格单Prism被动捕获Fork0活人；在该33 probe时持叉棱镜主动X尚未核；后续实际23的不同重置路线已补于下段。仍不推广光学完成、Ghost、叠体或任意容器合并。之后正常undo12回21保原Fork1货物与outside，累计32undo0retry，全历史未删除。
+
+
+M124补持叉Prism主动X（4-26实际23，2026-10-04）：另一次normalundo后重新部署 `DDWWWDSSSAXAAWAADSSAADX`。16混合Blue+Prism链捕获前端Prism，21 Prism92/cargo97在SPIKE11,2保护拾Fork1；22D外人到13,2并令cargo朝D。单X23，原Prism92/cargo97到11,3、新Prism98/cargo99到11,1，两PLAYER均active/contained1/ghost0/Fork1（X各花1后保护拾freshFork）；两个容器仍typePRISM/classPrism/Color1/height1，lighten/traversed/testCompleted=false。外93在13,2F0活，空Blue13,3，单leaf/time23/noDialog/noConflict，Goal未完成。这直接证明该安全容器继承、SPIKE保护、Fork1 cargo-X连棱镜复制实例；没有验证同源棱镜融合/光学完成、不同source或叠体复制。
+
+
+M124补同源Prism0+0融合（4-26实际24）：23双Pri11,3/11,1均F1且朝D，单X24两新南/北children同至11,2，均F0。实际Pri98/P99 active survivor、Pri100/P101 inactive；loser cargo.container98，双方height1，没有堆成height2。其它活Pri11,4F1/12,1F0、outside13,2不受影响。只证明这一同源Prism0+0融合；未证持叉Prism1+1如何合并，不把BOX的M1071+1直接当本例数据。后续真实48上区Pri3,14F0邻Goal仍lighten/traversed/testCompleted=false、completedfalse，光学目标需实际完成判据。
+
+
+M124补Prism载人X相反推力分叶（4-26实际51→52）：51持Fork1/W的Prism150/P151[4,11]与148/P149[6,11]分别右/左生孩子，同时对旧Prism134/P135[5,11]施D/A推力。实际两叶time52，axis0旧134/P135到4,11，148/P149到5,11活，156/P157在4,11 inactive/maskedoff1/contained0；axis1旧134/P135到6,11，156/P157在5,11活，148/P149在6,11 inactive/maskedoff1/contained0。两支新158/P159[9,11]保护取Fork保持1，outside93[15,5]活，旧head3,14/F0保留。两个timeline id皆160但axis不同，以axis保留各叶；稳定锁false/completedfalse，root MCP独立核。只补此Prism cargo/cargo分裂推力与失败孩子mask继承，不把光学Goal或任意融合/纠缠提前信用。
+
+
+### M125 叉子出生推空棱镜至Goal、南邻活载箱可光学完成（4-26）
+
+2026-10-04，4-26新成功114输入的直接112/113/114完整帧：112 emptyPrism92[3,13]、Blue187/cargo188[3,12]Fork1/faceD/activecontainedghost0。113单X北出生推Prism到3,14，原货物进入3,13拾freshFork保持1；114再单X北出生推Prism至Goal3,15，Blue187/cargo188到3,14Fork0仍活containedghost0。Goal西2,15、东4,15、北3,16皆真Wall；唯一南ray邻接该活cargo。实际Prism仍empty/typePRISM，lighten=false、traversed=true、testCompleted=true，level.completed=true；没有activePLAYER直接站Goal。root独立completion与SaveSlot1 dna3/record114/count115/6核一致。
+
+该实例证明直接坐标mask只检测PLAYER位置会漏掉已知棱镜光学完成；不把traversed单旗、邻任意棱镜或任意远光路当充分。先前载Prism3,14所有flagsfalse未完成与本例Goal上的emptyPrism不同，二者历史均保全。全部43活cargoghost0/contained1，无free，101undo0retry，禁止提示。
+
+
+### M126 两独立载人箱分裂孩子同格叠体，乘员只保一活（4-27）
+
+2026-10-04绽放，初Color2 BOX67/cargo76[2,2]与Color1 BOX69/cargo78[4,2]皆Fork1/faceS。首单X二者内向孩子同到3,2；完整4-27.json events[1]实证BOX67底height1，Color1 BOX86仍active但contained1/container67/height2。cargo76 active/contained1/container67/height2/Fork0/ghost0，newcargo87 inactive/contained1/container67/height2/Fork0/ghost0/maskedoff0。两个物理箱保留为不同源叠体，两个原乘员归同底容器且仅76活，不产生两叶；全场5活cargo+1外人，单time1/无conflict/dialog/completed。normalundo1恢复fresh0三持叉cargo与原箱，完整前后帧保留。
+
+这补M052/M109中不同源箱同时出生叠体的具体乘员范围，区别于空箱与一载箱叠加及M107同源箱物理融合。只实证本例Fork0+Fork0归属/活性与height；不推广持叉合并、任意标签优先级、叠体cargoX复制层数或目标完成。
+
+
+M126补局部远处Goal判别：4-27 normalundo1后重现首X的3,2叠体，再WWWA使右外75站Goal9,7。实际events[7] time5仍单axis0/叠体乘员归属未变/未完成；左3,2叠体不在任何直接Goal可见通路中。只否定该具体“远处踩Goal触全场叠体测量”猜测，不推广一般观测或光学范围。随后undo5完整恢复fresh0，累计6undo0retry。
+
+
+### M127 三组独立分裂推力同一输入生成八叶，旁观外人继承各叶覆盖八Goal（4-27）
+
+2026-10-04绽放，真实89构型：三Fork1 cargo分别Color2 67/76[3,3]、Color3 68/77[4,4]、Color1 69/78[4,2]，全faceA/activecontainedghost0；独立C4 70[3,2]、71[4,3]、74[3,4]为推力目标，guard72[4,1]与73[4,5]分别背row0/row6 Wall。90单X两外侧父侧支受guard阻后改前方A，三组对70(S/A)、71(S/W)、74(W/A)的独立冲突同时发生。
+
+实际八叶axis0..7全time90，各4active=3cargoFork0+未参与冲突的outside75[1,4]Fork0，cargo全contained/height1/ghost0；各输家PLAYER及BOX inactive/maskedoff1。3,2的70选择S或A（axis bit4），3,4的74选择W或A（bit2），4,3的71选择S或W（bit1），组成全部八种；没有同刻异源stack或自动教学。axis7时middle67的两cargo孩子均masked，另一独立outside仍完整继承，不能要求同父至少一孩子活或把观察数组顺序当T顺序。
+
+各真实叶随后普通18尾SDDDDSSDDDWWDDWWWW，仅把4,3的活cargo推到6,3，outside75到10,7；再分别A到八Goal9/8/7/6/4/3/2/1,7。实T numeric0→1…7，各末time109/110/111/112/114/115/116/117，最终较晚time117直接completedtrue；八不同时间叶的当前占位联合覆盖有效。主4-27.json89/90/各T和Goal直接帧、events53/54末回执/completion均完整，root独立SaveSlot1 blossom3/record281/count116/6核。只限本三对象六个出生推力/guard构型，不推广任意复杂冲突为2^n，也非所有动作经MCP的声明。
+
+### M128 同一箱链的相反分裂推力产生两条关联叶（4-22再访）
+
+2026-10-04，正常重入侵蚀并重放已实测34：cargo88/87在3,9 Fork1/key2/faceA，外89在3,5 Fork1/key2/faceW；空C4在3,6/7/8，Blue4,5。单35 X时，cargo向南的子分裂与外人向北的子分裂对同一三箱链给出相反推力。稳定实际仅两叶、各time35、均三活角色F0/key2/ghost0，不按链内三BOX独立生成八叶。
+
+axis0南胜：三空C4到3,5/6/7，原cargo88/87到3,8，新cargo91/90到2,9，外89到4,5且推Blue到5,5；北子92 maskedoff1/inactive。axis1北胜：三空C4到3,7/8/9，原cargo88及源87 maskedoff1/inactive，cargo91/90仍2,9，外89在4,5与新92在3,6均活；Blue5,5继承。没有异源叠箱/对话/完成。证据4-22.json最新事件[36]及34直接前态；不推广所有交叉链或独立多target的分枝数。M127仍为三个独立目标八叶的直接实例。
+
+
+### M129 同源载箱分裂对同一个独立箱施正交推力仍生成两叶（4-24）
+
+2026-10-04真实52：Color1 cargo100/BOX99在4,8、cargo106/BOX105在5,7，均Fork1/faceA/ghost0/activecontained；独立Blue70在4,7、outside89在1,4F0。单53X，5,7前A出生需将Blue推3,7；4,8南S出生需将同Blue推4,6。两个冲突child都拟4,7且来自同一原Color1 BOX87，实际没有先以M107融合消去冲突，而是两叶。
+
+axis0 S胜：Blue4,6，cargo100/99在4,7活F0，106/105 maskedoff1/inactive；axis1 A胜：Blue3,7，cargo106/105在4,7活F0，100/99 maskedoff1/inactive。旁观新cargo118/117在4,9及outside89继承两叶，各9活（8cargo+1free），全部ghost0/height1。单占Blue4,6打开下Gate1,2 ID0、上Gateclosed；另一叶单占Blue3,7打开上Gate1,8 ID1、下closed。主4-24.json events[86]/[90]稳定完整字段。
+
+后axis0三S到Goal1,1/time56，T切axis1再五W到Goal1,9/time58，62输入直接completed=true。这里只证本同源cargo/cargo正交推力与旁观继承，不能推广任意同源同格、复杂链或所有融合排序；旧42未完整与本次已完成均保存。
+
+
+M109/M126补4-19一载一空X出生叠体：2026-10-04实际19，C4 cargo48/42=3,4 Fork1/A，Blue43=4,3、outside44=5,3 Fork1/A。20单X载箱南child3,3与外人前child推动Blue43西至3,3同时重叠。C442底height1，Blue43仍active/contained1/container42/height2，cargo48 active/ghost0/contained1/container42/height2/Fork0。另C450/cargo51=3,5，twofree44=5,2与49=4,3，均Fork0/ghost0活，单leaf/time20/无dialog/未完成。主4-19.json events[32]；不把本一载一空套双载箱乘员融合，也不预设观测分叶或Goal。
+
+
+M052/M109补4-19实际27叠体受力：正常回访 actual27/time27，完整串 WDAXDDWWWSAWWSDDWDAXSSWDAAW。26 双free44=4,3/49=3,2；末W对同一C4底42+Blue上43叠体请求A/W，实际2相关叶。axis0 A胜整个叠体到2,3 SPIKE，cargo48 height2/container42/ghost0仍活，free44=3,3活、49maskedoff1。axis1 W胜叠体到3,4，free49=3,3/W活、44maskedoff1。两叶均Blue43 height2/contained1/container42、底42height1，旁观cargo51/BOX50=3,5保留。每叶2cargoF0+1freeF0，未完成，累计4undo0retry。新20刚性叠体普通first-light图647/647队列耗尽仅限无新增叠箱/冲突/occupied/ghost/X传播，未得完整光路运输；此实测补其拒绝边界，不将两物理层算独立4叶或新增活乘员。 公开证据 artifacts/slot1-playthrough/4-19.json events[39]。范围仅本例，不推广任意多层、任意复杂链独立分枝或Goal光学完成。
+
+
+M078/M102补4-19新25 X出生捕获：新25实际完整 WDAXDDWWWSAWWSDDWWSAWSDAX：24 C4cargo48/42=3,5F1/A、emptyBlue43=3,4、free44=3,2F1/A。25X C4南child推Blue至3,3，free北child同在3,3被Blue捕获，成为52/container43/height1/F0/A/ghost0活cargo；C4 cargo48=3,4、新53/cargo54=3,6，outside44=3,1，四活角色均F0/ghost0，无stack/冲突/自动对话，单time25未完成。此前actual27叠体两相关叶全历史保留，正常undo18逐次回9后重部署；累计22undo0retry。此例确认X新生人物可被同输入移动空箱捕获；该source普通尾52/52/pending0/depthcut0未到光路，单外人仍被箱列困在下腔，不把三cargo库存当已闭Goal运输，不重跑该有限域。 公开证据4-19.json events[81]。
+
+
+M078补4-20新26出生捕获：新回访26实际 SSSSSSDDSSSSAAWWSXAWWDSDAX：22单D首捕Blue5,3F2，outside3,3F2、emptyC44,3；SDA后25面A，26X得到C4cargo61/57=3,3、Bluecargo60/58=5,2、63/62=4,3，outside59=3,1；四活均F1/A/ghost0，单time26，未完成。新回访0undo0retry，历史累计5undo0retry。新ordinary→lastX→ordinary域598/598/pending0/depthCut0无Goal，maxBoxY5；停止17stack/4conflict，未传播未知叠体。AX虽六盒两外人但Blue5,1不能普通北回收；WWWDX异源stack仅候选未实测。优先正常返回，转4-19新41完整光路候选，不扩大horse域。 公开4-20.json events[48]。
+
+
+M053/M119补4-19三个分支光路同时保护观察实际完成：4-19反制正常回访41输入实际完成；38X出生同刻捕空Blue，三cargo3/4/6,6与外人1,6均F0；末DDD把三载箱送5/6/7,6，外人最后死4,6SPIKE，三cargo活contained/ghost0。源及左右Prism45/46/47均traversed/testCompleted=true、lighten=false，completed=true。本成功回访0undo0retry，历史累计22undo0retry全部保留；自动World[-42,-12]F1。 公开4-19.json events[100]/[113]及completion；只证本固定Prism网络三cargo南路覆盖，不推广traversedfalse为阻光。
+
+
+M033/M108补4-18出生ICE实际63：新正常回访63：完整 WASXWDDSWAAAAAWDDAAAASWDWWXWSSAAAAAWWWDASDSSDDDDDWWWAAAAASDDSSX。56旧护叉强资源重建吻合；ASDDSS到62/time66，63singleX三cargo3,5/4,6/5,6和twofree8,4/9,2，五活均F0/S/ghost0；free84出生9,3ICE沿S自动续9,2，time68，五BOX/单叶85/未完成。本次0undo0retry，旧1undo0retry全保；三个batch因动画暂停只续receipt.remaining，未重发已接受输入。这是M033/M108出生ICE的本关实证；helper独立ordinary286/286/pending0/depthCut0无Goal，不扩该图。SSAWWDSD交汇ICE仅待判边界，没有完整Goal正尾。 主4-18.json events[74]。
+
+
+M036补4-18实际71正交ICE交汇：实际63+SSAWWDS7→70/time76，free79=8,3/S、84=9,2/S。71单D首回执两free均9,3ICE，但稳定time78后79停9,3/faceD（east10,3Wall），84沿W续9,4/faceW，两个active/uncontained/F0/ghost0，没有融合/叠体/新叶/完成。三cargo仍3,5/4,6/5,6，F0/D/ghost0；五BOX五活单叶85。本次0undo0retry，历史1undo保留。只证同一ICE上D/W两个运动角色的交汇，不推广任意速度/朝向/资源完整融合。 主4-18.json events[78]，同时首微拍回执留在前一event。
+
+
+### M130 持叉乘员分裂会复制其两层异源载箱组（4-20）
+
+新正常回访重建C4-first25，再WWAX→29、SAAWWA→35。36单W将Blue58与C4cargo57/60异源叠于2,3，C457底height1、Blue58上height2/container57、cargo60height2/container57/F1/W，另62/63在2,4F1；twofree3,3/A和2,2/W。37单X原双箱层组57/58+60迁3,3，新双箱65/66+67在2,4；上cargo62/63单侧迁2,5。三cargo各F0ghost0活，threefree59=3,2/A、61=1,2/W、64=2,3/A各F0ghost0活；freechild68同3,2 inactive且maskedoff0。实际五BOX/三刚性位置组、六活角色、单叶71/time37、无dialog/未完成，不能将五物体当五连续链格。本回访0undo0retry，历史5undo0retry全保。 直接公开state主4-20.json events[71]/[73]/[75]。只证这一C4底+空Blue上+单乘员的两层组整体迁移/复制；不预设任意层数、双载人叠体、额外Fork相加、观测或全Goal。
+
+
+M044补4-20实际首分裂F2相反力：37整组复制probe后normalundo22回真实15，保原完整历史，再XWWWD→20：C4empty2,4/Blueempty4,3，free59=3,3与71=5,3各F2/D。21单D确生两叶/time21：axis0 Blue5,3、winner59=4,3/D/F2，71 inactive/maskedoff1/contained0；axis1 Blue3,3、winner71=4,3/A/F2，59 inactive/maskedoff1/contained0。两叶都仅一个活freeF2，没有载人箱/捕获，全部ghost0，C42,4未动。新增22undo，horse历史累计27undo0retry，未完成。 主4-20.json events[85]。这是同一空Blue的D/A普通推力两叶，非两人融合或已捕Fork2 cargo。
+
+
+M098/M106补4-17真实双库存：新正常回访actual15/time15，SDDDDAWWXWWWWDX：13双箱链捕获C4cargo58/55[2,5]F1/W，outside57[4,5]F1/A；单D14再单X15，cargo58/55[2,4]和61/60[3,5]、outside57[5,4]/59[6,5]均F0/D/ghost0活，emptyBlue56[4,5]，单叶62、未完成。本回访0undo0retry；旧9正常return历史保留。 直接主4-17.json events[23]；首捕同拍receiver2,4→2,5、pusher5,5因北Wall转A推Blue+C4两盒链，capture保实际W而outside为A。14D使两人faceD，15X父C455腾空且front-child推独立Blue3,5→4,5，保两cargo+两outside，无叠体或力冲突；不新增完成信用。
+
+
+M098/M106补4-17低位保护复制actual29：新低位actual29/time29：SDDDDWAXDWAWSWAWSDSAWWSAADWAX。旧15正常undo10回共同5，保留全部历史；25双箱链捕获C4cargo57/55[2,3]F1/D、outside62[4,3]F1/A。28 cargo面A、outside[5,3]面S，29单X：cargo57/55[2,2]和64/63[2,4] F0/A/ghost0/contained1，outside62[6,3]和65[4,3] F0/S/ghost0，emptyBlue56[3,3]，单叶66、全4活、未完成。本回访10undo0retry，早期旧probe6undo历史另保，累计可见16undo。 直接frames {24: 34, 25: 36, 28: 42, 29: 44}。25全局A时receiver原[1,3]撞西墙改D进入[2,3]，新cargo保实际D；28全局A既有cargo为A、外人因4,4Wall改S。29 cargo-X以A面竖生[2,2]（SPIKE）/[2,4]仍活ghost0，outside以S面横生[4,3]/[6,3]，没有新增stack/force/教学。本例不是裸free踩刺存活。
+
+
+M025补4-17自由人1+1真实融合（2026-10-05）：主4-17.json events[50]真10、[52]真11；完整SDDDDWAXDDS。10原57[7,5]Fork1/W、同源62[7,3]Fork1/D；S使上人直S7,4，下人因7,2/8,3Wall转W7,4。57存活split1/faceS，62 inactive仍split1/faceW，两者ghost0/contained0/maskedoff0，单leaf66、无force/教学。由此直接排除本例1+1相加2；连同旧0+1保1支持这些已观察数值的max保留，但不推广任意高Fork、普通Key、不同来源或层高。normalundo3回8恢复双F1，源和全历史保留，未获Goal完成信用。
+
+
+M052补4-17双持叉外人空箱同时叠加（2026-10-05）：主4-17.json events[57]/[59]，完整SDDDDWAXWWAWW。12前C455[3,4]、Blue56[4,5]为空，外57[5,5]/62[3,3]皆F1/A。13单W：57因5,6Wall转A推动Blue至3,5，自停4,5/faceA；62直接W推动C4至3,5，自停3,4/faceW。实际C455底h1/contained0、Blue56上h2/contained1/container55，两BOX active，两个外人各保F1/ghost0/contained0；单leaf66/time13，无force/dialog/completed。只证此两个空异源箱各一推力同格产生两层组，不预设装人层高、持叉组X、观察分叶、额外乘员或六Goal完成。旧free1+1融合证据/normalundo保留。
+
+
+M117补4-18 Button7单占用（2026-10-05）：正常回访完整52重建+单A53，再单D54清Button8，主events[104]/[106]/[108]直接核：54 Button7[7,6]仅活Color2 BOX80/cargo81占，Button8[8,6]无活BOX/PLAYER；Gate68[5,2]/ID0 blockable=true，Gate69[6,2]/ID1=false。正常Unity截图核左门关闭/右门开启。53外79停8,6仍压Button8，所以53不能当单按钮阴性/阳性。随后normalundo1恢复live53/time57/leaf82，主event[110]：cargo73/78=6,6、80/81=7,6全F0/A/ghost0活，outside79=8,6F1/A/ghost0活，左空箱2,2/2,3，末Fork3,6active，Lock9,5inactive，两门open。本次1undo0retry，旧1undo另保，累计2undo0retry；全部71/63/56/54历史保留。118关6星，未完成。 旧actual27 Button8-only→Gate5,2open/6,2closed与新54 Button7-only→Gate6,2open/5,2closed，补齐本图独立按钮配对的直接实例。占位判定须含活PLAYER和BOX，不能只查箱位置；新证据不泛化所有层高/容器/门占位或计本关完成。
+
+
+### M131 同次输入的滑动箱保留推者来源，连续争推产生三条兼容叶（2-G）
+
+2026-10-05正常64资源之后17尾 `WDWDASSAWWWWDWADW`：80/time127前态三left106[12,10]/108[5,2]/109[2,2]皆faceD，右105[14,10]/W；九空Color2 BOX，包括110[8,10]、111[5,7]、116[5,5]、118[5,10]。前16所有稳定ID/face与固定复算一致。81单W即刻回执executed1/remaining0、busy/input_locked；主JSON逐次完整观察保留到稳定，没有重发。
+
+公开动画event102/time130：108刚推116停5,5，BOX116[5,6] movingdir1/movingsrc108；经理106[9,10] faceA/movingdir3/movingsrc106。event103/time133已出现两轴：一轴108masked，118[4,10] movingdir3/movingsrc106，尽管106已在8,10SPIKE死亡；另一轴106masked，118[5,11]、108[5,5]活。event104仍保留118[3,10]/movingsrc106。event105..108随后三轴0/2/1；118分别[2,10]/[5,11]/[3,10]，0/1仅右105活，2/time133仍108及正在滑行的109活。实机因此否定本实例中将箱惯性统一作为无来源请求、提前拒绝整个输入的模型；不能凭稳定movingdir0/movingsrc-1推断此前不存在来源，也不能凭私有by=-1猜实际分叶数量。
+
+正常T逐次两次（events109..112），第二T回执明确105/108/109三人签名并busy；稳定后axis2原W余滑行到time135，109推114到2,11后自己在2,10踩刺死亡。最终三轴均time135：0/1仅105[14,9]/S活，2是105[14,9]/S与108[5,5]/W活。1068,10、1078,4死；108在0/1 masked，109在0 masked、1/2 ghost1。每轴九BOX皆active/height1/uncontained，无cargo/stack/新增Fork。当前83有效输入、未完成；此前axis2较早时刻的三活不是最终资源。timeline id全119，T选择以即时玩家签名与对应轴time变化核，不能按数组0/2/1或只按id猜。
+
+证据：artifacts/slot1-playthrough/2-G.json events100..112。本例只确认正常输入中的来源继承、连续分线与真实三叶结果，不推广任意多箱惯性独立二分、全部masked次序、再分线可达或四Goal完成。原M045校准/64/旧46与所有有限搜索历史完整保留；无存档进度或成就编辑。
+
+#### M131补证：安全C87的两稳定叶与保留两left
+
+2026-10-05安全C完整27尾 DWWDAASDSASSSSSSAWWWWWWWWDW 现实际到87/time135两稳叶；前26/event284/time128已全14实体字典核对，唯一末W receipt286 executed1/remaining0，未重发。公开Bridge快速90次/1284ms采样287..293：time129..134与固定tick0..5的全部实体物理字段逐帧一致；292/frame18630105/time134有118[3,10] movingdir3/movingsrc106、109[2,8] movingdir1/movingsrc109、113[2,9]及114[2,10]。293/frame18630133/time135已争推分成两轴，与固定tick6两叶一致；争推对象114[2,10]，来源109/W与已死106/A的箱惯性。294短暂input_locked=true后仅只读观察295/frame18640694，最终无busy/lock/paused/dialog、所有动画true、两轴皆time135/md0/src-1，无未settled叶。axis0/A源106胜：活105[14,9]/S及108[5,7]/W；109[2,8]/W inactive/maskedoff1/ghost0；106[8,10]/A ghost1/maskedoff0。axis1/W源109胜：活105[14,9]/S、108[5,7]/W、109[2,9]/W；106[8,10]/A inactive/ghost1/maskedoff1。107两叶[8,4]/W inactive/ghost1；全部PLAYER F0/key0/contained0/container-1/height1。每叶九Blue皆active/height1/contained0/maskedoff0/md0/src-1；共用110[8,9]/111[8,5]/112[5,10]/115[5,11]/116[8,7]/117[7,7]，分歧113/114/118：axis0[2,9]/[1,10]/[2,10]，axis1[2,10]/[2,11]/[3,10]。两叶所有完整properties及type/class/pos/active/face/flags/height/container/动画/details静态字段与固定final物理diff=[]；新axis1的公开GMID实例编号重分配447..460，源102..115，明确单独记录，不声称allocation counter相同。这是M131来源分线的新安全资源实例：W胜叶仍保两left，一A胜叶保一left，右105两叶都继承；只有两叶，非四Goal完成。未T/额外方向/Undo/ retry，累计66Undo0retry，118关6星link3不变。全部旧历史/M133相邻直接帧保留，一关一个主JSON。唯一owner保持87，无live输入/搜索handle；禁提示/反射/隐藏实现/存档进度编辑，save-management仍由root维护。
+
+#### M131补证：strong98两初叶均保两left
+
+2026-10-05strong38完整尾DDAWDWAASSWDDASSDSAADAWWWDWADSDAWDWADW已正常实测闭环到98/time160两稳定兼容叶，最新event459/frame19330256。前37/event448/time153整体14实体严格核对后，仅receipt450单W accepted1/remaining0；立即stdout/RAM保存，63次/1280ms公开state快速采样451..457，458显式末观察及459只读动画/lock稳态保同一2-G主JSON，未先sleep.25。451..456/time154..159逐帧完整实体物理/静态字段与固定tick0..5严格diff=[]（动画不作模型校准，GMID这些单轴帧原号相同）。456/frame19327010/time159：118[3,10] movingdir3/A/movingsrc106，109[2,8]/W movingdir1/movingsrc109，114[2,10]和113[2,9]停；106在[10,10]/A仍active/ghost0且md0/src-1。457/frame19327021/time160实际争推分成两轴；458短暂locktrue/动画未完后仅只读459，全部28 PLAYER/BOX动画true/md0/src-1，两叶同time160，无busy/lock/dialog/paused/completed，不需T。真实axis0是106/A胜：free106[10,10]/A及108[5,5]/W活，109[2,8]/W inactive/maskedoff1/ghost0；真实axis1是109/W胜：free108[5,5]/W及109[2,9]/W活，106[10,10]/A inactive/maskedoff1/ghost0。两叶right105[14,10]/W均活，旧107[8,4]/W inactive/ghost1/mask0。全部PLAYER F0/key0/contained0/container-1/h1；两叶各仍有2free left+right，无cargo或新增PLAYER/BOX。每叶九Color2 Blue皆active/h1/contained0/maskedoff0/md0/src-1；共用110[5,11]/111[5,10]/112[8,7]/115[8,10]/116[8,5]/117[8,9]。分歧113/114/118：axis0[2,9]/[1,10]/[2,10]；axis1[2,10]/[2,11]/[3,10]。整个物理/静态/动画字典对固定两final分别diff=[]，GMID allocation差异单列：axis0保持102..115，axis1新562..575，对应同logical IDs105..118。这是M131来源惯性与主动争推的新强资源实例：rear115先被推，106停10,10ICE存活，区别旧安全C87经理先踩刺死，结果两初叶均保两left。仅两叶尚未四Goal完成；后续每条世界线独立推进与T选择须按真实签名/axis/time，不按相同timeline id119或数组顺序代替选择。累计112Undo0retry、118完成6星link3不变；源60/捕获79/M131旧83/安全C87/M132/M133/TT/所有Undo和实际partial receipt历史全部保留，一关一个主JSON。唯一W后只有观察，未T/Undo/额外方向/X/retry。两个owner脚本均exit0，无live owner输入/搜索handle；当前保持98待root独立审与新尾授权，未按两叶共享串推进。Slot1/唯一owner，禁提示/简化/反射/隐藏实现/存档进度编辑；save-management未改。
+
+证据[2-G](../artifacts/slot1-playthrough/2-G.json) events448..459，直接争推前后456→457。此实例只核来源106/A与109/W对114箱链的两真实分线和实际存活；不证明后续第二force、四叶/四Goal、任意箱链独立分线或世界线共用控制。private fixed模型动画不作校准；公开分支GMID分配另列，不能声称两个分支整个raw字典的allocation都相同。
+### M132 墙制动后的移动标志已清除，再北推普通箱链（2-G有限实例）
+
+2026-10-05从已实新60/time81接10尾DDWASAWADW，稳定批次event138/140/146和中断后135/142/144逐ID/face固定复算全match；DDWA首只接受DDW后补A，ADW首只接受A后补D/W，均只续receipt.remaining。70/event146/frame17878974/time105：10514,8/W、10610,9/W、1085,2/W、1092,2/W活，107已8,4死；九BOX全保。71仅单W，receipt147 executed1/remaining0/busy，立即完整观察148/time108、149/time111、150/frame17884981/time113稳定。单axis0/id119未完成/无锁/未暂停/无dialog。最终活10514,9/W与1092,9/W，皆F0/ghost0；1068,9/1078,4/1085,10均inactive/ghost1，所有PLAYER maskedoff0且uncontained。九BOX皆active/height1/uncontained：1103,9/1118,5/1126,7/1132,10/1142,11/11510,10/1168,7/1177,7/1185,11。无force、分线、装箱、叠箱或新增BOX。公开149中113已2,9/movingdir0/movingsrc-1，而109仍2,8/W/movingdir1；随后的北推整链与墙挡停惯性相容，原A下一1,9是真Wall。此有限实例没有证明人物可垂直推仍能继续滑行的BOX，私有tick6仍保113A/src106属于模型需修的墙制动标志顺序。没有T/Undo/额外方向，累计34Undo/0retry、118完成6星/link3不变；旧60/64/83及TT/动画全部保留。唯一输入owner /root/ch4_1_readonly，Slot1，禁提示/反射/实现/存档进度编辑；当前无owner搜索handle。
+
+M132只记录本墙制动具体实例，关联M035/M131；不写成仍可继续滑行BOX的通用正交冲突规则。完整71串：`AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWWDSAWWDWAADDWASAWADWW`。
+
+### M133 可续滑BOX与滑动角色正交fixture的单叶末态（2-G有限实例）
+
+2026-10-05补证：下方初次采样未截到接触微拍的表述保留为当时历史；正常必要复测现已直接截到events216/time149与217/time150，BOX向A腾格、PLAYER向W进入旧格并续滑。最新完整范围见本条末尾补证。
+
+2026-10-05从真实新60/event173接19尾WWDDSASSWDAAWDWADWA，4/4/4/4/3批和所有ICE部分接受的后缀，每稳定检查PLAYER/BOX全ID、pos、face、active、ghost、maskedoff、movingdir/movingsrc、contained/height/Fork/key均与M132私有fixed一致，未提前发生边界。79/event205/frame18089618/time144：10514,9/S、10610,10/A、1083,4/S活，1078,4与1092,10死；9BOX全保。80唯一单W，receipt206 executed1/remaining0/busy/input_locked，立即full207/frame18103834/time147与208/frame18103940/time151稳定。单axis0/id119，未完成/无锁/未暂停/无dialog；唯一活10514,10/W F0/ghost0。1068,10/A、1078,4/W、1083,11/W、1092,10/W皆inactive/ghost1/maskedoff0/contained0/container-1/height1。九BOX全active/height1/uncontained：1105,10/1118,5/1122,10/1132,9/1142,11/1158,9/11610,7/1178,7/1185,11，皆md0/src-1。80没有force/分线/装箱/叠箱/新BOX/复活。112最终与旧尸体109同2,10，但109仍未收纳且inactive。相遇前私有fixed窗口是1123,10向A/src106、1083,9向W；A的2,10和W的3,11均真SPIKE且无Wall/BOX，所以区别于M132墙止实例。实机整体末态保112西移、108继续北行至3,11死亡；公开207只直接截到1106,10/A/src106和1083,7/W滑，未截到3,10相遇微拍。M133只记此可续滑正交fixture的实际单叶结果与末态，不能声称所有正交交汇都穿过或已逐拍证明一般计划顺序。总45Undo/0retry，118完成6星/link3不变；所有60/71/83/TT/撤销及本次逐帧历史保留。唯一输入owner /root/ch4_1_readonly，Slot1，禁提示/反射/隐藏实现/存档进度编辑；当前无运行搜索handle。保持80，不自动T/Undo或追加Goal方向。
+
+证据 `artifacts/slot1-playthrough/2-G.json` events173..208；完整80串：`AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWWDSAWWDWAAWWDDSASSWDAAWDWADWAW`。本例不将private boundary直接当force，也不以inactive同格装箱假设修改死者状态。
+
+#### M133必要复测：公开相邻time149/150直接证据
+
+2026-10-05为补M133原先缺失的接触微拍，仅正常Undo1回79/event210/frame18148560/time144，全PLAYER/BOX完整properties与原205严格相同；未重走19前置。唯一复测W的receipt211即刻记录executed1/remaining0。连续公开Bridge state95次（上限100/3秒），按level/axis/time/PLAYER及BOX全字段签名去重，7个不同full帧212..218写同一主JSON；回执即刻内存入主journal并stdout保留，采样后一次落盘，避免逐帧整文件I/O挡动画，未先sleep.25，也未另建stepJSON。关键216/frame18159795/time149：BOX112[3,10]仍movingdir3(A)/movingsrc106，PLAYER108[3,9]仍movingdir1(W)/movingsrc108；106已8,10死亡，但112来源仍106。下一217/frame18159823/time150：112到[2,10]停止md0/src-1，108进入旧BOX格[3,10]仍movingdir1/W/src108并继续；始终单axis0，无争推/分线/装箱/叠箱。112与旧尸体109同2,10，109仍inactive/ghost1/contained0/container-1/height1，未复活。218/frame18159851/time151稳定全部PLAYER/BOX ID/type/class/pos/active/完整properties与第一次208完全相同：只有105[14,10]/W/F0活，四leftghost1，九BOX全active/height1/uncontained。本M133现在有相遇前后直接公开微拍证据：本fixture可续滑正交箱腾格，滑动角色进入旧格继续前进。仅此不同目标腾格情形；不推广同目标碰撞、任意速度/方向/箱堆、墙阻场景或其他inactive捕获时序。累计46Undo/0retry（已含旧1），118完成6星/link3不变，未T/额外方向/再次循环复测。当前保持80，Slot1/唯一输入owner /root/ch4_1_readonly，禁提示/反射/隐藏实现/存档进度编辑；无运行中的owner搜索handle。
+
+#### M133补证：有前方BOX的横向链腾格与滑动角色续行（actual112有限实例）
+
+2026-10-05当前2-G strong98 A胜axis0的14尾SDSAWWDSSWWSDW现已真实闭环到112/time208，稳定event493/frame19411322。前13实际111/event482/time201经root独立核完整14entity；唯一末W receipt484 accepted1/remaining0，即刻stdout/RAM保留，再43次/1055ms连续公开state采样，去重485..491及显式492；未先sleep.25、未重发。485..489/time202..206与私有固定最后W的已接受tick0..4逐14entity物理/静态字段严格diff=[]，含GMID；动画不作模型校准。直接相邻489/frame19391263/time206：108[6,9]/W/md1/src108活，115[6,10]/A/md3/src106，111[5,10]停md0/src-1；106已[8,10]/A inactive/ghost1。490/frame19391273/time207：115向A到[5,10]停md0/src-1，111到[4,10]/A/md3/src106，108进入原115格[6,10]且仍W/md1/src108。111因此在真实帧继承已死经理106的来源；本fixture是带前方箱111的合法A链腾格，不是原M133空目的格已验证范围的预先套用，也不是private perpendicular boundary被当作force。随后491/time208中108续W到[6,11]SPIKE死亡，111到[3,10]停，115仍[5,10]停；唯一W没有新增axis/force/capture/stack/复活或BOX，全部PLAYER仍uncontained/h1/F0/key0。492动画108/111短暂false后只有只读493补全，物理/静态14字典与492忽略动画严格diff=[]，全部28对象animtrue/motion0/src-1，无busy/lock/dialog/paused/completed。真实axis0/time208仅right105[14,10]/W活；106[8,10]/A、107[8,4]/W、108[6,11]/W均inactive/ghost1/mask0，109[2,8]/W inactive/ghost0/mask1。九Color2 Blue110[5,11]/111[3,10]/112[8,7]/113[2,9]/114[1,10]/115[5,10]/116[8,5]/117[8,9]/118[2,10]全部active/h1/contained0/container-1/mask0/md0/src-1，GMID保持102..115。另一axis1/time160 untouched，与459该轴整个14entity字典含GMID/动画严格diff=[]：105[14,10]/W、108[5,5]/W、109[2,9]/W仍活，106[10,10]/A inactive/ghost0/mask1，107旧ghost1；GMID保持562..575。所有直接公开状态完整保同一2-G主JSON，未知接触后的模型后态未补造，未T/Undo/X/额外方向/retry，累计112Undo0retry、118完成6星link3不变。当前只保持112等待root独立审与后续正常授权；仅两初叶未四Goal完成，不把A叶控制耗尽推广成关卡无解或W叶失去资源。single112和只读补稳脚本均exit0，无live owner输入/搜索handle；Slot1/唯一owner，禁提示/简化/反射/隐藏实现/存档进度编辑，save-management由root维护未改。
+
+证据[2-G](../artifacts/slot1-playthrough/2-G.json) events483..493，直接489→490。原M133仅空目的格；此新实际补证只说明115向A推动111合法腾格时，108沿W进入115旧格并继续，未分线或捕获。不推广被墙/非法目的格阻挡的链、同一对象同时主动争推、任意层组/速度/方向/来源/尸体捕获，亦不预写其他正交接触规则。公开111继承106/A来源与M131相容，但是否一般顺序须另证；不能将私有unknown返回等同实机拒绝或force。
+
+#### M036补证：不同face一动一停同格融合（2-G actual101有限实例）
+
+2026-10-05当前2-G选中W胜axis1的第二W已真实闭环101/time174，稳定event540/frame19481835，完整instructions=原strong98+TWW。恢复98/459两叶strict28字典后唯一T/524及wait0/526确认W叶，首W/528到100/529全28固定字段match；本次仅第二W/receipt531 accepted1/remaining0，回执即刻stdout/RAM保留，27次/1075ms连续公开full采样532..538、539动画稳及显式540终观察，未先sleep.25、未重发。532/time168和533/time169以及535..537/time171..173逐14entity物理/static/GMID与原fixed tick0/1/3/4/5严格diff=[]，动画不作模型校准。唯一前接触差异534/frame19481766/time170：108初到[2,9]/A已停md0/src-1，原private tick2还保md3/A/src108；位置/face/active和其余全部字段相同。只读actual-audit初以整帧match断言exit1捕到这两field差异，随后审计显式记录实值与model值；没有改主模型或补游戏输入，不宣称六个微拍全match。直接537/frame19481796/time173：108[2,9]/A active且stop md0/src-1，109[2,8]/W active/md1/src109；两者F0/key0/ghost0/mask0/uncontained/h1。相邻538/frame19481806/time174：109进入[2,9]后inactive/faceW，108仍active/faceA；两者均md0/src-1、ghost0/maskedoff0/contained0/container-1/h1/F0/key0。因此本例不同face一moving(W)一stopped(A)同格融合为一活角色，没有穿过后继续W、没有ghost死亡或force loser mask；不预写该结果为任意朝向/速度/Fork的通用融合。现axis1/time174活105[14,10]/W和108[2,9]/A；109inactive同2,9/faceW/ghost0/mask0，106[10,10]/A仍inactive/ghost0/mask1，107[8,4]/W旧ghost1。九Color2空Blue110[5,11]/111[5,10]/112[8,7]/113[2,10]/114[2,11]/115[8,10]/116[8,5]/117[8,9]/118[3,10]整个九entity字典含GMID与529严格diff=[]，无箱移动/装人/叠箱/新BOX。另一axis0/time160整个14entity含GMID/动画与459严格diff=[]，仍105[14,10]/W、106[10,10]/A、108[5,5]/W三活，109旧masked；没有共同推进或丢历史投影。仍原两axis，当前所有28entity animtrue/motion0/src-1、无busy/lock/paused/dialog/completed；未知contact后的模型未补造，仅以直接相邻实际帧记录有限融合证据。累计126Undo0retry、118完成6星link3不变；原112有链接触/Undo14缺checkpoint脚本中止及续9例外/M131强98/所有历史全保同一2-G主JSON，owner_execution_notes保留脚本真实terminal与差异。第二W后只有公开state，无T/Undo/X/其他方向/retry，当前保持101待root独立核与后续授权；脚本exit0，无live owner输入/搜索handle。Slot1/唯一owner，禁提示/简化/反射/隐藏实现/存档进度编辑，save-management由root维护未改；本资源probe不是四Goal完成。
+
+证据[2-G](../artifacts/slot1-playthrough/2-G.json) events530..540，直接相邻537→538。只证此F0/key0/h1/uncontained的108 stopped/A与109 moving/W在ICE2,9合并，静止108活、109 inactive/ghost0/mask0。不推广M045同face一动一停穿越样本、不推广4-18双moving正交样本、任意资源融合max/sum/身份优先、位置/速度/容器或全Goal/分线预算。534的PLAYER临Wall停止提前清md/src为实际细节差异，应在模型校准时显式处理；不能把原模型trace全match或unknown边界当实际拒绝。
+
+#### M131补证：parent2400844的另一来源/身份两叶fixture
+
+2026-10-05当前2-G新parent2400844已唯一W闭环actual102/time165两稳定轴，终event731/frame19897550。准确source60+raw42 DDAWDWAASSWDDASAWDWSDAWDWASADSDSSSAWWWWDWW；新102身份/来源fixture区别旧strong98及98+TWW融合101。仅receipt720 batch up accepted1/rem0，即刻stdout/RAM保存，100次/1479ms快速公开state无initial sleep，去重721..730及显式731最终full保同一主JSON。721..726/time159..164六个公开单轴微帧逐14实体全部物理/static/GMID字段与fixed tick0..5严格diff=[]，动画不作模型校准、runtime time只来自实机。直接726/frame19897373/time164：118[3,10]/movingdir3(A)/movingsrc106，109[2,8]/W/md1/src109活；经理106[11,10]/A活且停md0/src-1，108[5,7]/W活停。相邻727/frame19897401/time165首次两轴，730动画完成、731完整终观察同值。axis0为106/A胜：105[14,10]/W、106[11,10]/A、108[5,7]/W活；109[2,8]/W inactive/ghost0/mask1。axis1为109/W胜：105[14,10]/W、108[5,7]/W、109[2,9]/W活；106[11,10]/A inactive/ghost0/mask1。两轴107[8,4]/W旧ghost1死亡。所有PLAYER F0/key0/uncontained/container-1/h1；每轴九Color2空Blue均active/h1/uncontained/mask0。共用110[8,9]/111[8,5]/112[5,10]/115[5,11]/116[8,10]/117[8,7]；分歧113/114/118：axis0[2,9]/[1,10]/[2,10]，axis1[2,10]/[2,11]/[3,10]。两final按实际106活性匹配fixed胜分支，全部物理/static/完整animation字段diff=[]，GMID allocation明确单列：axis0原102..115，axis1新677..690；没有把分配差异隐去。两轴均time165、全animtrue/md0/src-1、无busy/lock/paused/dialog/completed，不需T补滑；唯一W后只有观察，没有T/Undo/方向/X/retry/capture/stack/新BOX。这是M131继承来源与争推的另一实际fixture，两初叶均保两left，但新小普通域与旧strong98匿名BOX几何等价，已知175/2496范围不因此变成新四Goal进展；未宣称全解或四叶。累计167Undo/0game retry、118完成6星link3不变。旧98/101/M036直接融合、534两motion差异、112/M133链腾格、缺checkpoint脚本例外及所有旧历史完整保留。single102脚本exit0、无live owner输入/搜索handle；保持新102等待root独立审，未用相同timeline119或数组顺序推断当前选线。root管理save-management.md未改，Slot1唯一owner/禁提示、简化、反射、隐藏实现、存档进度编辑。
+
+证据[2-G](../artifacts/slot1-playthrough/2-G.json) events719..731，直接726→727。本例只补新实际位置/来源身份分支、败者masked而非ghost死亡和各叶保两left；不推广可独立连续四叶、任意推力顺序、Goal联合覆盖或新全关可解结论。
+
+
+### 2026-10-05用户暂停时的证据状态（不新增物理规则）
+
+2-G的M131/M132/M133及全部微帧/分线/融合/捕获有限范围完整保留，正常离场后的世界Undo重置已有公开事实，不补计通关。3-26旧已验92路线本次仅复建到实际70：66以后在途batch受用户暂停Ctrl+C中断，13请求的回执未返回，真实70 instructions只证4动作已接受；剩余不补发。新23观察者尾未实测，Prism光学完成/新容器取星均不能写成已证。具体完整actual帧与脚本异常见3-26主JSON最终event86/owner_execution_notes及solution；当前任务paused，游戏本身未开Pause菜单。

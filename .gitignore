@@ -6,3 +6,5 @@ __pycache__/
 theta.local.json
 .runtime/
 .codex/config.toml
+# Regenerable solver frontiers belong in artifacts/, not versioned research.
+scratch/*.v8

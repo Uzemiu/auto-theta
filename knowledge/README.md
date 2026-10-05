@@ -8,6 +8,8 @@
 
 ## 阅读顺序
 
+暂停或恢复时先读 [当前交接](handoff.md) 和 [2026-10-05暂停记录](checkpoints/2026-10-05-pause.md)。研究资料入口为 [scratch索引](../scratch/README.md)，本地原始观测的大小与哈希见 [资料清单](artifact-inventory.json)。
+
 1. [存档说明](save-management.md)：slot1 约定、启动设置、基线备份。
 2. [完成进度](progress.json)：优先读取 `active_playthrough`，确认本轮状态。
 3. [机制知识](mechanics.md)：已验证规则、教学说明与待验证假设。

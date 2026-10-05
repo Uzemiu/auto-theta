@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-09-27",
+  "updated_on": "2026-10-05",
   "save_management_file": "save-management.md",
   "active_playthrough": {
     "id": "slot1-from-start-2026-09-22",
@@ -104,17 +104,66 @@
       "3-34",
       "3-35",
       "3-36",
-      "3-38"
+      "3-38",
+      "3-X",
+      "3-Y",
+      "4-1",
+      "4-2",
+      "4-3",
+      "4-4",
+      "4-5",
+      "4-6",
+      "4-7",
+      "4-8",
+      "4-9",
+      "4-11",
+      "4-12",
+      "4-13",
+      "4-14",
+      "4-15",
+      "4-23",
+      "4-25",
+      "4-26",
+      "4-27",
+      "4-24",
+      "4-19"
     ],
     "last_observed_location": {
-      "scene": "3-0",
-      "level_id": "Chapter3",
-      "world": true,
-      "player_position": [
-        2,
-        5
+      "scene": "Template3",
+      "level_id": "stealth",
+      "world": false,
+      "player_positions": [
+        [
+          8,
+          4
+        ],
+        [
+          11,
+          7
+        ]
       ],
-      "observed_on": "2026-09-27"
+      "axis_player_positions": [
+        {
+          "axis": [
+            0,
+            0,
+            0
+          ],
+          "time": 70,
+          "positions": [
+            [
+              8,
+              4
+            ],
+            [
+              11,
+              7
+            ]
+          ]
+        }
+      ],
+      "observed_on": "2026-10-05",
+      "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -129,52 +178,127 @@
         "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
         "arrival_evidence_file": "../artifacts/slot1-playthrough/chapter2-arrival.json",
         "note": "北侧电梯进章，未完成东侧世界GOAL；不增加普通关卡数量"
+      },
+      {
+        "from": "Chapter3",
+        "to": "Chapter4",
+        "trigger_position": [
+          -23,
+          4
+        ],
+        "trigger": "confirm on UI 前往上层",
+        "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
+        "arrival_evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+        "note": "完成X/Y后普通西走到底；未要求补全本章欠关，不增加关数。"
       }
     ],
-    "paused_at_utc": "2026-09-27T03:12:53.607919+00:00",
-    "pause_reason": "用户要求完成3-38后提交并暂停；本关已完成，全部游戏输入和搜索已停止，root已完成存档与知识库核验。",
+    "paused_at_utc": "2026-10-05T05:37:23.481699+00:00",
+    "pause_reason": "用户明确要求先暂停，整理所有文件然后提交；停止游戏输入与搜索，仅保存证据、交接。root负责统一整理/提交。",
     "pause_checkpoint": {
       "location": {
-        "scene": "3-0",
-        "level_id": "Chapter3",
-        "world": true,
-        "player_position": [
-          2,
-          5
+        "scene": "Template3",
+        "level_id": "stealth",
+        "world": false,
+        "player_positions": [
+          [
+            8,
+            4
+          ],
+          [
+            11,
+            7
+          ]
         ],
-        "observed_on": "2026-09-27"
+        "axis_player_positions": [
+          {
+            "axis": [
+              0,
+              0,
+              0
+            ],
+            "time": 70,
+            "positions": [
+              [
+                8,
+                4
+              ],
+              [
+                11,
+                7
+              ]
+            ]
+          }
+        ],
+        "observed_on": "2026-10-05",
+        "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
       },
-      "last_completed_level": "3-38",
-      "last_attempted_level": "3-38",
-      "last_attempted_time": 312,
-      "completed": true,
-      "evidence_file": "../artifacts/slot1-playthrough/3-38.json",
-      "completion_event": 118,
-      "action_count": 619,
-      "undo_count": 0,
-      "retry_count": 0,
-      "verified_completed_count": 96,
-      "note": "通关动画自动返回第三章世界2,5；未主动确认或继续移动，恢复前先observe并指定唯一输入owner。"
+      "last_attempted_level": "3-26",
+      "last_attempted_time": 70,
+      "completed": false,
+      "evidence_file": "../artifacts/slot1-playthrough/3-26.json",
+      "current_event": 86,
+      "frame": 20359659,
+      "action_count": 70,
+      "new_undo_count": 0,
+      "new_retry_count": 0,
+      "verified_completed_count": 118,
+      "stars_last_verified": 6,
+      "link_count_last_verified": 3,
+      "owner_driver_session": 95160,
+      "owner_driver_terminal": "exit1 user Ctrl+C",
+      "owner_active_input_or_search_handle": null,
+      "note": "任务暂停；游戏本身unpaused。先observe真实70核对，不自动续批，不接新23尾。旧2-G60/209Undo保历史，已正常离场。"
     },
-    "resumed_at_utc": "2026-09-27T01:02:43.857833+00:00",
+    "resumed_at_utc": "2026-10-03T12:52:34.350505+00:00",
     "notes": [
       "2026-09-24子agent正常新增2-B/2-D/2-C三关，61关2星，西端出口通过第二章进入第三章。2-A/G/P/Q仍未解，本阶段禁提示。",
       "2026-09-24第三章子agent完成3-1至3-10，累计71关2星，Lift本轮条件已验证；无主动提示。最新世界56,5，3-11待进入。",
       "2026-09-24第三章中段完成3-11..3-18及3-20共9关，累计80关2星。3-19实际尝试未完成，见solutions/3-19.md；root同意暂缓回访。无提示，当前世界35,18。",
       "2026-09-24第三章后段新增3-21/22/24/25共4关，累计84关2星；3-23/26/27尝试未解。3-28已进入初态待接续；本阶段无提示，完成阶段审计84/84且issues=[]。",
-      "2026-09-27恢复slot1，子agent正常通关3-23安全区，46输入，本次0撤销/0重试；累计91关2星，M081双棱镜链安全观测。无提示。"
-    ]
+      "2026-09-27恢复slot1，子agent正常通关3-23安全区，46输入，本次0撤销/0重试；累计91关2星，M081双棱镜链安全观测。无提示。",
+      "2026-10-02用户要求切换存档然后继续：启动选择0切回1，两份存档哈希未变；标题β/96关/2星，实际Chapter3重启点40,-2。唯一输入owner resume_slot1_oct02，继续全成就且禁止提示。",
+      "2026-10-02取得绿色叉子103、实际3-28^3-X叠关，随后普通3-X以DD完成，累计97关2星；禁提示。",
+      "2026-10-02先完成3-X再装载其世界入口，99步搬到3-Y实际叠关；3-X^3-Y正常32输入完成，存档3X^3Y记录匹配，3Y新增完成，累计98关2星。",
+      "2026-10-02正常构造1-2+1-7，11输入取得NID1，返回世界落盘3星，独立关数98不变。",
+      "2026-10-02三种Chapter1相加关分别取得NID1/2/3，持久化5星；独立关数98、原普通完成记录保留。",
+      "2026-10-03启动标题β98/5、实际Chapter4 2,4；4-1正常41输入完成，累计99关5星，禁提示。",
+      "2026-10-03 4-2正常32输入完成，累计100关5星，分裂阻塞等待后双外人接力送载箱过刺，禁提示。",
+      "2026-10-03 4-3正常37输入完成，累计101关5星；X侧推捕获无叉等待者，另一侧角色运输，禁提示。",
+      "2026-10-03 4-4正常37输入完成，累计102关5星；闭门普通等待保叉，活人箱内分裂复制双载箱，禁提示。",
+      "2026-10-03 4-5正常61输入0undo/0retry完成，累计103关5星；单侧箱内X入开门，载箱占门让外人离按钮回收，禁提示。",
+      "2026-10-03 4-6正常61输入0undo/0retry完成，累计104关5星；单按钮OR与刺上复制载箱保外人运双目标，禁提示。",
+      "2026-10-03 4-7正常48输入/time50、0undo/0retry完成，累计105关5星；同步复制cargo+free，箱链跨刺；NID10墙内尚未取，禁提示。",
+      "2026-10-03 4-8乌龟28输入完成，M102同刻腾空接外人分裂实证，累计106关5星。",
+      "2026-10-03 4-9蚯蚓46输入/time47完成，正常离关回访解，M103箱链压刺后按钮保free到目标，107关5星。",
+      "2026-10-04 4-11大象81输入/time58/62跨两线四cargo覆盖四goal，0undo0retry，M104正交冲突保两cargo三free，108关5星；4-10仍未解23输入/undo12。",
+      "2026-10-04 4-12鸭子70输入/time57/65跨两线三活cargo覆盖三个goal，11undo/0retry，M105保最后叉给X等待角色，空箱压button后回收装箱；109关5星，继续4-13。",
+      "2026-10-04 4-13矩阵66输入同线四cargo覆盖四goal，0undo0retry，M106闭门+箱普通等待保叉2，XAX两代cargo复制矩形四角；110关5星，继续4-14。",
+      "2026-10-04 4-14金字塔17输入同线六cargo覆盖六goal，2undo0retry，M107同源箱融合自动教学及实际交汇；111关5星，继续4-15。",
+      "2026-10-04 4-15 actual11/time12/0undo0retry已正常返回；4-16地形局部阻隔，4-25入口blockable/pushablefalse；继续world4-X机制，不计4-15完成。",
+      "2026-10-04 4-15对齐73输入完成；旧28资源改任意goal覆盖分工，每叶保对侧inner并取本侧outer2，两叶time52联合六goal。累计107undo/1redo/0retry，112关6星，M115；继续4-16，禁提示不暂停。",
+      "2026-10-04从西侧世界-33,-11安全40输入取得COL104黄色叉子，世界Fork0→1；正常38导航入4-18触发保存，root核Collections104=true，112关6星不变；4-17未完成9输入/0undo0retry已正常返回。",
+      "2026-10-04 4-23蛇52输入/time52/11undo0retry完成，箱缓冲护叉、Fork0旧cargo由另一cargo分裂推动拾末叉后覆盖双Goal；root存档snake3/count113/6星，禁提示继续。",
+      "2026-10-04 4-25长颈鹿89输入/time89完成，0undo0retry、正常离关回访一次。复制作竖链、外人推12箱链到顶，Fork0 head再受ForkX侧推取末叉覆盖Goal，M123；root存档giraffe3/record89/count114/6星。",
+      "4-26 D.N.A正常114输入/time114光学完成：emptyPri92=Goal3,15 traversed/testCompleted true，Blue187/P188=3,14F0活containedghost0；43活cargo、无外人。累计101undo0retry，旧Pri复制/融合/双叶52probe全保。root核Slot1 dna3/record114/count115/6星，自动world[-45,6]F1；继续4-27，禁提示。",
+      "4-27绽放正常281输入（含7T）完成：89保三Fork1部署，90X三组推力冲突生成八叶；各叶旁观外75覆盖Goal9/8/7/6/4/3/2/1,7，time109/110/111/112/114/115/116/117，皆4活ghost0。累计6undo0retry，旧叠体/远Goal探针全保；root只读Slot1 blossom3/record281/count116/6核，自动world[-68,5]F1，继续全目标禁提示。",
+      "4-27正常281完成/116关6星后，世界15A到[-83,5]，单16A实际受缺格阻转S[-83,4]，未横向worldwrap、未死亡/花叉。普通已解锁Notebook重读分裂2/15、关卡水晶10/15、穿越15/15、锁和钥匙9/15，仍15项，未读提示；三个Esc关闭回unpaused。再54安全方向到world70/time70 [-32,5]F1，empty4-X[-32,4]未动，准备不同合法叠图资源。",
+      "4-24响指正常62输入完成：35后AXDXXAXXXXXX同步两F1载箱，53X对Blue A/S正交冲突真实两叶；axis0三S到Goal1,1/time56，T切axis1五W到Goal1,9/time58完成。此次0undo0retry、累计历史7undo0retry；root独立Slot1 snap3/record62/count117/6核，自动World[-45,3]F1。继续全成就，唯一输入owner /root/ch4_1_readonly，禁提示。",
+      "4-19反制正常回访41输入实际完成；38X出生同刻捕空Blue，三cargo3/4/6,6与外人1,6均F0；末DDD把三载箱送5/6/7,6，外人最后死4,6SPIKE，三cargo活contained/ghost0。源及左右Prism45/46/47均traversed/testCompleted=true、lighten=false，completed=true。本成功回访0undo0retry，历史累计22undo0retry全部保留；自动World[-42,-12]F1。",
+      "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+    ],
+    "verified_completed_count": 118
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
     "unknown": "尚未核实",
     "observed": "已读取关卡状态，尚未确认通关",
     "attempted": "已实际尝试，尚未确认通关",
-    "completed_verified": "已通过游戏完成状态或可核实的通关界面确认"
+    "completed_verified": "已通过游戏完成状态或可核实的通关界面确认",
+    "combined_completed_verified": "已实测完成的组合；只计其新增独立成分关，不增加独立关卡总数。"
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 96,
+  "verified_completed_count": 118,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -328,7 +452,16 @@
         "action_count": 17,
         "completed": true,
         "evidence_file": "../artifacts/slot1-playthrough/1-2.json"
-      }
+      },
+      "collection_revisits": [
+        {
+          "nid": 1,
+          "combination": "1-2+1-7",
+          "actions": "WWDSASAWWAS",
+          "evidence_file": "../artifacts/slot1-playthrough/1-2+1-7.json",
+          "verified_on": "2026-10-02"
+        }
+      ]
     },
     "1-3": {
       "name": "侧面",
@@ -380,7 +513,16 @@
         "action_count": 35,
         "completed": true,
         "evidence_file": "../artifacts/slot1-playthrough/1-6.json"
-      }
+      },
+      "collection_revisits": [
+        {
+          "nid": 2,
+          "combination": "1-6+1-20",
+          "actions": "DDDWWWDDDDDDWWAWWDDDDDDDWSASSASSASSAAWWAWSAAAAAAXXAAAXXAAWXWWXXWWWWDWDDSXDDSDD",
+          "evidence_file": "../artifacts/slot1-playthrough/1-6+1-20.json",
+          "verified_on": "2026-10-02"
+        }
+      ]
     },
     "1-7": {
       "name": "错位",
@@ -484,7 +626,16 @@
         "action_count": 75,
         "completed": true,
         "evidence_file": "../artifacts/slot1-playthrough/1-14.json"
-      }
+      },
+      "collection_revisits": [
+        {
+          "nid": 3,
+          "combination": "1-10+1-14",
+          "actions": "WDSSSSDDWXAWWWWSAWWDDDSSSSWAWWWWWWWWWWWWWWDADXDAWSSWWSSWAWAWASSSAAWSSWAWWWWWWDDSWASASAAAASAWASWWWWWDDSSAWWDWWDWDWAWAWASSSSS",
+          "evidence_file": "../artifacts/slot1-playthrough/1-10+1-14.json",
+          "verified_on": "2026-10-02"
+        }
+      ]
     },
     "1-15": {
       "name": "锁",
@@ -890,7 +1041,10 @@
         "action_count": 164,
         "completed": true,
         "evidence_file": "../artifacts/slot1-playthrough/2-21.json"
-      }
+      },
+      "notes": [
+        "2026-10-02再访125输入验证同刻落刺装箱与持叉容器分裂，解锁Cat Box/Creation。机制实验尚未再次通关；原slot1_run和存档记录保留，详M092/M093。"
+      ]
     },
     "2-23": {
       "name": "世界",
@@ -969,10 +1123,19 @@
     "2-A": {
       "name": "抛物",
       "internal_level_id": "parabolic",
-      "status": "in_progress",
+      "status": "attempted",
       "solution_file": "solutions/2-A.md",
       "evidence_file": "../artifacts/slot1-playthrough/2-A.json",
-      "notes": "用户暂停于WA后；箱3,3压按钮，8门已开；未通关，未使用提示。"
+      "verified_on": "2026-10-04",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WADDWWWWWWWWWAADDSSSSSSSSSAASAXWWW",
+        "checkpoint_time": 34,
+        "note": "正常回访34前置吻合；单S门时序探针35上人转D4,6SPIKE死亡、下人3,3按钮使末门全开；正常undo1恢复34双活，不计完成，随后正常return推进2-G。",
+        "undo_count": 5,
+        "retry_count": 0
+      },
+      "note": "2026-10-04回访34前置及单S门时序已实际判别，undo1恢复；未完成，无提示。"
     },
     "2-B": {
       "name": "鲸鱼",
@@ -1274,7 +1437,11 @@
         "undo_count": 30,
         "retry_count": 2,
         "note": "第二次重试后59步造8,4四箱夹困；第60W72原地等待、63推开左箱到7,5，实际异奇偶双活人7,4/8,4；继续清柱。 已正常返回世界46,18；用户要求提交后暂停，未进入3-B。"
-      }
+      },
+      "notes": [
+        "2026-10-02改良53输入夹困检查点，9,3通道保留；真实A/W仍让8,4人物等待，尚无完整解。见solution新增末节。",
+        "2026-10-02当前53检查点后正常返回世界，未执行D；6,4已空使困者可左反推，故D并非确定装箱。无新短解，收束此次实验。"
+      ]
     },
     "3-21": {
       "name": "束缚",
@@ -1345,17 +1512,31 @@
       "name": "潜行",
       "internal_level_id": "stealth",
       "status": "attempted",
-      "verified_on": "2026-09-24",
+      "verified_on": "2026-10-05",
       "solution_file": "solutions/3-26.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-26.json",
       "slot1_attempt": {
         "completed": false,
-        "checkpoint_actions": "DDDWXWADASSSSDSAWSAAAAAAWWWWSDDSSASSSSSSWSWDDWWWW",
-        "checkpoint_time": 49,
-        "undo_count": 1,
-        "retry_count": 2,
-        "note": "已取key返回并完成混合接触实验，正常undo恢复双人后返回世界；3-27实际已解锁，先推进后续机制。"
-      }
+        "checkpoint_actions": "SSDSAAAAAAWWWDDSSDDDDDDSAAWWWDDWXWADAAAAAAAAAAAWADSSSSSSSDSSWDDSSAWWWA",
+        "checkpoint_time": 70,
+        "undo_count": 0,
+        "retry_count": 0,
+        "observed_on": "2026-10-05",
+        "current_event": 86,
+        "frame": 20359659,
+        "task_paused_by_user": true,
+        "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+      },
+      "attempt_history": [
+        {
+          "completed": false,
+          "checkpoint_actions": "DDDWXWADASSSSDSAWSAAAAAAWWWWSDDSSASSSSSSWSWDDWWWW",
+          "checkpoint_time": 49,
+          "undo_count": 1,
+          "retry_count": 2,
+          "note": "已取key返回并完成混合接触实验，正常undo恢复双人后返回世界；3-27实际已解锁，先推进后续机制。"
+        }
+      ]
     },
     "3-27": {
       "name": "色散",
@@ -1454,11 +1635,19 @@
     "3-W": {
       "name": "黑暗森林",
       "internal_level_id": "darkforest",
-      "status": "observed_uncompleted",
-      "verified_on": "2026-09-24",
+      "status": "attempted",
+      "verified_on": "2026-10-04",
       "solution_file": "solutions/3-W.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-W.json",
-      "note": "初态已保存，无关内方向输入；无fork、目标左刺另三面墙，未找到已验证存活构造。正常返回，组合可能性待查。"
+      "note": "初态已保存，无关内方向输入；无fork、目标左刺另三面墙，未找到已验证存活构造。正常返回，组合可能性待查。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "",
+        "checkpoint_time": 0,
+        "note": "第三章世界正常14步到40,10，单W进入未完3-W；fresh0初态已保存，COL9未取。不复跑旧组合棱镜5,8被DARK阻止第9W的失败串。",
+        "undo_count": 0,
+        "retry_count": 0
+      }
     },
     "3-A": {
       "name": "延伸",
@@ -1477,17 +1666,17 @@
       "name": "延展",
       "internal_level_id": "extension",
       "status": "attempted",
-      "verified_on": "2026-09-27",
+      "verified_on": "2026-10-04",
       "solution_file": "solutions/3-B.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
-      "note": "初态已观察，无关内输入；箱链捕获候选尚未证可达，模型截断不证明无解。",
+      "note": "fresh0正常回访并返回；任意安全cargo有限模板域截断无可运输正前置，不作无解结论。",
       "slot1_attempt": {
         "completed": false,
-        "checkpoint_actions": "WWDDDDDWWWWWWWSSWWDDSSADWWWWSS",
-        "checkpoint_time": 30,
+        "checkpoint_actions": "",
+        "checkpoint_time": 0,
         "undo_count": 0,
         "retry_count": 0,
-        "note": "首次实际抽三箱到第四列下房，角色4,5 fork1；尚未完成"
+        "note": "本次fresh0/0undo0retry正常返回Chapter3 58,22；any-safe-cargo四箱模型首次底边cargo5,1无可用运输尾，非边界42模板30k/40487截断，无新关内输入，旧30历史保留。111关/6星不变。"
       }
     },
     "3-34": {
@@ -1553,17 +1742,764 @@
         "evidence_file": "../artifacts/slot1-playthrough/3-38.json"
       },
       "notes": "619正常输入、0撤销/0重试，18线覆盖18目标；完成后自动返回Chapter3世界2,5，未新增移动输入。SaveSlot1 factorize=3，累计96关，root独立核验。"
+    },
+    "3-Y": {
+      "name": "吸引",
+      "internal_level_id": "3Y",
+      "status": "completed_verified",
+      "verified_on": "2026-10-02",
+      "solution_file": "solutions/3-Y.md",
+      "slot1_run": {
+        "actions": "WWWDDDDDDSSSWWWAAASSDSASSSSTSAWT",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-X^3-Y.json",
+        "completion_kind": "combined",
+        "runtime_level_id": "template3",
+        "save_record_key": "3X^3Y",
+        "combined_level": "3-X^3-Y",
+        "combination_operator": "^",
+        "component_ids": [
+          "3X",
+          "3Y"
+        ],
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "3-28+3-X": {
+      "name": "保护+排斥",
+      "internal_level_id": "template3",
+      "status": "observed",
+      "observed_on": "2026-10-02",
+      "evidence_file": "../artifacts/slot1-playthrough/3-28+3-X.json",
+      "notes": [
+        "世界冰面改变两人奇偶后，3-X入口与角色同格触发；另人同刻占3-28，实际正常相加。0关内输入，已撤销进入，不增加完成数。"
+      ]
+    },
+    "3-28^3-X": {
+      "name": "保护^排斥",
+      "internal_level_id": "template3",
+      "status": "observed",
+      "observed_on": "2026-10-02",
+      "evidence_file": "../artifacts/slot1-playthrough/3-28^3-X.json",
+      "notes": [
+        "同一世界角色进入同格3-X与3-28，实际叠图8×8；0关内输入，未完成。"
+      ]
+    },
+    "3-X": {
+      "name": "排斥",
+      "internal_level_id": "3X",
+      "status": "completed_verified",
+      "verified_on": "2026-10-02",
+      "solution_file": "solutions/3-X.md",
+      "evidence_file": "../artifacts/slot1-playthrough/3-X.json",
+      "verified_action_sequence": "WWWDDDDDDSSSAAWAAS",
+      "action_count": 18,
+      "undo_count": 0,
+      "retry_count": 0,
+      "notes": [
+        "世界通过同格捕获进入可推3-X，关内1,4直接DD到3,4。Color4箱未操作，不预记该机制。",
+        "首次DD证据保留first_verified_completion/run；后持key1以18步重通关，世界key0，当前存档Record覆写18步。"
+      ],
+      "slot1_run": {
+        "actions": "WWWDDDDDDSSSAAWAAS",
+        "action_count": 18,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-X.json",
+        "undo_count": 0,
+        "retry_count": 0
+      },
+      "first_verified_action_sequence": "DD"
+    },
+    "3-X^3-Y": {
+      "name": "排斥^吸引",
+      "internal_level_id": "template3",
+      "status": "combined_completed_verified",
+      "verified_on": "2026-10-02",
+      "solution_file": "solutions/3-X^3-Y.md",
+      "slot1_run": {
+        "actions": "WWWDDDDDDSSSWWWAAASSDSASSSSTSAWT",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/3-X^3-Y.json",
+        "completion_kind": "combined",
+        "runtime_level_id": "template3",
+        "save_record_key": "3X^3Y",
+        "combined_level": "3-X^3-Y",
+        "combination_operator": "^",
+        "component_ids": [
+          "3X",
+          "3Y"
+        ],
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "3-W+3-X": {
+      "name": "黑暗森林+排斥",
+      "internal_level_id": "template3",
+      "status": "attempted",
+      "observed_on": "2026-10-02",
+      "evidence_file": "../artifacts/slot1-playthrough/3-W+3-X.json",
+      "notes": [
+        "20输入短机制试验，未完成；X外环拿key，Color4右推被wrap0,4墙挡、18,8上方无tile也阻挡，W人仍active ghost。准备撤销进入回世界继续更合适组合。",
+        "正常撤销进入后重入初态，WWAAWWWWW共9输入。第8幽灵5,7/棱镜5,8，第9W幽灵转左4,7、棱镜未动且lighten=false，不能同帧外推接光；未完成。"
+      ]
+    },
+    "4-1": {
+      "name": "对偶",
+      "internal_level_id": "dual",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-1.md",
+      "slot1_run": {
+        "actions": "AAXDDDDSXASWWWAWDDWAAASAWWDWATASDSDWWWAWD",
+        "action_count": 41,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-1.json",
+        "undo_count": 9,
+        "retry_count": 2
+      }
+    },
+    "4-2": {
+      "name": "末端",
+      "internal_level_id": "terminal",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-2.md",
+      "slot1_run": {
+        "actions": "WWXSAWDDSADSAWXAAWWAWDWSSDDWDDDW",
+        "action_count": 32,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-2.json",
+        "undo_count": 1,
+        "retry_count": 0
+      }
+    },
+    "4-3": {
+      "name": "井字棋",
+      "internal_level_id": "sharp",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-3.md",
+      "slot1_run": {
+        "actions": "AWWWWDWXWAAAAAASSSSSSWDWWWWAWSXWAAASS",
+        "action_count": 37,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-3.json",
+        "undo_count": 1,
+        "retry_count": 1
+      }
+    },
+    "4-4": {
+      "name": "同化",
+      "internal_level_id": "assimilation",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-4.md",
+      "slot1_run": {
+        "actions": "AAASDSSWWXDDWDDDDSASAASSADSDWWWWSAWWX",
+        "action_count": 37,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-4.json",
+        "undo_count": 7,
+        "retry_count": 0
+      }
+    },
+    "4-5": {
+      "name": "鸵鸟",
+      "internal_level_id": "bottleneck",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-5.md",
+      "slot1_run": {
+        "actions": "DDSSXWAAASASDWWWWSSDDDSSWADSDWWWAAAASAWWSSSSSAWXWDWWAWWWDDDDD",
+        "action_count": 61,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-5.json",
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "4-6": {
+      "name": "蝴蝶",
+      "internal_level_id": "popout",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-6.md",
+      "slot1_run": {
+        "actions": "SASSAADWSXWWDSSAAAASAWWWWAAAADDWDWAWSAAWDDDDSDWAXSDDWAAAASAWW",
+        "action_count": 61,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/4-6.json",
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "4-7": {
+      "name": "兔子",
+      "internal_level_id": "rabbit",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-7.md",
+      "slot1_run": {
+        "actions": "WWWASSDDDDWXSDDAAAWWWAAWWSXAWWWDSSADWDSSSSDWWWDD",
+        "action_count": 48,
+        "completed": true,
+        "completion_time": 50,
+        "evidence_file": "../artifacts/slot1-playthrough/4-7.json",
+        "undo_count": 0,
+        "retry_count": 0
+      },
+      "notes": [
+        "NID10与4,5墙同格未取，普通WWW撞墙转左；保留合法机制/叠关回访项，不预判无解。"
+      ]
+    },
+    "4-8": {
+      "name": "乌龟",
+      "internal_level_id": "insert",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-8.md",
+      "slot1_run": {
+        "actions": "SDXASASSSSDWDDDDDSAXWWASWWWD",
+        "action_count": 28,
+        "completed": true,
+        "completion_time": 28,
+        "evidence_file": "../artifacts/slot1-playthrough/4-8.json",
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "4-9": {
+      "name": "蚯蚓",
+      "internal_level_id": "earthworm",
+      "status": "completed_verified",
+      "verified_on": "2026-10-03",
+      "solution_file": "solutions/4-9.md",
+      "slot1_run": {
+        "actions": "DSXWWWDSSAWWASSDSAAAAXSDSAASSSSSWDSWSSWAAWWWWW",
+        "action_count": 46,
+        "completed": true,
+        "completion_time": 47,
+        "evidence_file": "../artifacts/slot1-playthrough/4-9.json",
+        "undo_count": 1,
+        "retry_count": 0
+      },
+      "notes": [
+        "保留首次20输入失败及正常离关到4-10初态后回访的历史；未使用提示。"
+      ]
+    },
+    "4-10": {
+      "name": "蜗牛",
+      "internal_level_id": "snail",
+      "status": "attempted",
+      "evidence_file": "../artifacts/slot1-playthrough/4-10.json",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SDXASDDDAAAAAWWWAWWSSSSWSSSSAWWASSAASAAWWDAWAAWDDSSA",
+        "checkpoint_time": 52,
+        "undo_count": 14,
+        "retry_count": 0,
+        "note": "actual52: cargo63 BOX58 at3,3 Fork1, outside60 at6,1; Gate class-BOX53/54 probe retained, normalundo2; current2undo+prior12=14, retry0"
+      },
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-10.md",
+      "analysis_records": [
+        {
+          "on": "2026-10-05",
+          "label": "2026-10-05 one-empty/two-free fixed tail",
+          "kind": "bounded_model_analysis_not_actual",
+          "note": "纯固定constructed cargo7,6F1/D+empty7,5+twofree7,2/7,3（锁已开）XWWW只覆盖Goal7,8/mask2，缺7,9：前推者第二W踏7,5SPIKE死，后推者第三W亦先踏7,5死，未触7,6空箱。无force/fusion/stack，无BFS或实测，不作为合法部署。更高库存cargoF2+empty7,5+onefree7,3的XWWX可条件覆盖两Goal，但MODEL17两叉单人首次freeX后仅F1，不假定可获得F2。私有固定证据scratch/ch4-10-one-buffer-two-pushers-oct05.cjs/.md，原尝试52/undo14不改。"
+        }
+      ]
+    },
+    "4-11": {
+      "name": "大象",
+      "internal_level_id": "elephant",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-11.md",
+      "slot1_run": {
+        "actions": "WWWDXSAAASXWWDDSSDDAXAAADDWDDSAAASDSDSDWASAWADSDSAAWWWAWWATASAAWAAWWAWDDSSSWWWWWD",
+        "action_count": 81,
+        "completed": true,
+        "completion_time": 62,
+        "timeline_completion_times": [
+          58,
+          62
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-11.json",
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "4-12": {
+      "name": "鸭子",
+      "internal_level_id": "duck",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-12.md",
+      "slot1_run": {
+        "actions": "DDDWDXWASAWWDDSDWDAAXAASAWWWSWDSSSDDDSWWWWSSSADDWWWWWWWWXTWXSDSSAWWWWW",
+        "action_count": 70,
+        "completed": true,
+        "completion_time": 65,
+        "timeline_completion_times": [
+          57,
+          65
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-12.json",
+        "undo_count": 11,
+        "retry_count": 0
+      }
+    },
+    "4-13": {
+      "name": "矩阵",
+      "internal_level_id": "matrix",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-13.md",
+      "slot1_run": {
+        "actions": "AAAAWAWDDDSDDWDWWWWWWWWAAXSSAWWWWADDDAADDDWDWWAADWAADSAAASAWWWWXAX",
+        "action_count": 66,
+        "completed": true,
+        "completion_time": 66,
+        "evidence_file": "../artifacts/slot1-playthrough/4-13.json",
+        "undo_count": 0,
+        "retry_count": 0
+      }
+    },
+    "4-14": {
+      "name": "金字塔",
+      "internal_level_id": "pyramid",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-14.md",
+      "slot1_run": {
+        "actions": "SWWWSSAAWWWWAXWXX",
+        "action_count": 17,
+        "completed": true,
+        "completion_time": 17,
+        "evidence_file": "../artifacts/slot1-playthrough/4-14.json",
+        "undo_count": 2,
+        "retry_count": 0
+      }
+    },
+    "4-15": {
+      "name": "对齐",
+      "internal_level_id": "align",
+      "status": "completed_verified",
+      "solution_file": "solutions/4-15.md",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "AAAAAAWDDSDWWWWSXWSASSSSWWWSAWWADWX",
+        "checkpoint_time": 36,
+        "undo_count": 72,
+        "retry_count": 0,
+        "note": "新35/time36：X直生4,1/4,3/1,6/3,6四活F0，C4空4,4/Blue4,6、余叉active。36D实际新推C4经ICE到刚死者4,6仍不捕获，已undo1恢复35；累计72undo/1redo/0retry，111关6星未变，禁提示继续。",
+        "redo_count": 1
+      },
+      "verified_on": "2026-10-04",
+      "slot1_run": {
+        "actions": "AAAWXSAWWDDSSWSSSSSWASAWWXWXAWWAWDDASSSSDSWWWSSDWWTDSWDWAAASAAWAWWWDAWAWW",
+        "action_count": 73,
+        "completed": true,
+        "completion_times": [
+          52,
+          52
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-15.json",
+        "undo_count": 107,
+        "redo_count": 1,
+        "retry_count": 0
+      },
+      "note": "73输入两叶time52联合六goal真实完成并自动返回；112关6星，禁提示。旧35失败checkpoint及全部历史保留。"
+    },
+    "2-G": {
+      "name": "分解和弦",
+      "internal_level_id": "chord",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/2-G.md",
+      "evidence_file": "../artifacts/slot1-playthrough/2-G.json",
+      "note": "2026-10-05正常从已验共同60返回世界，209Undo/0game retry全保；当前不是2-G现场。世界reset undo_depth0，若回访需正常重建60。\n2026-10-05当前2-G已由新parent2400844真实102正常Undo42恢复共同新60，event816/frame19963706/单axis0/time81。准确60串AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWWDSAWWDWAA；最后Undo815回执真实currentplayers为105[14,8]/106[10,7]/107[7,1]/108[4,1]/109[1,1]。主732为原新102只读guard；733..815共42正常Undo回执全部ok/dispatched、stdout/RAM即时保留，734..816逐full准确删1末instruction，无重发。首Undo734/new101/time158 entire14严格718 diff=[]；所有后态按parent2400844明确fixed-prefix全14字段diff=[]，确有历史实际checkpoint时另核time与完整字典，缺单拍history不虚构。终816与625/624/418/259整个14entity字典含GMID/animation/type/class/details/全部props strictdiff=[]；五free九空Blue全活、F0/key0/ghost0/mask0/uncontained/h1、motion0/src-1、全部动画true且guard清，未完成。原GMID102..115，未残留分线allocation；当前fivefree105[14,8]/S、106[10,7]/A、107/108/109在[7,1]/[4,1]/[1,1]/S。九BOX110[8,9]/111[8,5]/112[6,7]/113[3,9]/114[2,9]/115[11,8]/116[8,7]/117[7,7]/118[5,7]原库存。累计167+42=209Undo/0game retry，118完成6星link3不变；恢复不补计完成。新102的721..726六微帧/726→727来源争推、两叶165稳态、axis1 GMID677..690明确分配与M131有限fixture，旧98/101融合534差异/112链腾格/所有脚本例外和旧历史全保同一主JSON。输入PTY75317已exit0、无live owner输入/搜索handle；只正常Undo42，没有T/方向/X/retry/重开/同几何尾重测。保持共同60等待不同可达组件或三叶候选，未把等价175/2496普通域重跑。Slot1/唯一owner/禁提示、简化、反射、隐藏实现、存档进度编辑；root维护save-management.md，本次未修改。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWWDSAWWDWAA",
+        "checkpoint_time": 81,
+        "undo_count": 209,
+        "retry_count": 0,
+        "note": "2026-10-05当前2-G已由新parent2400844真实102正常Undo42恢复共同新60，event816/frame19963706/单axis0/time81。准确60串AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWWDSAWWDWAA；最后Undo815回执真实currentplayers为105[14,8]/106[10,7]/107[7,1]/108[4,1]/109[1,1]。主732为原新102只读guard；733..815共42正常Undo回执全部ok/dispatched、stdout/RAM即时保留，734..816逐full准确删1末instruction，无重发。首Undo734/new101/time158 entire14严格718 diff=[]；所有后态按parent2400844明确fixed-prefix全14字段diff=[]，确有历史实际checkpoint时另核time与完整字典，缺单拍history不虚构。终816与625/624/418/259整个14entity字典含GMID/animation/type/class/details/全部props strictdiff=[]；五free九空Blue全活、F0/key0/ghost0/mask0/uncontained/h1、motion0/src-1、全部动画true且guard清，未完成。原GMID102..115，未残留分线allocation；当前fivefree105[14,8]/S、106[10,7]/A、107/108/109在[7,1]/[4,1]/[1,1]/S。九BOX110[8,9]/111[8,5]/112[6,7]/113[3,9]/114[2,9]/115[11,8]/116[8,7]/117[7,7]/118[5,7]原库存。累计167+42=209Undo/0game retry，118完成6星link3不变；恢复不补计完成。新102的721..726六微帧/726→727来源争推、两叶165稳态、axis1 GMID677..690明确分配与M131有限fixture，旧98/101融合534差异/112链腾格/所有脚本例外和旧历史全保同一主JSON。输入PTY75317已exit0、无live owner输入/搜索handle；只正常Undo42，没有T/方向/X/retry/重开/同几何尾重测。保持共同60等待不同可达组件或三叶候选，未把等价175/2496普通域重跑。Slot1/唯一owner/禁提示、简化、反射、隐藏实现、存档进度编辑；root维护save-management.md，本次未修改。",
+        "returned_to_world": false,
+        "returned_world": true
+      }
+    },
+    "4-16": {
+      "name": "活塞",
+      "internal_level_id": "piston",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/4-16.md",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "",
+        "checkpoint_time": 0,
+        "undo_count": 7,
+        "retry_count": 0,
+        "note": "正常返回4-18实际53后，从World[-36,-11]F1走SDDDDWD进入4-16[-30,-11]；world events406..413保存完整收据与加载，ICE在第5方向D忙只续剩余W，末D单步入场。4-16主event[16]/frame16136487：fresh0/time0/leaf51，free49[4,2]F0/S，C4 BOX45/cargo50[5,5]F2/S/ghost0活contained1；Blue46/47/48空3,3/4,3/5,3。两个Fork库存全在初cargo，场上无KEY/Fork实体。没有关内输入；新回访0undo0retry，旧7undo0retry实验全保，未重放WWAXDX、未重跑旧12000，当前无solver/session。118完成6星，未完成本关。 2026-10-05本轮fresh0回访仅公开Notebook复查：4-16.json events18..35，event29装箱页<14/15>仅列重叠装箱、防刺/光观测、拾物/开锁、连箱分裂四项。未出现新容器移动/释放键，未选择获得启示/提示/简化，未试无说明Shift；正常关闭笔记恢复fresh0后返回世界。本轮关内零输入/0undo0retry，无新模型cap/机制/Goal；旧7undo和WWAXDX等历史保留。现已转Chapter2并正常进入2-G fresh0。",
+        "returned_to_world": true
+      },
+      "note": "正常返回4-18实际53后，从World[-36,-11]F1走SDDDDWD进入4-16[-30,-11]；world events406..413保存完整收据与加载，ICE在第5方向D忙只续剩余W，末D单步入场。4-16主event[16]/frame16136487：fresh0/time0/leaf51，free49[4,2]F0/S，C4 BOX45/cargo50[5,5]F2/S/ghost0活contained1；Blue46/47/48空3,3/4,3/5,3。两个Fork库存全在初cargo，场上无KEY/Fork实体。没有关内输入；新回访0undo0retry，旧7undo0retry实验全保，未重放WWAXDX、未重跑旧12000，当前无solver/session。118完成6星，未完成本关。 2026-10-05本轮fresh0回访仅公开Notebook复查：4-16.json events18..35，event29装箱页<14/15>仅列重叠装箱、防刺/光观测、拾物/开锁、连箱分裂四项。未出现新容器移动/释放键，未选择获得启示/提示/简化，未试无说明Shift；正常关闭笔记恢复fresh0后返回世界。本轮关内零输入/0undo0retry，无新模型cap/机制/Goal；旧7undo和WWAXDX等历史保留。现已转Chapter2并正常进入2-G fresh0。"
+    },
+    "4-17": {
+      "name": "上浮",
+      "internal_level_id": "floating",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/4-17.md",
+      "note": "当前actual13/time13，SDDDDWAXWWAWW：C4 BOX55[3,5]底层h1/contained0，Blue56同格上层h2/contained1/container55，两箱active且仍为空；外57[4,5]F1/A和62[3,4]F1/W均活ghost0/uncontained。单leaf66、无force/dialog/完成。12到13单W同拍两个空箱各受一个方向推力而叠加；两外人Fork未耗。本回访34undo0retry，旧probe6undo另保（累计40），全部旧15/25/29/融合11/undo历史保留。118关6星；下一仅核新的空叠体捕获/持叉复制资源，不重跑已封普通尾。 已正常暂停菜单返回世界（本回访13/34undo，旧6undo历史保留），之后转4-18单按钮核验；不再是live现场。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SDDDDWAXWWAWW",
+        "checkpoint_time": 13,
+        "undo_count": 34,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-17.json",
+        "note": "当前actual13/time13，SDDDDWAXWWAWW：C4 BOX55[3,5]底层h1/contained0，Blue56同格上层h2/contained1/container55，两箱active且仍为空；外57[4,5]F1/A和62[3,4]F1/W均活ghost0/uncontained。单leaf66、无force/dialog/完成。12到13单W同拍两个空箱各受一个方向推力而叠加；两外人Fork未耗。本回访34undo0retry，旧probe6undo另保（累计40），全部旧15/25/29/融合11/undo历史保留。118关6星；下一仅核新的空叠体捕获/持叉复制资源，不重跑已封普通尾。 已正常暂停菜单返回世界（本回访13/34undo，旧6undo历史保留），之后转4-18单按钮核验；不再是live现场。",
+        "returned_to_world": true
+      },
+      "analysis_records": [
+        {
+          "on": "2026-10-05",
+          "label": "2026-10-05 upper stack observation necessary condition",
+          "kind": "bounded_model_analysis_not_actual",
+          "note": "主event44历史actual29核匹配，两C4cargo2,2/2,4、Blue3,3、twofree4/6,3，全F0。固定旧尾WWAWWWDSSA叠1,3、WWDAWADAAS叠3,3且两free活；再SS的conditionalGoalObs1两叶均cargo2,1/3,1、outside0、mask34。此观测未实测。初图Wall3/5,6与3/5,8阻上下入口，侧廊箱到1/7,7后横转需0/8,7推位（真Wall）。仅乐观单body位置必要条件闭包每源34格，row7只角1/7，无法普通刚性运输叠体到上Goal3/5,7；无新游戏状态BFS或输入，不否定早期Fork出生/未知层分离。旧29轮5000/7154/pending2154仍截断，当前actual13/本回访undo34不改。证据scratch/ch4-17-upper-stack-observation-audit-oct05.cjs及原readonly.md。"
+        }
+      ]
+    },
+    "4-18": {
+      "name": "混合",
+      "internal_level_id": "mingle",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/4-18.md",
+      "note": "正常回访完整52重建+单A53，再单D54清Button8，主events[104]/[106]/[108]直接核：54 Button7[7,6]仅活Color2 BOX80/cargo81占，Button8[8,6]无活BOX/PLAYER；Gate68[5,2]/ID0 blockable=true，Gate69[6,2]/ID1=false。正常Unity截图核左门关闭/右门开启。53外79停8,6仍压Button8，所以53不能当单按钮阴性/阳性。随后normalundo1恢复live53/time57/leaf82，主event[110]：cargo73/78=6,6、80/81=7,6全F0/A/ghost0活，outside79=8,6F1/A/ghost0活，左空箱2,2/2,3，末Fork3,6active，Lock9,5inactive，两门open。本次1undo0retry，旧1undo另保，累计2undo0retry；全部71/63/56/54历史保留。118关6星，未完成。 已正常菜单返回并转4-16fresh0；53/54/undo1完整历史保留，不再是live现场。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WASXWDDSWAAAAAWDDAAAASWDWWXWSSAAAAAWWWDASDSSDDDDDWWWA",
+        "checkpoint_time": 57,
+        "undo_count": 2,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-18.json",
+        "note": "正常回访完整52重建+单A53，再单D54清Button8，主events[104]/[106]/[108]直接核：54 Button7[7,6]仅活Color2 BOX80/cargo81占，Button8[8,6]无活BOX/PLAYER；Gate68[5,2]/ID0 blockable=true，Gate69[6,2]/ID1=false。正常Unity截图核左门关闭/右门开启。53外79停8,6仍压Button8，所以53不能当单按钮阴性/阳性。随后normalundo1恢复live53/time57/leaf82，主event[110]：cargo73/78=6,6、80/81=7,6全F0/A/ghost0活，outside79=8,6F1/A/ghost0活，左空箱2,2/2,3，末Fork3,6active，Lock9,5inactive，两门open。本次1undo0retry，旧1undo另保，累计2undo0retry；全部71/63/56/54历史保留。118关6星，未完成。 已正常菜单返回并转4-16fresh0；53/54/undo1完整历史保留，不再是live现场。",
+        "returned_to_world": true
+      },
+      "analysis_records": [
+        {
+          "on": "2026-10-05",
+          "label": "4-18 Button7单独配对已实证",
+          "kind": "actual_verified",
+          "evidence_event": 108,
+          "note": "正常回访完整52重建+单A53，再单D54清Button8，主events[104]/[106]/[108]直接核：54 Button7[7,6]仅活Color2 BOX80/cargo81占，Button8[8,6]无活BOX/PLAYER；Gate68[5,2]/ID0 blockable=true，Gate69[6,2]/ID1=false。正常Unity截图核左门关闭/右门开启。53外79停8,6仍压Button8，所以53不能当单按钮阴性/阳性。随后normalundo1恢复live53/time57/leaf82，主event[110]：cargo73/78=6,6、80/81=7,6全F0/A/ghost0活，outside79=8,6F1/A/ghost0活，左空箱2,2/2,3，末Fork3,6active，Lock9,5inactive，两门open。本次1undo0retry，旧1undo另保，累计2undo0retry；全部71/63/56/54历史保留。118关6星，未完成。"
+        }
+      ]
+    },
+    "4-X": {
+      "name": "天空",
+      "internal_level_id": "sky",
+      "status": "attempted",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-X.md",
+      "note": "11/time11、1undo0retry后正常返回世界-31,-12，未完成；缺Floor普通方向/X边界留实证，等待合法组合或额外资源。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "AAAAAASSSSD",
+        "checkpoint_time": 11,
+        "undo_count": 1,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-X.json",
+        "note": "实际11/time11；单X12只前移0,6F0而未跳过缺Floor，normalundo1恢复P0,5F1/W，累计1undo0retry。单图14格起点组件与Prism/双Goal分离，未完成；保全历史，禁提示续合法世界资源。 正常返回Chapter4 -31,-12，Fork1恢复；此11为离关历史。",
+        "returned_to_world": true
+      }
+    },
+    "4-19": {
+      "name": "反制",
+      "internal_level_id": "counter",
+      "status": "completed_verified",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/4-19.md",
+      "note": "4-19反制正常回访41输入实际完成；38X出生同刻捕空Blue，三cargo3/4/6,6与外人1,6均F0；末DDD把三载箱送5/6/7,6，外人最后死4,6SPIKE，三cargo活contained/ghost0。源及左右Prism45/46/47均traversed/testCompleted=true、lighten=false，completed=true。本成功回访0undo0retry，历史累计22undo0retry全部保留；自动World[-42,-12]F1。 root独立Slot1 counter3/record41/count118核。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WDAXDDWWWSAWWSDDWWSAWSDAX",
+        "checkpoint_time": 25,
+        "undo_count": 22,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-19.json",
+        "note": "新25实际完整 WDAXDDWWWSAWWSDDWWSAWSDAX：24 C4cargo48/42=3,5F1/A、emptyBlue43=3,4、free44=3,2F1/A。25X C4南child推Blue至3,3，free北child同在3,3被Blue捕获，成为52/container43/height1/F0/A/ghost0活cargo；C4 cargo48=3,4、新53/cargo54=3,6，outside44=3,1，四活角色均F0/ghost0，无stack/冲突/自动对话，单time25未完成。此前actual27叠体两相关叶全历史保留，正常undo18逐次回9后重部署；累计22undo0retry。此例确认X新生人物可被同输入移动空箱捕获；该source普通尾52/52/pending0/depthcut0未到光路，单外人仍被箱列困在下腔，不把三cargo库存当已闭Goal运输，不重跑该有限域。 旧未完成25/27全保留；新回访41成功见slot1_run。",
+        "returned_to_world": true
+      },
+      "slot1_run": {
+        "actions": "WDAXDDWWWSAWWWWWWDSSSSDDWWSAWWWWWDWSWXDDD",
+        "action_count": 41,
+        "completed": true,
+        "completion_times": [
+          41
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-19.json",
+        "undo_count": 22,
+        "retry_count": 0,
+        "successful_attempt_undo_count": 0
+      }
+    },
+    "4-20": {
+      "name": "马",
+      "internal_level_id": "horse",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "solution_file": "solutions/4-20.md",
+      "note": "37整组复制probe后normalundo22回真实15，保原完整历史，再XWWWD→20：C4empty2,4/Blueempty4,3，free59=3,3与71=5,3各F2/D。21单D确生两叶/time21：axis0 Blue5,3、winner59=4,3/D/F2，71 inactive/maskedoff1/contained0；axis1 Blue3,3、winner71=4,3/A/F2，59 inactive/maskedoff1/contained0。两叶都仅一个活freeF2，没有载人箱/捕获，全部ghost0，C42,4未动。新增22undo，horse历史累计27undo0retry，未完成。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SSSSSSDDSSSSAAWXWWWDD",
+        "checkpoint_time": 21,
+        "undo_count": 27,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-20.json",
+        "note": "37整组复制probe后normalundo22回真实15，保原完整历史，再XWWWD→20：C4empty2,4/Blueempty4,3，free59=3,3与71=5,3各F2/D。21单D确生两叶/time21：axis0 Blue5,3、winner59=4,3/D/F2，71 inactive/maskedoff1/contained0；axis1 Blue3,3、winner71=4,3/A/F2，59 inactive/maskedoff1/contained0。两叶都仅一个活freeF2，没有载人箱/捕获，全部ghost0，C42,4未动。新增22undo，horse历史累计27undo0retry，未完成。",
+        "returned_to_world": true
+      }
+    },
+    "4-21": {
+      "name": "膨胀",
+      "internal_level_id": "dilation",
+      "status": "attempted",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-21.md",
+      "note": "实际66/time66：空Box82[7,5]单独开Gate7,6，cargo95[6,2]F1与两outside[7,4]/[5,8]F0全活，三C4保留；14undo0retry，仍未解。 已正常返回世界[-46,-11]，未计完成。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "WDDDSWXDSSWDDSSSWWWAASDWDSSDDWWSAAXAADDSSAADDWWWWAAAWAADDSSAAAWAWW",
+        "checkpoint_time": 66,
+        "undo_count": 14,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-21.json",
+        "note": "实际66/time66空Box82压Button7,5，Gate7,6单独open/Gate12,7closed已核；cargo6,2Fork1+两outside7,4/5,8Fork0三活ghost0，三C4保留。14undo0retry，112关6星未解，禁提示继续。",
+        "returned_to_world": true
+      }
+    },
+    "4-22": {
+      "name": "侵蚀",
+      "status": "attempted",
+      "verified_on": "2026-10-05",
+      "note": "新正常回访重建15两叉两Key，再AWWWAWX：actual22/time22两free88[3,9]/89[5,9]均F1/key2/W/ghost0，五原空BOX未动，单叶90，无dialog/未完成。本回访0undo0retry，erosion历史20undo0retry保留；horse21正常return，horse历史27undo0retry保留。 新22正常返回世界，转4-17资源实测，历史20undo保留。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SSSSSDDDWWDWWDSAWWWAWX",
+        "checkpoint_time": 22,
+        "undo_count": 20,
+        "retry_count": 0,
+        "returned_to_world": true,
+        "note": "新正常回访重建15两叉两Key，再AWWWAWX：actual22/time22两free88[3,9]/89[5,9]均F1/key2/W/ghost0，五原空BOX未动，单叶90，无dialog/未完成。本回访0undo0retry，erosion历史20undo0retry保留；horse21正常return，horse历史27undo0retry保留。",
+        "evidence_file": "artifacts/slot1-playthrough/4-22.json"
+      },
+      "internal_level_id": "erosion",
+      "solution_file": "solutions/4-22.md"
+    },
+    "4-23": {
+      "name": "蛇",
+      "internal_level_id": "snake",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-23.md",
+      "note": "52输入/time52同叶双Goal真实完成并自动返回；11undo0retry，首Blue15试验保留。root只读slot1 snake状态3/record52/count113/6星。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SSSDXDDDAAAAAWDSSDDDDDDSDDWSAAWDSDWWWW",
+        "checkpoint_time": 38,
+        "undo_count": 11,
+        "retry_count": 0,
+        "evidence_file": "artifacts/slot1-playthrough/4-23.json",
+        "returned_to_world": true,
+        "note": "历史38/time38检查点：C4cargo9,7Fork2活、Blue9,6，外人尖刺死；随后14蛇尾52完成见slot1_run，累计11undo0retry。"
+      },
+      "slot1_run": {
+        "actions": "SSSDXDDDAAAAAWDSSDDDDDDSDDWSAAWDSDWWWWWXAXXXXXXXSXXX",
+        "action_count": 52,
+        "completed": true,
+        "completion_times": [
+          52
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-23.json",
+        "undo_count": 11,
+        "retry_count": 0
+      }
+    },
+    "4-24": {
+      "name": "响指",
+      "internal_level_id": "snap",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-24.md",
+      "note": "4-24响指正常62输入完成：35后AXDXXAXXXXXX同步两F1载箱，53X对Blue A/S正交冲突真实两叶；axis0三S到Goal1,1/time56，T切axis1五W到Goal1,9/time58完成。此次0undo0retry、累计历史7undo0retry；root独立Slot1 snap3/record62/count117/6核，自动World[-45,3]F1。继续全成就，唯一输入owner /root/ch4_1_readonly，禁提示。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SDDSDDDDAAWWWXWSDDDDDDDSDDWSAAWDSDWXXAXXXX",
+        "checkpoint_time": 42,
+        "undo_count": 7,
+        "retry_count": 0,
+        "returned_to_world": true,
+        "evidence_file": "artifacts/slot1-playthrough/4-24.json",
+        "note": "实际42/time42：Blue70独压3,7开Gate1,8(ID1)，Gate1,2仍闭、Button4,6未压；外89=8,4F0活，onlychargedCargo109=6,9F1，剩3上叉。7undo0retry，单线未完成；已验证Color1复制，保存待解。 历史未解42已保留；新正常回访62实际完成见slot1_run。"
+      },
+      "slot1_run": {
+        "actions": "SDDSDDDDAAWWWXWSDDDDDDDSDDWSAAWDSDWAXDXXAXXXXXXAAAAAXSSSTWWWWW",
+        "action_count": 62,
+        "completed": true,
+        "completion_times": [
+          56,
+          58
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-24.json",
+        "undo_count": 7,
+        "retry_count": 0,
+        "successful_attempt_undo_count": 0
+      }
+    },
+    "4-25": {
+      "name": "长颈鹿",
+      "internal_level_id": "giraffe",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-25.md",
+      "note": "89输入/time89单叶Goal真实完成并自动返回；0undo0retry，旧64正常return及重新进入历史保留。root核slot1 giraffe3/record89/count114/6星。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "SSAADDXAAAAWDDWWAWAWWDWWWASSSSDSSSAAWDDWWASDSAASAWSDDDDDWAAAASAW",
+        "checkpoint_time": 64,
+        "undo_count": 0,
+        "retry_count": 0,
+        "returned_to_world": true,
+        "evidence_file": "artifacts/slot1-playthrough/4-25.json",
+        "note": "历史64检查点，护叉入口F1与outside保活；正常return后新重入重放64并追加25完成，最终见slot1_run。"
+      },
+      "slot1_run": {
+        "actions": "SSAADDXAAAAWDDWWAWAWWDWWWASSSSDSSSAAWDDWWASDSAASAWSDDDDDWAAAASAWSXWXXXXAXWXXAXSWXXSAXWWXX",
+        "action_count": 89,
+        "completed": true,
+        "completion_times": [
+          89
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-25.json",
+        "undo_count": 0,
+        "retry_count": 0,
+        "normal_reentry_count": 1
+      }
+    },
+    "4-26": {
+      "name": "D.N.A",
+      "internal_level_id": "dna",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-26.md",
+      "note": "4-26 D.N.A正常114输入/time114光学完成：emptyPri92=Goal3,15 traversed/testCompleted true，Blue187/P188=3,14F0活containedghost0；43活cargo、无外人。累计101undo0retry，旧Pri复制/融合/双叶52probe全保。root核Slot1 dna3/record114/count115/6星，自动world[-45,6]F1；继续4-27，禁提示。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "DDWWWDSSSAXAAWAADSSAADXXWXXDXXXWXXXXXXDXXXXWXXDXXWXX",
+        "checkpoint_time": 52,
+        "undo_count": 51,
+        "retry_count": 0,
+        "returned_to_world": false,
+        "evidence_file": "artifacts/slot1-playthrough/4-26.json",
+        "note": "历史52两叶未完成检查点，原51undo；后正常undo50回DD2复建leadingPrism47并追加67完成，最终见slot1_run。"
+      },
+      "slot1_run": {
+        "actions": "DDWWWASSWWDDDSAAWASDSWXDSSSAAWWASSDSAAADDDSAAAXXXXXWXDXWXXAXWXAXXXWXDXWXXXDXWXDXXXWXDXWXXXDXWXDXXXWXDXWXXXAXWXDXXX",
+        "action_count": 114,
+        "completed": true,
+        "completion_times": [
+          114
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-26.json",
+        "undo_count": 101,
+        "retry_count": 0
+      }
+    },
+    "4-27": {
+      "name": "绽放",
+      "internal_level_id": "blossom",
+      "status": "completed_verified",
+      "verified_on": "2026-10-04",
+      "solution_file": "solutions/4-27.md",
+      "note": "4-27绽放正常281输入（含7T）完成：89保三Fork1部署，90X三组推力冲突生成八叶；各叶旁观外75覆盖Goal9/8/7/6/4/3/2/1,7，time109/110/111/112/114/115/116/117，皆4活ghost0。累计6undo0retry，旧叠体/远Goal探针全保；root只读Slot1 blossom3/record281/count116/6核，自动world[-68,5]F1，继续全目标禁提示。",
+      "slot1_attempt": {
+        "completed": false,
+        "checkpoint_actions": "",
+        "checkpoint_time": 0,
+        "undo_count": 6,
+        "retry_count": 0,
+        "returned_to_world": false,
+        "evidence_file": "artifacts/slot1-playthrough/4-27.json",
+        "note": "历史fresh0/6undo0retry恢复点，首X两源载箱叠体与远Goal negative探针已完整保留；最终成功281见slot1_run。"
+      },
+      "slot1_run": {
+        "actions": "AAAAAAAAAWSAWSAAWDDAAWWWDSSAADAAAWWDAWWDSDWASSSDDWDDDDDDSDSASSASSAWWWWAASAAWDDAAAAADWAWDAXSDDDDSSDDDWWDDWWWWATSDDDDSSDDDWWDDWWWWAATSDDDDSSDDDWWDDWWWWAAATSDDDDSSDDDWWDDWWWWAAAATSDDDDSSDDDWWDDWWWWAAAAAATSDDDDSSDDDWWDDWWWWAAAAAAATSDDDDSSDDDWWDDWWWWAAAAAAAATSDDDDSSDDDWWDDWWWWAAAAAAAAA",
+        "action_count": 281,
+        "completed": true,
+        "completion_times": [
+          109,
+          110,
+          111,
+          112,
+          114,
+          115,
+          116,
+          117
+        ],
+        "evidence_file": "../artifacts/slot1-playthrough/4-27.json",
+        "undo_count": 6,
+        "retry_count": 0
+      }
     }
   },
   "last_observed_location": {
-    "scene": "3-0",
-    "level_id": "Chapter3",
-    "world": true,
-    "player_position": [
-      2,
-      5
+    "scene": "Template3",
+    "level_id": "stealth",
+    "world": false,
+    "player_positions": [
+      [
+        8,
+        4
+      ],
+      [
+        11,
+        7
+      ]
     ],
-    "observed_on": "2026-09-27"
+    "axis_player_positions": [
+      {
+        "axis": [
+          0,
+          0,
+          0
+        ],
+        "time": 70,
+        "positions": [
+          [
+            8,
+            4
+          ],
+          [
+            11,
+            7
+          ]
+        ]
+      }
+    ],
+    "observed_on": "2026-10-05",
+    "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

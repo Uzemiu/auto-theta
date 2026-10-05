@@ -103,6 +103,8 @@ up down left right split undo redo retry tab shift confirm pause grid preview
 
 坐标为游戏网格 `[x, y]`，向上移动增加 `y`。`confirm` 用于确认、交互或推进对话；暂停菜单可用 `up/down` 选择并用 `confirm` 确认。按钮 ID 仅在当前实例有效，请先读取 UI 再点击。
 
+章节地图中的 `X`“传送至章节”对应 `act split`（桥接版本 0.3.2 起支持在暂停菜单发送）。先用 `ui` 或截图确认当前菜单与所选章节；关内忙碌、输入锁定时仍会拒绝分裂。
+
 `act`、`batch`、`click`、`wait` 仅返回摘要，包括关卡状态与当前世界线最多 8 个活跃角色的位置；`player_count` 给出全部活跃角色数量。`ok: true` 表示请求处理成功，`dispatched: true` 表示输入已发送，均不保证角色实际移动。
 
 ### Observe：默认精简，按需完整
@@ -220,6 +222,8 @@ BepInEx 插件
 | [`scratch/`](scratch/) | 探索脚本、候选解法和中间实验结果 |
 
 **实验记录包含剧透。** `knowledge` 和 `scratch` 作为历史研究材料保留，不参与安装；其中的路径、存档约定、实验指令与进度描述属于当时的实验环境，不代表新安装用户的当前游戏状态。
+
+继续本轮实验前读取 [当前交接](knowledge/handoff.md)；研究脚本与报告见 [分类索引](scratch/README.md)，本次暂停和整理见 [2026-10-05记录](knowledge/checkpoints/2026-10-05-pause.md)。
 
 ## 验证
 

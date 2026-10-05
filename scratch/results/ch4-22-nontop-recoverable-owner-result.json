@@ -1,0 +1,467 @@
+{
+  "source": "actual15; new actual22 not changed during search",
+  "cap": 12000,
+  "maxDepth": 40,
+  "expanded": 12000,
+  "seen": 17049,
+  "pending": 5050,
+  "stale": 0,
+  "depthCut": 0,
+  "exhausted": false,
+  "deadReject": 2981,
+  "resourceReject": 3846,
+  "forceReject": 28,
+  "unknownReject": 2,
+  "firstCargo": null,
+  "hit": null,
+  "fixed": null,
+  "forceSamples": [
+    {
+      "path": "XWAAA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              3,
+              8
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              4,
+              5
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              5,
+              4
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    },
+    {
+      "path": "XWAAA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              3,
+              8
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              4,
+              5
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              5,
+              4
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    },
+    {
+      "path": "AXAAA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              3,
+              8
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              3,
+              4
+            ],
+            "f": "A",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              4,
+              5
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    },
+    {
+      "path": "AXAAA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              3,
+              8
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              3,
+              4
+            ],
+            "f": "A",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              4,
+              5
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    }
+  ],
+  "unknownSamples": [
+    {
+      "path": "AXAAWWWDDSDAWSA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              2,
+              9
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              5,
+              4
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              3,
+              8
+            ],
+            "f": "S",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    },
+    {
+      "path": "AXAAWWWDDSDAWSDAA",
+      "before": {
+        "boxes": [
+          {
+            "id": 83,
+            "color": 3,
+            "p": [
+              4,
+              4
+            ],
+            "c": null
+          },
+          {
+            "id": 84,
+            "color": 4,
+            "p": [
+              3,
+              7
+            ],
+            "c": null
+          },
+          {
+            "id": 85,
+            "color": 4,
+            "p": [
+              3,
+              6
+            ],
+            "c": null
+          },
+          {
+            "id": 86,
+            "color": 4,
+            "p": [
+              3,
+              5
+            ],
+            "c": null
+          },
+          {
+            "id": 87,
+            "color": 4,
+            "p": [
+              2,
+              9
+            ],
+            "c": null
+          }
+        ],
+        "free": [
+          {
+            "r": [
+              5,
+              4
+            ],
+            "f": "A",
+            "fork": 1,
+            "key": 2
+          },
+          {
+            "r": [
+              3,
+              8
+            ],
+            "f": "A",
+            "fork": 1,
+            "key": 2
+          }
+        ],
+        "keys": 0,
+        "locks": 2047
+      }
+    }
+  ],
+  "scope": "one first freeX then ordinary WASD; cargoF1/key2 at any non3,9 and outside3,9 F1/key2 faceA; all five source BOX avoid x1,row1,3,4,x>6; target prospective X must keep six usable BOX,two cargo,two free incl2,9. Same-origin body classes hashed by color; face retained, no force/stack/Ghost propagation; no game input, no extra cap."
+}

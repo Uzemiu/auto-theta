@@ -67,7 +67,7 @@ def main() -> None:
             result["combined_mapping_consistent"] = (
                 len(component_ids) >= 2
                 and entry["internal_level_id"] in component_ids
-                and operator in ("+", "×")
+                and operator in ("+", "×", "^")
                 and record_key == operator.join(component_ids)
                 and bool(run.get("combined_level"))
                 and bool(run.get("runtime_level_id"))

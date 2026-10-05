@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-09-27",
+  "updated_on": "2026-10-04",
   "objective": "通过正常游戏操作，在 SaveSlot1 持续推进至全成就",
   "steam_app_id": 3219580,
   "catalog_source": "https://steamcommunity.com/stats/3219580/achievements/",
   "catalog_total": 28,
-  "account_unlocked_count": 8,
-  "slot1_verified_earned_count": 8,
+  "account_unlocked_count": 13,
+  "slot1_verified_earned_count": 12,
   "verification_note": "官方公开列表用于确定成就范围，不能证明当前账户已解锁。账户历史成就和本轮 slot1 达成证据分开记录。隐藏条件未公开的条目保持未知，不编造条件。",
   "achievements": [
     {
@@ -144,9 +144,17 @@
     {
       "name": "Creation",
       "known_requirement": "触发箱子分裂",
-      "account_status": "locked_in_local_cache",
-      "slot1_status": "mechanism_observed_achievement_unconfirmed",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
       "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/2-21.json",
+          "note": "2026-10-02回访第125输入X：对刚形成的持叉箱内幽灵分裂，BOX161移到19,3并新增BOX185于20,4，两名角色仍contained/ghost1且split0，普通自动教学确认活着的角色可通过分裂复制箱子。"
+        },
+        {
+          "file": "artifacts/achievements/20261001T203412803370Z.json",
+          "note": "Steam缓存核验ACH_CREATION首次解锁，账户11/28。"
+        },
         {
           "file": "artifacts/slot1-playthrough/3-30.json",
           "note": "第12W两种颜色箱子同格叠加，第13A推至目标2,7后观测成两条世界线，分别保留Color1与Color3箱，两支都保留双活人；随后23输入通关。属于可能相关机制证据，2026-09-24T13:39:12.045127+00:00本地账户缓存仍ACH_CREATION=false、8/28，不宣称触发条件已完整满足。"
@@ -155,37 +163,67 @@
       "api_name": "ACH_CREATION",
       "name_zh": "创造",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null,
-      "verification_note": "物体叠加被观测后分线的现象已实测，仍须实际解锁证据或进一步正常操作证明Creation完整条件；当前不计入已确认成就。"
+      "account_unlock_time_utc": "2026-10-01T20:32:36+00:00",
+      "verification_note": "2026-10-02持叉箱内角色执行X后已实际解锁。旧3-30叠箱观察分线是不同机制，保留为排除误判的历史证据。"
     },
     {
       "name": "Green",
       "known_requirement": "使两个关卡叠加",
-      "account_status": "locked_in_local_cache",
-      "slot1_status": "unverified",
-      "evidence": [],
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter3-world.json",
+          "note": "取得绿色叉子后借世界冰面改变双人奇偶；14步 AWDSWDSDWDWWAA 最后 A 将可推3-X与固定3-28同时置于10,20，并让同一角色进入该格，外推者停10,21。"
+        },
+        {
+          "file": "artifacts/slot1-playthrough/3-28^3-X.json",
+          "note": "初态标题3-28^3-X、保护^排斥，size8×8单线且地图原坐标叠合，验证叠加而非先前的相加。仅创建组合，不代表完成。"
+        },
+        {
+          "file": "artifacts/achievements/20261001T184455957917Z.json",
+          "note": "Steam本地缓存首次核验Green解锁，账户9/28，解锁时间2026-10-01T18:42:47Z。"
+        }
+      ],
       "api_name": "ACH_GREEN",
       "name_zh": "绿色",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null
+      "account_unlock_time_utc": "2026-10-01T18:42:47+00:00"
     },
     {
       "name": "Observation",
       "known_requirement": "通过第三章",
-      "account_status": "locked_in_local_cache",
-      "slot1_status": "unverified",
-      "evidence": [],
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/chapter4-world.json",
+          "note": "2026-10-02正常走到第三章西端-23,4，UI前往上层并确认后实际进入Chapter4演生，初始角色21,0。第三章尚有欠关，但不阻止此正常章节出口。"
+        },
+        {
+          "file": "artifacts/achievements/20261001T222444872194Z.json",
+          "note": "同次转章后Steam本地缓存新增ACH_PASSCH3，账户12/28。"
+        }
+      ],
       "api_name": "ACH_PASSCH3",
       "name_zh": "观测",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null
+      "account_unlock_time_utc": "2026-10-01T22:24:06+00:00"
     },
     {
       "name": "Cat Box",
       "known_requirement": "在同时杀死和拯救某人",
-      "account_status": "locked_in_local_cache",
-      "slot1_status": "mechanism_observed_achievement_unconfirmed",
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
       "evidence": [
+        {
+          "file": "artifacts/slot1-playthrough/2-21.json",
+          "note": "2026-10-02回访第124输入S：持叉角色183与BOX161同刻进入19,4地刺，实测active=true、contained1、ghost1、split1；自动教学说明同时死亡与进入箱子的情形。不同于旧的黑暗幽灵观察实验。"
+        },
+        {
+          "file": "artifacts/achievements/20261001T203136057938Z.json",
+          "note": "同次实验后Steam缓存首次核验ACH_CAT解锁，账户10/28；Creation仍未解锁。"
+        },
         {
           "file": "artifacts/slot1-playthrough/3-22.json",
           "note": "events[9]和[14]：同一ghost76经棱镜照明分为axis0活人(active=true ghost0)与axis1死者(active=false ghost1)，均位于[4,6]；普通自动教学确认生死叠加被观测后发生时空断裂。符合公开条件的本轮机制证据，但2026-09-24T11:06:32Z账户缓存仍locked，不计作已确认账户解锁。"
@@ -202,29 +240,29 @@
       "api_name": "ACH_CAT",
       "name_zh": "猫箱",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null,
-      "verification_note": "3-22/24/28/29均有生死观察机制证据；阶段账户仍locked，不计作已获得，须正常操作进一步核验完整条件。"
+      "account_unlock_time_utc": "2026-10-01T20:29:55+00:00",
+      "verification_note": "2026-10-02同刻落刺与装箱后已实际解锁。旧3-22/24/28/29生死观察实验当时未解锁，不能替代本次完整触发证据。"
     },
     {
       "name": "Burst",
       "known_requirement": "触发墙的分裂",
-      "account_status": "locked_in_local_cache",
+      "account_status": "unlocked_in_local_cache",
       "slot1_status": "unverified",
       "evidence": [],
       "api_name": "ACH_BURST",
       "name_zh": "爆破",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null
+      "account_unlock_time_utc": "2026-10-03T10:50:00+00:00"
     },
     {
       "name": "Starry",
       "known_requirement": "获得9颗星星",
       "verified_progress": {
-        "stars": 2,
+        "stars": 6,
         "required_stars": 9,
-        "evidence_file": "artifacts/slot1-playthrough/2-16.json",
-        "evidence_section": "revisit_collection.save_check_after_return",
-        "note": "4号星星已实测拾取并持久化，尚未达到成就条件。"
+        "evidence_file": "artifacts/slot1-playthrough/chapter2-world.json",
+        "evidence_section": "COL5 pickup and collection save_check",
+        "note": "NID1/2/3/4/5/6均已正常取得并持久化；SaveSlot1 accomplishCollectionCount=6，尚未达到9颗条件。"
       },
       "account_status": "locked_in_local_cache",
       "slot1_status": "unverified",
@@ -370,10 +408,10 @@
       "name": "Magic",
       "known_requirement": "获得所有的星星",
       "verified_progress": {
-        "stars": 2,
+        "stars": 6,
         "required_stars": null,
         "evidence_file": "knowledge/collectibles.json",
-        "note": "当前确认2颗；总数尚未核实，不以Starry的9颗条件代替全部星星要求。"
+        "note": "当前确认6颗（NID1/2/3/4/5/6）；所有星星总数仍未核实，不能用Starry的9颗替代全部星星要求。"
       },
       "account_status": "locked_in_local_cache",
       "slot1_status": "unverified",
@@ -400,7 +438,7 @@
     "unlocked_count": 5,
     "note": "首次读取账户缓存发生于 slot1 开始游玩之后；不能作为零时刻基线。"
   },
-  "latest_account_evidence": "artifacts/achievements/20260927T030715392432Z.json",
+  "latest_account_evidence": "artifacts/achievements/20261003T223438562203Z.json",
   "account_status_source": "Steam local binary VDF cache, read-only; server synchronization not independently verified",
-  "account_observed_at_utc": "2026-09-27T03:07:15.392432+00:00"
+  "account_observed_at_utc": "2026-10-03T22:34:38.562203+00:00"
 }

@@ -1,0 +1,256 @@
+{
+  "constructed": {
+    "boxes": [
+      {
+        "id": 83,
+        "color": 3,
+        "p": [
+          5,
+          9
+        ],
+        "c": null
+      },
+      {
+        "id": 84,
+        "color": 4,
+        "p": [
+          3,
+          4
+        ],
+        "c": {
+          "f": "D",
+          "fork": 1,
+          "key": 2,
+          "ghost": 0
+        }
+      },
+      {
+        "id": 85,
+        "color": 4,
+        "p": [
+          3,
+          5
+        ],
+        "c": null
+      },
+      {
+        "id": 86,
+        "color": 4,
+        "p": [
+          3,
+          6
+        ],
+        "c": null
+      },
+      {
+        "id": 87,
+        "color": 4,
+        "p": [
+          6,
+          9
+        ],
+        "c": null
+      }
+    ],
+    "free": [
+      {
+        "r": [
+          3,
+          9
+        ],
+        "f": "A",
+        "fork": 1,
+        "key": 2
+      }
+    ],
+    "keys": 0,
+    "locks": 2047
+  },
+  "afterX": {
+    "boxes": [
+      {
+        "id": 83,
+        "color": 3,
+        "p": [
+          5,
+          9
+        ],
+        "c": null
+      },
+      {
+        "id": 85,
+        "color": 4,
+        "p": [
+          3,
+          6
+        ],
+        "c": null
+      },
+      {
+        "id": 86,
+        "color": 4,
+        "p": [
+          3,
+          7
+        ],
+        "c": null
+      },
+      {
+        "id": 87,
+        "color": 4,
+        "p": [
+          6,
+          9
+        ],
+        "c": null
+      },
+      {
+        "id": 84,
+        "color": 4,
+        "p": [
+          3,
+          5
+        ],
+        "c": {
+          "f": "D",
+          "fork": 0,
+          "key": 2,
+          "ghost": 0
+        }
+      },
+      {
+        "id": 84,
+        "color": 4,
+        "p": [
+          4,
+          4
+        ],
+        "c": {
+          "f": "D",
+          "fork": 0,
+          "key": 2,
+          "ghost": 0
+        }
+      }
+    ],
+    "free": [
+      {
+        "r": [
+          3,
+          8
+        ],
+        "f": "A",
+        "fork": 0,
+        "key": 2
+      },
+      {
+        "r": [
+          2,
+          9
+        ],
+        "f": "A",
+        "fork": 0,
+        "key": 2
+      }
+    ],
+    "keys": 0,
+    "locks": 2047
+  },
+  "cap": 5000,
+  "depth": 45,
+  "expanded": 5000,
+  "seen": 9391,
+  "pending": 4391,
+  "depthCut": 0,
+  "exhausted": false,
+  "force": 26,
+  "unknown": 0,
+  "ghost": 0,
+  "maxCargoX": 4,
+  "best": {
+    "path": "AASADSAAWWWWW",
+    "s": {
+      "boxes": [
+        {
+          "id": 83,
+          "color": 3,
+          "p": [
+            5,
+            9
+          ],
+          "c": null
+        },
+        {
+          "id": 85,
+          "color": 4,
+          "p": [
+            3,
+            5
+          ],
+          "c": null
+        },
+        {
+          "id": 86,
+          "color": 4,
+          "p": [
+            3,
+            6
+          ],
+          "c": null
+        },
+        {
+          "id": 87,
+          "color": 4,
+          "p": [
+            6,
+            9
+          ],
+          "c": null
+        },
+        {
+          "id": 84,
+          "color": 4,
+          "p": [
+            3,
+            4
+          ],
+          "c": {
+            "f": "W",
+            "fork": 0,
+            "key": 2,
+            "ghost": 0
+          }
+        },
+        {
+          "id": 84,
+          "color": 4,
+          "p": [
+            4,
+            9
+          ],
+          "c": {
+            "f": "W",
+            "fork": 0,
+            "key": 2,
+            "ghost": 0
+          }
+        }
+      ],
+      "free": [
+        {
+          "r": [
+            4,
+            8
+          ],
+          "f": "W",
+          "fork": 0,
+          "key": 2
+        }
+      ],
+      "keys": 0,
+      "locks": 2047
+    }
+  },
+  "hit": null,
+  "scope": "Constructed source only, cargo3,4 F1/D and outside3,9 F1/A, empty3,5/6+5/6,9; lastX then ordinary WASD; actual initial terrain, no force branches, independent stack, occupied cargo fusion or Ghost propagation; not a prefix search and not completion evidence."
+}

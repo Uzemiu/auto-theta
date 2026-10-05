@@ -1,0 +1,576 @@
+{
+  "sourceEvent": 79,
+  "source64": "AWWWSSAAWWWWWWWAADADSDSAADSSAWDWAWDWAWDSSSSSSSSAWWDWAAWWDDASDSAA",
+  "modelRoot72": "WDWDSDAD",
+  "cap": 5000,
+  "depth": 35,
+  "expanded": 5000,
+  "seen": 6413,
+  "pending": 1413,
+  "depthCut": 0,
+  "stale": 0,
+  "lossCut": 5141,
+  "forceCut": 14,
+  "hit": null,
+  "counts": {
+    "new-capture": 13,
+    "modeled-source-force": 14
+  },
+  "samples": {
+    "new-capture": {
+      "tail": "ASAWWADWW",
+      "result": {
+        "boundary": "new-capture",
+        "tick": 6,
+        "state": {
+          "p": [
+            {
+              "id": 105,
+              "x": 14,
+              "y": 9,
+              "face": 2,
+              "active": true,
+              "ghost": 0,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 106,
+              "x": 8,
+              "y": 9,
+              "face": 1,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 107,
+              "x": 8,
+              "y": 4,
+              "face": 0,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 108,
+              "x": 5,
+              "y": 10,
+              "face": 1,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 109,
+              "x": 2,
+              "y": 8,
+              "face": 0,
+              "active": true,
+              "ghost": 0,
+              "masked": 0,
+              "md": 0,
+              "src": 109
+            }
+          ],
+          "b": [
+            {
+              "id": 110,
+              "x": 10,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 111,
+              "x": 5,
+              "y": 7,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 112,
+              "x": 6,
+              "y": 11,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 113,
+              "x": 3,
+              "y": 9,
+              "md": 1,
+              "src": 106
+            },
+            {
+              "id": 114,
+              "x": 1,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 115,
+              "x": 10,
+              "y": 5,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 116,
+              "x": 8,
+              "y": 5,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 117,
+              "x": 8,
+              "y": 7,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 118,
+              "x": 2,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            }
+          ]
+        },
+        "proposed": {
+          "p": [
+            {
+              "id": 105,
+              "x": 14,
+              "y": 9,
+              "face": 2,
+              "active": true,
+              "ghost": 0,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 106,
+              "x": 8,
+              "y": 9,
+              "face": 1,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 107,
+              "x": 8,
+              "y": 4,
+              "face": 0,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 108,
+              "x": 5,
+              "y": 10,
+              "face": 1,
+              "active": false,
+              "ghost": 1,
+              "masked": 0,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 109,
+              "x": 2,
+              "y": 9,
+              "face": 0,
+              "active": true,
+              "ghost": 0,
+              "masked": 0,
+              "md": 0,
+              "src": 109
+            }
+          ],
+          "b": [
+            {
+              "id": 110,
+              "x": 10,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 111,
+              "x": 5,
+              "y": 7,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 112,
+              "x": 6,
+              "y": 11,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 113,
+              "x": 2,
+              "y": 9,
+              "md": 1,
+              "src": 106
+            },
+            {
+              "id": 114,
+              "x": 1,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 115,
+              "x": 10,
+              "y": 5,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 116,
+              "x": 8,
+              "y": 5,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 117,
+              "x": 8,
+              "y": 7,
+              "md": -1,
+              "src": -1
+            },
+            {
+              "id": 118,
+              "x": 2,
+              "y": 10,
+              "md": -1,
+              "src": -1
+            }
+          ]
+        },
+        "path": []
+      }
+    },
+    "modeled-source-force": {
+      "tail": "DSASAWWWDWADW",
+      "result": {
+        "forces": [
+          {
+            "tick": 7,
+            "box": 114,
+            "requests": [
+              {
+                "d": 0,
+                "src": 109,
+                "kind": "player"
+              },
+              {
+                "d": 1,
+                "src": 106,
+                "kind": "inertia"
+              }
+            ],
+            "path": []
+          }
+        ],
+        "leaves": [
+          {
+            "choices": [
+              109
+            ],
+            "left": 0,
+            "state": {
+              "p": [
+                {
+                  "id": 105,
+                  "x": 14,
+                  "y": 9,
+                  "face": 2,
+                  "active": true,
+                  "ghost": 0,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 106,
+                  "x": 8,
+                  "y": 10,
+                  "face": 1,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 1,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 107,
+                  "x": 8,
+                  "y": 4,
+                  "face": 0,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 108,
+                  "x": 8,
+                  "y": 10,
+                  "face": 3,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 109,
+                  "x": 2,
+                  "y": 10,
+                  "face": 0,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                }
+              ],
+              "b": [
+                {
+                  "id": 110,
+                  "x": 5,
+                  "y": 10,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 111,
+                  "x": 5,
+                  "y": 7,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 112,
+                  "x": 6,
+                  "y": 11,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 113,
+                  "x": 8,
+                  "y": 9,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 114,
+                  "x": 2,
+                  "y": 11,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 115,
+                  "x": 10,
+                  "y": 5,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 116,
+                  "x": 8,
+                  "y": 5,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 117,
+                  "x": 8,
+                  "y": 7,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 118,
+                  "x": 3,
+                  "y": 10,
+                  "md": -1,
+                  "src": -1
+                }
+              ]
+            }
+          },
+          {
+            "choices": [
+              106
+            ],
+            "left": 0,
+            "state": {
+              "p": [
+                {
+                  "id": 105,
+                  "x": 14,
+                  "y": 9,
+                  "face": 2,
+                  "active": true,
+                  "ghost": 0,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 106,
+                  "x": 8,
+                  "y": 10,
+                  "face": 1,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 107,
+                  "x": 8,
+                  "y": 4,
+                  "face": 0,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 108,
+                  "x": 8,
+                  "y": 10,
+                  "face": 3,
+                  "active": false,
+                  "ghost": 1,
+                  "masked": 0,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 109,
+                  "x": 2,
+                  "y": 9,
+                  "face": 0,
+                  "active": false,
+                  "ghost": 0,
+                  "masked": 1,
+                  "md": -1,
+                  "src": -1
+                }
+              ],
+              "b": [
+                {
+                  "id": 110,
+                  "x": 5,
+                  "y": 10,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 111,
+                  "x": 5,
+                  "y": 7,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 112,
+                  "x": 6,
+                  "y": 11,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 113,
+                  "x": 8,
+                  "y": 9,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 114,
+                  "x": 1,
+                  "y": 10,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 115,
+                  "x": 10,
+                  "y": 5,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 116,
+                  "x": 8,
+                  "y": 5,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 117,
+                  "x": 8,
+                  "y": 7,
+                  "md": -1,
+                  "src": -1
+                },
+                {
+                  "id": 118,
+                  "x": 2,
+                  "y": 10,
+                  "md": -1,
+                  "src": -1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "exhausted": false,
+  "stats": {
+    "forceEvents": 14,
+    "sameFaceMovingStopped": 0,
+    "capture": 13,
+    "stack": 0,
+    "perpendicularFreeBox": 0,
+    "uncertainPlayerCross": 0,
+    "sameSourceDifferentDirections": 0,
+    "loop": 0
+  },
+  "outsideHash": "ID105 pos/face excluded by model serial: isolated safe corridor; retained in fixed replay.",
+  "scope": "Ordinary no-X; at least two active left players in accepted states; first useful modeled force or perpendicular window stops; other unknown boundaries recorded and not propagated."
+}

@@ -16,7 +16,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[BepInPlugin("local.theta.agent", "Theta Agent Bridge", "0.3.1")]
+[BepInPlugin("local.theta.agent", "Theta Agent Bridge", "0.3.2")]
 public sealed class ThetaBridge : BaseUnityPlugin
 {
     const int MaxRequest = 65536;
@@ -153,7 +153,7 @@ public sealed class ThetaBridge : BaseUnityPlugin
         bool action = false;
         try {
             switch (method) {
-                case "ping": result = new JObject { ["version"] = "0.3.1", ["game"] = Application.productName,
+                case "ping": result = new JObject { ["version"] = "0.3.2", ["game"] = Application.productName,
                     ["unity"] = Application.unityVersion, ["pid"] = System.Diagnostics.Process.GetCurrentProcess().Id,
                     ["scene"] = SceneManager.GetActiveScene().name, ["save_path"] = Application.persistentDataPath }; break;
                 case "state": result = State((bool?)args["include_map"] ?? true); break;
@@ -167,8 +167,10 @@ public sealed class ThetaBridge : BaseUnityPlugin
                             || name.Equals("Left", StringComparison.OrdinalIgnoreCase) || name.Equals("Right", StringComparison.OrdinalIgnoreCase)
                             || name.Equals("Tab", StringComparison.OrdinalIgnoreCase) || name.Equals("Shift", StringComparison.OrdinalIgnoreCase);
                         bool menu = level != null && level.um != null && level.um.paused;
+                        // The chapter map uses the normal Split (X) input to travel.
+                        bool menuInput = navigation || name.Equals("Split", StringComparison.OrdinalIgnoreCase);
                         if ((level == null || !level.inited) && !navigation) throw new InvalidOperationException("No initialized level; use ui/click/confirm first");
-                        if (level != null && !(menu && navigation) && (level.isInputLocking || level.alreadyinoneround || level.isreseting || menu))
+                        if (level != null && !(menu && menuInput) && (level.isInputLocking || level.alreadyinoneround || level.isreseting || menu))
                             throw new InvalidOperationException("Level is busy or input is locked; inspect state/UI first");
                     }
                     pulse = name;
