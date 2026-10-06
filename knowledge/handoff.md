@@ -28,3 +28,19 @@
 - **当前5-12跃迁/transition fresh0** runtime51实体/97tiles，canonical initial/frame7029181和stableevent0/frame7040431；P50[2,3]/S/F0，Fork2,2，C4 Box2,1/6,4+Shadow7,4，两个Goal1,7/9,1，Pri3,1/2,7/9,1。正常SSSSD入口，没有hint/Undo/retry，125关保持。下一S正常取Fork。
 
 - **最新5-12 actualS1** main2/frame7046276/P50[2,2]/S/F1，3箱原位，下46/48遍历true/testfalse，上47false。上左Goal必须处理SPIKE带运输，44送8,1的条件尾尚未执行已撤回；保资源，禁提示，0Undo/retry，125完成保持。
+
+- **最新5-12 actualSX2** main9/frame7145464，原50[3,2]与新51[1,2]/GMID49双F0/g0/free；3箱原位，46/Goal48.testtrue而47false/overallfalse。普通Notebook目录无Shadow专页已关，仅正常菜单，无提示；0Undo/retry/nohandle。旧S1为历史资源节点，继续从真实2候选校准。
+
+- **最新5-12 actual25** main31/frame7314498，exactSXWDDWDSDDDWWASDSAWWDDASS；Shadow49[7,3]/ordinary44[8,3]/43初2,1全活，50 8,4与51 6,2双F0free。0Undo/retry，没有cargo/死亡，旧SX2局部testtrue非永久。新2000图截断后采用0search手工回收，后目标44@3,2/49@4,2的safe捕获还未actual。
+
+- **最新5-12 actual66 cargo阳性** main75/frame7399099，51[5,2]active/g0/contained1/container49/F0，Shadow49仍active，外50[3,2]/D活，44[4,2]/43[2,1]/三Pri原位。准确SXWDDWDSDDDWWASDSAWWDDASSDSAAAWASDASDWWDDDSAAAASDDDDAAASSWWWASAWSS，0Undo/retry/nohandle，125不变。下46/Goal48testtrue仅此实际态；下一17载人前置至4,4是MODEL，Spike/光释放每个未知single，不把94/95条件尾自动完成。
+
+- **历史5-12 restore93，已正常离场** main107/frame7536970，Shadow49/51[4,6]active/contained49、ordinary44[4,5]/free50[4,4]活；94上4,7未释放且50裸死的原始态全部保留。normalUndo1恢复93对原main103/7506014全部52dict/97tiles/instr/time严格等，timeline52同，累计1Undo/0retry；S95/AAAW条件尾未发，125不变，准备正常5-13后回访，不重跑2162域。
+
+- **当前Chapter5世界** 5-12正常退出frame7553806/P265[-23,-2]，5-13入口42[-18,2]实时active/unblocked、安全route WWWDDDDWD，下一新关正常推进。历史5-12 currentfalse/Undo1/0retry/125关不变。
+
+- **最新5-13栈/stack fresh0** canonical0/frame7564940，58实体/111tiles，P54[3,2]/S/F0；Fork4,3/6,11、Shadow6,5、GoalPrism1,8/relay1,2+1,9，3Buttons和2Gates条件待测。normalWWWDDDDWD安全进入，5-12已历史93/Undo1，count125不变，0游戏输入/Undo/retry，无handle。
+
+- **最新5-13 actual23** main31/frame7708384 exactDWWWDWDSSAWWAWWWWXDDSAA；54[3,9]/F0、58[4,11]/F1双free相反奇偶，单S21闭门等待保Fork1，顶两Button独压已实证开Gate5,11，Shadow53[6,3]active。S10照影negative/Undo1恢复9全58/111/instr/time/tt58等已保，1Undo/0retry，无handle。下一17手工到preD40，然后singleD41待测F1 Shadowcapture，不先丢Fork生3free。
+
+- **最新5-13 actual44 Shadow复制** main57/frame7805226 exactDWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX，53/58[6,5]与new59/60[6,7]两Shadowtrue/C1载活Fork0，外54[5,5]活。23→40全59/111匹配、D41真保Fork1活捕获，W/A/X分别single。1Undo/0retry，0搜索，无handle；新箱不是Normal，row2/9消影→释放均待single，未完成125保持。

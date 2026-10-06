@@ -304,3 +304,9 @@ root于2026-10-06T15:16:17.023411Z只读Settings LastUsedSaveSlot=1、SaveSlot1 
 root于2026-10-06T17:18:48.342981+00:00（北京时间10月7日）正常只读Settings LastUsedSaveSlot=1，SaveSlot1 accomplishLevelCount=125、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5、LevelStates.release=1，尚非完成值3。快照SHA-256 `af61cb1f282264206785937e16b8bcfaaba56a0a8275adf67807d73cf51addf3` 只代表读取时点，未修改游戏保存内容。
 
 官方本地成就缓存于2026-10-06T17:17:28.150029Z仍14/28，Slot1已核条件仍13；证据[本地成就快照](../artifacts/achievements/20261006T171728150029Z.json)。载人残影装箱和跨刺未新增已解锁条目，服务器同步未独立核验，全成就目标继续。80历史和回访前置见 [5-11解法](solutions/5-11.md) 与 [10月7日记录](checkpoints/2026-10-07-continue.md)。
+
+## 2026-10-07 5-12历史93与5-13消影释放：仍125关
+
+5-12实际W94没有释放cargo，外人裸SPIKE死亡；normalUndo1严格恢复历史93，随后正常返回世界并进入5-13。5-13取得第二叉、活Shadow保叉捕获和箱内分裂，actual44得到两个Shadow容器；actual49南影失活后58仍alive/ghost0并恢复free。root分别独立核44全部61字典/111tiles、49全部61字典/111tiles与完整instructions/time。实际边界与未发条件尾见 [5-12解法](solutions/5-12.md)、[5-13解法](solutions/5-13.md) 和M161..M166，未把局部阳性记作通关。
+
+2026-10-06T18:42:41.909725+00:00（北京时间10月7日）root正常只读Settings.LastUsedSaveSlot=1、SaveSlot1 accomplishLevelCount=125、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld=5，LevelStates.transition=1/stack=1。该读取时点SHA-256 `c551ae32b17a045ce76f45dbd1c3a7e27de721474b3e6637d9a41908fb8018a9`；后续正常游玩可更新文件，不把该hash称为永久当前值。没有编辑存档进度、解锁或关卡记录。

@@ -137,19 +137,27 @@
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "transition",
+      "level_id": "stack",
       "world": false,
-      "level_label": "5-12",
+      "level_label": "5-13",
       "player_positions": [
         [
-          2,
-          2
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          7
         ]
       ],
-      "time": 1,
-      "frame": 7046276,
-      "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
-      "evidence_event": 2
+      "time": 44,
+      "frame": 7805226,
+      "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
+      "evidence_event": 57
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3876,27 +3884,27 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "actualS1已取Fork，P50 2,2/S/F1；3箱原位，lower46/48 traversedtrue/testfalse。上区需跨中央SPIKE，撤回44送8,1丢资源手工尾（0执行）；保资源找合法cargo运输。禁提示，0Undo/retry。",
+      "note": "actual94释放阴性：49/51至4,7仍active/contained49，50在4,5bareSpike死g1；S95/AAAW条件尾全部未发。normalUndo1恢复actual93 full52/97/instr/time严格等、timeline52同；51 cargo4,6/49active、44 4,5、50 free4,4活。原63等全history保，累计1Undo/0retry、125未变；下一正常5-13。 93后normal返回Chapter5[-23,-2]，保历史93/94negative/真实Undo1，继续5-13。",
       "name": "跃迁",
       "internal_level_id": "transition",
       "solution_file": "solutions/5-12.md",
       "slot1_attempt": {
-        "actions": "S",
-        "action_count": 1,
-        "checkpoint_time": 1,
+        "actions": "SXWDDWDSDDDWWASDSAWWDDASSDSAAAWASDASDWWDDDSAAAASDDDDAAASSWWWASAWSSAWDDDDSSAWDWASSAWAAASDWDDWW",
+        "action_count": 93,
+        "checkpoint_time": 93,
         "completed": false,
-        "undo_count": 0,
+        "undo_count": 1,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
-        "evidence_event": 2,
-        "frame": 7046276,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 107,
+        "frame": 7536970,
+        "checkpoint_is_current_runtime": false
       }
     },
     "5-13": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -3912,7 +3920,22 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "actualX44已复制Shadow容器：53/58到6,5、new59/60到6,7，两Box都Shadowtrue/C1/active、两cargo活g0/F0；外54 5,5free。D41活装Fork1/F1保持真核，W42/A43/X44逐single；17捕获前置每停点59完整字典/111tiles=[]。1Undo/0retry，未完成/125保持，下一row2/row9消影是否release活人必须single。",
+      "name": "栈",
+      "internal_level_id": "stack",
+      "solution_file": "solutions/5-13.md",
+      "slot1_attempt": {
+        "actions": "DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX",
+        "action_count": 44,
+        "checkpoint_time": 44,
+        "completed": false,
+        "undo_count": 1,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
+        "evidence_event": 57,
+        "frame": 7805226,
+        "checkpoint_is_current_runtime": true
+      }
     },
     "5-1": {
       "status": "completed_verified",
@@ -4065,19 +4088,27 @@
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "transition",
+    "level_id": "stack",
     "world": false,
-    "level_label": "5-12",
+    "level_label": "5-13",
     "player_positions": [
       [
-        2,
-        2
+        5,
+        5
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        7
       ]
     ],
-    "time": 1,
-    "frame": 7046276,
-    "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
-    "evidence_event": 2
+    "time": 44,
+    "frame": 7805226,
+    "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
+    "evidence_event": 57
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

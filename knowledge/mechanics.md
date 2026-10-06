@@ -1316,3 +1316,53 @@ M158后正常9步 `DDSDDWAAA` 将空Shadow56从5,5绕回4,5，载人57/58保持4
 这否定了当前Pri2,1与上Goal1,7布局中“送到4,7就自动消影释放”的候选，没有隔离所有Goal光源、观察方向或其他释放规则。4,7箱普通左推所需的5,7是Wall，且当前Pri55无法按普通推法从2,1回4,1；需新的可执行光学顺序或正常撤销/回访，不宣布全关无解。
 
 所有以80已释放为前提的8步 `ASDSASDS`、11步 `ASASASDSAAA` 与备用AAA均未发送，不能接当前cargo状态。准确80实动作、失败前提、0Undo/0retry、1174已终端有限域均保留，不按模型收尾补完成数或成就，见 [5-11解法](solutions/5-11.md)。
+
+### M160 普通C4与残影的混合推链同刻装入活角色（5-12实际66）
+
+5-12实际65前态：固定C4 43[2,1]的南侧2,0为Wall，rear C4 44[3,2]、front Shadow49[4,2]，两活free分别2,2与5,3。single S66令2,2角色的南推因背墙失败而转D推动混合链；44到4,2、49到5,2，另一角色从5,3南走5,2与移动49同刻相遇。
+
+主75/frame7399099对root独立7434495全部52实体完整字典、97tiles、准确66串 `SXWDDWDSDDDWWASDSAWWDDASSDSAAAWASDASDWWDDDSAAAASDDDDAAASSWWWASAWSS` 及time66严格等。新51[5,2]active/ghost0/contained1/container49/F0/height1/mask0，Shadow49同格active/Color1，原50[3,2]/D仍活free；C4 44与43均active且未装载。没有Ghost、死亡、Force叶或释放。
+
+下Pri46/GoalPri48 testCompletedtrue、上47false，level.completedfalse。M157的双Shadow链与本普通C4/Shadow链两种实际构型都发生了活装箱，但未隔离所有接触方向或光路；后续运输、地刺牺牲、消影和迟后接尸体仍未知，不预授C4容器属性或全解，见 [5-12解法](solutions/5-12.md)。
+
+### M161 普通箱缓冲运输载人残影跨刺，但到上方仍未消影（5-12实际83..94）
+
+M160后正常17步 `AWDDDDSSAWDWASSAW` 到83，Shadow49/cargo51[4,4]、普通C4 44[4,3]、外50[4,2]。主92/frame7466783对root7474944全部52完整实体字典、97tiles、准确83指令/time严格相等。随后AAAS、single D88实际将底箱43推3,1、Pri46推4,1，影箱仍active且51仍alive/ghost0/contained49；这是主97/frame7485831的实际结果，root未另捕获88现场，不隔离全部光照算法。
+
+WDD后逐single W92/93把cargo送4,5裸SPIKE与4,6地板，普通44在后方、外50分别停4,3与4,4。实际93主103/frame7506014对root7515300全部52字典/97tiles/准确93指令/time严格相等：49/51[4,6]仍active/ghost0/contained49、44[4,5]有效、50[4,4]活free，底46/48.testCompletedtrue、上47false，整体未完成。
+
+末single W94主105/frame7516957：49/51到4,7仍active/contained49，44到4,6，外50进入裸SPIKE4,5后inactive/ghost1/free，底46/48.testCompleted又false。运输与保护实际成功，消影释放阴性；root未独立捕获94，完整主记录及私模物理校准保留。以51已释放为前提的S95迟C4接尸体与AAAW目标尾全部未发送，不能视为复活或通关证据。
+
+正常Undo1主107/frame7536970恢复93，root只读复算与原103全部52完整字典、97tiles、instructions/time严格相等，timeline均52；阴性历史保留。随后正常离场，93是历史重建点，完成仍125，见 [5-12解法](solutions/5-12.md)。
+
+### M162 空残影进入row2失活时，棱镜traversed仍可为false（5-13实际10）
+
+5-13「栈」Shadow53[6,5]被逐single S8/9下推到6,4/6,3，仍active。single S10主12/frame7607268把影送6,2时inactive，推者54[6,3]/F1仍alive/free，而relay56[1,2].traversed/testCompleted仍false。这只记录本构型的失活与公开flag，不从traversedfalse推断没有照影，也不授予装载后释放规则。
+
+以影存活为前提的S11/ASD压Button7,1尾未发。正常Undo1主14/frame7642614恢复9，与原10/frame7605204全部58完整字典、111tiles、instructions/time相等，timeline58不变；1Undo/0retry，见 [5-13解法](solutions/5-13.md)。
+
+### M163 两个上按钮各自开同一门，旧闭门使取叉者等待一拍（5-13实际17..23）
+
+实际17的54独占Button47[4,10]时Gate50[5,11]打开；X18后原54独占Button48[3,10]，同一门仍开。两个按钮分别足够开ID1门，不能猜作必须同时占位；底Button46与另一门的配对尚未实际。D19过门、D20让新58取第二Fork[6,11]/F1，外54[4,11]/F0且门关闭。主25/frame7678012对root7679226全部59完整字典/111tiles/exact20/time20严格等。
+
+S21中54到4,10开门，58仍受该步旧闭Gate和其余三面Wall约束，留6,11一拍并保F1；A22才进入5,11，A23退出到4,11，54因2,10Wall回S到3,9，两活free形成相反格点奇偶。主27/29/31完整实际校准保留，不授予任意闭门等待或所有门的更新顺序。见 [5-13解法](solutions/5-13.md)。
+
+### M164 持叉活角色同刻装入移动残影后保留Fork1（5-13实际41）
+
+从实际23正常17步 `SSSSSSSDDDWAWWSSD` 到40，原54[6,3]/F0、新58[5,5]/F1、Shadow53[6,4]。single D41令54因右方7,3Wall回W推影到6,5，58直D到同格并被装载。主51/frame7793454真实58[6,5]active/ghost0/contained1/container53/split1，53 active/Shadowtrue/Color1，外54[6,4]/W仍alive/F0/free。
+
+这证明本Shadow接触构型能够保叉活装箱；17前置各停点全部59字典/111tiles校准相等，无搜索。分裂的箱属性与新身份不能从M098普通C4箱复制提前代入，见下一实际边界及 [5-13解法](solutions/5-13.md)。
+
+### M165 持叉角色在残影箱内分裂，两个容器均保留Shadow属性（5-13实际44）
+
+M164后single W42送cargo到6,6、外54到6,5；single A43令箱内58朝A，外54退5,5。single X44主57/frame7805226真实原Shadow53/cargo58移6,5，新增Box59/cargo60在6,7，新增GMID52/53。两箱均active/Shadowtrue/Color1，两cargo均alive/ghost0/contained各自容器/F0，外54[5,5]/F0仍活free，没有Force或新时间线。
+
+root独立7852646对主57全部61完整实体字典、111tiles、准确44串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX` 与time44严格相等，level.completedfalse。实际副本仍是残影箱；消影后的角色活性、自由状态与按钮持续占位各须新实测，不能把影箱去活直接写成释放阳性。1Undo/0retry、0搜索，完成仍125，见 [5-13解法](solutions/5-13.md)。
+
+### M166 载人残影消失后，角色存活并恢复自由移动（5-13实际49）
+
+M165后WD把外54移到6,6，三个single S将南Shadow53/cargo58从6,5依次推6,4/6,3/6,2。single S49主65/frame7873495：53[6,2]inactive，而58同格active/ghost0/F0/contained0/container-1，真实成为free；外54[6,3]活free，北Shadow59/cargo60[6,7]仍active/contained59。没有死亡、Force、新时间线、教学或整体完成。
+
+root独立7887464对主65全部61完整字典、111tiles、准确49串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSS` 及time49严格相等。relay56.traversed/testCompleted仍false，与M162空影在同一row2失活形成实际对照；失活影留下的blockable字段不能作为有效实体继续推链。
+
+这是本已确认光路中的活人释放阳性，不推断任意影箱失活都安全，也不将本row2结果套用5-11/5-12的上方释放阴性。北影row8/row9、第三free和Goal仍需下一实际边界，1Undo/0retry、0搜索，见 [5-13解法](solutions/5-13.md)。
