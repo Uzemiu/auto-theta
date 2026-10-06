@@ -254,3 +254,13 @@ root于2026-10-06T10:05:39.864803Z只读Settings LastUsedSaveSlot=1，SaveSlot1 
 主5-3.json末W event73回执level_id=concrete、completed=true、stop_reason=level_completed、executed1/remaining0；完整终态event74/frame2654095为alive叶time79/cargo75[2,6]与dead叶time90/free76[6,8]。死叶75 masked但仍key1，Lock闭；单A89实际四箱链刹车成功，不使用“死叶无钥匙”的错误解释。末76动画false保真实原值；0Undo/0retry，无重发末W。
 
 root于2026-10-06T10:39:17.616472Z只读Settings LastUsedSaveSlot=1，SaveSlot1 LevelStates.concrete=3；准确91指令按W1/A2/S3/D4/X5/T8编码，与LevelRecords.concrete完整严格相等。accomplishLevelCount=122、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5。快照SHA-256 `7dc90410ef1775c4b8f3cacc4260716058e042ef53454a2385efbf73f417d5d9` 不代表继续游玩后的文件。root独立2671177已自动返回Chapter5；终态从完整原始完成观察与正常存档交叉核验，不冒称独立完成现场。owner继续正常5-4，目标仍全部28成就。
+
+## 2026-10-06 5-4正常Undo与5-5「坏死」完成：123关
+
+5-4未完成，正常游戏内Undo34从40回到持叉6，再实际14前缀与single X到21；出生推箱没有保护留在SPIKE的原角色，主稳定event51/frame3272946为历史阴性。正常退出后继续5-5，全部动作/Undo/立即帧与稳定帧均保留；0retry，没有编辑存档或重发已接受撤销。具体见 [5-4解法](solutions/5-4.md)，不能用旧21现场直接接当前新关。
+
+5-5准确39串 `SAAAAWWSSDDDWWWAAAAWAWWSSSSSWWDDSWXASSS`，0搜索/Undo/retry；末S receipt39已明确necrosis/completed=true，完整event41/frame3463964保存两活free在Goal1,1与3,1。末两玩家动画false如实保留，原始证据与正常持久化交叉核验。
+
+root于2026-10-06T11:57:08.225152Z只读Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.necrosis=3；准确39动作编码 `322221133444111222212113333311443152333` 与LevelRecords.necrosis完整严格相等。正常accomplishLevelCount=123、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5。快照SHA-256 `55c3eb6af7b66d90248be9da8d19194f8d42bc5613ba72ad65650945080e5910` 仅代表该读取时点。全部LevelStates值3的条目数124不等于独立完成计数，应使用游戏保存的accomplishLevelCount并核对去重的实际关卡标签，不把组合条目另加一关。
+
+root后续frame3511574已正常回Chapter5，未独立取得5-5关内终态。123关审计 artifacts/knowledge-audits/20261006T120749203420Z.json recorded=save_completed=123/issues=[]；它证明已登记条目一致，仍不证明全关卡或全成就。12:06:17Z官方本地缓存14/28、Slot1已核条件13；owner正常进入5-6继续，存档仍Slot1，全目标不暂停。

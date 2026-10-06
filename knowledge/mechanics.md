@@ -1099,3 +1099,37 @@ single D38/event24回执accepted1/remaining0后，75从[2,2]推69[3,2]到[4,2]�
 随后仅逐单WW到Goal[6,8]。末W91/event73回执level_id=concrete、completed=true、executed1/remaining0、stop_reason=level_completed；完整终态event74/frame2654095保存alive叶time79/cargo75[2,6]与dead叶time90/free76[6,8]，两Goal真实覆盖。末76 anim_completed=false保原始值，不冒称整体稳定模型字典相等。root只读Slot1 concreteState3、准确91编码与正常保存记录完整严格相等，完成122、星6/link3、CurWorld5；root独立2671177已返回Chapter5，不冒称live完成现场。
 
 准确91串见 [5-3解法](solutions/5-3.md)；条件几何与钥匙风险的原始限定见 [按钮布局审计](../scratch/ch5-3-button-layout-oct06.md)，未把后来证实的死叶结果反写成此前已知规则。
+
+### M141 上方单钮足以打开左门（5-4实际11）
+
+2026-10-06，5-4「自由」free正常取Fork并X，实际7 `WAAASWX` 得58[4,5]/59[6,5]两free/F0/ghost0/key0，三箱C4 55[7,6]/C1 56[7,3]/C2 57[6,6]未动。再正常AAA到10，single S11得到58[1,4]压Button51、59[3,4]；下Button52[1,1]无人无箱。实际Gate53[1,2]仍active而blockable=false，单个上钮在本关已足以开此门；不能据初态两个Button而假定必须同时压两个。
+
+root独立MCP frame2855444与主event12/frame2858739的全部12个非Wall/Floor动态完整字典及 `WAAASWXAAAS` 严格一致，diff=[]（主记录为稍后的同一稳定态）。Fork54 inactive、三箱原位、两freeF0/g0/key0，guards清，未进下室或完成任何Goal，不增加122已完成计数。
+
+下钮单独开门、撤压关门与BOX送过门接替压钮尚未由该11步证明；具体后续需另实际核。旧单free fresh0的24步压箱候选只能作为历史条件，不能接已经X分裂的实际7/11，也没有为此重置或撤销本轮。源见 [5-4局部门与按钮审计](../scratch/ch5-4-gates-oct06.md) 及唯一主JSON artifacts/slot1-playthrough/5-4.json。
+
+#### M141补证：撤压关门、换角色复压开门，以及实际38边界
+
+后续普通前置实际15/event14/frame3020843：58[4,5]/59[6,5]均离开上钮、下钮无人，Gate53 blockable=true。实际31/event22/frame3021627：59[1,4]压同上钮，Gate再次blockable=false；实际35/event24/frame3021823：59[2,5]/58[5,4]均离钮，Gate再次blockable=true。这些是原始观察中的开关对照，支持上钮由不同普通角色占用都能开门，未证明下钮或Blue空箱压钮。
+
+候选33后续只实际接受前27至38，准确串 `WAAASWXAAASWDDDDDDWWSAAAWAWWDSASSDDWAA`；稳定event26/frame3021977与root独立3080003全部12动态完整字典及38指令严格diff=[]。两free58[3,5]/A、59[1,5]/S皆F0/key0/ghost0，55空Box在SPIKE5,6、56仍7,3、57在2,5，Gate闭。A39未发；57一旦到x1列因x0全墙不能普通向右回收，原候选的末段已撤回。55在SPIKE也不等于可自由参与远端三箱jam，回收仍需合法保护推者的前置。338expanded/428seen的局部压钮命中只证明该限定布局，不能拼成三Goal全解。
+
+本38阶段尚无Box压钮、下钮独占、Ghostcargo或Goal完成，完成数仍122/known78，本阶段0Undo/0retry。正常游戏内Undo若之后用于修正资源前置，须保留全部实际动作及计数，不修改存档或假称未执行。下一状态随owner交接更新，本条保留38作为历史证据。
+
+### M142 出生时推走刺上空箱，没有保护留在原箱格的角色（5-4实际21）
+
+5-4在真实38后逐single SS到40；59移到门南邻[1,3]后Gate闭，因此该邻位没有保持门。随后正常游戏内Undo34回到持叉实际6，全部动作与撤销回执保留，0retry。恢复态59实体完整字典、地形及instructions与旧6相等；timeline ID从旧59保留为60，过严整timeline断言因此停止，只记录异常，不重发已经接受的34次撤销。
+
+从恢复态实际手算14步 `DDDWAASAAAWWDS` 到20：58[4,6]/S/F1，空C4箱55在SPIKE[5,6]，箱57[4,5]、56[7,3]。root独立frame3247684对主event48/frame3245227的11个动态实体完整字典与20指令严格diff=[]。唯一single X21后，稳定event51/frame3272946：箱55移到[6,6]仍空，原58在[5,6] inactive/ghost1/maskedoff0/uncontained/F0，新60[3,6]/S active/ghost0/free/F0。即时动画未完成的event50也保留，没有以稳定帧覆盖。
+
+该具体出生布局中，先前位于刺上的空箱被推走，没有留下对原58的保护或捕获；不能据此否定全部同刻装箱、其他颜色或后来尸体接触箱子的规则。root只独立捕获了20前态，21阴性由完整主记录与私人全实体校准支持，不称root独立21现场。未完成，最后逻辑串 `WAAASWDDDWAASAAAWWDSX`，本关累计34实际Undo/0retry；已正常退出转5-5。未来 `SDDDDWA` 让箱再碰尸体的七步仅为未执行候选，不能接当前新关。原有限域338、12000及271扩展已记录，不重复搜索；详情见 [5-4解法](solutions/5-4.md)。
+
+### M143 残影箱能压按钮，入Goal后inactive且不再阻路（5-5）
+
+5-5「坏死」正常自动教学说明残影是死去的箱子，属于必经教学，未使用提示。真实初态的两个Color1 BOX55/56均Shadow=true而active/pushable/blockable=true。single A4将56从[4,1]推到Goal[3,1]，主event11/frame3389608变inactive，仍保留Shadow=true及pushable/blockable=true；下一实际A5让角色安全进入同格。残留可推、可阻字段不能脱离active标志解释成仍在场。
+
+另一Shadow箱55在实际19送到Button[1,4]，主event22/frame3419840仍active，Gate[1,6]实际blockable=false；因此本残影箱可压钮开门。取得Fork后SSSS到27，箱55在[1,2]，角色57[1,3]/F1，门已闭。root独立frame3433281对主event26/frame3428039全部59实体完整字典（含SOLID）及27指令严格diff=[]。single S28把55送到Goal[1,1]后也inactive，没有Ghostcargo或新增观察叶。
+
+两个inactive箱清空通路后，正常WWDDSW、single X35、ASSS，两个active/ghost0/free/F0角色57[1,1]与59[3,1]实际覆盖两Goal。准确39串 `SAAAAWWSSDDDWWWAAAAWAWWSSSSSWWDDSWXASSS`，0搜索/Undo/retry；完成receipt39与完整event41/frame3463964、time39一致。终态两角色anim_completed=false如实保留，不声称稳定动画字典完全相等。
+
+root于2026-10-06T11:57:08.225152Z只读正常Settings slot1、SaveSlot1 necrosisState3；准确39动作编码 `322221133444111222212113333311443152333` 与完整保存记录严格相等，accomplishLevelCount=123、星6/link3。root后续frame3511574已回Chapter5，不冒称另一份独立完成现场。本例只证明这两个Color1 Shadow箱的按钮与Goal行为，不推广普通箱、其他颜色、载人箱、墙分裂或收藏成就。完整路径及主证据见 [5-5解法](solutions/5-5.md)。

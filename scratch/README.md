@@ -142,6 +142,10 @@
 | ch5-2-space-oct06 | [cjs](ch5-2-space-oct06.cjs) | [md](ch5-2-space-oct06.md) | — |
 | ch5-3-button-layout-oct06 | — | [md](ch5-3-button-layout-oct06.md) | — |
 | ch5-3-concrete-oct06 | [cjs](ch5-3-concrete-oct06.cjs) | [md](ch5-3-concrete-oct06.md) | — |
+| ch5-4-free-oct06 | [cjs](ch5-4-free-oct06.cjs) | [md](ch5-4-free-oct06.md) | — |
+| ch5-4-gates-oct06 | — | [md](ch5-4-gates-oct06.md) | — |
+| ch5-5-oct06 | [cjs](ch5-5-oct06.cjs) | [md](ch5-5-oct06.md) | — |
+| ch5-5-shadow-layout-oct06 | — | [md](ch5-5-shadow-layout-oct06.md) | — |
 | contact19-readonly | [cjs](contact19-readonly.cjs) | — | — |
 | finish-chapter2-to-A-candidate | — | [md](finish-chapter2-to-A-candidate.md) | — |
 | finish-phase-knowledge | [py](finish-phase-knowledge.py) | — | — |
