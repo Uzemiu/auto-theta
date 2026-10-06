@@ -1,8 +1,8 @@
-# 全成就继续：当前5-15 native两箱出生，125关（2026-10-07）
+# 全成就继续：当前5-15上叉载箱复制，125关（2026-10-07）
 
 唯一游戏输入owner `slot1_owner_oct06`；root/helper只读。全成就goal active，状态查询不暂停任务。
 
-- **当前5-15 握手/handshake actual6** main6/frame8402571/time6，exact `WAASWX`；原97 4,2/new98 6,2两F1活free，Blue86 3,2/Shadow95 2,2活，99实体/118tiles。nativeX左推两箱链actual成立，上8C4/GoalPri未动；rootfresh0全98/118严格核、rootWA2全98严格核。0Undo/retry/death/noinputhandle/count125，禁提示。旧17普通路线误读2,4Wall且全后尾未发已撤回；下一仅新实际6小图找4,2+1,3后单A Shadowcargo边界。
+- **当前5-15 握手/handshake actual37** main36/frame8498622/time37，exact `WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAX`；南Shadow95/cargo97 1,5F1、北new99/cargo100 1,7F2、外98 1,2F0，全部active/g0，Blue86 1,4，101实体/118tiles/singleleaf。19 F1活捕、34箱护SPIKE、35箱内拾Fork→F2、37混合复制+北叉补货均actual；root6/19分别全99/118严格核。0Undo/retry/death/search/noinputhandle/count125，禁提示。下一上叉自输运每X单核，不当MODEL全解。
 
 - **历史5-14 放射/emission actual12** main15/frame8133433/time12，exact `AAASWDDDWDSX`；60[6,2]/new61[4,2]两活free/g0/F1/S，Shadow59[6,3]/C458[7,3]活，Pri3,1/Goal9,1未动。AAAS4真累计Fork2，经singleD10保影再X12真实Fork2分配为两F1。rootfresh0与4均全61/107/instr/time严格核；0Undo/retry/noinputhandle，125保持，禁提示。下一新doublechain ShadowcargoF1完整短前置由primary主算，不重旧4007图。 已normal菜单退出12，currentfalse，99两限定图终端。
 

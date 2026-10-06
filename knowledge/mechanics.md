@@ -1392,3 +1392,11 @@ root独立8412126对主6全部99完整实体字典、118tiles、准确6串 `WAAS
 从实际6用手工12步 `SAAAWWDSDSWA` 到18，receiver原97[1,3]、pusher新98[4,2]均alive/F1，Blue86[3,2]/Shadow95[2,2]固定。末single A19主16/frame8427031使98左推混合链，Blue到2,2、Shadow到1,2；97因0,3Wall回S进入同1,2并装载。97真实active/ghost0/F1/contained1/container95，95 active/Color1/Shadowtrue，外98[3,2]/A仍alive/free/F1，Blue86仍空active。
 
 root独立8437312对主16全部99完整字典、118tiles、准确19串 `WAASWXSAAAWWDSDSWAA` 与time19严格相等。前12没有搜索、死亡、Undo或retry，不从墙后走裸SPIKE；两Goal仍未完成，cargo跨刺、拾上方叉与下一nativeX均需新实际。这里补实际混合链捕获，不替代5-13、5-12各自光路和阴性。
+
+### M169 载人残影跨刺拾叉，并在分裂出生格再次取得Fork（5-15实际34..37）
+
+实际19后手工13步 `SAAWDSDDWAASA` 到32，Shadow95/cargo97[1,3]、Blue86[1,2]、外98[1,1]，两角色F1。三single W33/34/35送载影至1,4/1,5裸SPIKE/1,6裸SPIKE，外人始终在安全1,2/1,3/1,4；35主32/frame8489384中97仍alive/ghost0/contained95，拾同格Fork71后split2，71inactive，Blue86在1,5active。该35由owner原始记录与primary全部99字典/118tiles校准证明，root未独立捕获35现场。
+
+A36令cargo朝A、外98退1,3；single X37主36/frame8498622真实南95/97[1,5]active/F1、北新Box99/cargo100[1,7]active/F2，两个容器均Shadowtrue/Color1，两个cargo均ghost0/contained各自容器。北出生格的Fork被取得，外98单侧出生移1,2后F0/free，Blue86被出生推进1,4仍active。新箱/角色GMID76/77取实际，没有预造身份或把影箱副本变普通箱。
+
+root独立8509203对主36全部101完整实体字典、118tiles、准确37串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAX` 与time37严格相等，单时间线且level.completedfalse。跨刺保护、箱内正常拾叉及本出生格拾叉均是本构型实测；不推广至未校准光路、墙内出生或完整上岛方案。0Undo/0retry/死亡/搜索，125关不变，见 [5-15解法](solutions/5-15.md)。

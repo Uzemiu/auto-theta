@@ -29,3 +29,13 @@ fresh0 canonical0/frame8325856，handshake/握手，size10,10；P97[7,1]/S/F0，
 之后三个singleW：33 Blue1,3/Shadow1,4/outside1,2；34 Blue1,4/Shadow1,5裸SPIKE/outside1,3，cargo保护只认新fixture实际；35 Blue1,5/Shadow1,6裸SPIKE+Fork71/outside1,4，预测cargo97从F1加到F2但必须actual拾取/active/contained全核。不要W36让outside进1,5裸刺；可A36 outside→1,3/faceS，箱内97只转faceA，Box不动。
 
 若35真的F2货物且36两角色alive，末**singleX37**有完整新资源价值：cargo在1,6/faceA，south1,5 Blue86可向1,4推动、north1,7是带Fork裸SPIKE，两个分裂方向有Floor；outside1,3/faceS两侧0/2,3Wall，front1,2safe，单侧迁移会耗其F1但保一effective外人。预测几何为Blue1,4、两个Shadowcargo1,5/1,7、outside1,2，没有目的同格碰撞；Box/PLAYER IDs、Shadow状态、各剩Fork与birth同刻拾Fork只actual，不能从5-13普通原理授新关全部后态。cargo南/北都是原始Shadow的复制，不写成C4保护箱；上岛递归复制与握手/融合未观察，不盲发整Fork池链。
+
+13前置已owner实际完成到32 canonical26/frame8475777，`cargoChecks`保全99dict/118tiles校准；singleW33 canonical28/frame8483094、34 canonical30/frame8486494、35 canonical32/frame8489384均已实际。34的NativeShadow cargo97穿1,5裸SPIKE仍active/ghost0/F1/contained95；35货物到1,6拾Fork71，KEY71inactive、cargo97 **F2**，Blue86[1,5]active、outside98[1,4]/W/F1free活。此直接实际支持当前保护/箱内叉拾取，不用Color2空buffer替cargo颜色；`actual35.entities`保存原99字段。0Undo/retry/death/search，A36/X37尚待单步；W36裸死、oldsoloD12全未执行。
+
+## 实际双货物与单有效front迁移
+
+actualA36 canonical34/frame8496262完整99dict/118tiles与物理模型严格相等；singleX37 canonical36/frame8498622：**原95/cargo97 south1,5/F1，新99/cargo100 north1,7/F2**（birth北边拾Fork72），两箱Shadowtrue/Color1、货物active/g0/contained；Blue86[1,4]，outside98[1,2]/S/F0为单侧迁移，全部101实体/单叶/无死亡。`actual37.entities`保真正新ID源，不沿用原37预测中的身份猜想。
+
+owner选择更少重叠的W38/X39，而非primary曾提W2后X的相邻parent旧格交接候选（后者未执行）：W38 outside1,3、货物仅转W，canonical38/frame8522427完整101dict/118tiles与模型相等。X39两箱左右均Wall，south95/97的不同front为1,6（Fork71已取），north99/100的front为1,8（Fork70active），Blue1,4不动、outsideF0在1,3等X。两目的不碰撞/不借用旧parent格，所以此不是“两个相同前位去重”测试。
+
+**actualX39 canonical40/frame8535626**：95/97迁移1,6/F0，99/100迁移1,8/F2（消耗1叉后拾Fork70补1），outside98仍1,3/F0，全部alive/g0，101同IDs、无新Box/Player、单叶。`migration39Audit`是获得actual后按单有效front规则重建并比较的审计，明确不称曾盲预测全部字段；保护、Fork/迁移只限本fixture。`next40.trace`从真正39生成singleW40，outside推Blue1,4→1,5、自己1,4safe；singleX41仅F2 cargo100可继续front1,9并拾Fork69，另一97F0/98F0等待，必须新actual核，未写未来出生/融合/全Goal。
