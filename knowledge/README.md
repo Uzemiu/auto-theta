@@ -8,7 +8,9 @@
 
 ## 阅读顺序
 
-暂停或恢复时先读 [当前交接](handoff.md) 和 [2026-10-05暂停记录](checkpoints/2026-10-05-pause.md)。研究资料入口为 [scratch索引](../scratch/README.md)，本地原始观测的大小与哈希见 [资料清单](artifact-inventory.json)。
+暂停或恢复时先读 [当前交接](handoff.md) 和 [2026-10-06恢复与119关核验](checkpoints/2026-10-06-resume.md)；此前暂停见 [2026-10-05暂停记录](checkpoints/2026-10-05-pause.md)。研究资料入口为 [scratch索引](../scratch/README.md)，本地原始观测的大小与哈希见 [资料清单](artifact-inventory.json)。该清单的哈希属于整理时的历史快照，不能代表仍在追加的当前观测文件。
+
+已观察但尚无完成证据的入口见 [待完成清单](remaining-levels.md)；不能只根据已登记的尝试条目推断全游戏欠关数量。
 
 1. [存档说明](save-management.md)：slot1 约定、启动设置、基线备份。
 2. [完成进度](progress.json)：优先读取 `active_playthrough`，确认本轮状态。

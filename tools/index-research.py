@@ -27,7 +27,9 @@ def main() -> None:
     lines = [
         "# 研究文件索引", "",
         "当前游戏与暂停状态以[交接记录](../knowledge/handoff.md)为准。这里保存只读模型、有限计算报告、实际记录审计及历史候选；文件名或模型命中不代表实际完成。", "",
-        "- 当前未实测的3-26尾：[23步候选与逐态](ch3-26-live92-two-observers-oct05.md)。按钮对应已用96个公开历史样本校准，光学动态仍需实测。",
+        "- 3-26原[23步候选与逐态](ch3-26-live92-two-observers-oct05.md)于2026-10-06已实际执行到115步，两活人邻位可达但光学未完成；最新状态见[解法记录](../knowledge/solutions/3-26.md)。",
+        "- [3-26锁旁捕获](ch3-26-lock-capture-oct06.md)仅排除所列有限普通图；[3-27光学研究](ch3-27-optics-oct06.md)已支持实际99输入通关，准确执行串与五叶完成证据见[3-27解法](../knowledge/solutions/3-27.md)。",
+        "- 已观察但尚无完成证据的世界入口见[待完成清单](../knowledge/remaining-levels.md)，未登记不等于已完成。",
         "- 2-G巨型队列：[保存事故](ch2-G-checkpoint-save-failure-oct05.md)。唯一旧前沿已丢失，原子分块保存修复不能恢复旧队列。",
         "- 十份历史JSON输出归于[results/](results/README.md)，原`.tmp`引用已更新，内容哈希不变。",
         "- 游戏主记录、存档备份和大型`.v8`留在本地`artifacts/`，不纳入Git；记录清单与哈希见[原始证据清单](../knowledge/artifact-inventory.json)。",

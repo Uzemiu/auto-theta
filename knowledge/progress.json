@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-05",
+  "updated_on": "2026-10-06",
   "save_management_file": "save-management.md",
   "active_playthrough": {
     "id": "slot1-from-start-2026-09-22",
     "save_slot": 1,
     "save_file": "C:/Users/Administrator/AppData/LocalLow/DeltaTheta/Theta and Paralldox on Worldlines/SaveSlot1.es3",
-    "status": "paused",
+    "status": "active",
     "baseline_completed_count": 0,
     "verified_completed_levels": [
       "0-1",
@@ -126,44 +126,31 @@
       "4-26",
       "4-27",
       "4-24",
-      "4-19"
+      "4-19",
+      "3-27"
     ],
     "last_observed_location": {
       "scene": "Template3",
-      "level_id": "stealth",
-      "world": false,
-      "player_positions": [
-        [
-          8,
-          4
+      "level_label": "3-B",
+      "level_id": "extension",
+      "time": 0,
+      "instructions": "",
+      "save_slot": 1,
+      "player": {
+        "id": 34,
+        "pos": [
+          2,
+          1
         ],
-        [
-          11,
-          7
-        ]
-      ],
-      "axis_player_positions": [
-        {
-          "axis": [
-            0,
-            0,
-            0
-          ],
-          "time": 70,
-          "positions": [
-            [
-              8,
-              4
-            ],
-            [
-              11,
-              7
-            ]
-          ]
-        }
-      ],
-      "observed_on": "2026-10-05",
-      "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+        "fork": 0,
+        "ghost": 0,
+        "contained": 0
+      },
+      "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
+      "evidence_event": 17,
+      "frame": 1005049,
+      "observed_on": "2026-10-06",
+      "completed": false
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -190,6 +177,18 @@
         "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
         "arrival_evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
         "note": "完成X/Y后普通西走到底；未要求补全本章欠关，不增加关数。"
+      },
+      {
+        "observed_on": "2026-10-06",
+        "from": "Chapter3",
+        "via": "Chapter1",
+        "to": "Chapter2",
+        "method": "normal pause chapter map, Tab/Shift, X teleport",
+        "evidence_files": [
+          "../artifacts/slot1-playthrough/chapter3-world.json",
+          "../artifacts/slot1-playthrough/chapter1-world.json",
+          "../artifacts/slot1-playthrough/chapter2-world.json"
+        ]
       }
     ],
     "paused_at_utc": "2026-10-05T05:37:23.481699+00:00",
@@ -249,7 +248,7 @@
       "owner_active_input_or_search_handle": null,
       "note": "任务暂停；游戏本身unpaused。先observe真实70核对，不自动续批，不接新23尾。旧2-G60/209Undo保历史，已正常离场。"
     },
-    "resumed_at_utc": "2026-10-03T12:52:34.350505+00:00",
+    "resumed_at_utc": "2026-10-06T06:41:38.437496+00:00",
     "notes": [
       "2026-09-24子agent正常新增2-B/2-D/2-C三关，61关2星，西端出口通过第二章进入第三章。2-A/G/P/Q仍未解，本阶段禁提示。",
       "2026-09-24第三章子agent完成3-1至3-10，累计71关2星，Lift本轮条件已验证；无主动提示。最新世界56,5，3-11待进入。",
@@ -284,9 +283,10 @@
       "4-27正常281完成/116关6星后，世界15A到[-83,5]，单16A实际受缺格阻转S[-83,4]，未横向worldwrap、未死亡/花叉。普通已解锁Notebook重读分裂2/15、关卡水晶10/15、穿越15/15、锁和钥匙9/15，仍15项，未读提示；三个Esc关闭回unpaused。再54安全方向到world70/time70 [-32,5]F1，empty4-X[-32,4]未动，准备不同合法叠图资源。",
       "4-24响指正常62输入完成：35后AXDXXAXXXXXX同步两F1载箱，53X对Blue A/S正交冲突真实两叶；axis0三S到Goal1,1/time56，T切axis1五W到Goal1,9/time58完成。此次0undo0retry、累计历史7undo0retry；root独立Slot1 snap3/record62/count117/6核，自动World[-45,3]F1。继续全成就，唯一输入owner /root/ch4_1_readonly，禁提示。",
       "4-19反制正常回访41输入实际完成；38X出生同刻捕空Blue，三cargo3/4/6,6与外人1,6均F0；末DDD把三载箱送5/6/7,6，外人最后死4,6SPIKE，三cargo活contained/ghost0。源及左右Prism45/46/47均traversed/testCompleted=true、lighten=false，completed=true。本成功回访0undo0retry，历史累计22undo0retry全部保留；自动World[-42,-12]F1。",
-      "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+      "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。",
+      "2026-10-06用户goal continuation恢复：正常MCP启动slot1；旧70运行内状态不在，新世界fresh0安全导航后正常重建92，并逐条实測新23候选到115；未通关，不增加count。"
     ],
-    "verified_completed_count": 118
+    "verified_completed_count": 119
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
@@ -298,7 +298,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 118,
+  "verified_completed_count": 119,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -1512,20 +1512,21 @@
       "name": "潜行",
       "internal_level_id": "stealth",
       "status": "attempted",
-      "verified_on": "2026-10-05",
+      "verified_on": "2026-10-06",
       "solution_file": "solutions/3-26.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-26.json",
       "slot1_attempt": {
         "completed": false,
-        "checkpoint_actions": "SSDSAAAAAAWWWDDSSDDDDDDSAAWWWDDWXWADAAAAAAAAAAAWADSSSSSSSDSSWDDSSAWWWA",
-        "checkpoint_time": 70,
+        "checkpoint_actions": "SSDSAAAAAAWWWDDSSDDDDDDSAAWWWDDWXWADAAAAAAAAAAAWADSSSSSSSDSSWDDSSAWWWAAAAAAAAWWWAASSSSADSDSSSAWAWAAWAAAAAAAASSAAWWA",
+        "checkpoint_time": 115,
         "undo_count": 0,
         "retry_count": 0,
-        "observed_on": "2026-10-05",
-        "current_event": 86,
-        "frame": 20359659,
-        "task_paused_by_user": true,
-        "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+        "observed_on": "2026-10-06",
+        "current_event": 166,
+        "frame": 63221,
+        "task_paused_by_user": false,
+        "note": "已正常复建92与新23逐条实測，全部模型移动/钥匙/锁/容器核验diff=[]；axis0两活人1,6/1,2，axis1旧单人92。Goal光学仍未满足，completed=false。0本次Undo/0retry；下一步研究并实际验证光学覆盖。 已正常返回世界，此115是关内历史checkpoint，不再live；重入fresh需正常复建，不能直接用旧Undo恢复。",
+        "checkpoint_is_current_runtime": false
       },
       "attempt_history": [
         {
@@ -1535,23 +1536,48 @@
           "undo_count": 1,
           "retry_count": 2,
           "note": "已取key返回并完成混合接触实验，正常undo恢复双人后返回世界；3-27实际已解锁，先推进后续机制。"
+        },
+        {
+          "completed": false,
+          "checkpoint_actions": "SSDSAAAAAAWWWDDSSDDDDDDSAAWWWDDWXWADAAAAAAAAAAAWADSSSSSSSDSSWDDSSAWWWA",
+          "checkpoint_time": 70,
+          "undo_count": 0,
+          "retry_count": 0,
+          "observed_on": "2026-10-05",
+          "current_event": 86,
+          "frame": 20359659,
+          "task_paused_by_user": true,
+          "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
         }
       ]
     },
     "3-27": {
       "name": "色散",
       "internal_level_id": "dispersion",
-      "status": "attempted",
-      "verified_on": "2026-09-24",
+      "status": "completed_verified",
+      "verified_on": "2026-10-06",
       "solution_file": "solutions/3-27.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-27.json",
-      "slot1_attempt": {
-        "completed": false,
-        "checkpoint_actions": "DDWAASSAXWWAWWDTDTDDDSSSDDAWDWWWTAAAAAAD",
-        "checkpoint_time": 36,
+      "attempt_history": [
+        {
+          "completed": false,
+          "checkpoint_actions": "DDWAASSAXWWAWWDTDTDDDSSSDDAWDWWWTAAAAAAD",
+          "checkpoint_time": 36,
+          "undo_count": 0,
+          "retry_count": 0,
+          "note": "安全复活及棱镜冲突已实测；三线各只一活人，边角源棱镜仍不满足；返回世界查看后续解锁。"
+        }
+      ],
+      "slot1_run": {
+        "actions": "DDWAAWWWXDAASAAAAWDDASSADDSWWWDSSWWSDDWAASDDDDDWAAASAASWWSDDWASAAAWDDDDDSDSSSWDAWDWWWAAAAAAATDTTTAT",
+        "action_count": 99,
+        "completed": true,
         "undo_count": 0,
         "retry_count": 0,
-        "note": "安全复活及棱镜冲突已实测；三线各只一活人，边角源棱镜仍不满足；返回世界查看后续解锁。"
+        "evidence_file": "../artifacts/slot1-playthrough/3-27.json",
+        "completion_event": 151,
+        "completion_frame": 815971,
+        "note": "真实五Goal完成，root独立只读确认Settings slot1、dispersion LevelState=3、累计119关/6星；精确99串W1/A2/S3/D4/X5/T8编码与SaveSlot1 LevelRecords.dispersion全串严格相等。"
       }
     },
     "3-28": {
@@ -1666,18 +1692,31 @@
       "name": "延展",
       "internal_level_id": "extension",
       "status": "attempted",
-      "verified_on": "2026-10-04",
+      "verified_on": "2026-10-06",
       "solution_file": "solutions/3-B.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
-      "note": "fresh0正常回访并返回；任意安全cargo有限模板域截断无可运输正前置，不作无解结论。",
+      "note": "正常fresh0重入，3-B仍未完成；优先核实际有运输价值的同刻装箱新前置。",
       "slot1_attempt": {
         "completed": false,
         "checkpoint_actions": "",
         "checkpoint_time": 0,
         "undo_count": 0,
         "retry_count": 0,
-        "note": "本次fresh0/0undo0retry正常返回Chapter3 58,22；any-safe-cargo四箱模型首次底边cargo5,1无可用运输尾，非边界42模板30k/40487截断，无新关内输入，旧30历史保留。111关/6星不变。"
-      }
+        "evidence_event": 17,
+        "frame": 1005049,
+        "checkpoint_is_current_runtime": true,
+        "note": "2026-10-06正常fresh0回访；新同tick落刺装箱域20k/22772截断无positive，未发关内输入，旧历史保留。只读helper继续具体构造，不重复旧域。119关/6星不变。"
+      },
+      "attempt_history": [
+        {
+          "completed": false,
+          "checkpoint_actions": "",
+          "checkpoint_time": 0,
+          "undo_count": 0,
+          "retry_count": 0,
+          "note": "本次fresh0/0undo0retry正常返回Chapter3 58,22；any-safe-cargo四箱模型首次底边cargo5,1无可用运输尾，非边界42模板30k/40487截断，无新关内输入，旧30历史保留。111关/6星不变。"
+        }
+      ]
     },
     "3-34": {
       "name": "分配",
@@ -2462,20 +2501,299 @@
         "undo_count": 6,
         "retry_count": 0
       }
+    },
+    "2-P": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        84,
+        28
+      ],
+      "evidence_file": "../artifacts/slot1-playthrough/chapter2-world.json",
+      "research_file": "../scratch/chapter2-pq-dynamic-readonly.md",
+      "note": "公开世界状态已观察入口，未进入，未完成；仅补已知范围，不假设internal_id或解锁条件。"
+    },
+    "2-Q": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        80,
+        24
+      ],
+      "evidence_file": "../artifacts/slot1-playthrough/chapter2-world.json",
+      "research_file": "../scratch/chapter2-pq-dynamic-readonly.md",
+      "note": "公开世界状态已观察入口，未进入，未完成；仅补已知范围，不假设internal_id或解锁条件。"
+    },
+    "4-Y": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -68,
+        -10
+      ],
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "research_file": "../scratch/ch4-Y-entry-readonly.md",
+      "note": "公开世界状态已观察入口，未进入，未完成；仅补已知范围，不假设internal_id或解锁条件。"
+    },
+    "1-Z": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        77,
+        33
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "1-W": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        68,
+        33
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "1-F": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        86,
+        29
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "1-G": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        86,
+        25
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "5-X": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        72,
+        46
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "6-X": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        72,
+        49
+      ],
+      "entry_source_frame": 1801701,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "3-U": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        75,
+        10
+      ],
+      "entry_source_frame": 527971,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "3-P": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        74,
+        5
+      ],
+      "entry_source_frame": 527971,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "3-C": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        54,
+        22
+      ],
+      "entry_source_frame": 527971,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-Z": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        50,
+        -3
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-O": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -4,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-L": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -13,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-K": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -16,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-J": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -19,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-N": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -7,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-M": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        -10,
+        -18
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-U": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        51,
+        4
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-W": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        47,
+        4
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "4-V": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_coordinates": [
+        49,
+        4
+      ],
+      "entry_source_frame": 1358870,
+      "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+      "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
     }
   },
   "last_observed_location": {
-    "scene": "Template3",
-    "level_id": "stealth",
-    "world": false,
+    "scene": "3-0",
+    "level_id": "Chapter3",
+    "world": true,
     "player_positions": [
       [
-        8,
-        4
-      ],
-      [
-        11,
-        7
+        14,
+        17
       ]
     ],
     "axis_player_positions": [
@@ -2485,21 +2803,20 @@
           0,
           0
         ],
-        "time": 70,
+        "time": 0,
         "positions": [
           [
-            8,
-            4
-          ],
-          [
-            11,
-            7
+            14,
+            17
           ]
         ]
       }
     ],
-    "observed_on": "2026-10-05",
-    "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+    "observed_on": "2026-10-06",
+    "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
+    "current_event": 594,
+    "frame": 831167,
+    "note": "3-27真实99输入完成后正常自动返回Chapter3[14,17]/F1；rootSaveSlot1累计119，无新增星。goal仍active，等待下一未完成关的新positive，不自行暂停。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

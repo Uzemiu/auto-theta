@@ -1,31 +1,16 @@
-# 用户暂停：3-26 第70步（2026-10-05）
+# 全成就继续：3-27已完成，当前119关（2026-10-06）
 
-全成就任务已按用户要求暂停。全部游戏输入和搜索进程已结束；游戏未打开暂停菜单。
+唯一游戏输入owner `slot1_owner_oct06`；root/helper只读。全成就goal active，状态查询不暂停任务。
 
-## 当前现场
+- Slot1，119已验证关/6星/link3；Steam本地缓存13/28仍未全成就。3-27后自动返回Chapter3[14,17]/Fork1；目前正常导航重入3-B fresh0，公开frame1005049，主3-B event17，P34[2,1]/Fork0。
+- **3-27色散已真实99输入完成**，本次0Undo/0retry，主JSON completion event151/frame815971/completed=true；精确actions含5次T已保存。五叶直接活人覆盖Goal1/3/5/7/9：axis0 time92 P52[1,9]，axis4 time32 P59[3,9]，axis3 time50 P59[7,9]，axis2 time62 P59[5,9]，axis1 time86 P59[9,9]。root独立只读核Settings slot1、dispersion State3、119关/6星；精确99串编码与LevelRecords.dispersion严格相等。
+- 新解通过可回收row9 relay8，按5/6/4三列各做一次幽灵生死观察，保留三个旁观死亡叶；最后双活人争推分成两单人叶。旧6,10不可回收探针没有执行。[完整99解法](solutions/3-27.md)。
+- 3-26 actual115/23移动/开锁校准成功但光学未完，正常退出留历史；root170实体diff=[]，不是当前live。[3-26](solutions/3-26.md)。
+- 1-W/Z/F/G实时AlwaysEnable=true，但第一章LOCK44,33阻普通安全路；3-U和3-P实际unblocked但第三章LOCK56,10及x63墙屏障阻当前单free普通路，3-C仍blocked/require3-B。这些只是普通无新资源有限连通边界，不是全局不可达。
+- 新World2 directP/Q 40k有界图没有入口positive；新capture23候选见helper报告，当前尚未实际执行，不假定还能X复制Fork0 cargo。避免重复旧44brake闭合图。
 
-- SaveSlot1，Template3 / stealth「3-26 潜行」，单axis0、time70、undo_depth70。
-- 主记录 `artifacts/slot1-playthrough/3-26.json` event86/frame20359659；root独立MCP frame20363661对全部85实体完整字段及instructions比较diff=[]，busy/input_locked/dialog/paused均false。
-- P70[8,4]/A：活、ghost0、Fork0、key0；P84[11,7]/D：active、ghost1、Fork0、key1。两者未装载、height1、movement/source已清。
-- 空BOX65[6,1]、66[8,1]；空Prism67[1,1]、68[12,1]、69[1,5]。
-- 已验证118关、6星、link3。Steam账户13/28为2026-10-04缓存核验值；全成就仍未完成。
+3-B新同tick SPIKE捕获20k域已终端无positive，关内暂无输入；只读helper继续构造具体短probe，避免重复预算。当前没有在途owner输入/搜索handle；继续正常推进全成就，不因这关完成自行暂停。下一输入由owner先核实当前scene/slot/guards与完整候选。每次time较早的切叶观察会投影较晚叶历史，必须保存每叶真实终点并最后切至最高time核整体completed。
 
-## 暂停时的在途输入
+仅Slot1；禁hint/启示/简化、外部攻略、隐藏实现/反射、存档进度编辑。一关一主JSON；2-G零字节巨型前沿无法恢复，不称同frontier续接。
 
-复建旧92前缀的66→79批次在请求中被Ctrl+C中断，未收到该批回执。最终实际70串证明只接受 `WWWA` 四步；不伪造回执、不续发剩9步。旧92前缀还剩22步，新23步候选全部未发。本次0游戏Undo/0游戏retry，旧3-26的1Undo/2retry保留。详见主记录owner_execution_notes和[3-26解法记录](solutions/3-26.md)。
-
-## 恢复时
-
-先获得用户恢复指令，再核实时状态与输入所有权。若游戏仍为上述70态，可从原真实92串仅接未执行的22步；若重启或离关导致fresh0，按实时起点正常重建，不能修改存档或把旧Undo历史当可用。
-
-旧92的活钥匙分支实际证明P84[15,7]/ghost0/key1与P70[9,1]。root的新23步MODEL候选为 `SAWAWAAWAAAAAAAASSAAWWA`，计划将两名活人送至Goal邻格[1,6]/[1,2]，第20步正常开锁，五个容器全程不动。见[候选及逐步预测](../scratch/ch3-26-live92-two-observers-oct05.md)。未验证光学动态或实际完成，先选并核活分支、单S校准后小段执行；不把MODEL当通关。
-
-## 2-G研究与检查点事故
-
-2-G已从共同60正常返回世界，累计209游戏Undo/0游戏retry；历史实测全部保留。最新巨型搜索在1820000扩展后保存失败，唯一 `.v8` 被截断为零字节，完整q/heap/seen/done等无法恢复。不得称旧前沿仍保全。已修原子分块保存并通过小型往返及失败保护验证；两份约2MB的已闭合派生队列和固定候选证明仍在。[事故报告](../scratch/ch2-G-checkpoint-save-failure-oct05.md)、[2-G概览](solutions/2-G.md)。
-
-## 固定约束
-
-仅Slot1；游戏操作由子agent担任唯一owner。禁止获得启示/提示/简化、外部攻略、隐藏实现/反射和修改存档进度。真实回执、现场与存档才是完成证据；模型和有限搜索只是候选。暂停期间不继续游戏或搜索。
-
-[完整历史交接](history/handoff-through-2026-10-05.md) · [研究文件索引](../scratch/README.md) · [本次整理与验证](checkpoints/2026-10-05-pause.md)
+[旧暂停记录](checkpoints/2026-10-05-pause.md) · [历史交接](history/handoff-through-2026-10-05.md) · [研究索引](../scratch/README.md)

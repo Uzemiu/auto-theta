@@ -214,3 +214,19 @@ root另做有限只读raw42局部变体：809条单处增删改及相邻双插�
 66→79的13步输入在途被中断，没有该批回执。最终实际串只证明接受 `WWWA` 四步，旧92前缀剩22步，新23步MODEL候选全部未执行。恢复前必须重新观察，只接确认未执行的后缀，不修改启动槽之外的任何游戏存档内容。当前118关6星/link3；只读完成审计确认recorded_completed=save_completed=118、issues=[]。Steam13/28仍是2026-10-04缓存值，本次没有刷新。
 
 此前“原巨checkpoint保全/沿同前沿续接”等段落是事故前的历史状态：最新保存触发单次写入长度上限，唯一巨文件截断成0字节，完整q/heap/seen/done/hitHistory无法恢复。两份小闭合组件队列、研究报告、真实游戏回执与SaveSlot1仍保留。这是计算队列丢失，不是游戏存档丢失。保存逻辑已修原子分块并通过约67MB小型验证，未恢复旧队列，未做多GiB验证。见 [当前交接](handoff.md)、[暂停整理](checkpoints/2026-10-05-pause.md) 和 [事故报告](../scratch/ch2-G-checkpoint-save-failure-oct05.md)。
+
+## 2026-10-06 恢复基线：重启后从第三章世界续接
+
+用户的新目标continuation恢复了全成就任务，goal当前active，唯一输入owner为 `/root/slot1_owner_oct06`。最初MCP observe/status明确连接拒绝，Win32_Process未发现游戏进程；没有向离线桥接器发送游戏输入。owner正常MCP launch并点击开始，游戏PID18884、桥接0.3.2，标题显示β118关6星。
+
+root于2026-10-06T06:31:37Z只读核Settings/value/LastUsedSaveSlot=1；SaveSlot1的SHA-256为 `e64614cb37f68672e1b1a97a41958a1ca0b7739f78fb67fcb618a101d9de0544`，CurWorld3、accomplishLinkCount3、COL1..6=true。LevelStates中119个值为3包含世界Chapter0，独立关仍118，不能把世界状态加成新通关。stealthState1、无stealth完成记录；没有修改存档。
+
+正常启动后root独立MCP frame13746核scene3-0 / Chapter3、world=true、单axis0/time0/instructions空；P238[40,-2]active、Fork1、ghost0、contained0、height1、movingdir0/movingsrc-1，与owner所见一致。旧3-26实际70及Undo栈仅保存在历史证据，不能直接接旧22步后缀；下一步通过正常世界导航重入，再按fresh0重建已验证前缀。
+
+Steam本地缓存于2026-10-06T06:31:37Z重新读取仍13/28，证据 `artifacts/achievements/20261006T063137779163Z.json`；缓存文件修改时间保留，未独立核验服务器同步。游戏和目标已恢复推进，原暂停记录继续作为历史保留；禁用提示/简化、外部攻略、隐藏实现/反射、存档进度改写及唯一输入owner约束不变。
+
+## 2026-10-06 3-27正常完成：119关
+
+owner正常99输入完成「3-27 色散」，主JSON event151/frame815971为dispersion、world=false、completed=true。本次0Undo/0retry，历史尝试全保。root只读核Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.dispersion=3；实际instructions按W1/A2/S3/D4/X5/T8编码后与LevelRecords.dispersion完整字符串严格相等，长度99。accomplishLevelCount=119、accomplishCollectionCount=6、accomplishLinkCount=3；不修改存档或账户成就。
+
+完成后正常自动返回Chapter3[14,17]/Fork1、time0/instructions空，主world event594/frame831167及root独立frame831878、928926一致。119关知识库审计 `artifacts/knowledge-audits/20261006T075753568192Z.json` 核recorded=save_completed=119、issues=[]；它只覆盖已登记完成条目，不证明全部游戏目标已完成。新checkpoint见 [恢复与119关核验](checkpoints/2026-10-06-resume.md)，当前交接和下一实际位置随owner继续更新；旧118基线哈希不代表新增通关后的文件哈希。

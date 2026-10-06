@@ -1,5 +1,7 @@
 # Restricted live92 observer candidate
 
+2026-10-06补充：唯一owner正常重启slot1、导航重入并复建92后，已逐条实测本报告23步路线，最终实际115。位置、面向、钥匙、锁和容器的逐步预测吻合，但光学目标仍未完成；它只证明两活人邻位可达。root独立MCP frame89716与主JSON event166/frame63221的两叶170个实体完整字典及instructions均相等。下面保留2026-10-05原MODEL报告，不改称已验证通关。最新状态见 [3-26记录](../knowledge/solutions/3-26.md)。
+
 ```json
 {
   "scope": "MODEL ONLY: ordinary two live free actors with current static public terrain, ordinary chain pushes, button gates, and one lock. No optical/DARK update, runtime/GMID, cargo, merge, ghost, force, or actual completion proof. Candidate needs real incremental calibration.",

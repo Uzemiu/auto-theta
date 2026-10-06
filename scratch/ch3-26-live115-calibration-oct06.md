@@ -1,0 +1,11 @@
+# 3-26 actual115 calibration and bounded post-candidate research
+
+2026-10-06. Slot1 only, one owner; no hints, hidden implementation or save progress edits. The old live92 MODEL did not include optical completion. Actual92 was rebuilt normally after game restart, then all23 candidate inputs were dispatched singly and checked. Main evidence `artifacts/slot1-playthrough/3-26.json` event119/frame43094, firstS event122/frame48628, final23 event166/frame63221.
+
+At actual115, 70[1,6] and84[1,2] are alive/ghost0/free/F0/key0. Lock4,2 is inactive after actual112. Empty Box65[6,1]/66[8,1], Prism67[1,1]/68[12,1]/69[1,7] remain fixed; two goals[1,1]/[1,7] are not complete. This is successful movement/key/lock calibration, not a level solution. Prism67 traversed=false,69 traversed=true; alltestCompleted=false. The containers on the two corner goals cannot be removed by a plain push: source stand cells or destinations are Walls at0-column/row0/row8.
+
+Three bounded private models ask for a future ordinary geometric alignment from this actual115, excluding capture/merge/death/force and optical updates. `ch3-26-live115-capture-align-oct06.cjs` fixes allfive containers:6098 expanded/seen, closed, no alignment of two free players at5,2 and7,1. `...-align-mobile...` allows66/68 to move while65/67/69 stay fixed:120000 expanded/132260 seen, no candidate; it is bounded, not exhaustive. `...-top-goal...` asks for players1,5/15,7, Box66 at9,1 and Prism68 at12,1 to hold allthree gates: same120000 bound/132260 seen, no candidate. Each JSON is model-only, with no game calls. Models were not cached and must not be called resumable frontiers.
+
+The initial proposed S capture from5,2/7,1 was rejected before any actual input: a blocked S at7,1 first turnsD, so movable66 at8,1 is pushed right; it does not turn immediatelyA into65. Root pointed this out using the verified W,A,S,D cyclic fallback. The lock-based A setup from older92 additionally needs opposite checkerboard parity and is separately excluded in helper's two finite held-free domains. These facts do not prove actual level insolubility; new phase changes, cargo or earlier layout remain outside the restricted models.
+
+No Undo/retry was dispatched in this revisit. All accepted normal inputs and full observations stay in one main level JSON; source92 and old70 interrupted-batch histories remain separate.

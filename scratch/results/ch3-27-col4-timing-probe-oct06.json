@@ -1,0 +1,416 @@
+{
+  "scope": "MODEL ONLY new pre-vs-post optical timing probe, no actual input/completion.",
+  "sourceEvent": 3,
+  "sourceFrame": 5562760,
+  "sourceActions": "DDWAASSAXWWAWW",
+  "expanded": 185,
+  "seen": 258,
+  "hit": true,
+  "path": "SSDDWW",
+  "trace": [
+    {
+      "a": "S",
+      "time": 15,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            5,
+            2
+          ],
+          "face": 3,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            3,
+            8
+          ],
+          "face": 2,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    },
+    {
+      "a": "S",
+      "time": 16,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            6,
+            2
+          ],
+          "face": 3,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            3,
+            7
+          ],
+          "face": 2,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    },
+    {
+      "a": "D",
+      "time": 17,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            6,
+            3
+          ],
+          "face": 0,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            4,
+            7
+          ],
+          "face": 3,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    },
+    {
+      "a": "D",
+      "time": 18,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            5,
+            3
+          ],
+          "face": 1,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            5,
+            7
+          ],
+          "face": 3,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    },
+    {
+      "a": "W",
+      "time": 19,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            4,
+            3
+          ],
+          "face": 1,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            5,
+            8
+          ],
+          "face": 0,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    },
+    {
+      "a": "W",
+      "time": 20,
+      "players": [
+        {
+          "id": 52,
+          "pos": [
+            4,
+            2
+          ],
+          "face": 2,
+          "ghost": 1,
+          "split": 0
+        },
+        {
+          "id": 59,
+          "pos": [
+            5,
+            9
+          ],
+          "face": 0,
+          "ghost": 0,
+          "split": 0
+        }
+      ],
+      "prisms": [
+        {
+          "id": 50,
+          "pos": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": 51,
+          "pos": [
+            4,
+            9
+          ]
+        }
+      ],
+      "dark": [
+        "4,2",
+        "4,3",
+        "5,2",
+        "5,3",
+        "6,2",
+        "6,3"
+      ],
+      "fork": false
+    }
+  ],
+  "pre": {
+    "time": 20,
+    "players": [
+      {
+        "id": 52,
+        "pos": [
+          4,
+          2
+        ],
+        "face": 2,
+        "ghost": 1,
+        "split": 0
+      },
+      {
+        "id": 59,
+        "pos": [
+          5,
+          9
+        ],
+        "face": 0,
+        "ghost": 0,
+        "split": 0
+      }
+    ],
+    "prisms": [
+      {
+        "id": 50,
+        "pos": [
+          6,
+          9
+        ]
+      },
+      {
+        "id": 51,
+        "pos": [
+          4,
+          9
+        ]
+      }
+    ],
+    "dark": [
+      "4,2",
+      "4,3",
+      "5,2",
+      "5,3",
+      "6,2",
+      "6,3"
+    ],
+    "fork": false
+  },
+  "lastD": {
+    "time": 21,
+    "players": [
+      {
+        "id": 52,
+        "pos": [
+          5,
+          2
+        ],
+        "face": 3,
+        "ghost": 1,
+        "split": 0
+      },
+      {
+        "id": 59,
+        "pos": [
+          6,
+          9
+        ],
+        "face": 3,
+        "ghost": 0,
+        "split": 0
+      }
+    ],
+    "prisms": [
+      {
+        "id": 50,
+        "pos": [
+          7,
+          9
+        ]
+      },
+      {
+        "id": 51,
+        "pos": [
+          4,
+          9
+        ]
+      }
+    ],
+    "dark": [
+      "5,2",
+      "5,3",
+      "6,2",
+      "6,3"
+    ],
+    "fork": false
+  }
+}

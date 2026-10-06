@@ -283,3 +283,19 @@ COL12[-68,-17]尚active、类型unclassified，四个正交邻都是SPIKE。载�
 
 2026-10-05，4-18按钮单占探针后正常undo1保actual53，再正常返回；world events[406]确认本次世界出生点[-36,-11]/Fork1，不能沿用旧[-38,-11]出生点。events[407]请求 `SDDDDW` 六方向，只执行五个SDDDD后因ICE输入锁停止、remaining1；events[408]玩家在[-31,-12]，owner稳定后仅补W，events[409]/[410]确认到[-31,-11]/Fork1。events[411]末单D正常进入4-16[-30,-11]，events[412]/[413]为piston fresh0；4-16主event[16]与正常截图再次核free49[4,2]Fork0、C4 BOX45/cargo50[5,5]Fork2/S、三Blue[3,3]/[4,3]/[5,3]原位。完整七方向 `SDDDDWD` 没有花世界Fork、推Sky或新增通关，Slot1仍118关6星。全部partial回执、关内旧7undo及新回访初态留在各主JSON，未重发已执行的五方向。
 2026-10-05，4-16本次fresh0公开Notebook检查后正常返回，通过章节地图与公开X传送到第二章。chapter4-world.json events[433]/[434]保留正常split动作与Chapter2 fresh0/玩家[82,7]/Fork1；chapter2-world.json events[489]再次核同一初态。沿既有正常冰面导航使用一次Fork，events[507]稳定世界59/time140、玩家[24,3]/Fork0，未进入东邻2-A[25,3]；随后events[508]/[509]执行SS加6D到[30,1]，events[510]/[511]单D冰滑到[35,1]/time153，events[512]末单D正常进入2-G[36,1]，events[513]为chord fresh0/单叶119/time0。世界完整69方向没有推动Box344[45,15]，partial输入锁定均等待后仅补未执行部分。随后2-G新64布局由正常输入真实完成部署，root独立MCP与关内events[79]一致；关卡尚未完成，Slot1仍118关6星。进入未完成关、资源部署及世界Fork使用均不计新增通关，具体关内实体布局维护于2-G主记录与解法。
+
+### 2026-10-06 重启续接、正常退关与未进入入口核验
+
+重启后唯一owner正常启动Slot1，root独立MCP frame13746核Chapter3 fresh0、P238[40,-2]/Fork1。随后旧47安全世界方向回到14,19，单W正常进入3-26fresh0，重新构造92并实际执行23尾到115；不能把昨天70或旧Undo栈视为重启后的live。所有真实回执仍在chapter3-world与3-26主JSON中。
+
+3-26实际115未光学完成，正常暂停菜单返回世界的confirm在加载期过早断言导致脚本exit1；owner只wait/observe确认Chapter3 fresh0[14,19]，没有重发confirm，不计gameRetry。随后正常章节地图两次Tab选“第一章-平行”，X传送：frame279575/Chapter1 fresh0，P74[9,1]/Fork1。脚本旧标题“分裂”断言错误只作为执行错误保留，没有重输已接受Tab。
+
+这次第一章公开现场1-W[68,33]、1-Z[77,33]、1-F[86,29]、1-G[86,25]均active、不阻挡、AlwaysEnable=true，但单个自由人固定安全地板图仅410个节点、x≤43；Lock[44,33]仍active、world key0，没有普通单人穿锁正前缀。它只核此固定单人资源范围，不排除正常新容器/组合/其他世界资源；AlwaysEnable不能当作已进入或已完成。
+
+owner随后通过正常章节地图传送第二章：chapter2-world.json event542/frame358019为Chapter2 fresh0、P306[82,7]/Fork1/S、BOX344[45,15]；root独立MCP frame363089再核同样人物、axis0/time0/instructions空。P/Q仍可用入口，但单free、无箱推动的普通ICE图620节点无直达，不把这个有限负结果称为全局不可达。下一验证针对该新源可移动箱、首次X地点及直接进入P/Q的正常前缀，不将旧COL5刹车后的封闭图重跑当新证据。
+
+四章原始公开ENTRY目录还包括未登记的字母入口。盘点时38个唯一标签未有Slot1完成证据；随后3-27真实完成，待办降为37，见 [待完成清单](remaining-levels.md)。入口观察、条件路线和有限模型不增加独立通关计数。
+
+正常章节地图再次回到第三章后，frame433844的Chapter3 fresh0为P238[40,-2]/Fork1；root独立frame456079再核。3-U[75,10]和3-P[74,5]实际均unblocked，3-C[54,22]仍blocked并要求3-B。固定单free安全图671节点、x[-23,62]/y[-4,23]，Lock[56,10]及x63墙屏障阻普通直达P/U；这不排除另取资源后的正常路线，也不以旧目录的blockable状态覆盖当前实测。
+
+从该第三章初态正常48个方向到3-27，真实99关内输入完成后自动返回Chapter3。主world event594/frame831167及root独立frame831878、928926核world=true、P238[14,17]/Fork1、axis0/time0、instructions空、无busy/paused。关内最终time92和世界time0属于不同场景，不把正常自动退出误认作撤销或重试；完成数119由实际回执及存档交叉验证。
