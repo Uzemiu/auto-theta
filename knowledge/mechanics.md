@@ -1073,3 +1073,29 @@ SA到31后single W32/event37/frame2030946把cargo/Box送Goal[3,7]，裸推者42�
 生叶44用AAAAAAWW到Goal[1,7]/time96，再正常T选死叶，44用AASSSSAAAA到Goal[1,1]/time98。唯一末A107/event90回执level_id=space、completed=true、executed1/remaining0、stop_reason=level_completed；完整原始completed观察event91/frame2285381保存两叶及三个终点。死叶44终帧anim_completed=false如实保留，不能声称整张终态与稳定模型动画true完全相等；其运动来源已清，正常完成回执与存档共同核实。本次0Undo/0retry。
 
 root于2026-10-06T10:05:39Z只读Settings LastUsedSaveSlot=1、SaveSlot1 spaceState3；实际107动作编码与LevelRecords.space完整字符串严格相等，完成121、星6/link3、CurWorld5。root独立现场已经为下一关concrete fresh0/frame2301288，不冒称独立5-2终态现场；独立64的9动态字典校准仍成立。完整107串及分段证据见 [5-2解法](solutions/5-2.md)。这证明本C4、同相两free、双箱链捕获和一缓冲箱运输的实际三Goal解法，不推广任意颜色或地形。
+
+### M139 三箱围困让一名角色等待一拍，建立两free相位差（5-3实际38）
+
+2026-10-06，5-3「浇筑」concrete正常DDDX到4，75[8,3]、76[8,1]皆F0/ghost0/key0/free；下三C1 BOX69[4,3]/70[3,3]/74[2,3]、上三C4 BOX71/72/73[3/4/5,6]，Gate7,5与Lock1,6闭。root独立frame2366608与主event4/frame2338260全部15非Wall/Floor动态完整字典及DDDX一致，diff=[]。
+
+实际32步 `AWASASAAWDDWASAASAWDSSWDWASSAAAA` 到36：75[1,2]、76[3,2]，下箱69[2,2]/70[3,4]/74[3,3]；八个分段停点的八个PLAYER/BOX完整字典和其余静态/地形均严格校准。single S37/event21回执accepted1/remaining0后稳定：69[3,2]与74[3,3]/70[3,4]成三箱竖链，上接Wall[3,5]；76[3,1]/S被上下左右障碍围住，75[2,2]/D仍活。
+
+single D38/event24回执accepted1/remaining0后，75从[2,2]推69[3,2]到[4,2]、自己到[3,2]/D；76实际原位[3,1]仅face变D。同一拍北侧箱被移开，76仍没有跟着腾出的北格移动，两free空间相位相差一格。完整稳定event26/frame2485258与root独立frame2500317全部15动态完整字典（含properties/details/GMID/动画）及38instructions严格一致，diff=[]。皆F0/key0/ghost0/contained0；上三C4未动，Gate/Lock仍闭，无cargo、争推分叶、死亡、Undo或retry，guards清。
+
+这是本三箱竖链及四面阻挡让角色等待一拍的实际正例；不凭末态概括所有箱色联动或整个引擎判定顺序。前置私有新域5798expanded/7505seen，实际只重放固定候选，没有再跑同图。后续地刺捕获、Goal2,6上KEY68、Lock开锁和ICE6,6刹车仍须另外实测；不据此加完成数。源见 [5-3解法](solutions/5-3.md) 及唯一主JSON artifacts/slot1-playthrough/5-3.json events21..26。
+
+#### M139补证：相位差后，C1白箱同刻地刺捕获实际成立（5-3实际45）
+
+实际38后人工六步WWDWDW仅私有重放，再每两步完整实际核到44：75[2,3]/A、76[4,4]/W，C1箱70[3,4]，其余下箱69[4,2]/74[5,3]。唯一single W45/event33回执accepted1/remaining0；76受Wall[4,5]改A推70到SPIKE[2,4]，75同拍W到2,4。稳定event35/frame2572092：70 Color1载75 active/ghost1/contained1/container70/F0/key0，76留安全[3,4]/A，两剩余下箱保留作buffer，上三C4/Gate/Lock未动。root独立frame2608906对所有15动态完整字典及45instructions与event35严格diff=[]。这是C1本具体实例的Ghost捕获，不把C4旧案例当任意颜色规则。人工六步及下一手工运输只重放校准，无额外同域搜索，原新前置5798expanded保持。
+
+### M140 Goal生死两叶均保钥匙，死叶masked装箱角色未开锁，可给四箱链作ICE刹车（5-3）
+
+5-3正常91输入完成，本次0Undo/0retry。45后实际34运输 `SSDDDWAAASAWSDDDDWDDSSAWDWAAAAASAW`，前33分段逐完整实体字典（含Gate）和地形核到78，末W79单独接受。箱70/cargo75送Goal[2,6]，两个C1 buffer69[2,4]/74[2,5]保free76[2,3]安全且持续压Button[2,5]，Gate[7,5]实际blockable=false；上三C4仍[3/4/5,6]。
+
+真实Goal79/event57/frame2621908有两叶同time79：axis0 cargo75 active/ghost0/key1，axis1 cargo75 inactive/ghost1/maskedoff1但同样key1；两叶KEY68均inactive、Lock65[1,6]仍active/blockable=true。死叶并非没有钥匙。root独立frame2635425与主57两叶全部30动态完整字典（含GMID/details/动画）及79instructions严格diff=[]，没有凭模型填入钥匙或锁状态。
+
+正常T选死叶，再DDDDDW到free76[7,4]、逐单WW到ICE[7,6]。唯一A89实际event70/frame2643595：76在ICE[6,6]/A活，movingdir0/movingsrc-1、全部动画true、guards清；cargo75仍inactive/maskedoff1/key1/contained70，Lock65仍闭，六箱全部未动。最左cargo箱70[2,6]、上三C4[3/4/5,6]组成背闭锁的四箱链，实际阻推而让free停6,6。此结果只证明本死叶masked载人箱在该A拍没有用所留钥匙开锁，不概括所有Ghost、contained角色或锁判定顺序。生叶保持cargo2,6，不在携活key的叶上误用同刹车尾。
+
+随后仅逐单WW到Goal[6,8]。末W91/event73回执level_id=concrete、completed=true、executed1/remaining0、stop_reason=level_completed；完整终态event74/frame2654095保存alive叶time79/cargo75[2,6]与dead叶time90/free76[6,8]，两Goal真实覆盖。末76 anim_completed=false保原始值，不冒称整体稳定模型字典相等。root只读Slot1 concreteState3、准确91编码与正常保存记录完整严格相等，完成122、星6/link3、CurWorld5；root独立2671177已返回Chapter5，不冒称live完成现场。
+
+准确91串见 [5-3解法](solutions/5-3.md)；条件几何与钥匙风险的原始限定见 [按钮布局审计](../scratch/ch5-3-button-layout-oct06.md)，未把后来证实的死叶结果反写成此前已知规则。

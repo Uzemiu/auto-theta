@@ -248,3 +248,9 @@ root只读Slot1 LevelStates.limbo=3，准确串 `AAXXWDDDWDWDWAASAWDDDWASAADWWSA
 主5-2.json event90末A回执level_id=space、completed=true、stop_reason=level_completed、executed1/remaining0；event91/frame2285381为完整completed实体状态，两叶分别time96/98，生叶cargo43[7,7]与free44[1,7]、死叶masked cargo43[7,7]与free44[1,1]。终帧死叶44动画false仍保原始记录，没有伪造稳定帧或重发末A；本次0Undo/0retry。
 
 root于2026-10-06T10:05:39.864803Z只读Settings LastUsedSaveSlot=1，SaveSlot1 LevelStates.space=3；准确107动作以W1/A2/S3/D4/X5/T8编码，与LevelRecords.space完整严格相等。accomplishLevelCount=121、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5；此次存档SHA-256 `327373a7be61775dd425b907e95c66434331655a6b3ec8624f851540a6c3cd90` 只代表该读取快照。root独立MCP frame2301288已为5-3 concrete fresh0；不声称独立抓到5-2完成现场。全成就目标仍active，owner正常进入下一关，不修改进度或账户成就。
+
+## 2026-10-06 5-3「浇筑」正常91输入完成：122关
+
+主5-3.json末W event73回执level_id=concrete、completed=true、stop_reason=level_completed、executed1/remaining0；完整终态event74/frame2654095为alive叶time79/cargo75[2,6]与dead叶time90/free76[6,8]。死叶75 masked但仍key1，Lock闭；单A89实际四箱链刹车成功，不使用“死叶无钥匙”的错误解释。末76动画false保真实原值；0Undo/0retry，无重发末W。
+
+root于2026-10-06T10:39:17.616472Z只读Settings LastUsedSaveSlot=1，SaveSlot1 LevelStates.concrete=3；准确91指令按W1/A2/S3/D4/X5/T8编码，与LevelRecords.concrete完整严格相等。accomplishLevelCount=122、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5。快照SHA-256 `7dc90410ef1775c4b8f3cacc4260716058e042ef53454a2385efbf73f417d5d9` 不代表继续游玩后的文件。root独立2671177已自动返回Chapter5；终态从完整原始完成观察与正常存档交叉核验，不冒称独立完成现场。owner继续正常5-4，目标仍全部28成就。

@@ -129,21 +129,17 @@
       "4-19",
       "3-27",
       "5-1",
-      "5-2"
+      "5-2",
+      "5-3"
     ],
     "last_observed_location": {
-      "scene": "Template5",
-      "level_id": "concrete",
-      "world": false,
-      "level_label": "5-3",
+      "scene": "5-0",
+      "level_id": "Chapter5",
+      "world": true,
       "player_positions": [
         [
-          8,
-          3
-        ],
-        [
-          8,
-          1
+          -35,
+          -15
         ]
       ],
       "axis_player_positions": [
@@ -153,24 +149,20 @@
             0,
             0
           ],
-          "time": 4,
+          "time": 0,
           "positions": [
             [
-              8,
-              3
-            ],
-            [
-              8,
-              1
+              -35,
+              -15
             ]
           ]
         }
       ],
       "observed_on": "2026-10-06",
-      "evidence_file": "../artifacts/slot1-playthrough/5-3.json",
-      "current_event": 4,
-      "frame": 2338260,
-      "note": "SaveSlot1121完成/6星；5-3实际DDDX4，75/76双free/F0，六空Box初位，0Undo/retry，guards清，无在途输入。helper只算有运输价值空Box按钮/捕获新短域，候选非完成。"
+      "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+      "current_event": 21,
+      "frame": 2669075,
+      "note": "5-3正常91完成后自动退world5，122独立完成/6星；5-4[-31,-13]当前unblocked，准备安全WWDDD至西邻后singleD正常进入。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -325,7 +317,7 @@
       "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。",
       "2026-10-06用户goal continuation恢复：正常MCP启动slot1；旧70运行内状态不在，新世界fresh0安全导航后正常重建92，并逐条实測新23候选到115；未通关，不增加count。"
     ],
-    "verified_completed_count": 121
+    "verified_completed_count": 122
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
@@ -337,7 +329,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 121,
+  "verified_completed_count": 122,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -3585,7 +3577,7 @@
       "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
     },
     "5-3": {
-      "status": "attempted",
+      "status": "completed_verified",
       "entry_observed": true,
       "entered": true,
       "entry_observation": {
@@ -3603,21 +3595,32 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "5-2正常完成已使入口unblocked；正常世界SSSS+单D进入，关内DDD取Fork8,2面D，单X得到75[8,3]/76[8,1]双free，六箱初位/Key2,6/Lock1,6/Gate7,5未改变，guards清。尚未搬箱/捕获/开门；新短前置由只读helper独占有限域构造。",
+      "note": "91实际完成、0Undo/retry；三C1夹困等待改变相位后White同tickSPIKE捕获，三箱缓冲到Goal/Key观察生死两叶。死cargo也保key1，但实际ICE A不能开Lock/四箱不动，free可止6,6上Goal6,8；livecargo另一叶覆盖2,6。完整completed抓到，final76 animfalse实值保留。正常SaveSlot1 exact91严格相等、累计122/6星/link3。",
       "name": "浇筑",
       "internal_level_id": "concrete",
       "solution_file": "solutions/5-3.md",
       "slot1_attempt": {
-        "actions": "DDDX",
-        "action_count": 4,
-        "checkpoint_time": 4,
+        "actions": "DDDXAWASASAAWDDWASAASAWDSSWDWASSAAAASD",
+        "action_count": 38,
+        "checkpoint_time": 38,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-3.json",
-        "evidence_event": 4,
-        "frame": 2338260,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 26,
+        "frame": 2485258,
+        "checkpoint_is_current_runtime": false
+      },
+      "verified_on": "2026-10-06",
+      "slot1_run": {
+        "actions": "DDDXAWASASAAWDDWASAASAWDSSWDWASSAAAASDWWDWDWWSSDDDWAAASAWSDDDDWDDSSAWDWAAAAASAWTDDDDDWWWAWW",
+        "action_count": 91,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/5-3.json",
+        "completion_event": 74,
+        "frame": 2654095,
+        "full_completed_state_captured": true,
+        "save_verification": "root 10:39:17.616472Z concreteState3/exact91 record equality/count122"
       }
     },
     "5-7": {
@@ -3862,18 +3865,13 @@
     }
   },
   "last_observed_location": {
-    "scene": "Template5",
-    "level_id": "concrete",
-    "world": false,
-    "level_label": "5-3",
+    "scene": "5-0",
+    "level_id": "Chapter5",
+    "world": true,
     "player_positions": [
       [
-        8,
-        3
-      ],
-      [
-        8,
-        1
+        -35,
+        -15
       ]
     ],
     "axis_player_positions": [
@@ -3883,24 +3881,20 @@
           0,
           0
         ],
-        "time": 4,
+        "time": 0,
         "positions": [
           [
-            8,
-            3
-          ],
-          [
-            8,
-            1
+            -35,
+            -15
           ]
         ]
       }
     ],
     "observed_on": "2026-10-06",
-    "evidence_file": "../artifacts/slot1-playthrough/5-3.json",
-    "current_event": 4,
-    "frame": 2338260,
-    "note": "SaveSlot1121完成/6星；5-3实际DDDX4，75/76双free/F0，六空Box初位，0Undo/retry，guards清，无在途输入。helper只算有运输价值空Box按钮/捕获新短域，候选非完成。"
+    "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+    "current_event": 21,
+    "frame": 2669075,
+    "note": "5-3正常91完成后自动退world5，122独立完成/6星；5-4[-31,-13]当前unblocked，准备安全WWDDD至西邻后singleD正常进入。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
