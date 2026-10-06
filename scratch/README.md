@@ -148,6 +148,10 @@
 | ch5-5-shadow-layout-oct06 | — | [md](ch5-5-shadow-layout-oct06.md) | — |
 | ch5-6-cleaning-oct06 | [cjs](ch5-6-cleaning-oct06.cjs) | [md](ch5-6-cleaning-oct06.md) | — |
 | ch5-6-optics-layout-oct06 | — | [md](ch5-6-optics-layout-oct06.md) | — |
+| ch5-7-optics-layout-oct06 | — | [md](ch5-7-optics-layout-oct06.md) | — |
+| ch5-7-scroller-oct06 | [cjs](ch5-7-scroller-oct06.cjs) | [md](ch5-7-scroller-oct06.md) | — |
+| ch5-8-lightroom-oct06 | [cjs](ch5-8-lightroom-oct06.cjs) | [md](ch5-8-lightroom-oct06.md) | — |
+| ch5-8-optics-layout-oct06 | — | [md](ch5-8-optics-layout-oct06.md) | — |
 | contact19-readonly | [cjs](contact19-readonly.cjs) | — | — |
 | finish-chapter2-to-A-candidate | — | [md](finish-chapter2-to-A-candidate.md) | — |
 | finish-phase-knowledge | [py](finish-phase-knowledge.py) | — | — |

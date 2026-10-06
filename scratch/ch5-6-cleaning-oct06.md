@@ -33,3 +33,5 @@ owner全部实际38/42/45/46/50/54/58/62/66/67/71/72短停点完整48实体字�
 末singleS73 receipt49已接受一次并返回completedtrue；完整main51/frame3914170/time73 **completed=true**。P47[2,1]活/F0/key0/g0/free；43[6,1]与44[7,1]均traversed/testCompleted=true、lighten=false，41/42分别6,2/7,2邻封北支。Shadow46 inactive，Shadow45仍active在5,5，本构型可以通关，不声称全部Shadow清除。终P47唯一动画差异`anim_completed=false`保留，其余完整字段和terrain与模型相等；无补造稳定帧。
 
 准确73：`SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS`。0搜索/0Undo/0retry/无handle，原42尾与末3D未执行；root负责正常Save核，helper不读存档。29/33/34原光flag预测反例始终保留在报告与CJS，不能回写成旧model原始全match。继续下一关。
+
+据root报告，正常Save核于2026-10-06T12:35:26.799166Z完成：slot1、cleaningState3、准确73记录严格相等、accomplish124、6星/link3；存档SHA256为`2fae9592a3cbb4d1559581ed89ad57f7eda48276b7dbf5aad2ca1b752f7c20db`。公开全库审计[20261006T123837190646Z.json](../artifacts/knowledge-audits/20261006T123837190646Z.json)报告recorded124/save124/issues=[]。这是root的核验回报，helper未独立读取Save。

@@ -1155,3 +1155,72 @@ D34清Shadow46后实际运输继续，single S46把普通C4箱42从[7,3]送到[7
 这实际证明相邻Pri[6,1]/[7,1]、北侧邻箱、东南墙与西侧单free的具体完整光学布局。把相互连接方向建模为循环依赖可以复现结果，但其求值顺序或最大固定点算法只是假设，不是已知游戏实现；不据此宣称任意Prism循环都能满足Goal或取得纠缠成就。
 
 准确73串 `SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS`，0搜索/Undo/retry。root于2026-10-06T12:35:26.799166Z只读Settings slot1、SaveSlot1 cleaningState3，完整73编码记录严格相等，accomplishLevelCount=124、星6/link3；独立live frame3920804已正常自动回Chapter5，不声称另捕获完整终态。完整执行和光学反例见 [5-6解法](solutions/5-6.md)。
+
+### M146 分裂侧出生压钮后门已开，仍未在原闭门前方生成另一角色（5-7实际25）
+
+5-7「银河」scroller正常取Fork，再安全返回实际24：唯一角色76[2,4]/W/F1，Button74[1,4]为空，Gate61[2,5] active/blockable=true，右[3,4]是Wall，两个普通C4箱仍[2,6]/[2,7]。主20/frame4099474对root独立4130364全部77实体完整字典及准确24串 `SDDDDDDDWWSSAAAAAAAAAWWW` 严格diff=[]。
+
+唯一single X25的原始receipt21、完整立即22及稳定23/frame4157322保存：仅原角色76在左侧Button[1,4]/W/F0、active/ghost0/free，没有第二个PLAYER；Gate61此时blockable=false。root独立4176244对全部77实体完整字典及25instructions严格diff=[]。终态按钮已压、门已开，没有让本次分裂在此前闭门的[2,5]生成另一角色；不得从终态open反推所有同拍出生都可利用该门。该结果只限定本朝向、墙与门布局，不概括整个引擎更新顺序或所有同刻按钮/出生组合。
+
+双角色[1,4]/[2,5]后的DWD保活推链与光学收尾仍是未执行条件模型；本X25没有满足前提，没有发任何DWD/WWA/WWW，也未让唯一角色W裸踏SPIKE[1,5]。随后正常游戏Undo1恢复24/F1，主25/frame4193819全部77实体、地形与指令对preX完整相等；timeline ID从77保留为78的唯一差异单列，不重发已接受Undo。0retry，实际25阴性及撤销回执全部保留，仍未完成，计数124/6星不变。完整尝试由owner在 [5-7解法](solutions/5-7.md) 交接，条件布局见 [5-7静态审计](../scratch/ch5-7-optics-layout-oct06.md)。
+
+### M147 整列十棱镜环绕推动，并支持分裂前方出生（5-7实际40/41）
+
+普通关按size+1横纵环绕已有M015实证。本条新增5-7的具体十棱镜循环链与出生构型，不能据此把大地图边界或任意实体交互视为相同规则。正常Undo1恢复24/F1后，实际15步 `SSSDDDDDDDDDDWD` 到39，角色76[13,2]/D/F1，x13的10个Prism仅在y2留空。主48/frame4338534对root独立4340581全部77实体完整字典、164个tiles及instructions严格diff=[]。
+
+唯一single W40真实把整列10个Prism上移一格，跨y10→y0，并继续推动原y0/y1物体；角色76到[13,3]/W/F1，没有实体停在[13,11]。主51/frame4341471与root独立4382289全部77字典、164tiles和40指令严格diff=[]。不能只比较坐标集合而误认底部两个Prism未动；逐id变化如下（x均13）：
+
+| Prism id | 实际39的y | W40后的y | X41后的y |
+|---|---:|---:|---:|
+| 64 | 0 | 1 | 2 |
+| 65 | 4 | 5 | 6 |
+| 66 | 3 | 4 | 5 |
+| 67 | 7 | 8 | 9 |
+| 68 | 8 | 9 | 10 |
+| 69 | 10 | 0 | 1 |
+| 70 | 1 | 2 | 3 |
+| 71 | 9 | 10 | 0 |
+| 72 | 5 | 6 | 7 |
+| 73 | 6 | 7 | 8 |
+
+随后single X41：左侧[12,3]安全，右[14,3]为Wall，前[13,4]是可推动的循环Pri链。真实主54/frame4431048有原76[12,3]/W与新78[13,4]/W（GMID74），两者active/ghost0/key0/F0/free；整列Prism再次按模11上移，原角色格13,3被Prism70占据。root独立4453748对全部78实体完整字典、164tiles及41指令严格diff=[]。一条axis0/time41/timeline79，无Ghostcargo、Force分叶或Goal完成。此例证明本循环Pri链可给前方出生提供格位，M146的原闭门阴性不能代替这个不同构型的实测。
+
+**地刺限制：** tiles明确[13,10]与[13,0]都是SPIKE。X41后内侧角色从13,4连续W，第六步将裸踏13,10；推动前同格的Pri已移走，不是角色的保护cargo。未执行的8W+A玩家环绕错相候选已撤回，不能以M015的一般安全端环绕或这次Pri环绕，宣布本角色能安全跨刺。下一运输/等待/装载必须另有实际前置，不能盲批该尾。此时仍124完成/6星，累计1实际Undo/0retry，详情见 [5-7解法](solutions/5-7.md)。
+
+#### M147补证：外侧横推仍受墙阻，有限双活域已闭合
+
+single D42主57/frame4475145：76在旧[12,3]向东请求推动[13,3]的Pri，因背后[14,3]Wall受阻而转W至[12,4]；78从[13,4]向东也受Wall阻而转W至[13,5]，整列Pri再环绕。外侧角色没有利用同拍另一人推动腾出的格子进入旧13,3，也没有Ghostcargo、Force分叶、错相或完成。主59保存相同42实体/地形、正常菜单状态另记，与私人全78字典及164tiles审计一致；root独立现场已为下一关，不冒称独立42快照。
+
+仅这个已校准source42的新有限双活域跑一次，expanded=seen=12026、pending=0、closed=true、hit=null；6254裸SPIKE边与314合并损员边排除，0.2秒终端、无在途handle或巨型队列文件。该域保两个F0活free、双C4和已验证普通请求/模11整Pri链，只排除了所建域的等待、异相、进门及运输目标；未建立的出生保影、尸体接触、Ghost/装载、叠体、Force和损员方案仍未知，不能称全关无解或重跑同一闭域。随后正常退出5-7进入5-8，42及所有阴性为历史fixture，仍保待办。
+
+### M148 目标附近两条观察线未覆盖西侧继续连接的棱镜网（5-8实际10）
+
+5-8「光房」lightroom正常DD2取得Fork，再single X3得到79[9,9]/D与103[9,7]/D两个活free/F0（新GMID100以实际分配为准）；两个C4箱75[3,8]/76[4,9]与Shadow78[4,8]全active原位。候选以目标Pri97[14,11]南方与邻Pri96[13,11]南方分别站人，是否足够满足整个23Pri网络原先未知，没有按邻近两个节点宣布完成。
+
+实际只接受安全前7步WDDDDDW到10：79[13,10]/A、103[14,9]/W均active/ghost0/key0/F0/free；Pri95[12,11]、96[13,11]、97Goal[14,11]均traversed=true而testCompleted=false，其他20Pri仍traversed=false。Gate73[14,12]闭、三箱及Shadow双盾原位，completed=false、guards清。主14/frame4766578对root独立4802738全部104实体完整字典、207tiles及 `DDXWDDDDDW` 严格diff=[]。
+
+这支持观测在此配置继续进入西邻Pri95，两个近端观察位置没有完成本关。未执行原14尾的其余7步，也不把本阴性推广成任意两人网络无解或推断内部折射算法；既有M053/M054只提供已实证的分支与邻挡规则。另一条空Box保持Button[2,1]后推GoalPri入开Gate的路径仍为条件：末送箱推者可正常死亡、另一名有效free完成即可，用户没有要求cargoButton或两个角色全活。运输、Shadow消影与最终完成都需要后续实际回执，见 [5-8解法](solutions/5-8.md) 和 [5-8局部布局](../scratch/ch5-8-optics-layout-oct06.md)。
+
+### M149 更换出生位置后，两名角色同步搬运三箱并保持残影有效（5-8实际34）
+
+M148的10步光学尝试仍作为历史阴性保留。随后正常游戏Undo8恢复DD2/F1：主16/frame4909262的全部103实体、207tiles及instructions与原3相等，只有timeline ID保留为104。安全14步 `SSAAAAAAAWWWWD` 后single X17，主27/frame4943560生成79[3,9]/D与新104[4,10]/D，两者active/ghost0/free/F0；北侧Prism背墙不能出生，本次使用南侧与前方有效格位。新id/GMID以实际分配为准，不沿用旧103。
+
+逐single SSS到20，普通C4箱75[3,5]/76[4,6]、Shadow78[4,5]仍active，两个free在3,6/4,7。首S18即时帧的动画未完成触发过严断言，观察稳定后只续未接受的SS，没有重发S或游戏retry。再真实WASSDDD到27、WDSASDD到34，三箱经过右侧安全通道后为75[8,4]/76[9,5]/Shadow78[9,4]，free79[7,4]/104[8,5]均active/ghost0/F0。底部转向S30时Shadow[7,4]仍有效；这证明所列实际布局能够保影搬运，不证明所有残影必须一直保持左、北双盾。
+
+root独立完整核对三个停点：27主42/frame4993862对5012351；32主48/frame5071898对5071886；34主52/frame5072030对5089895。每点全部104实体完整字典、207实际tiles及instructions严格diff=[]。20只有主原始记录和私人replay校准，root没有另捕获20现场。准确34串 `DDSSAAAAAAAWWWWDXSSSWASSDDDWDSASDD`，本关累计8次正常Undo、0retry；第3次后续D会撞10,4墙，未发送。
+
+当前未压Button、未捕获cargo、未满足Goal；箱保持按钮与另一有效free赴Goal仍需合法后续，不能把34步运输计入完成关数或成就。详情见 [5-8解法](solutions/5-8.md)。
+
+### M150 西邻普通角色未替代箱子遮住残影光路（5-8实际44）
+
+M149之后正常ASDDW到39，75[8,5]/76[9,5]与Shadow78[9,4]仍active；ASSD到43后，free79[9,3]/104[8,4]，三箱仍同位且active。新的single W44同时将75推至8,6、76推至9,6、Shadow推至9,5；free79到9,4、104到8,5。预期“104在残影西邻可代替原Box75阻光”的私人模型被实际否定：主62/frame5167533的Shadow78变inactive，而两个普通C4箱及两名free仍active；其余预测几何与完整地形保持。
+
+root独立frame5174131对主62全部104实体完整字典、207实际tiles及准确44串 `DDSSAAAAAAAWWWWDXSSSWASSDDDWDSASDDASDDWASSDW` 严格diff=[]。这只证明该西邻玩家、北侧箱与棱镜网构型没有保住残影，不证明所有玩家、方向或普通光学都不能阻光，也不把inactive残影残留的pushable/blockable字段当作有效缓冲。
+
+随后正常Undo1，主64/frame5205121恢复43：全部104实体、207tiles及instructions对原59/frame5162960严格相等，Shadow重新active；本次timeline ID前后均105，没有新增差异。全关累计9次真实Undo、0retry，44阴性和原始回执保留，无重发W。需要修正站位使西邻箱留在相应遮光格，或证明另一完整资源方案；任何未实际达到的双人站位都只是候选。当前仍124完成，未压Button/未完成Goal。
+
+#### M150补证：实际AS改站位后，留住西邻箱的single W46保影成功
+
+以恢复43为源，新的固定三箱导航只展开5个节点、seen8，得到AS两步到45；free79[9,3]/104[7,3]，三箱没有移动。随后唯一single W46，主68/frame5310861：75仍[8,5]作为残影西邻普通箱，76到[9,6]、Shadow78到[9,5]且active，两个active/F0/free在[9,4]/[7,4]。45、46主原始状态对私人replay的全部104实体与207tiles严格等；这与44将75移到8,6、玩家占西邻而失影形成具体对照。不能据此预授下一次W或任意残影方向的遮光规则。
+
+准确46串 `DDSSAAAAAAAWWWWDXSSSWASSDDDWDSASDDASDDWASSDASW`，累计Undo9/0retry，未完成Button或Goal。root后续独立frame5367563已正常返回Chapter5，没有另捕获46关内现场；不能把44独立核验移作46证明。46及全部阴性保为历史，owner转新关继续全成就，旧2035闭域不重跑。三有效物到row1并送Button的末推者牺牲路线仍只是假设前置，详见 [按钮条件审计](../scratch/ch5-8-optics-layout-oct06.md)。

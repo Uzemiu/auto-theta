@@ -274,3 +274,15 @@ root于2026-10-06T12:35:26.799166Z只读Settings LastUsedSaveSlot=1，SaveSlot1 
 root独立live3920804已自动返回Chapter5，无独立67/73关内现场；实际34则有全部48实体独立逐键核验。官方本地成就缓存12:36:44Z仍14/28，全成就尚未达成。owner继续5-7，Slot1与禁提示约束不变。
 
 124关审计 artifacts/knowledge-audits/20261006T123837190646Z.json recorded=save_completed=124/issues=[]，只验证已登记条目与当前正常存档的一致性，不扩张为全游戏完成。
+
+## 2026-10-06 5-7环链尝试已历史退出，5-8正常新尝试
+
+5-7 actualX25闭门出生阴性后正常Undo1回24/F1，全部原始回执与阴性保留；随后W40整十Pri纵环绕、X41实际双free、D42普通横推拒墙并转W，均未完成。唯一新双活safe域12026状态闭合无hit，有限条件见M147，不作全关无解；正常退出后5-7 source42是历史，不以存档改写或强制场景接续。
+
+正常进入5-8 lightroom取Fork、single X、7步光学观察到实际10，完整主帧与root独立104实体/207tiles严格相等，仍未完成。root于2026-10-06T13:42:58.917569Z只读Settings LastUsedSaveSlot=1、SaveSlot1 accomplishLevelCount=124、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5；scrollerState1/lightroomState1均未计完成。对应时点官方本地成就缓存14/28，后续新动作不凭模型计入通关或成就，所有正常撤销/损员如实记录。
+
+随后5-8正常Undo8恢复持叉DD2，再安全14步与single X17更换出生位置，逐SSS20、WASSDDD27、WDSASDD34实际搬运三箱且Shadow仍active。34主52/frame5072030与root独立5089895的104完整实体、207tiles和准确instructions严格相等；27、32亦有独立全量核验。原10阴性和全部8个真实Undo回执保留，0游戏retry，没有编辑存档或重发已接受输入。仍未完成，正常Slot1最新读取的accomplishLevelCount仍124、lightroomState1；现场与后续路径见 [5-8解法](solutions/5-8.md)，不能以搬运成功代替Goal或成就完成证据。
+
+5-8后续single W44使Shadow失活，完整主62/frame5167533与root5174131全104实体、207tiles和instructions相等；两free及普通箱仍active。正常Undo1的主64/frame5205121恢复43，全部实体/地形/指令与原59相等、Shadow重新active，本次timeline ID前后均105。累计9次正常Undo、0retry，阴性未删除、W未重发，仍无完成记录；未修改任何保存的游戏进度。
+
+恢复43后实际AS+single W到46，西邻普通箱75保持8,5，Shadow9,5重新证明有效，main68/frame5310861保存完整真实阳性；仍未到按钮或Goal。随后正常离场，root独立5367563已为Chapter5世界，46是历史fixture而非当前可直接输入的关内现场。未新增完成数，仍Slot1/124关；root未独立捕获46，原始阳性与校准范围见M150补证及5-8解法。
