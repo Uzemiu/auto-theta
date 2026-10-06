@@ -1248,3 +1248,33 @@ M151的安全北推15后，正常DDDSSDS到22/持叉5,2/S，single X23实际原5
 公开terrain的103个tiles不含Goal[1,8]，该格由GOAL49.floor=true提供；0,8的type=SOLID/class=Floor、floor=true/blockable=false，不是Wall。私人模型漏合并GOAL.floor的错误已修，不能把修模型写成游戏新边界。末A的58物理/静态字段和103tiles与预测相等，55/56最终光flag携带预测差异如实保留；root后续5661622已在Chapter5，未独立另捕获60终态。
 
 准确60串 `DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA`，本次1Undo/0retry、634有限导航扩展。root于2026-10-06T15:16:17.023411Z只读Settings slot1、SaveSlot1 blinkState3，完整60编码 `422111123433211444334351132211111414323344342332141411111412` 与LevelRecords.blink严格相等；accomplishLevelCount=125、星6/link3。5-9从待办移除，5-8等历史未完成项保留，完整证据见5-9解法。
+
+### M153 棱镜testCompleted随站位变化，单个true不是持久的通关进度（5-10实际3/11）
+
+5-10「遮罩」delete正常DD2取Fork，再single X3得到原61[5,3]/D与新65[5,1]/D，两active/F0/ghost0/free；Shadow59[7,3]/60[4,9]与三个Pri的位置均未变化。主4/frame5826750：三个Pri62/63/64的traversed均true，仅底部64[1,1].testCompleted=true，62Goal[1,8]与63[1,5]仍false，level.completed=false。root独立5830334对全部66实体完整字典、116实际tiles与DDX指令严格diff=[]，新GMID61只取实际分配。
+
+随后正常8步AAAWWWWA，主10/frame5850396实际11：61[1,7]/A、65[2,4]/S仍active/F0/free；所有Box/Pri坐标及active均未变，两个Gate仍闭。Goal62.traversed=true/testCompleted=false，而63与此前已true的64均traversed=false/testCompleted=false，关卡仍未完成。root独立5893459对全部66完整字典、116tiles及准确11串 `DDXAAAWWWWA` 严格diff=[]。
+
+这两态证明本例testCompleted会随有效观察构型改变，不能将先前一个Pri的true永久累加、等同独立关数或视为底部永久完成；traversed与testCompleted也必须分别保存。本南侧观察阴性没有隔离门、边界与其他观察方向，不推断闭Gate的挡光规则或内部算法。M055记录混合箱与棱镜推链，不能作为“Gate关闭光轴”的来源。累计0Undo/0retry，双残影未移动，后续压钮、运输与Goal仍需实测，见 [5-10解法](solutions/5-10.md)。
+
+#### M153补证：两名东侧观察者满足两个relay，Goal仍未满足（5-10实际44）
+
+从11正常手算32步到43，再single A44，主36/frame5917081：61[2,5]/65[2,1]均active/F0/free；中Pri63与底Pri64的traversed/testCompleted均true，GoalPri62仅traversed=true、testCompleted=false，level.completed=false。两个Shadow及全部Pri均原位，双Gate仍闭。root独立5968842对全部66实体完整字典、116实际tiles及准确44串 `DDXAAAWWWWAWWWDSADSSSSSWWWWWWWWWWWDSSSSSAASA` 严格diff=[]。
+
+本实际对照只证明这两个东侧观察位置足以满足本两个relay，不能把它们的true累加为Goal完成，或据此隔离关闭Gate的光学方向。11→43每四步物理/静态/terrain校准一致，未建模的光flags差异保留；此前3源282expanded/302seen固定图是已终端的条件导航，不扩大或称全关无解。下一残影送钮前置尚需实际核，0Undo/0retry，完成数仍125。
+
+### M154 上方残影降到双门东侧后仍有效，目标未自动完成（5-10实际66）
+
+5-10两个新固定物体导航域分别422expanded/422seen、443expanded/443seen，均pending0/hitnull/handle=null；前者用actual44，后者用已上推下方Shadow59到7,4的新构型。实际66上影降4,8后的第三域442expanded/442seen、pending0/closedtrue/hitnull亦终端，目标为free1,7/7,3。各域只保五物体位置、双F0free存活，排除death/merge/capture/force/hold及新出生，不包含真正动态箱或相位变化，不能当全关无解。此前282/302命中域与三域合计1589扩展，全部终端，不反复重建。
+
+从实际51，下Shadow59[7,4]仍active，安全14步SAAWWWWWWWWDAW到65，角色61[1,7]/65[4,10]。唯一single S66将上方Color1 Shadow60从4,9推到4,8、推者65落4,9，61落1,6；两个Shadow仍active，双free仍active/F0/ghost0/uncontained，双Gate55/56[2,8]/[3,8]仍blockable=true。GoalPri62.traversedtrue/testCompletedfalse，其他两Pri均false，level.completed=false。
+
+主58/frame6069718对root独立6102208全部66实体完整字典、116实际tiles及准确66串 `DDXAAAWWWWAWWWDSADSSSSSWWWWWWWWWWWDSSSSSAASADDDSSSWSAAWWWWWWWWDAWS` 严格diff=[]。该结果证明本具体北侧观察者、双门与Shadow位置下可以完成这次下移，不隔离门的光学作用，也不授予S67、遮罩捕获或完整按钮运输。0Undo/0retry，最新现场随owner更新；离场后66必须标历史，回访先正常重建并按实际出生身份校准，见 [5-10解法](solutions/5-10.md)。
+
+### M155 冰滑碰棱镜后停止，输入次数与模拟时间分别保存（5-11实际13/time14）
+
+5-11「释放」release正常DS2拾Fork，再安全WWWDDSSSS到11，P58[6,1]/F1，ICE在5,1、Pri55仍4,1。唯一single A12先滑入5,1，再碰并推Pri到3,1、角色停4,1，实际time13；此前一A直接把Pri送2,1的猜测没有发生。另一个普通A13才把Pri推至2,1、角色到3,1，实际time14。碰物停止的具体结果与M035相符，不把无ICE关卡的一次移动模型直接移用。
+
+准确13串 `DSWWWDDSSSSAA`，主12/frame6326270对root独立6360120全部59实体完整字典、88实际tiles和instructions严格diff=[]。Pri55[2,1]邻GoalPri54[1,1]，两者traversed/testCompleted均true，P58[3,1]/A/F1、Shadow56[7,3]/57[7,4]仍active。关卡有另一个Goal1,7，所以level.completed仍false，没有增加125完成数。
+
+本例自动冰滑多产生一个模拟时步，记录13个实际输入与time14，不把它改成14输入或复发A12；Fork1仍保留供后续正常出生。0Undo/0retry，未证明Shadow捕获或消影释放，后续以 [5-11解法](solutions/5-11.md) 的实际新边界为准。

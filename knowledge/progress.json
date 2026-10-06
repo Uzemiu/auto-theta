@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-06",
+  "updated_on": "2026-10-07",
   "save_management_file": "save-management.md",
   "active_playthrough": {
     "id": "slot1-from-start-2026-09-22",
@@ -137,13 +137,13 @@
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "delete",
+      "level_id": "release",
       "world": false,
-      "level_label": "5-10",
+      "level_label": "5-11",
       "player_positions": [
         [
           3,
-          2
+          1
         ]
       ],
       "axis_player_positions": [
@@ -153,20 +153,20 @@
             0,
             0
           ],
-          "time": 0,
+          "time": 14,
           "positions": [
             [
               3,
-              2
+              1
             ]
           ]
         }
       ],
-      "observed_on": "2026-10-06",
-      "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
-      "current_event": 0,
-      "frame": 5717560,
-      "note": "5-10遮罩fresh0，正常完成125/6星/link3，0Undo/retry，无inputhandle。"
+      "observed_on": "2026-10-07",
+      "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
+      "current_event": 12,
+      "frame": 6326270,
+      "note": "13inputs/time14，底Goal光学true但上Goal未完，125/6星/link3，0Undo/retry/nohandle。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3052,21 +3052,21 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "正常SSSS+D入5-10，真实fresh0/65entities/116tiles；下一DD取Fork，未完成，禁提示。",
+      "note": "actual66上Shadow60降4,8仍active，59已7,4active，双Gate闭/双F0free；root6102208全66dict/116tiles/instr严格等。旧两个限定图422/443封闭无北mask前置，下一新首X地点域尚无positive，准备正常5-11；0Undo/retry。",
       "name": "遮罩",
       "internal_level_id": "delete",
       "solution_file": "solutions/5-10.md",
       "slot1_attempt": {
-        "actions": "",
-        "action_count": 0,
-        "checkpoint_time": 0,
+        "actions": "DDXAAAWWWWAWWWDSADSSSSSWWWWWWWWWWWDSSSSSAASADDDSSSWSAAWWWWWWWWDAWS",
+        "action_count": 66,
+        "checkpoint_time": 66,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
-        "evidence_event": 0,
-        "frame": 5717560,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 58,
+        "frame": 6069718,
+        "checkpoint_is_current_runtime": false
       }
     },
     "5-15": {
@@ -4029,9 +4029,9 @@
       }
     },
     "5-11": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -4047,18 +4047,33 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "actual13/time14，ICE A先到Pri3,1再普通A到2,1，P3,1/F1使两Prism testtrue；上Goal未完成，Shadow7,3/7,4active，保Fork给下一新出生/运输，0Undo/retry。",
+      "name": "释放",
+      "internal_level_id": "release",
+      "solution_file": "solutions/5-11.md",
+      "slot1_attempt": {
+        "actions": "DSWWWDDSSSSAA",
+        "action_count": 13,
+        "checkpoint_time": 14,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
+        "evidence_event": 12,
+        "frame": 6326270,
+        "checkpoint_is_current_runtime": true
+      }
     }
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "delete",
+    "level_id": "release",
     "world": false,
-    "level_label": "5-10",
+    "level_label": "5-11",
     "player_positions": [
       [
         3,
-        2
+        1
       ]
     ],
     "axis_player_positions": [
@@ -4068,20 +4083,20 @@
           0,
           0
         ],
-        "time": 0,
+        "time": 14,
         "positions": [
           [
             3,
-            2
+            1
           ]
         ]
       }
     ],
-    "observed_on": "2026-10-06",
-    "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
-    "current_event": 0,
-    "frame": 5717560,
-    "note": "5-10遮罩fresh0，正常完成125/6星/link3，0Undo/retry，无inputhandle。"
+    "observed_on": "2026-10-07",
+    "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
+    "current_event": 12,
+    "frame": 6326270,
+    "note": "13inputs/time14，底Goal光学true但上Goal未完，125/6星/link3，0Undo/retry/nohandle。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
