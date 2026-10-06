@@ -146,6 +146,8 @@
 | ch5-4-gates-oct06 | — | [md](ch5-4-gates-oct06.md) | — |
 | ch5-5-oct06 | [cjs](ch5-5-oct06.cjs) | [md](ch5-5-oct06.md) | — |
 | ch5-5-shadow-layout-oct06 | — | [md](ch5-5-shadow-layout-oct06.md) | — |
+| ch5-6-cleaning-oct06 | [cjs](ch5-6-cleaning-oct06.cjs) | [md](ch5-6-cleaning-oct06.md) | — |
+| ch5-6-optics-layout-oct06 | — | [md](ch5-6-optics-layout-oct06.md) | — |
 | contact19-readonly | [cjs](contact19-readonly.cjs) | — | — |
 | finish-chapter2-to-A-candidate | — | [md](finish-chapter2-to-A-candidate.md) | — |
 | finish-phase-knowledge | [py](finish-phase-knowledge.py) | — | — |

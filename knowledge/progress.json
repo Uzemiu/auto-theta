@@ -131,7 +131,8 @@
       "5-1",
       "5-2",
       "5-3",
-      "5-5"
+      "5-5",
+      "5-6"
     ],
     "last_observed_location": {
       "scene": "Template5",
@@ -141,7 +142,7 @@
       "player_positions": [
         [
           2,
-          2
+          1
         ]
       ],
       "axis_player_positions": [
@@ -151,20 +152,21 @@
             0,
             0
           ],
-          "time": 0,
+          "time": 73,
           "positions": [
             [
               2,
-              2
+              1
             ]
           ]
         }
       ],
       "observed_on": "2026-10-06",
       "evidence_file": "../artifacts/slot1-playthrough/5-6.json",
-      "current_event": 0,
-      "frame": 3530015,
-      "note": "123真实完成/6星/link3；5-6fresh0，唯一owner无输入handle，仍持续全成就，禁提示。5-4已历史21/34Undo，5-5真实39已保存严格核。"
+      "current_event": 51,
+      "frame": 3914170,
+      "checkpoint_is_current_runtime": false,
+      "note": "正常SaveSlot1已核124/6星/link3；5-6真实73完成历史终态，已自动返回world，下一正常5-7，0Undo/retry，无inputhandle。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -319,7 +321,7 @@
       "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。",
       "2026-10-06用户goal continuation恢复：正常MCP启动slot1；旧70运行内状态不在，新世界fresh0安全导航后正常重建92，并逐条实測新23候选到115；未通关，不增加count。"
     ],
-    "verified_completed_count": 123
+    "verified_completed_count": 124
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
@@ -331,7 +333,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 123,
+  "verified_completed_count": 124,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -3871,7 +3873,7 @@
       }
     },
     "5-6": {
-      "status": "attempted",
+      "status": "completed_verified",
       "entry_observed": true,
       "entered": true,
       "entry_observation": {
@@ -3889,21 +3891,51 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "正常5-5自动返回后四D+singleD进入5-6，公开fresh0/guards清。P47 2,2/F0无叉，无ICE/DARK；Goal7,1固定角落Pri，四箱含两Shadow、7SPIKE；primary独占新光/Shadow域≤20k，尚未关内输入。",
+      "note": "手算73真正光学完成/0搜索/Undo/retry。Shadow45缓冲将C4下降，relay43到6,1实际照Shadow46消失；两C4邻6,2/7,2封北，唯一free2,1覆盖西光，两个Pri testCompletedtrue，Shadow45仍active。29/33光flag模型true→actualfalse差异与脚本异常保留，未重发。root正常Slot1 cleaning3/exact73严格等，124/6星/link3。",
       "name": "清洁",
       "internal_level_id": "cleaning",
       "solution_file": "solutions/5-6.md",
       "slot1_attempt": {
-        "actions": "",
-        "action_count": 0,
-        "checkpoint_time": 0,
+        "actions": "SWWWWWWDDDSAWAASDDWDSAAASSSSASDDD",
+        "action_count": 33,
+        "checkpoint_time": 33,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-6.json",
-        "evidence_event": 0,
-        "frame": 3530015,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 19,
+        "frame": 3800288,
+        "checkpoint_is_current_runtime": false
+      },
+      "verified_on": "2026-10-06",
+      "normal_save_verification": {
+        "verified_at_utc": "2026-10-06T12:35:26.799166Z",
+        "verified_by": "root read-only normal SaveSlot1",
+        "LastUsedSaveSlot": 1,
+        "LevelState_key": "cleaning",
+        "LevelState_value": 3,
+        "exact_actions": "SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS",
+        "saved_record": "3111111444321223441432223333234444222114444143212223221143234444143222233",
+        "exact_record_equal": true,
+        "independent_completed_count": 124,
+        "stars": 6,
+        "link": 3,
+        "CurWorld": 5,
+        "save_sha256": "2fae9592a3cbb4d1559581ed89ad57f7eda48276b7dbf5aad2ca1b752f7c20db",
+        "root_current_live_world_frame": 3920804
+      },
+      "slot1_run": {
+        "actions": "SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS",
+        "action_count": 73,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/5-6.json",
+        "completion_event": 51,
+        "frame": 3914170,
+        "full_completed_state_captured": true,
+        "undo_count": 0,
+        "retry_count": 0,
+        "search_expanded": 0,
+        "save_verification": "root 2026-10-06T12:35:26.799166Z cleaningState3/exact73/count124"
       }
     },
     "5-11": {
@@ -3936,7 +3968,7 @@
     "player_positions": [
       [
         2,
-        2
+        1
       ]
     ],
     "axis_player_positions": [
@@ -3946,20 +3978,21 @@
           0,
           0
         ],
-        "time": 0,
+        "time": 73,
         "positions": [
           [
             2,
-            2
+            1
           ]
         ]
       }
     ],
     "observed_on": "2026-10-06",
     "evidence_file": "../artifacts/slot1-playthrough/5-6.json",
-    "current_event": 0,
-    "frame": 3530015,
-    "note": "123真实完成/6星/link3；5-6fresh0，唯一owner无输入handle，仍持续全成就，禁提示。5-4已历史21/34Undo，5-5真实39已保存严格核。"
+    "current_event": 51,
+    "frame": 3914170,
+    "checkpoint_is_current_runtime": false,
+    "note": "正常SaveSlot1已核124/6星/link3；5-6真实73完成历史终态，已自动返回world，下一正常5-7，0Undo/retry，无inputhandle。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

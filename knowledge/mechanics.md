@@ -1133,3 +1133,25 @@ root独立MCP frame2855444与主event12/frame2858739的全部12个非Wall/Floor�
 两个inactive箱清空通路后，正常WWDDSW、single X35、ASSS，两个active/ghost0/free/F0角色57[1,1]与59[3,1]实际覆盖两Goal。准确39串 `SAAAAWWSSDDDWWWAAAAWAWWSSSSSWWDDSWXASSS`，0搜索/Undo/retry；完成receipt39与完整event41/frame3463964、time39一致。终态两角色anim_completed=false如实保留，不声称稳定动画字典完全相等。
 
 root于2026-10-06T11:57:08.225152Z只读正常Settings slot1、SaveSlot1 necrosisState3；准确39动作编码 `322221133444111222212113333311443152333` 与完整保存记录严格相等，accomplishLevelCount=123、星6/link3。root后续frame3511574已回Chapter5，不冒称另一份独立完成现场。本例只证明这两个Color1 Shadow箱的按钮与Goal行为，不推广普通箱、其他颜色、载人箱、墙分裂或收藏成就。完整路径及主证据见 [5-5解法](solutions/5-5.md)。
+
+### M144 调整棱镜光路后残影箱去活，relay的traversed仍false（5-6实际34）
+
+5-6「清洁」cleaning中无Fork/key、仅一个free。实际S1让角色在[2,1]，Goal同格Pri44[7,1]为traversed=true/testCompleted=false，北方远箱42[7,3]没有使该构型直接完成。root独立3667634对主3/3591691全部48实体完整字典与指令diff=[]。
+
+手算运输保Shadow45作缓冲，将普通C4箱41从[5,6]降到[5,4]、Shadow45留SPIKE[5,5]仍active，再将Pri43经安全col2送到下row1。实际29与33的物理/静态布局符合候选，但Pri43.traversed预测true、实际false；两次脚本断言停止已记录，所有已接受输入未重发，0Undo/0retry。root对29主17/3741535与独立3778669、33主19/3800288与独立3820869全部48实体字典及指令分别严格diff=[]。不能称此前整段模型的全部光学字段都正确。
+
+唯一single D34把Pri43从[5,1]推到[6,1]、角色47从[4,1]到[5,1]。稳定主22/frame3823354：Shadow46[6,4]变inactive，仍保留Shadow=true/Color1与pushable/blockable=true；Shadow45[5,5]仍active，普通41[5,4]/42[7,3]没有移动，未新增角色、Ghostcargo或世界线，也未完成Goal。root独立3848948对全部48实体完整字典及34指令严格diff=[]。
+
+北向光路调整后，未发生直接接触的46去活，支持该具体棱镜光路清除残影的机制；Pri43同时仍lighten=false/traversed=false/testCompleted=false，Pri44仍traversed=true/testCompleted=false。因此不能用relay的traversed=false否定这次已发生的远处残影清除，也不把内部光学标记彼此等同。任意网络、Shadow颜色或普通箱的消除规则没有由此穷尽。完整实际34串 `SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDD`，仍123完成/6星，0搜索/Undo/retry。后续邻箱封轴与最终完成需要实际回执另核，见 [5-6解法](solutions/5-6.md) 和 [私人光路条件](../scratch/ch5-6-cleaning-oct06.md)。
+
+### M145 两个相邻棱镜以邻箱封北轴，单free在西侧满足Goal（5-6完成）
+
+D34清Shadow46后实际运输继续，single S46把普通C4箱42从[7,3]送到[7,2]紧邻GoalPri44；主31/frame3875676：角色47[7,3]，Pri43/44均traversed=true而testCompleted=false。先前relay43.traversed=false的反例仍保留，不反写成此前已遍历。
+
+再实际20手算运输将普通41从[5,4]经[2,4]、[2,3]送到[6,3]，single S67送至SPIKE[6,2]，推者47留安全[6,3]；主44/frame3896112：41[6,2]/42[7,2]分别紧邻Pri43[6,1]与GoalPri44[7,1]的北方。两Pri已有traversed=true但testCompleted仍false，说明邻位布局本身未自动满足剩余观察方向。这里是主原始状态与私人48全字典/地形校准，root之后观察已到世界，不冒称独立67现场。
+
+仅AAAASS六步让角色47到西侧[2,1]。最后single S73的真实完成receipt49为cleaning/completed=true/input_locked=true，完整event51/frame3914170/time73保存：43/44均testCompleted=true、traversed=true、lighten=false，角色47 active/ghost0/F0/key0/free；Goal中心[7,1]由Pri44占据，角色没有直接踩Goal。Shadow46[6,4]inactive，Shadow45[5,5]仍active，未清完全部残影也能完成此关。终角色anim_completed=false保真实值，不用稳定模型值覆盖。
+
+这实际证明相邻Pri[6,1]/[7,1]、北侧邻箱、东南墙与西侧单free的具体完整光学布局。把相互连接方向建模为循环依赖可以复现结果，但其求值顺序或最大固定点算法只是假设，不是已知游戏实现；不据此宣称任意Prism循环都能满足Goal或取得纠缠成就。
+
+准确73串 `SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS`，0搜索/Undo/retry。root于2026-10-06T12:35:26.799166Z只读Settings slot1、SaveSlot1 cleaningState3，完整73编码记录严格相等，accomplishLevelCount=124、星6/link3；独立live frame3920804已正常自动回Chapter5，不声称另捕获完整终态。完整执行和光学反例见 [5-6解法](solutions/5-6.md)。

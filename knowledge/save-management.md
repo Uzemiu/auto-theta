@@ -264,3 +264,13 @@ root于2026-10-06T10:39:17.616472Z只读Settings LastUsedSaveSlot=1，SaveSlot1 
 root于2026-10-06T11:57:08.225152Z只读Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.necrosis=3；准确39动作编码 `322221133444111222212113333311443152333` 与LevelRecords.necrosis完整严格相等。正常accomplishLevelCount=123、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5。快照SHA-256 `55c3eb6af7b66d90248be9da8d19194f8d42bc5613ba72ad65650945080e5910` 仅代表该读取时点。全部LevelStates值3的条目数124不等于独立完成计数，应使用游戏保存的accomplishLevelCount并核对去重的实际关卡标签，不把组合条目另加一关。
 
 root后续frame3511574已正常回Chapter5，未独立取得5-5关内终态。123关审计 artifacts/knowledge-audits/20261006T120749203420Z.json recorded=save_completed=123/issues=[]；它证明已登记条目一致，仍不证明全关卡或全成就。12:06:17Z官方本地缓存14/28、Slot1已核条件13；owner正常进入5-6继续，存档仍Slot1，全目标不暂停。
+
+## 2026-10-06 5-6「清洁」正常73输入完成：124关
+
+main5-6.json single末S的receipt49明确cleaning/completed=true/input_locked=true，完整completion51/frame3914170/time73保存单free47[2,1]、Pri43[6,1]/44[7,1]两者testCompleted=true，以及普通C4邻箱41[6,2]/42[7,2]。Shadow46 inactive、45仍active；最终玩家anim_completed=false如实保留。0搜索/Undo/retry，原29/33光flag断言异常与续remaining记载完整，不称游戏重试或抹掉光学预测反例。
+
+root于2026-10-06T12:35:26.799166Z只读Settings LastUsedSaveSlot=1，SaveSlot1 LevelStates.cleaning=3；准确73串 `SWWWWWWDDDSAWAASDDWDSAAASSSSASDDDDAAAWWDDDDWDSAWAAASAAWWDSASDDDDWDSAAAASS` 编码 `3111111444321223441432223333234444222114444143212223221143234444143222233` 与LevelRecords.cleaning完整严格相等。accomplishLevelCount=124、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5；快照SHA-256 `2fae9592a3cbb4d1559581ed89ad57f7eda48276b7dbf5aad2ca1b752f7c20db` 只代表读取时点。
+
+root独立live3920804已自动返回Chapter5，无独立67/73关内现场；实际34则有全部48实体独立逐键核验。官方本地成就缓存12:36:44Z仍14/28，全成就尚未达成。owner继续5-7，Slot1与禁提示约束不变。
+
+124关审计 artifacts/knowledge-audits/20261006T123837190646Z.json recorded=save_completed=124/issues=[]，只验证已登记条目与当前正常存档的一致性，不扩张为全游戏完成。
