@@ -1057,3 +1057,19 @@ actual4后24步到28/event24/frame1975351：BOX41[4,6]、42[5,6]/W、43[3,5]/A�
 SA到31后single W32/event37/frame2030946把cargo/Box送Goal[3,7]，裸推者42在SPIKE[3,6]死亡。真实两叶同time32：axis0的43活ghost0/cargo41在[3,7]，44在[1,5]活free；axis1的43 inactive/ghost1/maskedoff1仍cargo41，44同样活free。两叶同timeline id45，选线须用axis与43活性核，不能只按id。旁观者44先在生叶用SSSSDDDDD到Goal[6,1]/time41，T选死叶，再SSSSDDDDDD到Goal[7,1]/time42；最高time42核三Goal联合覆盖。
 
 唯一末D52的实际receipt48明确level_id=limbo、completed=true、stop_reason=level_completed、executed1/remaining0，末玩家44[7,1]。自动退世界太快，没有完整completed实体帧；旧stableguard拒input_locked的脚本exit1仅是执行异常，末D已接受且没有重发、撤销或游戏重试。root只读SaveSlot1 limboState=3，准确52指令编码与LevelRecords.limbo严格全字符串相等，完成数120、星6/link3不变，足以将本次正常完成核实；不补造终态快照。准确动作与全回执见 [5-1解法](solutions/5-1.md) 和 [只读模型核验](../scratch/ch5-1-capture-oct06.md)。只证明本C4、三free及固定Goal观测实例，不推广任意颜色、任意Ghost分裂或所有观察次序。
+
+### M138 双箱链同刻地刺捕获，保留活推者（5-2实际64）
+
+2026-10-06，5-2「空间」从普通fresh初态以WDDDSSSAX到9，两个free 43[4,1]、44[4,3]皆Fork0/ghost0，同相；三箱40 Color4、41 Color1、42 Color2均公开类型BOX/class Box，不将白箱视为PRISM。随后实际54步 `WDDWWDWSSWWWWDSSWAWDDASASAAWDDSDSDWSAWWDWSSAAASASDSSWW` 到63：C4箱40[4,3]、蓝箱42[5,3]、白箱41[7,3]，free 43[2,3]与44[6,3]。14个分段停点与私有模型的五个PLAYER/BOX完整物理字段、静态实体及地形严格一致；模型仅帮助布置，不替代实际回执。
+
+单D64只有一次正常输入：主event55回执executed1/remaining0。右44因白箱41[7,3]后方Wall[8,3]挡D、Wall[6,4]挡W，改A推动42与40两箱链；左43同时D进入SPIKE[3,3]。实际稳定event57/frame2249212：40[3,3]内43 active/ghost1/contained1/container40，42[4,3]、41[7,3]，44[5,3]/A仍活且未装载。唯一axis0/time64，全部动画完成、busy/input_locked/dialog/paused/conflicting/looping/completed均false。root独立MCP frame2250372与event56/frame2249080及57的全部9个非Wall/Floor动态实体完整字典（含details/GMID/动画）及64指令严格一致，diff=[]。
+
+这是双箱链在同一拍将踩刺角色捕入C4、让另一角色留在安全后方的具体正例；相同资源相位不排除这种空间布置。它不证明任意箱色捕获、BOX光学、Ghost再分裂或本关完成。后续运送与Goal观察必须再实测，未完成计数仍120。证据见 [5-2解法](solutions/5-2.md) 与唯一主JSON artifacts/slot1-playthrough/5-2.json events55..57。
+
+#### M138补证：缓冲箱运输保活推者，实际三Goal完成
+
+上述64捕获后，实际24步 `ASSAAWWWAWDDDDDASSSDDWWW` 到88。先23步分段核至87，唯一末W88/event72回执accepted1/remaining0；实际event75/frame2273383有两叶：C4箱40及cargo43在Goal[7,7]，axis0 cargo active/ghost0，axis1 cargo inactive/ghost1/maskedoff1；白箱41[7,6]在后缓冲，两叶free44[7,5]仍活，蓝箱42[3,3]。缓冲白箱让free推者停安全[7,5]，没有裸踏SPIKE[7,6]；保留它供两叶终点分工。
+
+生叶44用AAAAAAWW到Goal[1,7]/time96，再正常T选死叶，44用AASSSSAAAA到Goal[1,1]/time98。唯一末A107/event90回执level_id=space、completed=true、executed1/remaining0、stop_reason=level_completed；完整原始completed观察event91/frame2285381保存两叶及三个终点。死叶44终帧anim_completed=false如实保留，不能声称整张终态与稳定模型动画true完全相等；其运动来源已清，正常完成回执与存档共同核实。本次0Undo/0retry。
+
+root于2026-10-06T10:05:39Z只读Settings LastUsedSaveSlot=1、SaveSlot1 spaceState3；实际107动作编码与LevelRecords.space完整字符串严格相等，完成121、星6/link3、CurWorld5。root独立现场已经为下一关concrete fresh0/frame2301288，不冒称独立5-2终态现场；独立64的9动态字典校准仍成立。完整107串及分段证据见 [5-2解法](solutions/5-2.md)。这证明本C4、同相两free、双箱链捕获和一缓冲箱运输的实际三Goal解法，不推广任意颜色或地形。

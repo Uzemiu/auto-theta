@@ -139,6 +139,7 @@
 | --- | --- | --- | --- |
 | 2-A-gate-prefix-readonly | — | [md](2-A-gate-prefix-readonly.md) | — |
 | ch5-1-capture-oct06 | [cjs](ch5-1-capture-oct06.cjs) | [md](ch5-1-capture-oct06.md) | — |
+| ch5-2-space-oct06 | [cjs](ch5-2-space-oct06.cjs) | [md](ch5-2-space-oct06.md) | — |
 | contact19-readonly | [cjs](contact19-readonly.cjs) | — | — |
 | finish-chapter2-to-A-candidate | — | [md](finish-chapter2-to-A-candidate.md) | — |
 | finish-phase-knowledge | [py](finish-phase-knowledge.py) | — | — |

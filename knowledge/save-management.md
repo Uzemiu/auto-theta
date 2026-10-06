@@ -242,3 +242,9 @@ Steam本地缓存新解锁ACH_PASSCH4「演生」时间2026-10-06T09:15:11Z，�
 主5-1.json原始event48 receipt为Template5/level_id=limbo、completed=true、stop_reason=level_completed、executed1/remaining0、undo_depth52、44[7,1]。正常自动退世界后未捕获完整completed实体观察；主completion_receipt/run明确full_completed_state_captured=false，没有补造终态。末D已经接受，尾脚本因stableguard随后看到自动世界跳转而exit1，仅记录脚本异常，没有再发方向、Undo或retry。
 
 root只读Slot1 LevelStates.limbo=3，准确串 `AAXXWDDDWDWDWAASAWDDDWASAADWWSAWSSSSDDDDDTSSSSDDDDDD` 长52（含1T），按W1/A2/S3/D4/X5/T8编码与LevelRecords.limbo完整相等；accomplishLevelCount=120、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld=5。原始完成回执自带正确runtime id，配合前两Goal的实际叶终点和正常保存记录交叉核实，不因缺完整终态伪造或否认该真实通关。owner继续正常5-2首入，目标仍全28成就。
+
+## 2026-10-06 5-2「空间」正常107输入完成：121关
+
+主5-2.json event90末A回执level_id=space、completed=true、stop_reason=level_completed、executed1/remaining0；event91/frame2285381为完整completed实体状态，两叶分别time96/98，生叶cargo43[7,7]与free44[1,7]、死叶masked cargo43[7,7]与free44[1,1]。终帧死叶44动画false仍保原始记录，没有伪造稳定帧或重发末A；本次0Undo/0retry。
+
+root于2026-10-06T10:05:39.864803Z只读Settings LastUsedSaveSlot=1，SaveSlot1 LevelStates.space=3；准确107动作以W1/A2/S3/D4/X5/T8编码，与LevelRecords.space完整严格相等。accomplishLevelCount=121、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5；此次存档SHA-256 `327373a7be61775dd425b907e95c66434331655a6b3ec8624f851540a6c3cd90` 只代表该读取快照。root独立MCP frame2301288已为5-3 concrete fresh0；不声称独立抓到5-2完成现场。全成就目标仍active，owner正常进入下一关，不修改进度或账户成就。
