@@ -299,3 +299,21 @@ owner随后通过正常章节地图传送第二章：chapter2-world.json event54
 正常章节地图再次回到第三章后，frame433844的Chapter3 fresh0为P238[40,-2]/Fork1；root独立frame456079再核。3-U[75,10]和3-P[74,5]实际均unblocked，3-C[54,22]仍blocked并要求3-B。固定单free安全图671节点、x[-23,62]/y[-4,23]，Lock[56,10]及x63墙屏障阻普通直达P/U；这不排除另取资源后的正常路线，也不以旧目录的blockable状态覆盖当前实测。
 
 从该第三章初态正常48个方向到3-27，真实99关内输入完成后自动返回Chapter3。主world event594/frame831167及root独立frame831878、928926核world=true、P238[14,17]/Fork1、axis0/time0、instructions空、无busy/paused。关内最终time92和世界time0属于不同场景，不把正常自动退出误认作撤销或重试；完成数119由实际回执及存档交叉验证。
+
+3-B正常重入fresh0、主关内event17/frame1005049，未发关内动作即正常离场；之后3-19正常重建53并single D实际两叶54，未完成，正常退出到Chapter3[46,18]。正常地图回第四章后，主world event435/frame1125834为P66[2,4]/Fork1，Fork1是已持久化COL104带来的当前资源，不能沿旧spawn Fork0假设建模。
+
+第四章INTERACTABLE63[2,7]已在历史event166/frame3657231附近真实查看，event167/168展开“世界树海”碑文，169关闭；它不是上层电梯。西边[-83,5]/[-83,4]也已有真实event307/frame10987598、309/frame10991388，UI均无“前往上层”；不能把正常77步到这个旧落点当新出口探针。119完成没有直接证据改变该触发。第四章真正GOAL[54,-3]没有实际占据证据；当时固定objects/key0单free安全图709节点仍不通东目标。该结果不涵盖正常动态容器、分裂、光照或新资源，当时第四章尚未通过，后续真实西侧出口见下一节。详情见 [正常交互与边界核验](../scratch/chapter4-elevator-access-oct06.md)。
+
+### 2026-10-06 第四章正常升层：正确西侧位置与朝向
+
+3-21回访后正常退出至Chapter3[30,18]。章节地图四次Shift实际3→4→1→2→3（chapter3-world.json ui_observation643/645/647/649，frame1588439/1588480/1588521/1588582），没有第五或第六章选项及锁定原因文本；这只证明当时地图可选范围，不证明其他正常升层流程不可用。
+
+正常再进Chapter4 fresh[2,4]/Fork1，31安全方向到北ICE[-23,10]，主world event452/frame1659305无升层UI。only A32在ICE沿西向自动20拍滑到[-43,10]，receipt453已accepted1/remaining0；稳定event480/frame1672113为time51/instructions32、Fork1，仍无升层UI。等待原输入完成，没有重发A。之后正常西行到[-83,4]，single S到新[-83,3]/面S，event495/frame1707789亦无升层UI。
+
+**正常D到[-82,3]，W到[-82,4]并朝北时，真实UI显示“前往上层”。** 主world event499/frame1740308，root独立完整公开MCP frame1743132核同一P66[-82,4]/face0(W)/Fork1/key0、instructions80/time100、guards全清；原计划末A未发。出口是该实际位置与朝向，旧[-83,4]/面S负证据不能替代它。
+
+正常confirm（world4主receipt500）进入Chapter5「纠缠」：唯一canonical [chapter5-world.json](../artifacts/slot1-playthrough/chapter5-world.json)初frame1764756，稳定event7/frame1781523；root独立frame1790940再核scene5-0/worldtrue、P265[-44,-25]/Fork0/key0/ghost0、time0/instructions空，无guard或对话。普通地图升层和必经两句开场对话不使用提示；没有强切scene或改存档。
+
+root只读SaveSlot1 CurWorld5、Counters.chapter_5_entered=1、Settings LastUsedSaveSlot=1，普通完成数119、星6、link3不因升层增加。官方本地成就缓存ACH_PASSCH4「演生」于2026-10-06T09:15:11Z解锁；09:17:44Z读取证据为 `artifacts/achievements/20261006T091744068770Z.json`，账户14/28，服务器同步未独立核验。WorldGoal54,-3仍无占据证明，正常楼梯通过第四章与WorldGoal完成分开记账。
+
+Chapter5公开初态45个ENTRY：数字5-1..5-39及5-G/P/R/X/Y/Z，原5-X已有第一章入口观察，新增44个唯一待办标签。目录扩为五章，119关时已知待办81，不把新入口或解锁当已通关。第六章普通关尚未探索；具体持续变化见 [进度](progress.json) 与 [待办](remaining-levels.md)。

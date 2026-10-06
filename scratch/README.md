@@ -94,6 +94,7 @@
 
 | 名称 | 脚本 | 报告 | 数据 |
 | --- | --- | --- | --- |
+| chapter1-goal-access-oct06 | — | [md](chapter1-goal-access-oct06.md) | — |
 | chapter1-nid1-revisit-readonly | — | [md](chapter1-nid1-revisit-readonly.md) | — |
 | chapter1-nid2-revisit-readonly | [cjs](chapter1-nid2-revisit-readonly.cjs) | [md](chapter1-nid2-revisit-readonly.md) | — |
 | chapter1-nid3-world-revisit-readonly | — | [md](chapter1-nid3-world-revisit-readonly.md) | — |
@@ -105,9 +106,11 @@
 | chapter3-east-world-readonly | — | [md](chapter3-east-world-readonly.md) | — |
 | chapter3-west-entry-readonly | [py](chapter3-west-entry-readonly.py) | [md](chapter3-west-entry-readonly.md) | — |
 | chapter3-west-load-readonly | [py](chapter3-west-load-readonly.py) | [md](chapter3-west-load-readonly.md) | — |
+| chapter4-elevator-access-oct06 | — | [md](chapter4-elevator-access-oct06.md) | — |
 | chapter4-west-progression-readonly | — | [md](chapter4-west-progression-readonly.md) | — |
 | chapter4-yellow-4x-capture-readonly | [cjs](chapter4-yellow-4x-capture-readonly.cjs) | — | — |
 | chapter4-yellow-4x-readonly | — | [md](chapter4-yellow-4x-readonly.md) | — |
+| chapter5-world-resources-oct06 | — | [md](chapter5-world-resources-oct06.md) | — |
 | icecart-analysis-fuse | [py](icecart-analysis-fuse.py) | — | — |
 | icecart-analysis-fuse-candidate | — | [md](icecart-analysis-fuse-candidate.md) | — |
 | icecart-analysis-gates | [cjs](icecart-analysis-gates.cjs) | — | — |
@@ -135,6 +138,7 @@
 | 名称 | 脚本 | 报告 | 数据 |
 | --- | --- | --- | --- |
 | 2-A-gate-prefix-readonly | — | [md](2-A-gate-prefix-readonly.md) | — |
+| ch5-1-capture-oct06 | [cjs](ch5-1-capture-oct06.cjs) | [md](ch5-1-capture-oct06.md) | — |
 | contact19-readonly | [cjs](contact19-readonly.cjs) | — | — |
 | finish-chapter2-to-A-candidate | — | [md](finish-chapter2-to-A-candidate.md) | — |
 | finish-phase-knowledge | [py](finish-phase-knowledge.py) | — | — |
@@ -254,6 +258,9 @@
 | 3-B-tail-check | [cjs](3-B-tail-check.cjs) | — | — |
 | ch3-19-catbox-readonly | [cjs](ch3-19-catbox-readonly.cjs) | [md](ch3-19-catbox-readonly.md) | — |
 | ch3-19-new-mechanism-oct06 | [cjs](ch3-19-new-mechanism-oct06.cjs) | [md](ch3-19-new-mechanism-oct06.md) | — |
+| ch3-19-postforce-tail-oct06 | [cjs](ch3-19-postforce-tail-oct06.cjs) | [md](ch3-19-postforce-tail-oct06.md) | — |
+| ch3-21-col7-cargo-oct06 | [cjs](ch3-21-col7-cargo-oct06.cjs) | [md](ch3-21-col7-cargo-oct06.md) | — |
+| ch3-21-col7-optical-oct06 | [cjs](ch3-21-col7-optical-oct06.cjs) | [md](ch3-21-col7-optical-oct06.md) | — |
 | ch3-21-col7-readonly | [cjs](ch3-21-col7-readonly.cjs) | [md](ch3-21-col7-readonly.md) | — |
 | ch3-26-fresh-readonly | [cjs](ch3-26-fresh-readonly.cjs) | [md](ch3-26-fresh-readonly.md) | — |
 | ch3-26-live115-calibration-oct06 | — | [md](ch3-26-live115-calibration-oct06.md) | — |
@@ -268,6 +275,7 @@
 | ch3-27-optics-readonly | — | [md](ch3-27-optics-readonly.md) | — |
 | ch3-37-cargo-revisit-oct03 | [cjs](ch3-37-cargo-revisit-oct03.cjs) | [md](ch3-37-cargo-revisit-oct03.md) | — |
 | ch3-37-structure-readonly | — | [md](ch3-37-structure-readonly.md) | — |
+| ch3-B-new-capture-oct06 | [cjs](ch3-B-new-capture-oct06.cjs) | [md](ch3-B-new-capture-oct06.md) | — |
 | ch3-w-revisit-readonly | — | [md](ch3-w-revisit-readonly.md) | — |
 | ch3-x-26-static-readonly | — | [md](ch3-x-26-static-readonly.md) | — |
 

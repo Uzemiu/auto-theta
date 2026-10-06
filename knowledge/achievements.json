@@ -5,8 +5,8 @@
   "steam_app_id": 3219580,
   "catalog_source": "https://steamcommunity.com/stats/3219580/achievements/",
   "catalog_total": 28,
-  "account_unlocked_count": 13,
-  "slot1_verified_earned_count": 12,
+  "account_unlocked_count": 14,
+  "slot1_verified_earned_count": 13,
   "verification_note": "官方公开列表用于确定成就范围，不能证明当前账户已解锁。账户历史成就和本轮 slot1 达成证据分开记录。隐藏条件未公开的条目保持未知，不编造条件。",
   "achievements": [
     {
@@ -275,13 +275,41 @@
     {
       "name": "Emergence",
       "known_requirement": "通过第四章",
-      "account_status": "locked_in_local_cache",
-      "slot1_status": "unverified",
-      "evidence": [],
+      "account_status": "unlocked_in_local_cache",
+      "slot1_status": "requirement_verified",
+      "evidence": [
+        {
+          "verified_on": "2026-10-06",
+          "playthrough_id": "slot1-from-start-2026-09-22",
+          "method": "normal_chapter_transition",
+          "chapter4_evidence_file": "artifacts/slot1-playthrough/chapter4-world.json",
+          "chapter4_exit_event": 499,
+          "chapter4_exit_frame": 1740308,
+          "chapter4_exit_position": [
+            -82,
+            4
+          ],
+          "chapter4_exit_face": "W",
+          "root_exit_ui_frame": 1743132,
+          "chapter5_evidence_file": "artifacts/slot1-playthrough/chapter5-world.json",
+          "chapter5_initial_frame": 1764756,
+          "root_chapter5_frame": 1790940,
+          "read_only_save_check": {
+            "LastUsedSaveSlot": 1,
+            "CurWorld": 5,
+            "chapter_5_entered": 1,
+            "accomplishLevelCount": 119,
+            "accomplishCollectionCount": 6,
+            "accomplishLinkCount": 3
+          },
+          "account_cache_evidence": "artifacts/achievements/20261006T091744068770Z.json",
+          "scope": "Official local cache unlock corroborated by normal Slot1 chapter4 to5 transition; server synchronization not independently checked."
+        }
+      ],
       "api_name": "ACH_PASSCH4",
       "name_zh": "演生",
       "requirement_source": "Steam local official achievement schema",
-      "account_unlock_time_utc": null
+      "account_unlock_time_utc": "2026-10-06T09:15:11+00:00"
     },
     {
       "name": "Yellow",
@@ -438,7 +466,7 @@
     "unlocked_count": 5,
     "note": "首次读取账户缓存发生于 slot1 开始游玩之后；不能作为零时刻基线。"
   },
-  "latest_account_evidence": "artifacts/achievements/20261006T063137779163Z.json",
+  "latest_account_evidence": "artifacts/achievements/20261006T091744068770Z.json",
   "account_status_source": "Steam local binary VDF cache, read-only; server synchronization not independently verified",
-  "account_observed_at_utc": "2026-10-06T06:31:37.779163+00:00"
+  "account_observed_at_utc": "2026-10-06T09:17:44.068770+00:00"
 }

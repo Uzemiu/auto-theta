@@ -127,30 +127,41 @@
       "4-27",
       "4-24",
       "4-19",
-      "3-27"
+      "3-27",
+      "5-1"
     ],
     "last_observed_location": {
-      "scene": "Template3",
-      "level_label": "3-B",
-      "level_id": "extension",
-      "time": 0,
-      "instructions": "",
-      "save_slot": 1,
-      "player": {
-        "id": 34,
-        "pos": [
+      "scene": "Template5",
+      "level_id": "space",
+      "world": false,
+      "level_label": "5-2",
+      "player_positions": [
+        [
           2,
-          1
-        ],
-        "fork": 0,
-        "ghost": 0,
-        "contained": 0
-      },
-      "evidence_file": "../artifacts/slot1-playthrough/3-B.json",
-      "evidence_event": 17,
-      "frame": 1005049,
+          4
+        ]
+      ],
+      "axis_player_positions": [
+        {
+          "axis": [
+            0,
+            0,
+            0
+          ],
+          "time": 0,
+          "positions": [
+            [
+              2,
+              4
+            ]
+          ]
+        }
+      ],
       "observed_on": "2026-10-06",
-      "completed": false
+      "evidence_file": "../artifacts/slot1-playthrough/5-2.json",
+      "source_field": "initial",
+      "frame": 2076460,
+      "note": "5-1完成120，自动退world5后DWDDW+单D正常进入5-2空间fresh0。P43/F0/key0/g0，C4/C1/C2各一箱，无关内输入；入场inputlock正常待稳定，不重发。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -189,6 +200,25 @@
           "../artifacts/slot1-playthrough/chapter1-world.json",
           "../artifacts/slot1-playthrough/chapter2-world.json"
         ]
+      },
+      {
+        "from": "Chapter4",
+        "to": "Chapter5",
+        "on": "2026-10-06",
+        "from_pos": [
+          -82,
+          4
+        ],
+        "face": "W/north",
+        "input": "confirm",
+        "world4_evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
+        "world4_UI_event": 499,
+        "world4_confirm_event": 500,
+        "to_evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "to_initial_frame": 1764756,
+        "to_stable_event": 7,
+        "to_stable_frame": 1781523,
+        "note": "正常入口按朝向有真实UI，previous -83,4/S无UI不能否定东邻面W的合法升层；普通数字欠关未补齐。"
       }
     ],
     "paused_at_utc": "2026-10-05T05:37:23.481699+00:00",
@@ -286,7 +316,7 @@
       "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。",
       "2026-10-06用户goal continuation恢复：正常MCP启动slot1；旧70运行内状态不在，新世界fresh0安全导航后正常重建92，并逐条实測新23候选到115；未通关，不增加count。"
     ],
-    "verified_completed_count": 119
+    "verified_completed_count": 120
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
@@ -298,7 +328,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 119,
+  "verified_completed_count": 120,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -1427,21 +1457,35 @@
       "name": "撬锁",
       "internal_level_id": "lockpick2",
       "status": "attempted",
-      "verified_on": "2026-09-24",
+      "verified_on": "2026-10-06",
       "solution_file": "solutions/3-19.md",
       "evidence_file": "../artifacts/slot1-playthrough/3-19.json",
       "slot1_attempt": {
         "completed": false,
-        "checkpoint_actions": "WWSAWDDDDDWWDWXDWWDSSSWWAWWWDSSSSSWAAAAASDDWDWAAAWDWDSDSDWDW",
-        "checkpoint_time": 60,
-        "undo_count": 30,
-        "retry_count": 2,
-        "note": "第二次重试后59步造8,4四箱夹困；第60W72原地等待、63推开左箱到7,5，实际异奇偶双活人7,4/8,4；继续清柱。 已正常返回世界46,18；用户要求提交后暂停，未进入3-B。"
+        "checkpoint_actions": "WWSAWDDDDDWWDWXDWWDSSSWWAWWWDSSSWWAAAASWWDDWAADSSWDAWD",
+        "checkpoint_time": 54,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_event": 85,
+        "frame": 1097671,
+        "checkpoint_is_current_runtime": false,
+        "note": "2026-10-06重建历史53并真实单D Color3相反力分两叶；各一free F0/key0，无cargo/融合/死亡，仍未完成。随后正常退出去Chapter4。旧30undo/2retry历史保留。"
       },
       "notes": [
         "2026-10-02改良53输入夹困检查点，9,3通道保留；真实A/W仍让8,4人物等待，尚无完整解。见solution新增末节。",
         "2026-10-02当前53检查点后正常返回世界，未执行D；6,4已空使困者可左反推，故D并非确定装箱。无新短解，收束此次实验。"
-      ]
+      ],
+      "attempt_history": [
+        {
+          "completed": false,
+          "checkpoint_actions": "WWSAWDDDDDWWDWXDWWDSSSWWAWWWDSSSSSWAAAAASDDWDWAAAWDWDSDSDWDW",
+          "checkpoint_time": 60,
+          "undo_count": 30,
+          "retry_count": 2,
+          "note": "第二次重试后59步造8,4四箱夹困；第60W72原地等待、63推开左箱到7,5，实际异奇偶双活人7,4/8,4；继续清柱。 已正常返回世界46,18；用户要求提交后暂停，未进入3-B。"
+        }
+      ],
+      "note": "actual54两叶新force fixture未完成，已正常离场；两个单free真实源供小普通尾域检验。"
     },
     "3-21": {
       "name": "束缚",
@@ -1454,7 +1498,23 @@
         "action_count": 53,
         "completed": true,
         "evidence_file": "../artifacts/slot1-playthrough/3-21.json"
-      }
+      },
+      "collectible_attempts": [
+        {
+          "target": "COL7",
+          "started_on": "2026-10-06",
+          "status": "attempted",
+          "checkpoint_actions": "ASSWWWDXWWWDDDWDWDWDWSDAAWWWSSSSWDSAASS",
+          "checkpoint_time": 39,
+          "evidence_event": 62,
+          "frame": 1514885,
+          "evidence_file": "../artifacts/slot1-playthrough/3-21.json",
+          "undo_count": 0,
+          "retry_count": 0,
+          "note": "本次39/0undo0retry；新COL aligned光源A37无复活，S38推空Prism出Dark到2,7，S39拒绝继续推往Dark外2,6，幽灵转向，COL仍active。不能泛化所有COL源/Prismcargo，未加星或重计普通完成。 已正常离关，无Undo或新收藏。root对actual39的28动态字典及instructions完整diff=[]。",
+          "checkpoint_is_current_runtime": false
+        }
+      ]
     },
     "3-22": {
       "name": "闪光",
@@ -1704,8 +1764,8 @@
         "retry_count": 0,
         "evidence_event": 17,
         "frame": 1005049,
-        "checkpoint_is_current_runtime": true,
-        "note": "2026-10-06正常fresh0回访；新同tick落刺装箱域20k/22772截断无positive，未发关内输入，旧历史保留。只读helper继续具体构造，不重复旧域。119关/6星不变。"
+        "checkpoint_is_current_runtime": false,
+        "note": "2026-10-06正常fresh0回访；新同tick落刺装箱域20k/22772截断无positive，未发关内输入，旧历史保留。只读helper继续具体构造，不重复旧域。119关/6星不变。 已正常离场，helper继续只读，不是当前live。"
       },
       "attempt_history": [
         {
@@ -2601,7 +2661,23 @@
       "entry_source_frame": 1801701,
       "evidence_file": "../artifacts/slot1-playthrough/chapter1-world.json",
       "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
-      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+      "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。",
+      "entry_observations": [
+        {
+          "world_id": "Chapter5",
+          "pos": [
+            -27,
+            -15
+          ],
+          "entry_id": 30,
+          "active": true,
+          "blockable": false,
+          "pushable": false,
+          "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+          "source_field": "events[7].observation",
+          "frame": 1781523
+        }
+      ]
     },
     "6-X": {
       "status": "unknown",
@@ -2784,16 +2860,980 @@
       "evidence_file": "../artifacts/slot1-playthrough/chapter4-world.json",
       "entry_catalog_file": "../artifacts/knowledge-audits/world-entry-catalog-20261006.json",
       "note": "公开世界snapshot已观察入口，未进入，完成未证明。源只证明当时实体active/blockable/pushable，不推测当前解锁/完整internal_id/name。"
+    },
+    "5-5": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -39,
+          0
+        ],
+        "entry_id": 1,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-16": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -14,
+          -2
+        ],
+        "entry_id": 2,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-17": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -11,
+          0
+        ],
+        "entry_id": 3,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-4": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -31,
+          -13
+        ],
+        "entry_id": 4,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-8": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -32,
+          -2
+        ],
+        "entry_id": 5,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-10": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -28,
+          -2
+        ],
+        "entry_id": 6,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-15": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -14,
+          2
+        ],
+        "entry_id": 7,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-P": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          12,
+          -38
+        ],
+        "entry_id": 8,
+        "active": true,
+        "blockable": false,
+        "pushable": false,
+        "AlwaysEnable": true,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-G": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -18
+        ],
+        "entry_id": 9,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-19": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          2,
+          -14
+        ],
+        "entry_id": 10,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-20": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -1,
+          -10
+        ],
+        "entry_id": 11,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-22": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -4,
+          -10
+        ],
+        "entry_id": 12,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-R": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -68
+        ],
+        "entry_id": 13,
+        "active": true,
+        "blockable": false,
+        "pushable": false,
+        "AlwaysEnable": true,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-Z": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -64
+        ],
+        "entry_id": 14,
+        "active": true,
+        "blockable": false,
+        "pushable": false,
+        "AlwaysEnable": true,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-Y": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -48
+        ],
+        "entry_id": 15,
+        "active": true,
+        "blockable": true,
+        "pushable": true,
+        "AlwaysEnable": true,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-32": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          2,
+          -29
+        ],
+        "entry_id": 16,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-34": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          5,
+          -29
+        ],
+        "entry_id": 17,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-26": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -13,
+          -27
+        ],
+        "entry_id": 18,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-30": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -1,
+          -27
+        ],
+        "entry_id": 19,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-31": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          2,
+          -25
+        ],
+        "entry_id": 20,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-33": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          5,
+          -25
+        ],
+        "entry_id": 21,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-35": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          12,
+          -27
+        ],
+        "entry_id": 22,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-36": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          19,
+          -27
+        ],
+        "entry_id": 23,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-37": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          23,
+          -27
+        ],
+        "entry_id": 24,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-39": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          25,
+          -29
+        ],
+        "entry_id": 25,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-38": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          25,
+          -25
+        ],
+        "entry_id": 26,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-27": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -10,
+          -27
+        ],
+        "entry_id": 27,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-28": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -27
+        ],
+        "entry_id": 28,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-29": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -4,
+          -27
+        ],
+        "entry_id": 29,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-21": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -1,
+          -14
+        ],
+        "entry_id": 31,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-23": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -4,
+          -14
+        ],
+        "entry_id": 32,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-18": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          2,
+          -10
+        ],
+        "entry_id": 33,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-24": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -10
+        ],
+        "entry_id": 34,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-25": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -7,
+          -14
+        ],
+        "entry_id": 35,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-3": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -34,
+          -15
+        ],
+        "entry_id": 36,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-7": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -32,
+          2
+        ],
+        "entry_id": 37,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-9": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -28,
+          2
+        ],
+        "entry_id": 38,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-14": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -18,
+          -2
+        ],
+        "entry_id": 39,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-2": {
+      "status": "attempted",
+      "entry_observed": true,
+      "entered": true,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -34,
+          -11
+        ],
+        "entry_id": 40,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "5-1完成后5-2实时unblocked，正常世界5方向+单D进入fresh0，未发关内方向。三色箱规则需正常观察校准。",
+      "name": "空间",
+      "internal_level_id": "space",
+      "solution_file": "solutions/5-2.md",
+      "slot1_attempt": {
+        "actions": "",
+        "action_count": 0,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-2.json",
+        "source_field": "initial",
+        "frame": 2076460,
+        "checkpoint_is_current_runtime": true
+      }
+    },
+    "5-12": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -22,
+          -2
+        ],
+        "entry_id": 41,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-13": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -18,
+          2
+        ],
+        "entry_id": 42,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-1": {
+      "status": "completed_verified",
+      "entry_observed": true,
+      "entered": true,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -37,
+          -13
+        ],
+        "entry_id": 43,
+        "active": true,
+        "blockable": false,
+        "pushable": false,
+        "AlwaysEnable": true,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "实际52末D正常completedtrue回执后自动回world；没有完整final关内状态，保留该限制。SaveSlot1 limboState3、exact52 record与正常累计120交叉核通过，6星/link3不变。C4同tickSPIKE捕获后Goal观察生成生死两叶，箱内活人3,7与两叶free44底6,1/7,1覆盖三个Goal。0Undo/0retry。",
+      "name": "弥留",
+      "internal_level_id": "limbo",
+      "solution_file": "solutions/5-1.md",
+      "slot1_attempt": {
+        "actions": "AAXX",
+        "action_count": 4,
+        "checkpoint_time": 4,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-1.json",
+        "evidence_event": 12,
+        "frame": 1871448,
+        "checkpoint_is_current_runtime": false
+      },
+      "verified_on": "2026-10-06",
+      "slot1_run": {
+        "actions": "AAXXWDDDWDWDWAASAWDDDWASAADWWSAWSSSSDDDDDTSSSSDDDDDD",
+        "action_count": 52,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/5-1.json",
+        "completion_receipt_event": 48,
+        "full_completed_state_captured": false,
+        "save_verification": "root: Settings1/limboState3/exact52 record strict equality/count120; normal SaveSlot1"
+      }
+    },
+    "5-6": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -35,
+          0
+        ],
+        "entry_id": 44,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+    },
+    "5-11": {
+      "status": "unknown",
+      "entry_observed": true,
+      "entered": false,
+      "entry_observation": {
+        "world_id": "Chapter5",
+        "pos": [
+          -22,
+          2
+        ],
+        "entry_id": 45,
+        "active": true,
+        "blockable": true,
+        "pushable": false,
+        "AlwaysEnable": false,
+        "evidence_file": "../artifacts/slot1-playthrough/chapter5-world.json",
+        "source_field": "events[7].observation",
+        "frame": 1781523
+      },
+      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
     }
   },
   "last_observed_location": {
-    "scene": "3-0",
-    "level_id": "Chapter3",
-    "world": true,
+    "scene": "Template5",
+    "level_id": "space",
+    "world": false,
+    "level_label": "5-2",
     "player_positions": [
       [
-        14,
-        17
+        2,
+        4
       ]
     ],
     "axis_player_positions": [
@@ -2806,17 +3846,17 @@
         "time": 0,
         "positions": [
           [
-            14,
-            17
+            2,
+            4
           ]
         ]
       }
     ],
     "observed_on": "2026-10-06",
-    "evidence_file": "../artifacts/slot1-playthrough/chapter3-world.json",
-    "current_event": 594,
-    "frame": 831167,
-    "note": "3-27真实99输入完成后正常自动返回Chapter3[14,17]/F1；rootSaveSlot1累计119，无新增星。goal仍active，等待下一未完成关的新positive，不自行暂停。"
+    "evidence_file": "../artifacts/slot1-playthrough/5-2.json",
+    "source_field": "initial",
+    "frame": 2076460,
+    "note": "5-1完成120，自动退world5后DWDDW+单D正常进入5-2空间fresh0。P43/F0/key0/g0，C4/C1/C2各一箱，无关内输入；入场inputlock正常待稳定，不重发。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

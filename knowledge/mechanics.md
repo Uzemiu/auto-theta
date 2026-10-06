@@ -1029,3 +1029,31 @@ actual84/event125/frame732542的前态为P52[8,8]/W、P59[9,9]/W、Pri50[9,10]�
 实际短尾保留已到Goal的旧time50、62旁观叶：axis0七A到[1,9]/time92；T选axis1，D到[9,9]/time86；T依次略过已覆盖[5,9]/time62和[7,9]/time50的叶；T选axis4，A到[3,9]/time32；最后T回axis0/time92，event151/frame815971收到completed=true。五个活人均ghost0、uncontained、Fork0，五叶直接联合覆盖五Goal；完整99指令编码与SaveSlot1 dispersion记录严格一致，LevelState=3、累计119关。
 
 只证明本关三次逐列复活和末次正交争推的实际五叶路线，不推广任意暗区复活次数、任意幽灵/容器或任意时间投影的全局完成判定。切至较早time时公开观察可能显示其他叶的历史状态，应保留真实终点并返回已推进的最高time核完成。源和旧所有失败探针保留在 [3-27主记录](../artifacts/slot1-playthrough/3-27.json)，可复现的准确流程见 [解法](solutions/3-27.md)。
+
+### M135 两个无叉外人普通争推Color3空箱，败者被屏蔽而不被装载（3-19）
+
+2026-10-06正常重入「撬锁」，重建旧53串 `WWSAWDDDDDWWDWXDWWDSSSWWAWWWDSSSWWAAAASWWDDWAADSSWDAW`。新event81/frame1084425的71个完整实体字典及instructions，与旧实际event61严格相等（含GMID/动画）；owner另核地形，合计167物理/静态条目。两free63[6,4]、70[8,4]均Fork0/key0/ghost0，BOX64[7,4]；右方BOX67[9,4]背后Wall10,4、上方Wall8,5限制右人转向。这里不是模型中的确定夹困捕获。
+
+仅single D被接受一次（receipt83、executed1/remaining0），随后快速公开观察及最终event85/frame1097671记录actual54的两轴，guards全清、两轴time54：axis0的63到[7,4]/D活、BOX64到[8,4]，70仍[8,4]但inactive/maskedoff1/ghost0；axis1的70到[7,4]/A活、BOX64到[6,4]，63仍[6,4]但inactive/maskedoff1/ghost0。每轴六空Color3箱保持active、height1、uncontained，另五箱不变；活人均Fork0/key0/ghost0/uncontained。没有cargo、融合、新箱、死亡或额外分叉库存；key[5,5]仍active，Lock[12,3]仍闭，Goal[13,3]未覆盖，completed=false。
+
+本例直接证普通D请求与右人fallback A请求对同箱形成两条关联叶；否定旧普通模型把该动作直接bad/null处理，也否定将胜者/败者同格看成装箱。败者被masked，不能继续当第二推手使用。owner之后正常离场；root随后公开观察已是Chapter3世界，没有取得另一份root关内54现场，最终分支证据来自保存的正常公开回执与观察。各叶新普通WASD尾仅3000扩展、分别3833/3755已见，均截断无Goal/钥匙，不是全关穷尽或不可解证明。见 [3-19主记录](../artifacts/slot1-playthrough/3-19.json)、[解法与历史](solutions/3-19.md)、[新两叶有限尾报告](../scratch/ch3-19-postforce-tail-oct06.md)。
+
+### M136 COL7对齐未触发光照，幽灵拒出黑暗时不继续推动空棱镜（3-21）
+
+2026-10-06正常回访已完成的3-21「束缚」以调查COL7，不增加普通通关数。fresh后仅重建已实证前8 `ASSWWWDX`，主event34/frame1264741：P73[5,5]/D、95[5,3]/D均活、ghost0/Fork0/free，Pri74[5,6]，COL76[2,6]active。root独立frame1378843的28个非Wall/Floor动态实体完整字典及instructions逐键diff=[]；历史没有精确旧8帧，不能声称该比较来自旧8。
+
+正常接已实证17步到25，再新11步 `WWWSSSSWDSA` 到36，主event50/frame1426596：Ghost73[4,8]/A、95[2,10]/A、Pri74[3,8]、两门closed、18个DARKactive。only A37（event56/frame1442933）把Pri推到[2,8]、73到[3,8]/A，95因墙转S到安全[2,9]/S。Pri lighten/traversed/testCompleted均false、18DARK不变，两人仍ghost1/free活、单leaf，COL7仍active；没有复活或取物。此结果只否定COL[2,6]与Pri[2,8]这一对齐位置足以发光复活的假设，不排除同格或其他合法观测条件。
+
+随后两次single S各接受一次并立即完整公开采样。S38/event59/frame1510904将Pri[2,8]推至非DARK[2,7]；95进入SPIKE+DARK[2,8]/S仍ghost1活，73因S离开DARK受阻转D至[4,8]。S39/event62/frame1514885中Pri仍[2,7]没有先行推到COL[2,6]，95改D至[3,8]、73到[5,8]；两ghost全活、Fork0/uncontained、18DARK不变、全部Pri flags false、COL仍active。root独立frame1558332与event62全部28个动态实体完整字典（含properties/details/GMID/anim）及39指令严格diff=[]。
+
+只证该freeGhost面对DARK外空Pri的S推进在拒走时一并拒绝，不能模拟为“物体先移，幽灵再回转”。没有实际Prism/COL同格，不替它记光照阴性，也不把普通BOX内Ghost离开DARK的M073直接推广到Prism乘员。当前39两F0自由ghost不能从其Dark内合法推位再移动Pri[2,7]，后续普通移动的固定态没有取星正路径；fresh的其他生人、分裂、装载或组合前置仍未知。新光学部署模型累计1843扩展，独立cargo前置仅8000截断无捕获/hold，均不作全关无解证明。见 [3-21历史与回访](solutions/3-21.md)、[光学短判别](../scratch/ch3-21-col7-optical-oct06.md)、[cargo局部范围](../scratch/ch3-21-col7-cargo-oct06.md)。
+
+### M137 同刻地刺捕入C4后，目标观测产生生死两叶并复用旁观者覆盖三Goal（5-1）
+
+2026-10-06第五章5-1「弥留」真实52输入完成，本次0Undo/0retry。AAXX实际4/event12/frame1871448得到三free：42[2,1]、43[2,2]、44[2,4]，均Fork0/key0/ghost0；唯一C4 BOX41[5,6]。第一次X的新北子取第二Fork，第二次X时无叉42原位等待，43分裂生成44，资源相位因此不同；没有凭空增加Fork或把F0 X当再复制。
+
+actual4后24步到28/event24/frame1975351：BOX41[4,6]、42[5,6]/W、43[3,5]/A、44[2,4]/W。single W29/event27/frame1998821：42因真实Wall[5,7]改A推Box到SPIKE[3,6]，43直W同时进入[3,6]，实际active/ghost1/contained1/container41/Fork0/height1，42在[4,6]/A、44在[2,5]/W仍活free。这验证本C4同刻地刺捕获，没有把“先删裸刺角色”的旧模型当规则。root独立frame2023660在后续S30与main event29/frame2013105全部9个动态实体完整字典及instructions一致，diff=[]，cargo仍在3,6、仅face随S改变；不声称独立取得29快照。
+
+SA到31后single W32/event37/frame2030946把cargo/Box送Goal[3,7]，裸推者42在SPIKE[3,6]死亡。真实两叶同time32：axis0的43活ghost0/cargo41在[3,7]，44在[1,5]活free；axis1的43 inactive/ghost1/maskedoff1仍cargo41，44同样活free。两叶同timeline id45，选线须用axis与43活性核，不能只按id。旁观者44先在生叶用SSSSDDDDD到Goal[6,1]/time41，T选死叶，再SSSSDDDDDD到Goal[7,1]/time42；最高time42核三Goal联合覆盖。
+
+唯一末D52的实际receipt48明确level_id=limbo、completed=true、stop_reason=level_completed、executed1/remaining0，末玩家44[7,1]。自动退世界太快，没有完整completed实体帧；旧stableguard拒input_locked的脚本exit1仅是执行异常，末D已接受且没有重发、撤销或游戏重试。root只读SaveSlot1 limboState=3，准确52指令编码与LevelRecords.limbo严格全字符串相等，完成数120、星6/link3不变，足以将本次正常完成核实；不补造终态快照。准确动作与全回执见 [5-1解法](solutions/5-1.md) 和 [只读模型核验](../scratch/ch5-1-capture-oct06.md)。只证明本C4、三free及固定Goal观测实例，不推广任意颜色、任意Ghost分裂或所有观察次序。

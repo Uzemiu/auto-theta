@@ -229,4 +229,16 @@ Steam本地缓存于2026-10-06T06:31:37Z重新读取仍13/28，证据 `artifacts
 
 owner正常99输入完成「3-27 色散」，主JSON event151/frame815971为dispersion、world=false、completed=true。本次0Undo/0retry，历史尝试全保。root只读核Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.dispersion=3；实际instructions按W1/A2/S3/D4/X5/T8编码后与LevelRecords.dispersion完整字符串严格相等，长度99。accomplishLevelCount=119、accomplishCollectionCount=6、accomplishLinkCount=3；不修改存档或账户成就。
 
-完成后正常自动返回Chapter3[14,17]/Fork1、time0/instructions空，主world event594/frame831167及root独立frame831878、928926一致。119关知识库审计 `artifacts/knowledge-audits/20261006T075753568192Z.json` 核recorded=save_completed=119、issues=[]；它只覆盖已登记完成条目，不证明全部游戏目标已完成。新checkpoint见 [恢复与119关核验](checkpoints/2026-10-06-resume.md)，当前交接和下一实际位置随owner继续更新；旧118基线哈希不代表新增通关后的文件哈希。
+完成后正常自动返回Chapter3[14,17]/Fork1、time0/instructions空，主world event594/frame831167及root独立frame831878、928926一致。119关知识库审计 `artifacts/knowledge-audits/20261006T075753568192Z.json` 核recorded=save_completed=119、issues=[]；它只覆盖已登记完成条目，不证明全部游戏目标已完成。新checkpoint见 [恢复、119关与第五章到达](checkpoints/2026-10-06-resume.md)，当前交接和下一实际位置随owner继续更新；旧118基线哈希不代表新增通关后的文件哈希。
+
+## 2026-10-06 正常通过第四章进入第五章
+
+正确西侧出口是Chapter4[-82,4]朝W，world4主event499/frame1740308与root独立frame1743132均有“前往上层”UI。正常confirm后Chapter5 canonical初frame1764756，root独立frame1790940确认[-44,-25]/Fork0/key0/ghost0、world/time0、空instructions、guards全清。root只读核Settings LastUsedSaveSlot=1、SaveSlot1 CurWorld=5、PlayerPosWorld[-44,-25]、Counters.chapter_5_entered=1；accomplishLevelCount=119、accomplishCollectionCount=6、accomplishLinkCount=3，没有以转章加普通关数。世界LevelStates仍仅Chapter0为3，不把楼梯通过或章节成就混算成WorldGoal完成。
+
+Steam本地缓存新解锁ACH_PASSCH4「演生」时间2026-10-06T09:15:11Z，读取证据 `artifacts/achievements/20261006T091744068770Z.json` 为14/28；knowledge/achievements.json已用正常Slot1转章、存档计数和该缓存交叉记录本轮条件达成，slot1 requirement_verified总13。服务器同步仍未独立确认，全成就尚未完成，继续第五章正常游玩。
+
+## 2026-10-06 5-1「弥留」正常52输入完成：120关
+
+主5-1.json原始event48 receipt为Template5/level_id=limbo、completed=true、stop_reason=level_completed、executed1/remaining0、undo_depth52、44[7,1]。正常自动退世界后未捕获完整completed实体观察；主completion_receipt/run明确full_completed_state_captured=false，没有补造终态。末D已经接受，尾脚本因stableguard随后看到自动世界跳转而exit1，仅记录脚本异常，没有再发方向、Undo或retry。
+
+root只读Slot1 LevelStates.limbo=3，准确串 `AAXXWDDDWDWDWAASAWDDDWASAADWWSAWSSSSDDDDDTSSSSDDDDDD` 长52（含1T），按W1/A2/S3/D4/X5/T8编码与LevelRecords.limbo完整相等；accomplishLevelCount=120、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld=5。原始完成回执自带正确runtime id，配合前两Goal的实际叶终点和正常保存记录交叉核实，不因缺完整终态伪造或否认该真实通关。owner继续正常5-2首入，目标仍全28成就。
