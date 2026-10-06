@@ -43,3 +43,9 @@ actual31接WWAA至35/time37：58[6,5]/A、59[6,1]/S，56[5,5]/57[4,5]active。si
 装载后的手工MODEL28 `SAAWWDDSDWDDSDDWAAASSSSSAWWW` 由actual51重放，完整60字段在`postCapture.trace`；只先部署7 SAAWWDD将cargo57送4,5、empty56送5,5、free59至3,5，再SD至4,4，singleW61独测Shadow cargo在4,6裸SPIKE保护。若此前影消失则立即按实际止，不批后尾。条件后尾把buffer从7,5回推4,5；outside经干净ICE回左区、到4,4，再singleW80/time85把cargo推4,7、buffer推4,6，outside59落4,5保护。这个顶通道运送几何不以“必须双人全活free”妨碍正常装载，也不预授影箱属性；containedface按已实证输入方向更新，运动随实际容器。
 
 4,7角落箱不能普通左推至Goal1,7：north4,8/east5,7都是Wall，向左推侧5,7不可达。上Goal1,7横row7通4,7是否令影箱消失/角色释放仍是单步未知，不因当前无col4Pri而断言阴性，也不借5-5空影到Goal直接消失推广载人远距照影。Pri55@2,1普通无法回4,1的推侧限制保留，当前路径提供机制观测，不承诺全解。捕获前ICE错误较长预测、旧182nohit和未执行DDWS+X全部保留。
+
+实际Shadow入裸SPIKE61已阳性main74/frame6756927，61inputs/time65：58[4,6]active/ghost0/contained57，Shadow57仍active，free59[4,5]/W活，buffer56[5,5]active。前7、SD及单W共四停点全部60完整字典/88tiles与`postCapture.trace`严格相等。此具体Shadow装载防刺实测不泛化任意颜色或出生时序，亦未释放。owner下一9 DDSDDWAAA只回收buffer至4,5，再9 SSSSSAWWW回到4,4，ICE76单独核，最后W80未知需actual。
+
+仅在W80真实给Shadow57inactive、58 alive/ghost0/free4,7、59free4,5且buffer56 active4,6时，可采用候选11 ASASASDSAAA：58在行7的3/4格墙回转，最后1,7；59从4,5经左安全区到3,1观察底Pri。`releaseConditionalTail`完整60字段只是手工条件重放，无搜索、没有伪造释放；不能S从4,7先推buffer离刺，以免裸踩4,6死亡。若80仍cargo、死或有其它属性，则该尾不适用。
+
+owner后给更短8 ASDSASDS，私模独立0search重放同样安全：58交替3/4,7，每次S前在3,7，59经3,5/3,4/4,4/4,3/3,3/3,2/4,2到4,1，88/time93时底部东观察、上方4,7。该8优先但完整completion仍unknown；若88已completed立即停，若仍false且几何/属性一致，可备用AAA使58真正到Goal1,7、59在3/4,1往返，91/time96。`ownerConditionalTail8`保全60字段，旧11未执行候选不删除，两者都依赖80实际release。

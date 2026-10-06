@@ -1298,3 +1298,11 @@ M151的安全北推15后，正常DDDSSDS到22/持叉5,2/S，single X23实际原5
 主63/frame6695893对root独立6716955全部60实体完整字典、88实际tiles、准确51串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWW` 及time55严格相等，level.completedfalse。新前置域992expanded/1219seen、pending227首hit即止、无handle/保存队列；加旧182封闭域合计1174扩展，各限定只描述其目标范围，不能称整关已解。
 
 本实测没有隔离所有Shadow接触方向，也没有证明载人残影跨SPIKE、消影后释放或箱内角色如何满足Goal。后续只按实际边界补证，不把本alive/ghost0货物当既有C4/Ghost结果或成就条件，见 [5-11解法](solutions/5-11.md)。
+
+### M158 Color1残影箱内的活角色进入裸地刺后仍活着（5-11实际61/time65）
+
+M157的装箱51后，正常7步 `SAAWWDD` 搬运至cargo57/58[4,5]与空Shadow56[5,5]，再SD使外部59站4,4。下一single W61将载人Shadow57推到[4,6]的裸SPIKE；外部59停安全Floor[4,5]，空Shadow56仍5,5。
+
+主74/frame6756927对root独立6767629全部60实体完整字典、88实际tiles、准确61串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDW` 及time65严格相等：Shadow57[4,6]active/Shadowtrue/Color1，58同格active/ghost0/contained1/container57/height1/maskedoff0/F0，59仍active/F0/ghost0/free。没有新增死亡、Ghost、Force叶或释放，level.completedfalse。
+
+这里明确隔离了唯一无Wall覆盖的SPIKE4,6，证明本载人Color1 Shadow构型提供保护，不把右上Wall覆盖的SPIKE计入跨刺。不推广至所有影箱颜色、光照、消影或多时步：上方4,7的释放与Goal有效性仍须单步实测。仍0Undo/0retry，完成125不变，见 [5-11解法](solutions/5-11.md)。

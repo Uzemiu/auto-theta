@@ -142,8 +142,8 @@
       "level_label": "5-11",
       "player_positions": [
         [
-          2,
-          5
+          4,
+          6
         ],
         [
           4,
@@ -157,11 +157,11 @@
             0,
             0
           ],
-          "time": 55,
+          "time": 65,
           "positions": [
             [
-              2,
-              5
+              4,
+              6
             ],
             [
               4,
@@ -172,9 +172,9 @@
       ],
       "observed_on": "2026-10-07",
       "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-      "current_event": 63,
-      "frame": 6695893,
-      "note": "51inputs/time55、Ghost0 Shadowcargo+1free，125/6星/link3，0Undo/retry/nohandle。"
+      "current_event": 74,
+      "frame": 6756927,
+      "note": "61/time65 Color1Shadow保护真证，125/6星/link3，0Undo/retry/nohandle。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -4055,20 +4055,20 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "actual51/time55 Shadow57活载原58 Ghost0/container57/contained1，另一free59[4,5]保活，emptyShadow56[3,5]；root6716955全60/88/instr等。新992导航后singleW同tick安全捕获，上Goal释放仍未测，0Undo/retry。",
+      "note": "actual61/time65 Shadow载cargo58进入Spike4,6仍active/g0/contained57，free59在4,5安全、buffer56在5,5；root6767629全60/88/指令等。下一buffer回4,5及singleW80释放未知，0Undo/retry。",
       "name": "释放",
       "internal_level_id": "release",
       "solution_file": "solutions/5-11.md",
       "slot1_attempt": {
-        "actions": "DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWW",
-        "action_count": 51,
-        "checkpoint_time": 55,
+        "actions": "DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDW",
+        "action_count": 61,
+        "checkpoint_time": 65,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-        "evidence_event": 63,
-        "frame": 6695893,
+        "evidence_event": 74,
+        "frame": 6756927,
         "checkpoint_is_current_runtime": true
       }
     }
@@ -4080,8 +4080,8 @@
     "level_label": "5-11",
     "player_positions": [
       [
-        2,
-        5
+        4,
+        6
       ],
       [
         4,
@@ -4095,11 +4095,11 @@
           0,
           0
         ],
-        "time": 55,
+        "time": 65,
         "positions": [
           [
-            2,
-            5
+            4,
+            6
           ],
           [
             4,
@@ -4110,9 +4110,9 @@
     ],
     "observed_on": "2026-10-07",
     "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-    "current_event": 63,
-    "frame": 6695893,
-    "note": "51inputs/time55、Ghost0 Shadowcargo+1free，125/6星/link3，0Undo/retry/nohandle。"
+    "current_event": 74,
+    "frame": 6756927,
+    "note": "61/time65 Color1Shadow保护真证，125/6星/link3，0Undo/retry/nohandle。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
