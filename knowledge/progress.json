@@ -132,13 +132,14 @@
       "5-2",
       "5-3",
       "5-5",
-      "5-6"
+      "5-6",
+      "5-9"
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "blink",
+      "level_id": "delete",
       "world": false,
-      "level_label": "5-9",
+      "level_label": "5-10",
       "player_positions": [
         [
           3,
@@ -162,10 +163,10 @@
         }
       ],
       "observed_on": "2026-10-06",
-      "evidence_file": "../artifacts/slot1-playthrough/5-9.json",
-      "current_event": 1,
-      "frame": 5368250,
-      "note": "5-9fresh0，5-8历史46/Undo9未完，124/6星/link3。"
+      "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
+      "current_event": 0,
+      "frame": 5717560,
+      "note": "5-10遮罩fresh0，正常完成125/6星/link3，0Undo/retry，无inputhandle。"
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -320,7 +321,7 @@
       "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。",
       "2026-10-06用户goal continuation恢复：正常MCP启动slot1；旧70运行内状态不在，新世界fresh0安全导航后正常重建92，并逐条实測新23候选到115；未通关，不增加count。"
     ],
-    "verified_completed_count": 124
+    "verified_completed_count": 125
   },
   "scope": "本知识库中经实际游玩确认的进度，不代表存档的完整解锁或完成情况",
   "status_definitions": {
@@ -332,7 +333,7 @@
   },
   "unlisted_level_status": "unknown",
   "total_game_levels": null,
-  "verified_completed_count": 124,
+  "verified_completed_count": 125,
   "levels": {
     "1-1": {
       "name": "叉子",
@@ -3033,9 +3034,9 @@
       }
     },
     "5-10": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -3051,7 +3052,22 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "正常SSSS+D入5-10，真实fresh0/65entities/116tiles；下一DD取Fork，未完成，禁提示。",
+      "name": "遮罩",
+      "internal_level_id": "delete",
+      "solution_file": "solutions/5-10.md",
+      "slot1_attempt": {
+        "actions": "",
+        "action_count": 0,
+        "checkpoint_time": 0,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
+        "evidence_event": 0,
+        "frame": 5717560,
+        "checkpoint_is_current_runtime": true
+      }
     },
     "5-15": {
       "status": "unknown",
@@ -3725,7 +3741,7 @@
       }
     },
     "5-9": {
-      "status": "attempted",
+      "status": "completed_verified",
       "entry_observed": true,
       "entered": true,
       "entry_observation": {
@@ -3743,7 +3759,7 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "5-8正常退world[-32,-1]，实时5-9[-28,2]unblocked，safeWWDDDWD最后D正常进入fresh0。所有暗示/启示禁用，下一Pri移行每步看Shadow。",
+      "note": "真实眨眼换行避免照影，Shadow压Button后牺牲右free，左free穿门推GoalPri到0,8完成。S10照影失败/Undo1及光flag模型差异全保；正常Slot1 blink3/exact60核125/6星/link3。",
       "name": "眨眼",
       "internal_level_id": "blink",
       "solution_file": "solutions/5-9.md",
@@ -3757,7 +3773,37 @@
         "evidence_file": "../artifacts/slot1-playthrough/5-9.json",
         "evidence_event": 1,
         "frame": 5368250,
-        "checkpoint_is_current_runtime": true
+        "checkpoint_is_current_runtime": false
+      },
+      "verified_on": "2026-10-06",
+      "normal_save_verification": {
+        "verified_at_utc": "2026-10-06T15:16:17.023411Z",
+        "verified_by": "root read-only normal SaveSlot1",
+        "LastUsedSaveSlot": 1,
+        "LevelState_key": "blink",
+        "LevelState_value": 3,
+        "exact_actions": "DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA",
+        "saved_record": "422111123433211444334351132211111414323344342332141411111412",
+        "exact_record_equal": true,
+        "independent_completed_count": 125,
+        "stars": 6,
+        "link": 3,
+        "CurWorld": 5,
+        "save_sha256": "b49561c9cb570aa6ea13034060a912be73c1182ff17f6a9f93deb494962668d0",
+        "root_current_live_world_frame": 5661622
+      },
+      "slot1_run": {
+        "actions": "DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA",
+        "action_count": 60,
+        "completed": true,
+        "evidence_file": "../artifacts/slot1-playthrough/5-9.json",
+        "completion_event": 59,
+        "frame": 5643594,
+        "full_completed_state_captured": true,
+        "undo_count": 1,
+        "retry_count": 0,
+        "search_expanded": 634,
+        "save_verification": "root 2026-10-06T15:16:17.023411Z blink3/exact60/count125"
       }
     },
     "5-14": {
@@ -4006,9 +4052,9 @@
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "blink",
+    "level_id": "delete",
     "world": false,
-    "level_label": "5-9",
+    "level_label": "5-10",
     "player_positions": [
       [
         3,
@@ -4032,10 +4078,10 @@
       }
     ],
     "observed_on": "2026-10-06",
-    "evidence_file": "../artifacts/slot1-playthrough/5-9.json",
-    "current_event": 1,
-    "frame": 5368250,
-    "note": "5-9fresh0，5-8历史46/Undo9未完，124/6星/link3。"
+    "evidence_file": "../artifacts/slot1-playthrough/5-10.json",
+    "current_event": 0,
+    "frame": 5717560,
+    "note": "5-10遮罩fresh0，正常完成125/6星/link3，0Undo/retry，无inputhandle。"
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

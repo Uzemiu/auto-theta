@@ -1224,3 +1224,27 @@ root独立frame5174131对主62全部104实体完整字典、207实际tiles及准
 以恢复43为源，新的固定三箱导航只展开5个节点、seen8，得到AS两步到45；free79[9,3]/104[7,3]，三箱没有移动。随后唯一single W46，主68/frame5310861：75仍[8,5]作为残影西邻普通箱，76到[9,6]、Shadow78到[9,5]且active，两个active/F0/free在[9,4]/[7,4]。45、46主原始状态对私人replay的全部104实体与207tiles严格等；这与44将75移到8,6、玩家占西邻而失影形成具体对照。不能据此预授下一次W或任意残影方向的遮光规则。
 
 准确46串 `DDSSAAAAAAAWWWWDXSSSWASSDDDWDSASDDASDDWASSDASW`，累计Undo9/0retry，未完成Button或Goal。root后续独立frame5367563已正常返回Chapter5，没有另捕获46关内现场；不能把44独立核验移作46证明。46及全部阴性保为历史，owner转新关继续全成就，旧2035闭域不重跑。三有效物到row1并送Button的末推者牺牲路线仍只是假设前置，详见 [按钮条件审计](../scratch/ch5-8-optics-layout-oct06.md)。
+
+### M151 棱镜下移对齐残影横行后消影，绕行北推则保留残影（5-9实际10/15）
+
+5-9「眨眼」blink的Color1 Shadow箱53初在[6,3]，可推Pri56在[1,5]。取Fork并安全到[1,6]后，single S9把Pri推至[1,4]，主10/frame5485588仍Shadowactive。下一single S10将Pri推到[1,3]、角色54到[1,4]/F1；主12/frame5485649的Shadow53[6,3]变inactive，Pri56仍traversed=false/testCompleted=false。没有角色或箱子直接碰残影，没有新增世界线或完成Goal。root独立5500128对主12的全部57实体完整字典、103实际tiles及准确10串 `DAAWWWWASS` 严格diff=[]。
+
+这一具体棱镜横行变化会消除残影，且relay的traversed=false没有否定已发生的消影；同类光学标记反例已有M144。原28步候选只实际接受前10，余下两S、出生和送钮收尾未执行，不能把几何候选当作安全完整解。正常Undo1恢复9，主14/frame5513499对原10/frame5485588的全部57实体、103tiles及instructions严格相等，Shadow重新active，timeline ID前后均57；0retry。
+
+改走安全DSSA到13、再两个single W14/15，Pri由1,4经1,5北推至1,6，绕开残影所在row3，角色54[1,5]/F1、Shadow仍[6,3]active。DSSA13仅Pri.traversed由预测false变实际true的过严断言保留，没有重发已接受输入；14/15完整校准相等。主21/frame5520468对root独立5530207的全部57字典、103tiles及准确15串 `DAAWWWWASDSSAWW` 严格diff=[]。本关累计1真实Undo、0retry，仍未完成；后续双人同步移Pri与Shadow的换行前置尚需实际出生、导航和光学边界核验，见 [5-9解法](solutions/5-9.md)。
+
+### M152 同一指令挪开棱镜横行并上推残影，完成换行时残影仍有效（5-9实际54）
+
+M151的安全北推15后，正常DDDSSDS到22/持叉5,2/S，single X23实际原54生在右6,2、新57在左4,2/GMID54，两者active/F0/ghost0/free。两single W到25：Shadow53[6,5]active、Pri56[1,6]，free54[6,4]/57[4,4]。主32/frame5545700对root独立5574284全部58实体完整字典、103tiles及25指令严格等，出生身份只取实际分配。
+
+新的固定物体共享导航仅634expanded/654seen即命中，28步 `SAAWWWWWDWDSASSDDSDASSAWDWDW` 实际到53，free54[1,7]/57[6,4]，Shadow/Pri位置未动。七个4步停点的物理、静态字段及103tiles与预测相等；33/49/53的Pri56.traversed携带预测true、实际false差异保留，不能称整段所有光学字典都相等。旧变量名nav27与先前口述59均已校正：实际导航28，换行在54，完整收尾候选为60，剩余仍须实际核。
+
+唯一single W54在左侧因GoalPri55背墙受阻而转S，将Pri56从1,6推到1,5；右侧将Shadow53从6,5推到6,6。稳定主49/frame5604702：Shadow仍active，两个free54[1,6]/S、57[6,5]/W均active/F0。root独立5627538对该停点全部58实体完整字典、103实际tiles及54instructions严格diff=[]。这证明本共同换行布局避免了M151直接对齐横行的消影，不证明任意移动次序或连续上推都安全。累计1真实Undo、0retry，无提示；按钮、死亡及末Goal的回执另核，见 [5-9解法](solutions/5-9.md)。
+
+#### M152补证：残影实际压钮、推者死亡后另一free直接覆盖Goal，正常60完成
+
+后续三个single W到57，主55/frame5629212：Color1 Shadow53[6,9]仍active压Button51，Gate50[2,8]实际blockable=false；推者57[6,8]在SPIKE上inactive/ghost1/free，54[1,7]仍active。死亡即时anim_completed=false原值保留，不按静态预测覆盖，也不把裸死当装箱或猫箱成就。随后D58/W59使54经2,7进入开Gate2,8；末single A60将GoalPri55推至真实Floor[0,8]，54占Goal[1,8]，原始receipt58/completion59/frame5643594均明确blink/completed=true。完整终态两Pri.traversed/testCompleted均false，残影仍active，不需要清除残影或满足这两个Pri的光学网络。
+
+公开terrain的103个tiles不含Goal[1,8]，该格由GOAL49.floor=true提供；0,8的type=SOLID/class=Floor、floor=true/blockable=false，不是Wall。私人模型漏合并GOAL.floor的错误已修，不能把修模型写成游戏新边界。末A的58物理/静态字段和103tiles与预测相等，55/56最终光flag携带预测差异如实保留；root后续5661622已在Chapter5，未独立另捕获60终态。
+
+准确60串 `DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA`，本次1Undo/0retry、634有限导航扩展。root于2026-10-06T15:16:17.023411Z只读Settings slot1、SaveSlot1 blinkState3，完整60编码 `422111123433211444334351132211111414323344342332141411111412` 与LevelRecords.blink严格相等；accomplishLevelCount=125、星6/link3。5-9从待办移除，5-8等历史未完成项保留，完整证据见5-9解法。

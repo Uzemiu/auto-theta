@@ -286,3 +286,13 @@ root独立live3920804已自动返回Chapter5，无独立67/73关内现场；实�
 5-8后续single W44使Shadow失活，完整主62/frame5167533与root5174131全104实体、207tiles和instructions相等；两free及普通箱仍active。正常Undo1的主64/frame5205121恢复43，全部实体/地形/指令与原59相等、Shadow重新active，本次timeline ID前后均105。累计9次正常Undo、0retry，阴性未删除、W未重发，仍无完成记录；未修改任何保存的游戏进度。
 
 恢复43后实际AS+single W到46，西邻普通箱75保持8,5，Shadow9,5重新证明有效，main68/frame5310861保存完整真实阳性；仍未到按钮或Goal。随后正常离场，root独立5367563已为Chapter5世界，46是历史fixture而非当前可直接输入的关内现场。未新增完成数，仍Slot1/124关；root未独立捕获46，原始阳性与校准范围见M150补证及5-8解法。
+
+5-9「眨眼」正常入场，fresh0 main1/frame5368250对root5413746全57实体/103tiles等。原棱镜下推候选到S10使Shadowinactive，main12/5485649对root5500128完整核验；正常Undo1主14/frame5513499恢复9与原10/5485588实体/地形/指令严格等、timelineID仍57。改绕DSSAWW到15使Pri1,6、Shadow6,3仍active，main21/5520468对root5530207全57/103等，1实际Undo/0retry。全部阴性、撤销及光flag断言异常保留，未修改存档进度、未计新通关；后续从正常现场继续，详见M151和5-9解法。
+
+## 2026-10-06 5-9「眨眼」正常60完成：125关
+
+5-9实际同步换行54主49/frame5604702对root5627538全部58实体/103tiles/instructions严格等；残影保持有效并在57压Button6,9，另一个推者在6,8裸死。末A receipt58/completion59/frame5643594为blink/completedtrue，active free54占Goal1,8、Pri55推至0,8Floor，Shadow53仍active、Gate2,8open。1Undo/0retry，旧阴性与模型光flags差异、死亡即时animfalse保留，不改存档或虚构装箱成就。
+
+root于2026-10-06T15:16:17.023411Z只读Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.blink=3；准确60串DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA编码422111123433211444334351132211111414323344342332141411111412与LevelRecords.blink完整严格相等。accomplishLevelCount=125、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5，快照SHA-256 b49561c9cb570aa6ea13034060a912be73c1182ff17f6a9f93deb494962668d0仅代表读取时点。root后续5661622已Chapter5世界，未另捕获关内60终态；成就本地cache15:18:39Z仍14/28，owner继续新关，目标未完成。
+
+125关只读审计 artifacts/knowledge-audits/20261006T152151601983Z.json recorded=save_completed=125/issues=[]，只验证已登记条目与正常SaveSlot1，未宣称第六章、全部关卡、全部星星或服务器全成就已完成。当前仍用Slot1继续正常推进，启动槽设置未改。
