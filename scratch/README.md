@@ -141,6 +141,8 @@
 | ch5-1-capture-oct06 | [cjs](ch5-1-capture-oct06.cjs) | [md](ch5-1-capture-oct06.md) | — |
 | ch5-10-delete-oct06 | [cjs](ch5-10-delete-oct06.cjs) | [md](ch5-10-delete-oct06.md) | — |
 | ch5-10-mask-layout-oct06 | — | [md](ch5-10-mask-layout-oct06.md) | — |
+| ch5-11-release-layout-oct07 | — | [md](ch5-11-release-layout-oct07.md) | — |
+| ch5-11-release-oct07 | [cjs](ch5-11-release-oct07.cjs) | [md](ch5-11-release-oct07.md) | — |
 | ch5-2-space-oct06 | [cjs](ch5-2-space-oct06.cjs) | [md](ch5-2-space-oct06.md) | — |
 | ch5-3-button-layout-oct06 | — | [md](ch5-3-button-layout-oct06.md) | — |
 | ch5-3-concrete-oct06 | [cjs](ch5-3-concrete-oct06.cjs) | [md](ch5-3-concrete-oct06.md) | — |

@@ -1278,3 +1278,23 @@ M151的安全北推15后，正常DDDSSDS到22/持叉5,2/S，single X23实际原5
 准确13串 `DSWWWDDSSSSAA`，主12/frame6326270对root独立6360120全部59实体完整字典、88实际tiles和instructions严格diff=[]。Pri55[2,1]邻GoalPri54[1,1]，两者traversed/testCompleted均true，P58[3,1]/A/F1、Shadow56[7,3]/57[7,4]仍active。关卡有另一个Goal1,7，所以level.completed仍false，没有增加125完成数。
 
 本例自动冰滑多产生一个模拟时步，记录13个实际输入与time14，不把它改成14输入或复发A12；Fork1仍保留供后续正常出生。0Undo/0retry，未证明Shadow捕获或消影释放，后续以 [5-11解法](solutions/5-11.md) 的实际新边界为准。
+
+### M156 一名角色冰滑产生额外时间，另一名角色只响应一次共同指令（5-11实际36/time39）
+
+5-11正常出生31后，WWAA到35/time37：原58[6,5]/A，新59[6,1]/S，Shadow56[5,5]/57[4,5]仍active。下一single A36中，原58向西推双影链一次，停[5,5]、双影到[4,5]/[3,5]；新59从6,1入ICE5,1后滑到4,1。实际time从37到39，58没有在冰滑的额外时步中再推一次横链。
+
+主44/frame6575191对root独立6604029全部60实体完整字典、88实际tiles及准确36串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAA` 严格diff=[]。两free均active/F0/ghost0/uncontained，双Shadowactive；Pri54[1,1]/55[2,1]位置不变，traversed/testCompleted均true，level.completedfalse。
+
+这里只校准本次双人、空ICE出口与普通影箱链的具体结果，不推广至cargo、碰撞、Force或其他冰面路径。输入次数36与模拟time39分别记录，未知捕获、消影释放及双目标完成继续逐边界实际核验。此前批次遇冰锁只接受DD、其余WD经观察后续发，没有重发DD或游戏retry；原始提前停止回执保留，见 [5-11解法](solutions/5-11.md)。
+
+反向single D37也已实际校准：新59从4,1经ICE5,1到6,1，原58仅D一次从5,5到6,5，双影仍4,5/3,5而未再次被推；实际37输入/time41。主46/frame6629156对root独立6641538全部60完整实体、88tiles及准确37指令严格相等。两个Pri仍testtrue，关卡仍未完成；额外时间没有让站在普通Floor上的另一角色重复共同指令。
+
+### M157 活角色同刻进入移动残影箱后被装载，角色与残影均仍有效（5-11实际51/time55）
+
+以实际37的新构型继续13个普通输入 `WWSAWWWDWWASW`，到50/time54：原58[2,4]/W、新59[5,5]/A，两Color1 Shadow57[3,5]/56[4,5]仍active。single W51中，58向北请求2,5；59因5,6为Wall转A推双箱链，使前Shadow57从3,5到2,5、后56到3,5，59停4,5。
+
+实际结果是58与57同在2,5，58.active=true/ghost0/contained1/container57/height1/maskedoff0；57.active=true/Shadowtrue/Color1/contained0/container-1/height1/maskedoff0。另一59仍active/F0/ghost0/free，56也active。这里只发生了本构型的普通活角色装入残影箱，没有死亡、Ghost装载、Force分叶或释放。
+
+主63/frame6695893对root独立6716955全部60实体完整字典、88实际tiles、准确51串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWW` 及time55严格相等，level.completedfalse。新前置域992expanded/1219seen、pending227首hit即止、无handle/保存队列；加旧182封闭域合计1174扩展，各限定只描述其目标范围，不能称整关已解。
+
+本实测没有隔离所有Shadow接触方向，也没有证明载人残影跨SPIKE、消影后释放或箱内角色如何满足Goal。后续只按实际边界补证，不把本alive/ghost0货物当既有C4/Ghost结果或成就条件，见 [5-11解法](solutions/5-11.md)。

@@ -9,7 +9,7 @@
 
 - **历史5-10遮罩/delete actual66，已正常离场** main58/frame6069718，exact DDXAAAWWWWAWWWDSADSSSSSWWWWWWWWWWWDSSSSSAASADDDSSSWSAAWWWWWWWWDAWS。61[1,6]/65[4,9]/S双F0活，59[7,4]/60[4,8]Shadow全active，Gates闭、Goaltestfalse/relaytraversedfalse。root66独立6102208全66dict/116tiles/instr严格等。44后DDDSSS+W51首先送右影7,4，安全14到65，singleS66送上影4,8。0Undo/retry/nohandle。旧两个固定目标域422/443各封闭无hit，不是全关无解；新freshF1首X地点域没有可部署positive，不为猜测Undo64。已经正常离关，实际Chapter5[-29,-2]，5-11[-22,2]实时unblocked，safeWWDDDDDDWWD前往；再回访遮罩。
 
-- **当前5-11释放/release actual13/time14** main12/frame6326270，exact DSWWWDDSSSSAA，P58[3,1]/A/F1，Pri55[2,1]邻GoalPri54[1,1]两testCompletedtrue，Shadow56[7,3]/57[7,4]active，上Goal1,7未完成。ICE singleA12只推Pri到3,1/P4,1/time13，第二普通A才到2,1/P3,1/time14；没有把一A滑两推猜测当actual。Fork保留给新birth/cargo/Shadowrelease前置，0Undo/retry/nohandle，禁提示，125关不变。
+- **当前5-11释放/release actual51/time55** main63/frame6695893，exact DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWW。Shadow57[2,5]active载原58 active/g0/contained1/container57/F0，另一free59[4,5]/A，emptyShadow56[3,5]active。root6716955全60dict/88tiles/exact51等；992新微域13导航后末W51同tick安全捕获已真证，非Shadow释放或上Goal完成。0Undo/retry/nohandle。下一safe7 SAAWWDD+SD后singleW61送cargo4,6Spike，C1 Shadow保护/活性未知，只actual核；后两Box缓冲送4,7释放仍MODEL。
 
 - **3-27色散已真实99输入完成**，本次0Undo/0retry，主JSON completion event151/frame815971/completed=true；精确actions含5次T已保存。五叶直接活人覆盖Goal1/3/5/7/9：axis0 time92 P52[1,9]，axis4 time32 P59[3,9]，axis3 time50 P59[7,9]，axis2 time62 P59[5,9]，axis1 time86 P59[9,9]。root独立只读核Settings slot1、dispersion State3、119关/6星；精确99串编码与LevelRecords.dispersion严格相等。
 - 新解通过可回收row9 relay8，按5/6/4三列各做一次幽灵生死观察，保留三个旁观死亡叶；最后双活人争推分成两单人叶。旧6,10不可回收探针没有执行。[完整99解法](solutions/3-27.md)。
