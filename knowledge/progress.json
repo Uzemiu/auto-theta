@@ -6,7 +6,7 @@
     "id": "slot1-from-start-2026-09-22",
     "save_slot": 1,
     "save_file": "C:/Users/Administrator/AppData/LocalLow/DeltaTheta/Theta and Paralldox on Worldlines/SaveSlot1.es3",
-    "status": "active",
+    "status": "paused",
     "baseline_completed_count": 0,
     "verified_completed_levels": [
       "0-1",
@@ -143,11 +143,19 @@
       "player_positions": [
         [
           1,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
           5
         ],
         [
           1,
-          2
+          3
         ],
         [
           1,
@@ -156,9 +164,9 @@
       ],
       "player_positions_scope": "active",
       "time": 37,
-      "frame": 8498622,
+      "frame": 8886498,
       "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-      "evidence_event": 36
+      "evidence_event": 86
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -218,62 +226,58 @@
         "note": "正常入口按朝向有真实UI，previous -83,4/S无UI不能否定东邻面W的合法升层；普通数字欠关未补齐。"
       }
     ],
-    "paused_at_utc": "2026-10-05T05:37:23.481699+00:00",
-    "pause_reason": "用户明确要求先暂停，整理所有文件然后提交；停止游戏输入与搜索，仅保存证据、交接。root负责统一整理/提交。",
+    "paused_at_utc": "2026-10-06T20:20:04.308294+00:00",
+    "pause_reason": "用户要求暂停、整理全部文件并提交；当前仅询问各章未完成数量，未要求恢复。已停止游戏输入及只读研究，等待恢复指令。",
     "pause_checkpoint": {
       "location": {
-        "scene": "Template3",
-        "level_id": "stealth",
+        "scene": "Template5",
+        "level_id": "handshake",
         "world": false,
+        "level_label": "5-15",
         "player_positions": [
           [
-            8,
+            1,
             4
           ],
           [
-            11,
+            1,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
             7
           ]
         ],
-        "axis_player_positions": [
-          {
-            "axis": [
-              0,
-              0,
-              0
-            ],
-            "time": 70,
-            "positions": [
-              [
-                8,
-                4
-              ],
-              [
-                11,
-                7
-              ]
-            ]
-          }
-        ],
-        "observed_on": "2026-10-05",
-        "note": "2026-10-05用户明确要求先暂停、整理文件后提交。唯一owner已Ctrl+C终止3-26复建driver95160(exit1)，不发送任何后续方向/T/Undo/retry。当前真实Template3/stealth实际70、singleaxis0/time70、event86/frame20359659、undo_depth70；游戏paused=false但任务paused，guards与动画/运动全清。P70[8,4]/A活F0/key0/ghost0；P84[11,7]/D活F0/key1/ghost1，均uncontained/h1/md0/src-1。BOX65[6,1]/66[8,1]、Pri67[1,1]/68[12,1]/69[1,5]全active空容器/h1/md0/src-1。输入driver已返回20/26/36/56/60/66各批回执，整实体与真实旧checkpoint逐键diff=[]（GMID单列也无差）。暂停到达时66→79的13动作公共batch正在调用内，Ctrl+C未收到这一批回执；最新真实instructions=旧66+WWWA证明该在途批只接受4，剩9不续。第一只读保存脚本仍断言66而exit1，没有游戏输入；随后仅公开state保存真实70。不伪造该部分批receipt，不把脚本中止记game retry。原92前缀还剩22未发，新23 MODEL尾SAWAWAAWAAAAAAAASSAAWWA全未执行/未验证，不计完成。本回访新增Undo0/game retry0；旧3-26 1Undo/2retry及旧92双叶全保。2-G已在共同新60/209Undo后正常返回世界，关内所有历史保留；世界reset instructions/undo_depth0，重入不能直接用旧Undo恢复60，只能正常重走已证完整60。正常章节地图Chapter2→3，实际spawn40,-2/F1，47安全方向到14,19、单W入3-26。公开地图标题“第三章-观测”曾被脚本误写“观察”导致一次assert停止；Shift已接受，仅续split，不重发，无game retry。118完成/6星/link3保持最后独立验证值，Slot1、无新增完成/星。全部owner输入driver终止，无owner搜索handle；root/helper负责停其搜索。未为用户暂停打开游戏菜单，无hint/启示/简化/隐藏实现/反射/存档进度编辑；root管理save-management/world-mechanics，本次未写。"
+        "player_positions_scope": "active",
+        "time": 37,
+        "frame": 8886498,
+        "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
+        "evidence_event": 86
       },
-      "last_attempted_level": "3-26",
-      "last_attempted_time": 70,
+      "last_attempted_level": "5-15",
+      "last_attempted_time": 37,
       "completed": false,
-      "evidence_file": "../artifacts/slot1-playthrough/3-26.json",
+      "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
       "current_event": 86,
-      "frame": 20359659,
-      "action_count": 70,
-      "new_undo_count": 0,
-      "new_retry_count": 0,
-      "verified_completed_count": 118,
+      "frame": 8886498,
+      "action_count": 37,
+      "undo_count": 21,
+      "retry_count": 0,
+      "historical_death_count": 1,
+      "verified_completed_count": 125,
       "stars_last_verified": 6,
       "link_count_last_verified": 3,
-      "owner_driver_session": 95160,
-      "owner_driver_terminal": "exit1 user Ctrl+C",
       "owner_active_input_or_search_handle": null,
-      "note": "任务暂停；游戏本身unpaused。先observe真实70核对，不自动续批，不接新23尾。旧2-G60/209Undo保历史，已正常离场。"
+      "checkpoint_file": "checkpoints/2026-10-07-continue.md",
+      "note": "任务暂停；最后实际新37。旧50死亡证据保留；后续路线未执行。恢复前先重新观察场景和存档。"
     },
     "resumed_at_utc": "2026-10-06T06:41:38.437496+00:00",
     "notes": [
@@ -3080,20 +3084,20 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "actualA19混合双链F1活装Shadow95，0search手工13至32+singleW33/34/35跨SPIKE1,5并cargo拾1,6Fork升F2；A36/X37 nativecargoF2+freeF1复制，南95/97 1,5F1/北new99/100 1,7F2，外98 1,2F0，Blue1,4，全部活g0。0Undo/retry/death/count125，下一上Fork自输运每X单核。",
+      "note": "新30异源叠层Blue86承载Shadow95/P97 h2，SAWWW至35真实混层穿SPIKE1,5仍active/g0；A36/X37仅将混层退1,4、south124/1251,5F0，north127/1281,7F1拾KEY72，无额外融合。两free98 1,1/1261,3F0，104entities/current37/all5aliveg0；真实Undo21/retry0/0search，历史50一裸刺死亡与false11尾全保，count125。下一Normal底座Fork交接尚未达，不授全解。",
       "name": "握手",
       "internal_level_id": "handshake",
       "solution_file": "solutions/5-15.md",
       "slot1_attempt": {
-        "actions": "WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAX",
+        "actions": "WAASWXSAAAWWDSDSWAASAAWDSDDWAXSAWWWAX",
         "action_count": 37,
         "checkpoint_time": 37,
         "completed": false,
-        "undo_count": 0,
+        "undo_count": 21,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-        "evidence_event": 36,
-        "frame": 8498622,
+        "evidence_event": 86,
+        "frame": 8886498,
         "checkpoint_is_current_runtime": true
       }
     },
@@ -4125,11 +4129,19 @@
     "player_positions": [
       [
         1,
+        4
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
         5
       ],
       [
         1,
-        2
+        3
       ],
       [
         1,
@@ -4138,9 +4150,9 @@
     ],
     "player_positions_scope": "active",
     "time": 37,
-    "frame": 8498622,
+    "frame": 8886498,
     "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-    "evidence_event": 36
+    "evidence_event": 86
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

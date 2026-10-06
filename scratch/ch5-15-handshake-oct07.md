@@ -39,3 +39,33 @@ actualA36 canonical34/frame8496262完整99dict/118tiles与物理模型严格相�
 owner选择更少重叠的W38/X39，而非primary曾提W2后X的相邻parent旧格交接候选（后者未执行）：W38 outside1,3、货物仅转W，canonical38/frame8522427完整101dict/118tiles与模型相等。X39两箱左右均Wall，south95/97的不同front为1,6（Fork71已取），north99/100的front为1,8（Fork70active），Blue1,4不动、outsideF0在1,3等X。两目的不碰撞/不借用旧parent格，所以此不是“两个相同前位去重”测试。
 
 **actualX39 canonical40/frame8535626**：95/97迁移1,6/F0，99/100迁移1,8/F2（消耗1叉后拾Fork70补1），outside98仍1,3/F0，全部alive/g0，101同IDs、无新Box/Player、单叶。`migration39Audit`是获得actual后按单有效front规则重建并比较的审计，明确不称曾盲预测全部字段；保护、Fork/迁移只限本fixture。`next40.trace`从真正39生成singleW40，outside推Blue1,4→1,5、自己1,4safe；singleX41仅F2 cargo100可继续front1,9并拾Fork69，另一97F0/98F0等待，必须新actual核，未写未来出生/融合/全Goal。
+
+## 实际44..50与裸刺释放阴性
+
+上述W40/X41已实际；SD42/43让outside98在1,3→1,4safe、cargo转D。X44 canonical48/frame8557376真实原99/cargo100[1,8]/F1、新108/cargo109[2,9]/F2（出生拾Fork68），95/97[1,6]/F0、Blue86[1,5]、outside98[1,4]/F0皆活。root报告8586901独立全103字典/118tiles/exact44/time44/单叶严格相等。新ID108/109取actual，不按实体数猜。`actual40_50`保完整公开实体；`normalLateChecks`只对W40、SD43、S47作普通完整字段预测比较，不将获得actual后的X赋值称为盲预测。
+
+owner后续全部single实际：X45 canonical50/frame8604728，东109到3,9/F2、左100到1,9/F0、新110/111到1,7/F0；X46 canonical52/frame8607923，东109仅front到4,9/F2（3,8五C4链背3,3Wall不能推）。S47 canonical54/frame8615141，outside98退1,3、cargo朝S。X48 canonical56/frame8619273，原108/109到3,9/F1、新116/117到4,8/F2；X49 canonical58/frame8623624，117单迁移4,7/F2，109双侧分裂4,9/F0及新118/119[2,9]/F0。所有Shadow仍active、货物ghost0/contained，均取实际而非凭颜色预授。
+
+**singleX50 canonical60/frame8632049是死亡阴性**：116[4,6] Shadow失活，117同格inactive/ghost1/contained0/container-1/F2；Fork76被取得但裸SPIKE仍杀角色，outside98[1,3]仍活free，其他箱内货物仍活。不能把“容器消影”写作“存活释放”；`release50`保真实字典和guardFALSE。此前条件11 `ASSDAXXSDSW`只在4,6出现alive/ghost0/free/F2时成立，全部未输入且已撤回；不能由末D到5,6安全反向假设X50后的死者可行动。没有通关、分叶或新搜索。
+
+## 新独立C2与Shadow同刻叠体边界
+
+从真实19手工10 **SAAWSDDDWA** 到pre29，完整99字段出口`stackProbe.trace`；终95/97[1,3]/A/F1、普通Blue86[2,2]、outside98[3,2]/A/F1，前置不触刺/不动上岛C4/Pri。旧已接受19后10 **SAAWDSDDWA** 经不同Blue往返也到相同全字典/资源，`old29VsNew29FullDiff=[]`仅是模型路径比较：旧内部29没有独立raw观测，不伪称旧raw全等。
+
+末**singleX30**：cargo97南child出生1,2、北child1,4；outside98南child3,1，north3,3Wall所以front2,2并推独立Blue86至1,2。Shadowchild与不同来源C2同tick汇入1,2，目的格均safe；已有M109/M130仅支持测试异源叠体的动机，实际层数、container归属、cargo活性、残影去活后普通底箱保护仍未知，没有完整Goal解预授。该probe不重复导航图或旧死亡释放构型。
+
+owner保留50阴性后，已正常**Undo21**恢复29 canonical72/frame8693348，exact `WAASWXSAAAWWDSDSWAASAAWDSDDWA`，99实体：95/97 1,3/A/F1活contained95、86 2,2/C2空箱h1、98 3,2/A/F1活free，无motion。此是新的真实恢复源，非旧29 raw；X30单边界待actual。累计21真实Undo、0retry、0搜索、handle=null；默认CJS只audit，未保队列。
+
+**新singleX30已实际阳性** canonical74/frame8706212：普通C2 Blue86[1,2]h1，Shadow95同格h2/contained1/container86，cargo97同格h2/contained86、active/g0/F0。north新124/cargo125[1,4]h1/F0，outside98[3,1]与新126[2,2]两free/F0；全部102实体/单叶（纠正速报101），尚未消影、穿刺或完成。`actualNativeStack30.entities`保存原字典；root报告8724904全102/118/exact新30/time30/timeline127严格相等，只证异源叠体与容器重建。新恢复29由`restored29Check`和新手工10作完整预测比较，不能替代不存在的旧内部29 raw证明。
+
+从真新30，0图手工transport5 **SAWWW**：S31 free98→4,1、126→2,1；A32→3,1/1,1；W33混合组86/95/97至1,3，free1261,2/983,2；W34组1,4、north124/125至1,5，free1261,3/982,2；W35组1,5裸SPIKE、north124/125至1,6拾Fork71预计F1，free1261,4/981,2都safe。末W35必须单独核异源多层cargo保护、全部contained/container/height和Fork；不能套单Shadow保护自动授全层组。`groupStep`只把公开contained链作刚体普通推移，光学/X/融合/死亡不建模，完整102字段出口`stackTransport.trace`。
+
+若35保护阳性，可singleA36把free98→1,1、126→1,3并cargo125转A。singleX37预测head124/125南child1,5朝现混合叠体并将它推1,4、北child1,7拾叉；原Shadow95被装在Blue中又与分裂child同源，融合/层数/货物归属为新的实际边界，不预设与旧空Blue的X37相同结果。上方cargo先取1,6叉，后到的Bluecargo97不能再凭同已取KEY加叉，当前还无完整Goal尾。
+
+## 已执行新35/37与暂停收尾
+
+上段已owner实际逐W执行：**新35 canonical82/frame8823669**，exact `WAASWXSAAAWWDSDSWAASAAWDSDDWAXSAWWW`。86普通C2底箱h1、95 Shadow及cargo97 h2/contained86在1,5裸SPIKE全部active，97 ghost0/F0；front124/125在1,6拾KEY71，125F1；free98[1,2]与126[1,4]F0保活。这是异源多层载人组的本fixture实际跨刺保护，不能升级为任意光消影保护。`stackTransportChecks`保实际普通每段完整字段/光flag差异，`nativeStackLate`保真实原字典。
+
+随后singleA36和**singleX37 canonical86/frame8886498**实际：只是south124/cargo125[1,5]/F0将Blue86整组推退1,4，86h1、95和97仍h2/contained86，97F0/g0；north新127/cargo128[1,7]/F1拾KEY72。free98[1,1]与126[1,3]F0，104实体/118tiles/time37/timeline129，全部五角色alive/g0、单叶、无force、没有额外同源融合或完成。未来普通底座取得Fork、叠体光消后的角色归属与通关均仍未知；没有继续发路线、没有重跑图。
+
+收到root转达用户此前明确暂停并整理未提交文件的操作要求，**只收尾以上已执行证据后停止分析与改动**。pair可供统一提交；默认只audit，expanded/seen/pending全0，handle=null，真实累计Undo21/0retry。旧50死亡阴性与未执行条件11完整保留，新分支35/37不覆盖其历史。

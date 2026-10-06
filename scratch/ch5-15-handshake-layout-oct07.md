@@ -69,3 +69,18 @@ Pri96[7,6]北邻87[7,7]是C4，东8,6 Wall，南7,5/7,4 Floor后7,3 Wall，西6,
 末W后立刻核completed/自动返回，**不要再加W**：若仍在双Goal5,6/7,6，右北链被7,10Wall封住，回A会踏6,6裸刺；左north5,7Wall，回A会踏4,6裸刺。不是可安全多按一步等待的尾。
 
 本域ready，实际WA2/F2、新raw地形/箱推侧、南西光学条件和direct北推Goal/XWW局部末段已发owner/primary/root。零搜索/输入/新JSON/后台，不要求owner驻关或暂停。
+
+## 实际44后的独立光轴/刺上脱离审计
+
+新准确源 **event48/frame8557376、44 inputs/time44**，root独立8586901全部103实体/118tiles匹配（root回报）。95/cargo97[1,6]F0、99/cargo100[1,8]F1、108/cargo109[2,9]F2均active、Shadow=true/Color1 body、ghost0/contained1、height1、mask0；外98[1,4]active/F0/ghost0/free，Blue86[1,5]active。Pri96仍7,6、traversed=true/testCompleted=false/lighten=false，87/88及左C4列/94均原位active。这些cargo不是free资源，未来release未发生，不按模型授新生状态。
+
+- 北邻87[7,7]是紧邻C4，88[7,8]在后；西向7,6→6,6裸SPIKE/Fork75→5,6空Goal.floor→4,6裸SPIKE/Fork76→91[3,6]远C4。87的邻轴条件与91的远轴条件不能互换，也不因96.testfalse推断没有光。
+- **4,6是96直西轴；4,7/4,8不是其同row/col。** 这里只核公开几何，未授完整折射算法、任何相位/Shadow自动去活或container释放。Fork76/73/74同格不覆盖SPIKE，不是保护物。
+- 若未来独立singleprobe的actual确实给出一个**active/ghost0/free、contained0/container-1**角色在4,6，并确认5,6仍空且guards清，最短下一**singleD**到Goal5,6安全。S遇4,5 Wall后也回D；A遇91[3,6]背2,6 Wall而拒推，再S受墙后回D，但优先明确D，不批多步，不W到4,7刺。
+- 固定原C4/Wall下，裸free释放于4,7或4,8**没有普通安全离开方向**：东5,7/5,8 Wall，西3,7/3,8 C4背2,7/2,8 Wall，南北皆SPIKE（4,6/7/8/9）。不能把可拾Fork或一次拒推当safe hold；新container/出生机制若actual成立另核，不作全关无解。
+
+上段singleD只保证这个released角色的目的地，**不省略共同输入的其它角色**。例如仍保本44外98[1,4]时，D先遇2,4 Wall，回W会推Blue86[1,5]+Shadow95[1,6]北移，98进原1,5裸SPIKE而可能正常死亡；该牺牲可允许，但其余cargo容器移动/光照、5,6是否有其它active实体必须按future新source重核，不能把单人脱刺写成全104等字典已校准。
+
+若要采用6,4的XWW守卫：该角色必须actual为有效free、F≥1且faceW或S，5,4/7,4出生格为空安全Floor、96/87/88仍可普通北推；普通侧向到6,4不能产生竖面。共同X还会响应所有有Fork的cargo/其他角色，例如本44的100/109，须检查其出生/复制目的与5,4/7,4是否冲突。不能仅模拟6,4的两个children便给完整XWW完成证据；当前没有6,4竖面prefix。
+
+本新增段只核位置/原物推侧与conditional一步，**零新增图、输入、JSON或后台**，未重复primary东/南Fork运输域。4,6脱刺、4,7/8普通无safe方向和全部X应答守卫已发owner/primary，实际光学/释放仍交sole owner逐边界验收。

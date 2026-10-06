@@ -1400,3 +1400,35 @@ root独立8437312对主16全部99完整字典、118tiles、准确19串 `WAASWXSA
 A36令cargo朝A、外98退1,3；single X37主36/frame8498622真实南95/97[1,5]active/F1、北新Box99/cargo100[1,7]active/F2，两个容器均Shadowtrue/Color1，两个cargo均ghost0/contained各自容器。北出生格的Fork被取得，外98单侧出生移1,2后F0/free，Blue86被出生推进1,4仍active。新箱/角色GMID76/77取实际，没有预造身份或把影箱副本变普通箱。
 
 root独立8509203对主36全部101完整实体字典、118tiles、准确37串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAX` 与time37严格相等，单时间线且level.completedfalse。跨刺保护、箱内正常拾叉及本出生格拾叉均是本构型实测；不推广至未校准光路、墙内出生或完整上岛方案。0Undo/0retry/死亡/搜索，125关不变，见 [5-15解法](solutions/5-15.md)。
+
+### M170 仅一个有效前出生格时，载影单迁移并可用同格Fork补偿消耗（5-15实际39..44）
+
+W38令M169两cargo朝W；single X39主40/frame8535626：左右侧目标均Wall，两影及其货物分别单迁移到不同front1,6/1,8，全部101实体同IDs、单叶，没有新增Box/Player。原97成为F0，北100消耗一叉后拾Fork70[1,8]仍F2；外98在1,3/F0，Blue86在1,4有效。primary在取得实际结果后按单front规则重建审计相等，不能写作预先全字段预测，也未测试两个相同front的去重。
+
+W40外人推Blue到1,5、安全停1,4。single X41主44/frame8545313仅上100继续带影99迁移到1,9，拾Fork69后仍F2；另97/F0与98/F0不分裂，实体仍101、全部alive/ghost0。SD42/43把cargo朝向改D，single X44主48/frame8557376把原99/100放1,8/F1，新增Shadow108/cargo109放2,9/F2并取得Fork68，95/97仍1,6/F0、外98仍1,4/F0、Blue1,5。
+
+root独立8586901对主48全部103完整字典、118tiles、准确44串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAXWXWXSDX` 与time44/单时间线严格相等，三个载人Shadow均active/Color1/ghost0/contained，level.completedfalse。新108/109只从实际分配取值，不按实体数猜ID；1,9、2,9及后续4,6/7/8均须按裸SPIKE处理，箱保护不等于失影后裸人安全。0Undo/retry/死亡/搜索，见 [5-15解法](solutions/5-15.md)。
+
+### M171 残影在裸SPIKE上失活后，货物角色也死亡并失去容器（5-15实际50）
+
+44后东/南叉链真实逐single执行到50。single X50主60/frame8632049：Shadow116[4,6]inactive，cargo117同格inactive/ghost1/F2/contained0/container-1/mask0，Fork76[4,6]inactive；仍单叶、整体未完成。其他六角色仍active，其中五个contained、外98[1,3]/F0/free，原上方C4没有移动。
+
+root独立8669447对主60全部109完整实体字典、118tiles、准确50串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAASAWWWAXWXWXSDXXXSXXX` 与time50严格相等。4,6是真裸SPIKE，不因同格Fork存在变普通Floor；与M166在5-13安全地面上的活释放对照，本构型没有给失活后的裸角色继续保护。该终态没有隔离内部光照/伤害结算先后，不从终态反推隐藏实现。
+
+以117 alive/ghost0/F2/free为前提的11步 `ASSDAXXSDSW` 全部未执行、guard失效后撤回；不把先前保护或消影视为Goal完成。此时累计0Undo/0retry、1实际死亡、0搜索，后续正常撤销和不同蓝箱/残影叠体须另取新实际源，旧50阴性永久保留。见 [5-15解法](solutions/5-15.md)。
+
+### M172 出生汇合形成蓝箱底层，残影与角色改挂同一底箱的第二层（5-15新分支30）
+
+正常21次Undo从M171的50回到旧29几何。新主72/frame8693348对root8704898全部99完整字典/118tiles/准确29指令/time29/timeline124严格相等：Shadow95/cargo97[1,3]/A/F1、Blue86[2,2]、外98[3,2]/A/F1。旧29原先在批内部没有完整观测；这里只比较恢复后两个新观测，不说旧29全字段相等，累计21Undo/0retry。
+
+single X30主74/frame8706212：cargo南侧出生到1,2，同时另一出生推动Blue86到1,2，真实出现异源层叠。Blue86在1,2 active/height1/contained0；原Shadow95及cargo97同1,2均active/height2/contained1/container86/mask0，97 ghost0/F0，容器已从95改为Blue86。北新Shadow124/cargo125在1,4，height1/contained124/F0；外98[3,1]与新126[2,2]是两活free/F0。
+
+root独立8724904对主74全部102完整实体、118tiles、准确新30串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAX` 与time30/timeline127严格相等。实际底箱仍Color2/Shadowfalse，上层95仍Color1/Shadowtrue；不按高度或容器改变预授跨光保护、复活或整体完成。后续叠组推行、拾叉和消影生死仍需新实际，旧50/1死亡和21Undo均保留，见 [5-15解法](solutions/5-15.md)。
+
+#### M172补证：蓝箱混层跨SPIKE保活，同源残影接触只推退原组（5-15新35/37）
+
+新W35主82/frame8823669中，Blue86底层与contained95/97第二层到1,5裸SPIKE，三者仍active，97 ghost0/F0；北124/125到1,6，125真实取得Fork成为F1。primary对32..36全部102字典/118tiles校准相等；root未独立捕获35现场，不将地刺保护推广为光照保护。
+
+新X37主86/frame8886498，准确串 `WAASWXSAAAWWDSDSWAASAAWDSDDWAXSAWWWAX`、time37/timeline129/104实体/118tiles：南124/125在1,5/F0，推退Blue86与95/97混组至1,4，后两者仍height2/container86；北新127/128在1,7/F1，真实拾Fork72。没有新增同源融合保护层，两个free98/126在1,1/1,3，五玩家全部active/ghost0，整体未完成。
+
+真实累计Undo21/retry0，旧50死亡阴性仍保留；当前用户要求暂停，后续Normal底座Fork交接和光后生死没有执行。见 [5-15记录](solutions/5-15.md)。
