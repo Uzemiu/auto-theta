@@ -1,8 +1,8 @@
-# 全成就继续：当前5-14 fresh0，125关（2026-10-07）
+# 全成就继续：当前5-14双F1资源，125关（2026-10-07）
 
 唯一游戏输入owner `slot1_owner_oct06`；root/helper只读。全成就goal active，状态查询不暂停任务。
 
-- **当前5-14 emission fresh0** main0/frame8036563，61实体/107tiles/time0，P60[4,2]/S/F0；Fork1,1+1,2，C4 7,3/Shadow5,3，Pri3,1/Goal9,1，上Goals1,7+1,8。世界SSSS+D正常进入，禁提示，0Undo/retry/noinputhandle，125保持。位置player_positions明确只列active，死亡实体仍raw保全。
+- **当前5-14 放射/emission actual12** main15/frame8133433/time12，exact `AAASWDDDWDSX`；60[6,2]/new61[4,2]两活free/g0/F1/S，Shadow59[6,3]/C458[7,3]活，Pri3,1/Goal9,1未动。AAAS4真累计Fork2，经singleD10保影再X12真实Fork2分配为两F1。rootfresh0与4均全61/107/instr/time严格核；0Undo/retry/noinputhandle，125保持，禁提示。下一新doublechain ShadowcargoF1完整短前置由primary主算，不重旧4007图。
 
 - **历史5-13 actual61钮开门** main78/frame7959567/time61，exact `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWWSSSSSSD`；58 Button7,1活free/F0、60 6,4活free/F0，54裸死7,2 inactive/ghost1/mask0。Gate49[0,8]真实open、Gate50closed，双Shadowinactive；源54已由root7933342全61dict/111tiles/exact54严格核。累计Undo1/0retry/noinputhandle、125关保持。三活fixed域3427closed仅有限范围，新两活Goal域最多1573一次，未知末A进Goal实测，不用提示。 已正常菜单返回世界frame8031957，currentfalse；580新域也closed/nohit，合4007，993未用。
 

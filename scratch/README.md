@@ -147,6 +147,8 @@
 | ch5-12-transition-oct07 | [cjs](ch5-12-transition-oct07.cjs) | [md](ch5-12-transition-oct07.md) | — |
 | ch5-13-stack-layout-oct07 | — | [md](ch5-13-stack-layout-oct07.md) | — |
 | ch5-13-stack-oct07 | [cjs](ch5-13-stack-oct07.cjs) | [md](ch5-13-stack-oct07.md) | — |
+| ch5-14-emission-layout-oct07 | — | [md](ch5-14-emission-layout-oct07.md) | — |
+| ch5-14-emission-oct07 | [cjs](ch5-14-emission-oct07.cjs) | [md](ch5-14-emission-oct07.md) | — |
 | ch5-2-space-oct06 | [cjs](ch5-2-space-oct06.cjs) | [md](ch5-2-space-oct06.md) | — |
 | ch5-3-button-layout-oct06 | — | [md](ch5-3-button-layout-oct06.md) | — |
 | ch5-3-concrete-oct06 | [cjs](ch5-3-concrete-oct06.cjs) | [md](ch5-3-concrete-oct06.md) | — |
