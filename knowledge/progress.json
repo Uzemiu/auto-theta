@@ -137,24 +137,20 @@
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "emission",
+      "level_id": "handshake",
       "world": false,
-      "level_label": "5-14",
+      "level_label": "5-15",
       "player_positions": [
         [
-          6,
-          2
-        ],
-        [
-          4,
-          2
+          7,
+          1
         ]
       ],
       "player_positions_scope": "active",
-      "time": 12,
-      "frame": 8133433,
-      "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
-      "evidence_event": 15
+      "time": 0,
+      "frame": 8325856,
+      "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
+      "evidence_event": 0
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3058,9 +3054,9 @@
       }
     },
     "5-15": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -3076,7 +3072,22 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "正常世界live ENTRY7[-14,2]unblocked，safeWWWDDDDWD进入fresh0，98entities/118tiles/22Fork/10Box/2Goal，禁提示/0Undo/retry/count125。",
+      "name": "握手",
+      "internal_level_id": "handshake",
+      "solution_file": "solutions/5-15.md",
+      "slot1_attempt": {
+        "actions": "",
+        "action_count": 0,
+        "checkpoint_time": 0,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
+        "evidence_event": 0,
+        "frame": 8325856,
+        "checkpoint_is_current_runtime": true
+      }
     },
     "5-P": {
       "status": "unknown",
@@ -3813,7 +3824,7 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "AAAS4真实累计Fork2；手工7 WDDDWDS中singleD10把Shadow5,3推6,3仍活；singleX12两free60[6,2]/new61[4,2]皆F1/g0。C458[7,3]/Shadow59[6,3]活，Pri初位，0Undo/retry/125保持。下一同parity双链ShadowcaptureF1待完整前置+singleWactual。 新实际12fixed图48closed、假竖排birth51closed共99终端/nohandle，仅有限目标无hit，无新Undo，未排全关；root12全62/107/exact12严格核。",
+      "note": "AAAS4真实累计Fork2；手工7 WDDDWDS中singleD10把Shadow5,3推6,3仍活；singleX12两free60[6,2]/new61[4,2]皆F1/g0。C458[7,3]/Shadow59[6,3]活，Pri初位，0Undo/retry/125保持。下一同parity双链ShadowcaptureF1待完整前置+singleWactual。 新实际12fixed图48closed、假竖排birth51closed共99终端/nohandle，仅有限目标无hit，无新Undo，未排全关；root12全62/107/exact12严格核。 已normal菜单返回世界8318324/P265[-19,-2]，actual12仅历史，正常5-15后回访。",
       "name": "放射",
       "internal_level_id": "emission",
       "solution_file": "solutions/5-14.md",
@@ -3827,7 +3838,7 @@
         "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
         "evidence_event": 15,
         "frame": 8133433,
-        "checkpoint_is_current_runtime": true
+        "checkpoint_is_current_runtime": false
       }
     },
     "5-2": {
@@ -4100,24 +4111,20 @@
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "emission",
+    "level_id": "handshake",
     "world": false,
-    "level_label": "5-14",
+    "level_label": "5-15",
     "player_positions": [
       [
-        6,
-        2
-      ],
-      [
-        4,
-        2
+        7,
+        1
       ]
     ],
     "player_positions_scope": "active",
-    "time": 12,
-    "frame": 8133433,
-    "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
-    "evidence_event": 15
+    "time": 0,
+    "frame": 8325856,
+    "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
+    "evidence_event": 0
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
