@@ -1,6 +1,10 @@
-# 全成就继续：5-9已完成，当前125关（2026-10-06）
+# 全成就继续：当前5-14 fresh0，125关（2026-10-07）
 
 唯一游戏输入owner `slot1_owner_oct06`；root/helper只读。全成就goal active，状态查询不暂停任务。
+
+- **当前5-14 emission fresh0** main0/frame8036563，61实体/107tiles/time0，P60[4,2]/S/F0；Fork1,1+1,2，C4 7,3/Shadow5,3，Pri3,1/Goal9,1，上Goals1,7+1,8。世界SSSS+D正常进入，禁提示，0Undo/retry/noinputhandle，125保持。位置player_positions明确只列active，死亡实体仍raw保全。
+
+- **历史5-13 actual61钮开门** main78/frame7959567/time61，exact `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWWSSSSSSD`；58 Button7,1活free/F0、60 6,4活free/F0，54裸死7,2 inactive/ghost1/mask0。Gate49[0,8]真实open、Gate50closed，双Shadowinactive；源54已由root7933342全61dict/111tiles/exact54严格核。累计Undo1/0retry/noinputhandle、125关保持。三活fixed域3427closed仅有限范围，新两活Goal域最多1573一次，未知末A进Goal实测，不用提示。 已正常菜单返回世界frame8031957，currentfalse；580新域也closed/nohit，合4007，993未用。
 
 - Slot1，125已验证关/6星/link3；Steam本地缓存14/28（第四章Emergence正常升层新增）仍未全成就。3-27后自动返回Chapter3[14,17]/Fork1；本次3-B fresh0未输入已离场；世界4当时普通709停点无新升层positive，旧西端309已核无上层UI；3-21 COL7 actual39未取已正常离关；第五章已正常进入：第四章P66[-82,4]面W/north实际UI前往上层（world499），normalconfirm500后Chapter5纠缠initial/frame1764756；world5开场已正常确认；5-3浇筑真实91完成，completion74/frame2654095，normal SaveSlot1 concreteState3/exact91严格等/122关；5-6清洁runtimecleaning真实73/fullcompletion51 frame3914170已完成：唯一P47[2,1]覆盖西光，Pri43/44 testCompletedtrue，Box41/42邻6,2/7,2封北，Shadow46inactive但45仍active。0搜索/Undo/retry，29/33两次traversed模型差异真实保存，仅续remaining无重发。root12:35:26.799166Z正常SaveSlot1 cleaning3/exact73严格等，124关/6星/link3；root独立live3920804已世界，不冒称独立终态。5-7当时银河/scroller实际42 `SDDDDDDDWWSSAAAAAAAAAWWWSSSDDDDDDDDDDWDWXD`，main57/frame4475145，P76[12,4]/W与78[13,5]/W均F0/g0/free；X41循环链front出生positive后单D42旧横推blocked→W，10Pri再次环绕，未capture/phase/Goal。X25negative/Undo1完整保留；普通Notebook无残影专页，关闭恢复24全77等。新15安全前置四停点全77dict/terrain等，singleW40实际整10Pri环绕：69从13,10→0、64从0→1、70从1→2，其余3..9→4..10，没有13,11。C4仍2,6/2,7、Gate闭，未完成/0搜索/0retry，无handle；新wrap短候选仍需实际校准，8W+A裸刺错误候选已撤回/0后尾输入。5-5真实39/fullcompletion41 frame3463964，exact39 SAAAAWWSSDDDWWWAAAAWAWWSSSSSWWDDSWXASSS与正常SaveSlot1 necrosisState3完整记录严格相等，root11:57:08.225152Z核123/6星/link3。末两玩家动画false实值保留；纯手算0搜索/Undo/retry。5-4只记录历史actual21 negative，真实Undo34/0retry；X出生推箱没保护裸刺58，新60保活，已正常离场。所有原40/Undo/14前缀与negative完整保留。当前无输入handle，继续全目标不暂停。
 - **5-8历史光房/lightroom actual46** main68/frame5310861，准确`DDSSAAAAAAAWWWWDXSSSWASSDDDWDSASDDASDDWASSDASW`，79[9,4]/104[7,4]/W双F0/g0/free，C4 75[8,5]/76[9,6]/Shadow78[9,5]active；恢复43后AS45+singleW46真Box西盾positive，全104dict/207tiles等，完整运输未达，下一正常5-9；singleW44 Player代西Box挡影模型实际negative，78[9,5]inactive，后北运撤回未发。normalUndo1回43全部104dict/207tiles/instr严格等、timeline105不变，真实累计Undo9/0retry；root44/main62对5174131严格等。短两Pri10光学negative完整保留/备用7尾未发，normalUndo8回2再安全14+X17得3,9/4,10，SSS20+WASSDDD27搬盾，各稳定104dict/207tiles严格等。首S18仅即时动画过严stop，只续remaining无gameRetry。104实体/noICE/DARK；GoalPri14,11、Gate14,12/Button2,1。5-7实际42已正常离关，世界[-32,1]safeSS+singleS入实时unblocked5-8。真实Undo9/0retry无inputhandle，继续正常资源和新机制。
@@ -23,24 +27,24 @@
 
 [旧暂停记录](checkpoints/2026-10-05-pause.md) · [历史交接](history/handoff-through-2026-10-05.md) · [研究索引](../scratch/README.md)
 
-- **当前Chapter5世界** normal退出5-11后的stable frame7011438/P265[-23,2]/F0，5-12 ENTRY41[-22,-2]实时active/unblocked；历史80未完，0Undo/retry，准备正常安全导航新关。
+- **历史Chapter5世界** normal退出5-11后的stable frame7011438/P265[-23,2]/F0，5-12 ENTRY41[-22,-2]实时active/unblocked；历史80未完，0Undo/retry，准备正常安全导航新关。
 
-- **当前5-12跃迁/transition fresh0** runtime51实体/97tiles，canonical initial/frame7029181和stableevent0/frame7040431；P50[2,3]/S/F0，Fork2,2，C4 Box2,1/6,4+Shadow7,4，两个Goal1,7/9,1，Pri3,1/2,7/9,1。正常SSSSD入口，没有hint/Undo/retry，125关保持。下一S正常取Fork。
+- **历史5-12跃迁/transition fresh0** runtime51实体/97tiles，canonical initial/frame7029181和stableevent0/frame7040431；P50[2,3]/S/F0，Fork2,2，C4 Box2,1/6,4+Shadow7,4，两个Goal1,7/9,1，Pri3,1/2,7/9,1。正常SSSSD入口，没有hint/Undo/retry，125关保持。下一S正常取Fork。
 
-- **最新5-12 actualS1** main2/frame7046276/P50[2,2]/S/F1，3箱原位，下46/48遍历true/testfalse，上47false。上左Goal必须处理SPIKE带运输，44送8,1的条件尾尚未执行已撤回；保资源，禁提示，0Undo/retry，125完成保持。
+- **历史5-12 actualS1** main2/frame7046276/P50[2,2]/S/F1，3箱原位，下46/48遍历true/testfalse，上47false。上左Goal必须处理SPIKE带运输，44送8,1的条件尾尚未执行已撤回；保资源，禁提示，0Undo/retry，125完成保持。
 
-- **最新5-12 actualSX2** main9/frame7145464，原50[3,2]与新51[1,2]/GMID49双F0/g0/free；3箱原位，46/Goal48.testtrue而47false/overallfalse。普通Notebook目录无Shadow专页已关，仅正常菜单，无提示；0Undo/retry/nohandle。旧S1为历史资源节点，继续从真实2候选校准。
+- **历史5-12 actualSX2** main9/frame7145464，原50[3,2]与新51[1,2]/GMID49双F0/g0/free；3箱原位，46/Goal48.testtrue而47false/overallfalse。普通Notebook目录无Shadow专页已关，仅正常菜单，无提示；0Undo/retry/nohandle。旧S1为历史资源节点，继续从真实2候选校准。
 
-- **最新5-12 actual25** main31/frame7314498，exactSXWDDWDSDDDWWASDSAWWDDASS；Shadow49[7,3]/ordinary44[8,3]/43初2,1全活，50 8,4与51 6,2双F0free。0Undo/retry，没有cargo/死亡，旧SX2局部testtrue非永久。新2000图截断后采用0search手工回收，后目标44@3,2/49@4,2的safe捕获还未actual。
+- **历史5-12 actual25** main31/frame7314498，exactSXWDDWDSDDDWWASDSAWWDDASS；Shadow49[7,3]/ordinary44[8,3]/43初2,1全活，50 8,4与51 6,2双F0free。0Undo/retry，没有cargo/死亡，旧SX2局部testtrue非永久。新2000图截断后采用0search手工回收，后目标44@3,2/49@4,2的safe捕获还未actual。
 
-- **最新5-12 actual66 cargo阳性** main75/frame7399099，51[5,2]active/g0/contained1/container49/F0，Shadow49仍active，外50[3,2]/D活，44[4,2]/43[2,1]/三Pri原位。准确SXWDDWDSDDDWWASDSAWWDDASSDSAAAWASDASDWWDDDSAAAASDDDDAAASSWWWASAWSS，0Undo/retry/nohandle，125不变。下46/Goal48testtrue仅此实际态；下一17载人前置至4,4是MODEL，Spike/光释放每个未知single，不把94/95条件尾自动完成。
+- **历史5-12 actual66 cargo阳性** main75/frame7399099，51[5,2]active/g0/contained1/container49/F0，Shadow49仍active，外50[3,2]/D活，44[4,2]/43[2,1]/三Pri原位。准确SXWDDWDSDDDWWASDSAWWDDASSDSAAAWASDASDWWDDDSAAAASDDDDAAASSWWWASAWSS，0Undo/retry/nohandle，125不变。下46/Goal48testtrue仅此实际态；下一17载人前置至4,4是MODEL，Spike/光释放每个未知single，不把94/95条件尾自动完成。
 
 - **历史5-12 restore93，已正常离场** main107/frame7536970，Shadow49/51[4,6]active/contained49、ordinary44[4,5]/free50[4,4]活；94上4,7未释放且50裸死的原始态全部保留。normalUndo1恢复93对原main103/7506014全部52dict/97tiles/instr/time严格等，timeline52同，累计1Undo/0retry；S95/AAAW条件尾未发，125不变，准备正常5-13后回访，不重跑2162域。
 
-- **当前Chapter5世界** 5-12正常退出frame7553806/P265[-23,-2]，5-13入口42[-18,2]实时active/unblocked、安全route WWWDDDDWD，下一新关正常推进。历史5-12 currentfalse/Undo1/0retry/125关不变。
+- **历史Chapter5世界** 5-12正常退出frame7553806/P265[-23,-2]，5-13入口42[-18,2]实时active/unblocked、安全route WWWDDDDWD，下一新关正常推进。历史5-12 currentfalse/Undo1/0retry/125关不变。
 
-- **最新5-13栈/stack fresh0** canonical0/frame7564940，58实体/111tiles，P54[3,2]/S/F0；Fork4,3/6,11、Shadow6,5、GoalPrism1,8/relay1,2+1,9，3Buttons和2Gates条件待测。normalWWWDDDDWD安全进入，5-12已历史93/Undo1，count125不变，0游戏输入/Undo/retry，无handle。
+- **历史5-13栈/stack fresh0** canonical0/frame7564940，58实体/111tiles，P54[3,2]/S/F0；Fork4,3/6,11、Shadow6,5、GoalPrism1,8/relay1,2+1,9，3Buttons和2Gates条件待测。normalWWWDDDDWD安全进入，5-12已历史93/Undo1，count125不变，0游戏输入/Undo/retry，无handle。
 
-- **最新5-13 actual23** main31/frame7708384 exactDWWWDWDSSAWWAWWWWXDDSAA；54[3,9]/F0、58[4,11]/F1双free相反奇偶，单S21闭门等待保Fork1，顶两Button独压已实证开Gate5,11，Shadow53[6,3]active。S10照影negative/Undo1恢复9全58/111/instr/time/tt58等已保，1Undo/0retry，无handle。下一17手工到preD40，然后singleD41待测F1 Shadowcapture，不先丢Fork生3free。
+- **历史5-13 actual23** main31/frame7708384 exactDWWWDWDSSAWWAWWWWXDDSAA；54[3,9]/F0、58[4,11]/F1双free相反奇偶，单S21闭门等待保Fork1，顶两Button独压已实证开Gate5,11，Shadow53[6,3]active。S10照影negative/Undo1恢复9全58/111/instr/time/tt58等已保，1Undo/0retry，无handle。下一17手工到preD40，然后singleD41待测F1 Shadowcapture，不先丢Fork生3free。
 
-- **最新5-13 actual44 Shadow复制** main57/frame7805226 exactDWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX，53/58[6,5]与new59/60[6,7]两Shadowtrue/C1载活Fork0，外54[5,5]活。23→40全59/111匹配、D41真保Fork1活捕获，W/A/X分别single。1Undo/0retry，0搜索，无handle；新箱不是Normal，row2/9消影→释放均待single，未完成125保持。
+- **历史5-13 actual44 Shadow复制** main57/frame7805226 exactDWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX，53/58[6,5]与new59/60[6,7]两Shadowtrue/C1载活Fork0，外54[5,5]活。23→40全59/111匹配、D41真保Fork1活捕获，W/A/X分别single。1Undo/0retry，0搜索，无handle；新箱不是Normal，row2/9消影→释放均待single，未完成125保持。

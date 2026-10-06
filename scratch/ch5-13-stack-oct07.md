@@ -1,6 +1,6 @@
 # 5-13 栈：只读下降残影探针
 
-[私模](ch5-13-stack-oct07.cjs)只读公开[5-13.json](../artifacts/slot1-playthrough/5-13.json)，唯一输入owner slot1_owner_oct06；不输入游戏、不使用提示/启示/简化/攻略、隐藏实现/反射、存档编辑，不另写JSON。0搜索/无后台handle，默认仅audit，完整58字典预测导出`transport.trace`供逐步校准。
+[私模](ch5-13-stack-oct07.cjs)只读公开[5-13.json](../artifacts/slot1-playthrough/5-13.json)，唯一输入owner slot1_owner_oct06；不输入游戏、不使用提示/启示/简化/攻略、隐藏实现/反射、存档编辑，不另写JSON。资源前置全手工0搜索，后续两有限导航域合计4007已终端、无后台handle/队列；默认仅audit，搜索入口均禁重跑。完整58/59/61字典预测按对应实际源导出供逐步校准。
 
 fresh canonical0/frame7564940，stack/栈，size9,12、58entities/111tiles。54[3,2]/S/F0，Fork52[4,3]/51[6,11]；Shadow53[6,5]active/Color1，Goal45/Pri55[1,8]，relay56[1,2]/57[1,9]；Buttons46[7,1]/47[4,10]/48[3,10]，Gate49[0,8]ID0/Gate50[5,11]ID1均闭。Floor包含GOAL/Button实体，Wall覆盖SPIKE优先，无ICE/DARK。右侧7,3..12是Wall；7,2与8,1/2是真裸SPIKE，不能把右侧通路当safe。
 
@@ -51,3 +51,15 @@ actualX44 canonical57/frame7805226，root独立7852646对61实体/111tiles/exact
 actualS49 canonical65/frame7873495：Shadow53[6,2]inactive，58同6,2 **active/ghost0/contained0/container-1/F0**真正释放；54[6,3]alivefree，north59/cargo60[6,7]活。`releaseApproachChecks`保carry差异（53.active与58.contained/container），不是预测早已释放；`actualRelease49.entities`原61字段供后续真实模型源。root报告7887464独立对61dict/111tiles/exact49/time49全部相等，本helper未替root声称独立游戏观察。46/47/48等此前其他关反例没有被拿来阻止本新已知ray阳性。
 
 `northApproach.trace`从真正49生成5W：50/51/52角色54依次6,4/5/6、58依次6,3/4/5、cargo60/59仍6,7；singleW53影到6,8、54到6,7/58到6,6；singleW54影到6,9、54到6,8/58到6,7。最后row9光照释放仍unknown，完整61carry预测不造第三free。若该未知阳性，owner另准一次新≤5000固定地形导航到preA目标：一个free2,8、另一个free7,1；执行前必须新真实54，不沿用hyp源或0search声明。该新图尚未开始，当前无handle。
+
+## 实际北侧释放与两次有限导航终端
+
+actual52 canonical68/frame7922721与53 canonical70/frame7924508全部61dict/111tiles/time与carry严格相等。**singleW54 canonical72/frame7926388**北Shadow59[6,9]inactive，60同格active/ghost0/free/container-1/F0；54[6,8]、58[6,7]，三人均W/g0/F0/free、双Shadowinactive，双Gate闭、Prisms原位、completedfalse。`northApproachChecks`保54的59.active/60.contained-container两处实际释放差异，`actualRelease54.entities`原61字典；root报告7933342独立全部61/111/exact54/time54严格相等。该实际替代先前54未知，不抹历史条件。
+
+从真54只跑一次新的三free固定域，目标是preA有一个free2,8、另一个free7,1。普通移动/Wall优先/GOAL.floor/clockwise fallback，所有Prisms固定、双Boxinactive；拒任何合法Prism推动/Force/死亡/merge/capture，只有已actual的6,11四墙hold；upper两Button OR由actual17/18得到；**未隔离的Player独占Gate5,11且无Button情形拒绝**。匿名位置key适用三个F0/无钥匙角色、faces不决定普通方向；A*采用两目标乐观单人走格距离的max作为lowerbound。3427expanded/3427seen/pending0，closed/hitnull、cuts3524、limit5000；全部队列在进程退出时释放，无后台handle/队列文件，`recordedNavigation54`留范围，搜索入口已throw禁重跑。没有检查owner备用三光学位置3,8/3,9/3,2，不能说全关或所有3free方案已排除。
+
+新正常牺牲前置改变资源而不是重复该图：由54的6 S到60，54[6,2]/58[6,1]/60[6,3]全活；actual57 canonical74/frame7955917及60 canonical76/frame7957588完整61/111/time严格相等。**singleD61 canonical78/frame7959567**原54进7,2裸刺，inactive/ghost1/mask0/free/F0/D；58进Button7,1 active/g0/free/F0/D，60因7,3Wall回W到6,4活free。Gate49[0,8]blockablefalse、Gate50闭、双Shadowinactive、completedfalse。0,8是实际SOLID/Floor无Wall，目的不是地图外猜测；底Button单占足以开0,8已实际。root报告7973329对61完整dict/111tiles/exact61/time61严格相等，正常Undo仅先前S10那1次、retry0。
+
+真61两名sameparityfree58/60的新域只用剩1573上限，同固定Prisms/Boxinactive，尸体54非blockable；拒第二死/merge/force/capture/Prism移动，沿用真实hold/upper OR/底Button开门，仍拒未隔离Player-only Gate占位。机械preA2,8+Button7,1目标：**580expanded/580seen/pending0、closed/hitnull/cuts460**，无保存队列/handle，`recordedNavigation61`与禁重跑入口保存。两个不同资源域总4007expanded，预算剩993未使用，不为凑额重跑closed图。末A同时令钮人离开与55入Gate的时序/completion没有实际probe，不能用“旧Gateopen”预授通关，也不能把普通闭域否定动态Prism、再生死/融合/其它出生、未查光学目标或新门时序。
+
+没有完整可部署通关positive，已明确通知owner可正常推进5-14，61保历史；owner报告已正常菜单退出，当前5-13 runtime=false。未来回访须按正常游戏资源重建/实际Undo核验，新前置要改变上述范围，旧4007域不增预算、不再要求owner驻关等模型。本pair默认仅audit，node--check/gitdiff--check通过；只读helper未使用gameinput/提示/hidden/save修改。

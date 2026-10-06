@@ -1366,3 +1366,17 @@ M165后WD把外54移到6,6，三个single S将南Shadow53/cargo58从6,5依次推
 root独立7887464对主65全部61完整字典、111tiles、准确49串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSS` 及time49严格相等。relay56.traversed/testCompleted仍false，与M162空影在同一row2失活形成实际对照；失活影留下的blockable字段不能作为有效实体继续推链。
 
 这是本已确认光路中的活人释放阳性，不推断任意影箱失活都安全，也不将本row2结果套用5-11/5-12的上方释放阴性。北影row8/row9、第三free和Goal仍需下一实际边界，1Undo/0retry、0搜索，见 [5-13解法](solutions/5-13.md)。
+
+#### M166补证：北侧副本到row9也消影释放，形成三名free（5-13实际54）
+
+actual49后三W到52，54[6,6]/58[6,5]均free；single W53把北Shadow59/cargo60推6,8时仍active/contained59。single W54主72/frame7926388把59送6,9后inactive，60同格仍active/ghost0/F0/contained0/container-1；54[6,8]与58[6,7]仍alive/free，两个旧Shadow均inactive，没有分线/死亡/整体完成。
+
+root独立7933342对主72全部61完整实体字典、111tiles、准确54串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWW` 与time54严格相等。这隔离实际53仍装载与54释放，不把5,8Wall、Goal及relay各自的光学算法推成已完全建模；接下来三free共享输入导航、门持续占位和目标仍需真实执行。累计1Undo/0retry，此前无搜索，后续新有限域须单列。
+
+### M167 底按钮由活角色单压打开西门，允许普通牺牲改变资源构型（5-13实际61）
+
+从实际54正常六S到60，三free54[6,2]/58[6,1]/60[6,3]仍alive/F0；single D61主78/frame7959567：54进入裸SPIKE7,2后inactive/ghost1/free，58进入Button46[7,1]仍alive/free，60右方7,3Wall回W到6,4仍alive/free。Gate49[0,8]实际blockable=false，Gate50[5,11]仍闭，level.completedfalse。
+
+root独立7973329对主78全部61完整字典、111tiles、准确61串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWWSSSSSSD` 与time61严格相等。底按钮与ID0西门的具体关联已验证，两个存活角色同格点奇偶；死亡角色的阴性、ghost1和全部原字段保留，未装箱/复活，不能提前记作成就或整个目标完成。
+
+此前实际54的三活free、固定棱镜、排除死亡/合并/Force/新出生的普通导航域3427expanded/seen3427/pending0/hitnull已封闭并释放队列，只否定该限定域的preGoal候选，不是全关无解。新实际61资源域单列，不能把旧三活限制作为整个通关条件，见 [5-13解法](solutions/5-13.md)。

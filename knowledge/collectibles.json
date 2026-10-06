@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "save_slot": 1,
-  "updated_on": "2026-10-04",
+  "updated_on": "2026-10-07",
   "scope": "本轮发现的收集物及回访待办；未列出的收集物未知",
   "verified_star_count": 6,
   "items": [
@@ -448,13 +448,61 @@
       "evidence_file": "artifacts/slot1-playthrough/chapter4-world.json",
       "finding": "COLLECTION entity65 NID12 active/Reverse=false；仅观测，尚未取得。",
       "next_step": "合法世界路线或资源前置后实取，按UI及正常SaveSlot1计数核分类，不按NID推定星。"
+    },
+    {
+      "nid": 14,
+      "kind": "unclassified",
+      "location": "Chapter5",
+      "position": [
+        -3,
+        -32
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter5-world.json",
+      "evidence": "公开COLLECTION 267，event7/frame1781523 active；只读复核所选最近世界frame7562095仍active。仅证明历史发现，当前正常Collections中无取得标记。",
+      "candidate_notes": "scratch/world-collections-pending-oct07.md",
+      "next_step": "唯一普通南邻[-3,-33]为Gate166，选取历史源仍closed；按钮配对与真实保持条件未知。",
+      "classification_verified": false
+    },
+    {
+      "nid": 105,
+      "kind": "unclassified",
+      "location": "Chapter5",
+      "position": [
+        -15,
+        -13
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter5-world.json",
+      "evidence": "公开COLLECTION 268，event7/frame1781523 active；只读复核所选最近世界frame7562095仍active。仅证明历史发现，当前正常Collections中无取得标记。",
+      "candidate_notes": "scratch/world-collections-pending-oct07.md",
+      "next_step": "新彩叉候选，收藏UI名称/种类未核；Gate165开放投影不是实际通路，需正常持压资源。",
+      "classification_verified": false
+    },
+    {
+      "nid": 205,
+      "kind": "unclassified",
+      "location": "Chapter5",
+      "position": [
+        -17,
+        -27
+      ],
+      "status": "observed_uncollected",
+      "counts_as_star": null,
+      "evidence_file": "artifacts/slot1-playthrough/chapter5-world.json",
+      "evidence": "公开COLLECTION 266，event7/frame1781523 active；只读复核所选最近世界frame7562095仍active。仅证明历史发现，当前正常Collections中无取得标记。",
+      "candidate_notes": "scratch/world-collections-pending-oct07.md",
+      "next_step": "局部自身及四邻SOLID，无同格Wall；实际可达前缀、种类及是否计星尚未核。",
+      "classification_verified": false
     }
   ],
   "last_save_check": {
-    "checked_at_utc": "2026-10-03T22:34:38.242775+00:00",
-    "accomplishLevelCount": 111,
+    "checked_at_utc": "2026-10-06T19:00:00.257097+00:00",
+    "accomplishLevelCount": 125,
     "accomplishCollectionCount": 6,
-    "CurWorld": 3,
+    "CurWorld": 5,
     "Collections": {
       "201": true,
       "101": true,
@@ -465,8 +513,10 @@
       "1": true,
       "2": true,
       "3": true,
-      "5": true
+      "5": true,
+      "104": true
     },
-    "source": "SaveSlot1.es3 read-only after normal Chapter2 to Chapter3 map teleport"
+    "source": "root normal SaveSlot1 read-only during Chapter5 playthrough",
+    "save_sha256": "38c83c804e52a6a9b5d7640f4e4153c70a63bc80b3a400073f6fb0f8479cc03c"
   }
 }

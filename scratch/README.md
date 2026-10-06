@@ -221,6 +221,7 @@
 | tail19-stage | [cjs](tail19-stage.cjs) | — | — |
 | tail19-trap | [cjs](tail19-trap.cjs) | — | — |
 | tail19-trap-found | — | — | [json](tail19-trap-found.json) |
+| world-collections-pending-oct07 | — | [md](world-collections-pending-oct07.md) | — |
 
 ## 第三章关卡
 

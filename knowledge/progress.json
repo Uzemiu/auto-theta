@@ -137,27 +137,20 @@
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "stack",
+      "level_id": "emission",
       "world": false,
-      "level_label": "5-13",
+      "level_label": "5-14",
       "player_positions": [
         [
-          5,
-          5
-        ],
-        [
-          6,
-          5
-        ],
-        [
-          6,
-          7
+          4,
+          2
         ]
       ],
-      "time": 44,
-      "frame": 7805226,
-      "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
-      "evidence_event": 57
+      "player_positions_scope": "active",
+      "time": 0,
+      "frame": 8036563,
+      "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
+      "evidence_event": 0
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3798,9 +3791,9 @@
       }
     },
     "5-14": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -3816,7 +3809,22 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "正常世界live ENTRY39[-18,-2]unblocked，safeSSSS+D进入fresh0；完整61实体/107tiles，0Undo/retry，125保持，禁提示。正常UI标题实核放射。",
+      "name": "放射",
+      "internal_level_id": "emission",
+      "solution_file": "solutions/5-14.md",
+      "slot1_attempt": {
+        "actions": "",
+        "action_count": 0,
+        "checkpoint_time": 0,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
+        "evidence_event": 0,
+        "frame": 8036563,
+        "checkpoint_is_current_runtime": true
+      }
     },
     "5-2": {
       "status": "completed_verified",
@@ -3920,21 +3928,21 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "actualX44已复制Shadow容器：53/58到6,5、new59/60到6,7，两Box都Shadowtrue/C1/active、两cargo活g0/F0；外54 5,5free。D41活装Fork1/F1保持真核，W42/A43/X44逐single；17捕获前置每停点59完整字典/111tiles=[]。1Undo/0retry，未完成/125保持，下一row2/row9消影是否release活人必须single。",
+      "note": "历史61已正常菜单返回世界；双Shadow真消影释放后牺牲54开Gate0,8，保58/60两活。1Undo/0retry，4007固定有限域终端（3427+580）无机械Goal前置，993预算未用；未完成125保持，不重旧图。",
       "name": "栈",
       "internal_level_id": "stack",
       "solution_file": "solutions/5-13.md",
       "slot1_attempt": {
-        "actions": "DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAX",
-        "action_count": 44,
-        "checkpoint_time": 44,
+        "actions": "DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWWSSSSSSD",
+        "action_count": 61,
+        "checkpoint_time": 61,
         "completed": false,
         "undo_count": 1,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
-        "evidence_event": 57,
-        "frame": 7805226,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 78,
+        "frame": 7959567,
+        "checkpoint_is_current_runtime": false
       }
     },
     "5-1": {
@@ -4088,27 +4096,20 @@
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "stack",
+    "level_id": "emission",
     "world": false,
-    "level_label": "5-13",
+    "level_label": "5-14",
     "player_positions": [
       [
-        5,
-        5
-      ],
-      [
-        6,
-        5
-      ],
-      [
-        6,
-        7
+        4,
+        2
       ]
     ],
-    "time": 44,
-    "frame": 7805226,
-    "evidence_file": "../artifacts/slot1-playthrough/5-13.json",
-    "evidence_event": 57
+    "player_positions_scope": "active",
+    "time": 0,
+    "frame": 8036563,
+    "evidence_file": "../artifacts/slot1-playthrough/5-14.json",
+    "evidence_event": 0
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",
