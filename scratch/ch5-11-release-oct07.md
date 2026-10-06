@@ -49,3 +49,13 @@ actual31接WWAA至35/time37：58[6,5]/A、59[6,1]/S，56[5,5]/57[4,5]active。si
 仅在W80真实给Shadow57inactive、58 alive/ghost0/free4,7、59free4,5且buffer56 active4,6时，可采用候选11 ASASASDSAAA：58在行7的3/4格墙回转，最后1,7；59从4,5经左安全区到3,1观察底Pri。`releaseConditionalTail`完整60字段只是手工条件重放，无搜索、没有伪造释放；不能S从4,7先推buffer离刺，以免裸踩4,6死亡。若80仍cargo、死或有其它属性，则该尾不适用。
 
 owner后给更短8 ASDSASDS，私模独立0search重放同样安全：58交替3/4,7，每次S前在3,7，59经3,5/3,4/4,4/4,3/3,3/3,2/4,2到4,1，88/time93时底部东观察、上方4,7。该8优先但完整completion仍unknown；若88已completed立即停，若仍false且几何/属性一致，可备用AAA使58真正到Goal1,7、59在3/4,1往返，91/time96。`ownerConditionalTail8`保全60字段，旧11未执行候选不删除，两者都依赖80实际release。
+
+## 实际80释放阴性：条件尾全部撤回
+
+61后9 DDSDDWAAA、9 SSSSSAWWW及singleW80已实际执行。actual79 main97/frame6872656，time84；未知W80 main100/frame6899719，80inputs/time85：Shadow57[4,7]仍active/Shadowtrue，cargo58同4,7仍active/ghost0/contained1/container57，buffer56[4,6]active、free59[4,5]/W活，两Pri1,1/2,1的testCompletedfalse，completedfalse。`actual80`与不含释放的纯运输预测完整60dict/88tiles/Time相等。cargo自身位于4,7不等于free，输入只改变containedface不能拿来执行自由移动尾。
+
+root独立frame6902193对main100全部60完整字典/88tiles/exact80/time85严格相等（据root回报），M159保存该构型阴性；此处上Goal1,7横row7没有自动消影，不能授予无Pri的Goal远光源。条件8 ASDSASDS、旧11 ASASASDSAAA和备用AAA均**未执行并撤回对80的部署**，CJS保历史条件重放并标WITHDRAWN。释放阴性不否定所有Shadow释放，原安全捕获51/地刺保护61仍为实际阳性。
+
+后段76的soloICE仍仅玩家59滑两拍、cargo58等在4,6；75/76时底Pri testfalse携带→实际true差异保在`postCaptureChecks`，79/80回false。其余后段完整物理/static/地形与预测相等，不能称所有carry光学字段全等。owner已正常离5-11继续5-12；root7010080已Chapter5，80是历史fixture。正常Save releaseState1/count125仅据root报告，本helper没有读存档。累计1174扩展、无追加域/handle，不要求owner驻场。
+
+恢复光轴的新局部构型也有边界：两free3,1与6,1分别偶/奇，固定55@4,1且普通双生角色同parity时，不可用无动对象普通导航授予这对站位；唯一ICE5,1左入口4,1被55占，右滑会先推动55。若已有2,1 free、55@3,1，则2,1的W/A/S均被墙或固定54拒绝，D会推55→4,1，所以任一普通指令会自动回D，不是能长期留2,1等另一人完成运输的静止资源。尚无完整可部署恢复时序，不作全关无解。未来可用正常freshDS2、AS至3,1/F1、singleD核55从4,1入ICE是否停6,1（或7,1不可回收），北col6光对运影仍未知；这仅短probe，不是既有cargo80的续输入。

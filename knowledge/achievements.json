@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-06",
+  "updated_on": "2026-10-07",
   "objective": "通过正常游戏操作，在 SaveSlot1 持续推进至全成就",
   "steam_app_id": 3219580,
   "catalog_source": "https://steamcommunity.com/stats/3219580/achievements/",
@@ -466,7 +466,7 @@
     "unlocked_count": 5,
     "note": "首次读取账户缓存发生于 slot1 开始游玩之后；不能作为零时刻基线。"
   },
-  "latest_account_evidence": "artifacts/achievements/20261006T151839817908Z.json",
+  "latest_account_evidence": "artifacts/achievements/20261006T171728150029Z.json",
   "account_status_source": "Steam local binary VDF cache, read-only; server synchronization not independently verified",
-  "account_observed_at_utc": "2026-10-06T15:18:39.817908+00:00"
+  "account_observed_at_utc": "2026-10-06T17:17:28.150029+00:00"
 }

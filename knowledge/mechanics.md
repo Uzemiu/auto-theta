@@ -1306,3 +1306,13 @@ M157的装箱51后，正常7步 `SAAWWDD` 搬运至cargo57/58[4,5]与空Shadow56
 主74/frame6756927对root独立6767629全部60实体完整字典、88实际tiles、准确61串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDW` 及time65严格相等：Shadow57[4,6]active/Shadowtrue/Color1，58同格active/ghost0/contained1/container57/height1/maskedoff0/F0，59仍active/F0/ghost0/free。没有新增死亡、Ghost、Force叶或释放，level.completedfalse。
 
 这里明确隔离了唯一无Wall覆盖的SPIKE4,6，证明本载人Color1 Shadow构型提供保护，不把右上Wall覆盖的SPIKE计入跨刺。不推广至所有影箱颜色、光照、消影或多时步：上方4,7的释放与Goal有效性仍须单步实测。仍0Undo/0retry，完成125不变，见 [5-11解法](solutions/5-11.md)。
+
+### M159 载人残影到上方4,7仍有效，角色没有自动释放（5-11实际80/time85）
+
+M158后正常9步 `DDSDDWAAA` 将空Shadow56从5,5绕回4,5，载人57/58保持4,6；再9步 `SSSSSAWWW` 把外59绕到4,4，A76的ICE额外时间独立保留。79/time84主97/frame6872656对root6886991全部60实体、88tiles及instructions严格相等：双影active，58仍contained57，两个Pri仍在1,1/2,1且testCompletedfalse。
+
+唯一single W80将两箱沿col4上推：57/58到4,7，56到4,6，外59到4,5。主100/frame6899719对root6902193全部60实体完整字典、88实际tiles、准确80串 `DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDWDDSDDWAAASSSSSAWWWW` 及time85严格相等。57仍active/Shadowtrue/Color1，58仍active/ghost0/contained1/container57，56也active，59仍活free，level.completedfalse。
+
+这否定了当前Pri2,1与上Goal1,7布局中“送到4,7就自动消影释放”的候选，没有隔离所有Goal光源、观察方向或其他释放规则。4,7箱普通左推所需的5,7是Wall，且当前Pri55无法按普通推法从2,1回4,1；需新的可执行光学顺序或正常撤销/回访，不宣布全关无解。
+
+所有以80已释放为前提的8步 `ASDSASDS`、11步 `ASASASDSAAA` 与备用AAA均未发送，不能接当前cargo状态。准确80实动作、失败前提、0Undo/0retry、1174已终端有限域均保留，不按模型收尾补完成数或成就，见 [5-11解法](solutions/5-11.md)。

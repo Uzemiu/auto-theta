@@ -296,3 +296,11 @@ root独立live3920804已自动返回Chapter5，无独立67/73关内现场；实�
 root于2026-10-06T15:16:17.023411Z只读Settings LastUsedSaveSlot=1、SaveSlot1 LevelStates.blink=3；准确60串DAAWWWWASDSSAWWDDDSSDSXWWSAAWWWWWDWDSASSDDSDASSAWDWDWWWWWDWA编码422111123433211444334351132211111414323344342332141411111412与LevelRecords.blink完整严格相等。accomplishLevelCount=125、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5，快照SHA-256 b49561c9cb570aa6ea13034060a912be73c1182ff17f6a9f93deb494962668d0仅代表读取时点。root后续5661622已Chapter5世界，未另捕获关内60终态；成就本地cache15:18:39Z仍14/28，owner继续新关，目标未完成。
 
 125关只读审计 artifacts/knowledge-audits/20261006T152151601983Z.json recorded=save_completed=125/issues=[]，只验证已登记条目与正常SaveSlot1，未宣称第六章、全部关卡、全部星星或服务器全成就已完成。当前仍用Slot1继续正常推进，启动槽设置未改。
+
+## 2026-10-07 5-11装载/跨刺阳性，80释放阴性：仍125关
+
+5-11实际51活58装入Color1 Shadow57，61 cargo进入裸SPIKE4,6仍active/ghost0/contained57；两个边界均由主完整帧与root全部60字典/88tiles/精确动作严格核验。实际80送57/58到4,7、空56到4,6，main100/frame6899719对root6902193全60/88/instructions/time85严格等；残影仍active、58仍装载，未释放或完成。全部8/11条件收尾和备用AAA未发送，0Undo/0retry，不把机制阳性计作完成关。
+
+root于2026-10-06T17:18:48.342981+00:00（北京时间10月7日）正常只读Settings LastUsedSaveSlot=1，SaveSlot1 accomplishLevelCount=125、accomplishCollectionCount=6、accomplishLinkCount=3、CurWorld5、LevelStates.release=1，尚非完成值3。快照SHA-256 `af61cb1f282264206785937e16b8bcfaaba56a0a8275adf67807d73cf51addf3` 只代表读取时点，未修改游戏保存内容。
+
+官方本地成就缓存于2026-10-06T17:17:28.150029Z仍14/28，Slot1已核条件仍13；证据[本地成就快照](../artifacts/achievements/20261006T171728150029Z.json)。载人残影装箱和跨刺未新增已解锁条目，服务器同步未独立核验，全成就目标继续。80历史和回访前置见 [5-11解法](solutions/5-11.md) 与 [10月7日记录](checkpoints/2026-10-07-continue.md)。

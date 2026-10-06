@@ -137,44 +137,19 @@
     ],
     "last_observed_location": {
       "scene": "Template5",
-      "level_id": "release",
+      "level_id": "transition",
       "world": false,
-      "level_label": "5-11",
+      "level_label": "5-12",
       "player_positions": [
         [
-          4,
-          6
-        ],
-        [
-          4,
-          5
+          2,
+          2
         ]
       ],
-      "axis_player_positions": [
-        {
-          "axis": [
-            0,
-            0,
-            0
-          ],
-          "time": 65,
-          "positions": [
-            [
-              4,
-              6
-            ],
-            [
-              4,
-              5
-            ]
-          ]
-        }
-      ],
-      "observed_on": "2026-10-07",
-      "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-      "current_event": 74,
-      "frame": 6756927,
-      "note": "61/time65 Color1Shadow保护真证，125/6星/link3，0Undo/retry/nohandle。"
+      "time": 1,
+      "frame": 7046276,
+      "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
+      "evidence_event": 2
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3883,9 +3858,9 @@
       }
     },
     "5-12": {
-      "status": "unknown",
+      "status": "attempted",
       "entry_observed": true,
-      "entered": false,
+      "entered": true,
       "entry_observation": {
         "world_id": "Chapter5",
         "pos": [
@@ -3901,7 +3876,22 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "2026-10-06首次公开第五章地图ENTRY，仅观察入口，不假定关内id/名称、访问/完成或普遍解锁条件。"
+      "note": "actualS1已取Fork，P50 2,2/S/F1；3箱原位，lower46/48 traversedtrue/testfalse。上区需跨中央SPIKE，撤回44送8,1丢资源手工尾（0执行）；保资源找合法cargo运输。禁提示，0Undo/retry。",
+      "name": "跃迁",
+      "internal_level_id": "transition",
+      "solution_file": "solutions/5-12.md",
+      "slot1_attempt": {
+        "actions": "S",
+        "action_count": 1,
+        "checkpoint_time": 1,
+        "completed": false,
+        "undo_count": 0,
+        "retry_count": 0,
+        "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
+        "evidence_event": 2,
+        "frame": 7046276,
+        "checkpoint_is_current_runtime": true
+      }
     },
     "5-13": {
       "status": "unknown",
@@ -4055,64 +4045,39 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "actual61/time65 Shadow载cargo58进入Spike4,6仍active/g0/contained57，free59在4,5安全、buffer56在5,5；root6767629全60/88/指令等。下一buffer回4,5及singleW80释放未知，0Undo/retry。",
+      "note": "actual80/time85 Shadow57+58到4,7仍active/contained，未消影释放；buffer56 4,6、外59 4,5安全，root6902193全60/88/exact80等。释放条件尾8/11/AAA全未发，Pri55@2,1不能普通恢复，准备新关后回访；0Undo/retry。 已normal pause→返回世界，保80历史；实际Chapter5[-23,2]，5-12入口实时active/unblocked。",
       "name": "释放",
       "internal_level_id": "release",
       "solution_file": "solutions/5-11.md",
       "slot1_attempt": {
-        "actions": "DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDW",
-        "action_count": 61,
-        "checkpoint_time": 65,
+        "actions": "DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDWDDSDDWAAASSSSSAWWWW",
+        "action_count": 80,
+        "checkpoint_time": 85,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-        "evidence_event": 74,
-        "frame": 6756927,
-        "checkpoint_is_current_runtime": true
+        "evidence_event": 100,
+        "frame": 6899719,
+        "checkpoint_is_current_runtime": false
       }
     }
   },
   "last_observed_location": {
     "scene": "Template5",
-    "level_id": "release",
+    "level_id": "transition",
     "world": false,
-    "level_label": "5-11",
+    "level_label": "5-12",
     "player_positions": [
       [
-        4,
-        6
-      ],
-      [
-        4,
-        5
+        2,
+        2
       ]
     ],
-    "axis_player_positions": [
-      {
-        "axis": [
-          0,
-          0,
-          0
-        ],
-        "time": 65,
-        "positions": [
-          [
-            4,
-            6
-          ],
-          [
-            4,
-            5
-          ]
-        ]
-      }
-    ],
-    "observed_on": "2026-10-07",
-    "evidence_file": "../artifacts/slot1-playthrough/5-11.json",
-    "current_event": 74,
-    "frame": 6756927,
-    "note": "61/time65 Color1Shadow保护真证，125/6星/link3，0Undo/retry/nohandle。"
+    "time": 1,
+    "frame": 7046276,
+    "evidence_file": "../artifacts/slot1-playthrough/5-12.json",
+    "evidence_event": 2
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

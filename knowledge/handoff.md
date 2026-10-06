@@ -9,7 +9,7 @@
 
 - **历史5-10遮罩/delete actual66，已正常离场** main58/frame6069718，exact DDXAAAWWWWAWWWDSADSSSSSWWWWWWWWWWWDSSSSSAASADDDSSSWSAAWWWWWWWWDAWS。61[1,6]/65[4,9]/S双F0活，59[7,4]/60[4,8]Shadow全active，Gates闭、Goaltestfalse/relaytraversedfalse。root66独立6102208全66dict/116tiles/instr严格等。44后DDDSSS+W51首先送右影7,4，安全14到65，singleS66送上影4,8。0Undo/retry/nohandle。旧两个固定目标域422/443各封闭无hit，不是全关无解；新freshF1首X地点域没有可部署positive，不为猜测Undo64。已经正常离关，实际Chapter5[-29,-2]，5-11[-22,2]实时unblocked，safeWWDDDDDDWWD前往；再回访遮罩。
 
-- **当前5-11释放/release actual61/time65** main74/frame6756927，exact DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDW。Shadow57[4,6]和cargo58仍active/g0/contained57，Color1Shadow保护裸Spike已真证，free59[4,5]、buffer56[5,5]活。root6767629全60dict/88tiles/exact61等。0Undo/retry/nohandle；下一DDSDDWAAA把buffer回4,5、SSSSSAWWW到79/preW80，A76单独ICE，末W80到上row7消影释放未知，条件后尾ASDSASDS尚未actual。
+- **历史5-11释放/release actual80/time85，已正常离场** main100/frame6899719，exact DSWWWDDSSSSAADDWDWWDDWWADSSAWSXWWAAADWWSAWWWDWWASWWSAAWWDDSDWDDSDDWAAASSSSSAWWWW。Shadow57[4,7]和cargo58仍active/g0/contained57，未释放；buffer56[4,6]active、free59[4,5]活，底Pri1,1/2,1testfalse。root6902193全60dict/88tiles/exact80严格等。61后9回buffer4,5、9绕行到pre79全60物理/static校准，ICE A76单独真实；singleW80几何成功但消影negative。释放条件尾8/11/AAA全部未发，0Undo/retry/nohandle。原Pri2,1不可普通恢复，若没有新完整positive正常5-12后回访，不重跑旧域。
 
 - **3-27色散已真实99输入完成**，本次0Undo/0retry，主JSON completion event151/frame815971/completed=true；精确actions含5次T已保存。五叶直接活人覆盖Goal1/3/5/7/9：axis0 time92 P52[1,9]，axis4 time32 P59[3,9]，axis3 time50 P59[7,9]，axis2 time62 P59[5,9]，axis1 time86 P59[9,9]。root独立只读核Settings slot1、dispersion State3、119关/6星；精确99串编码与LevelRecords.dispersion严格相等。
 - 新解通过可回收row9 relay8，按5/6/4三列各做一次幽灵生死观察，保留三个旁观死亡叶；最后双活人争推分成两单人叶。旧6,10不可回收探针没有执行。[完整99解法](solutions/3-27.md)。
@@ -22,3 +22,9 @@
 仅Slot1；禁hint/启示/简化、外部攻略、隐藏实现/反射、存档进度编辑。一关一主JSON；2-G零字节巨型前沿无法恢复，不称同frontier续接。
 
 [旧暂停记录](checkpoints/2026-10-05-pause.md) · [历史交接](history/handoff-through-2026-10-05.md) · [研究索引](../scratch/README.md)
+
+- **当前Chapter5世界** normal退出5-11后的stable frame7011438/P265[-23,2]/F0，5-12 ENTRY41[-22,-2]实时active/unblocked；历史80未完，0Undo/retry，准备正常安全导航新关。
+
+- **当前5-12跃迁/transition fresh0** runtime51实体/97tiles，canonical initial/frame7029181和stableevent0/frame7040431；P50[2,3]/S/F0，Fork2,2，C4 Box2,1/6,4+Shadow7,4，两个Goal1,7/9,1，Pri3,1/2,7/9,1。正常SSSSD入口，没有hint/Undo/retry，125关保持。下一S正常取Fork。
+
+- **最新5-12 actualS1** main2/frame7046276/P50[2,2]/S/F1，3箱原位，下46/48遍历true/testfalse，上47false。上左Goal必须处理SPIKE带运输，44送8,1的条件尾尚未执行已撤回；保资源，禁提示，0Undo/retry，125完成保持。
