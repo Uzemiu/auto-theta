@@ -142,15 +142,19 @@
       "level_label": "5-15",
       "player_positions": [
         [
-          7,
-          1
+          4,
+          2
+        ],
+        [
+          6,
+          2
         ]
       ],
       "player_positions_scope": "active",
-      "time": 0,
-      "frame": 8325856,
+      "time": 6,
+      "frame": 8402571,
       "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-      "evidence_event": 0
+      "evidence_event": 6
     },
     "note": "本轮从序章初始存档开始；下方历史关卡记录不自动计入 slot1 本轮进度",
     "chapter_transitions": [
@@ -3072,20 +3076,20 @@
         "source_field": "events[7].observation",
         "frame": 1781523
       },
-      "note": "正常世界live ENTRY7[-14,2]unblocked，safeWWWDDDDWD进入fresh0，98entities/118tiles/22Fork/10Box/2Goal，禁提示/0Undo/retry/count125。",
+      "note": "WA2/F2，ASW到5 parent5,2/W，singleX6原97 4,2/new98 6,2两F1活free；nativebirth左推Blue86到3,2/Shadow95到2,2皆活，上8C4未动。0Undo/retry/death/count125，错误17solo过2,4Wall候选未发已撤回；下一新sameparity Shadowcapture前置由primary主算。",
       "name": "握手",
       "internal_level_id": "handshake",
       "solution_file": "solutions/5-15.md",
       "slot1_attempt": {
-        "actions": "",
-        "action_count": 0,
-        "checkpoint_time": 0,
+        "actions": "WAASWX",
+        "action_count": 6,
+        "checkpoint_time": 6,
         "completed": false,
         "undo_count": 0,
         "retry_count": 0,
         "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-        "evidence_event": 0,
-        "frame": 8325856,
+        "evidence_event": 6,
+        "frame": 8402571,
         "checkpoint_is_current_runtime": true
       }
     },
@@ -4116,15 +4120,19 @@
     "level_label": "5-15",
     "player_positions": [
       [
-        7,
-        1
+        4,
+        2
+      ],
+      [
+        6,
+        2
       ]
     ],
     "player_positions_scope": "active",
-    "time": 0,
-    "frame": 8325856,
+    "time": 6,
+    "frame": 8402571,
     "evidence_file": "../artifacts/slot1-playthrough/5-15.json",
-    "evidence_event": 0
+    "evidence_event": 6
   },
   "update_rules": [
     "未列出的关卡视为未知，不能视为未通关或已通关",

@@ -1380,3 +1380,15 @@ root独立7933342对主72全部61完整实体字典、111tiles、准确54串 `DW
 root独立7973329对主78全部61完整字典、111tiles、准确61串 `DWWWDWDSSAWWAWWWWXDDSAASSSSSSSDDDWAWWSSDDWAXWDSSSWWWWWSSSSSSD` 与time61严格相等。底按钮与ID0西门的具体关联已验证，两个存活角色同格点奇偶；死亡角色的阴性、ghost1和全部原字段保留，未装箱/复活，不能提前记作成就或整个目标完成。
 
 此前实际54的三活free、固定棱镜、排除死亡/合并/Force/新出生的普通导航域3427expanded/seen3427/pending0/hitnull已封闭并释放队列，只否定该限定域的preGoal候选，不是全关无解。新实际61资源域单列，不能把旧三活限制作为整个通关条件，见 [5-13解法](solutions/5-13.md)。
+
+### M168 普通出生推进蓝箱与残影的混合链，两个新角色保持Fork1（5-15实际6）
+
+5-15「握手」实际WA2取得Fork2后正常ASW到5，parent97[5,2]/W/F2，Blue86[4,2]与Shadow95[3,2]横邻。single X6主6/frame8402571真实原97到4,2、新98在6,2，两active/ghost0/free/F1；左侧出生将Blue86推3,2、Shadow95推2,2，两个箱均active/height1/contained0，没有装载、死亡或Force新叶，上八C4及GoalPri未改。
+
+root独立8412126对主6全部99完整实体字典、118tiles、准确6串 `WAASWX` 与time6严格相等。Blue保持Color2/Shadowfalse，残影保持Color1/Shadowtrue，不能以同刻推进混合链当作已捕获角色或箱内复制。0Undo/0retry，125关不变；末捕获、岛上运输与两Goal仍由后续实际验证，见 [5-15解法](solutions/5-15.md)。
+
+#### M168补证：混合链向西推，与回S角色同刻相遇并保Fork1装影箱（5-15实际19）
+
+从实际6用手工12步 `SAAAWWDSDSWA` 到18，receiver原97[1,3]、pusher新98[4,2]均alive/F1，Blue86[3,2]/Shadow95[2,2]固定。末single A19主16/frame8427031使98左推混合链，Blue到2,2、Shadow到1,2；97因0,3Wall回S进入同1,2并装载。97真实active/ghost0/F1/contained1/container95，95 active/Color1/Shadowtrue，外98[3,2]/A仍alive/free/F1，Blue86仍空active。
+
+root独立8437312对主16全部99完整字典、118tiles、准确19串 `WAASWXSAAAWWDSDSWAA` 与time19严格相等。前12没有搜索、死亡、Undo或retry，不从墙后走裸SPIKE；两Goal仍未完成，cargo跨刺、拾上方叉与下一nativeX均需新实际。这里补实际混合链捕获，不替代5-13、5-12各自光路和阴性。
